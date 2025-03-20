@@ -11,7 +11,7 @@ book:
   downloads: [pdf, docx]
   search: true
   author:
-    - name: Southeast Fisheries Science Center
+    - name: Southeest Fisheries Science Center
       affiliations:
         - name: NOAA Fisheries
   chapters:
@@ -55,7 +55,7 @@ format:
     toc-depth: 1
   docx:
     toc: true
-    toc-depth: 1
+    toc-depth: 2
     reference-doc: template.docx
     always_allow_html: true
   html:
@@ -70,4 +70,3 @@ filters:
 # Comment next 2 lines if the PDF is having trouble
 # metadata-files:
 #   - _frontmatter.yml
- 
