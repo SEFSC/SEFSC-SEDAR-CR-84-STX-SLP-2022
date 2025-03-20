@@ -3,28 +3,17 @@ project:
 
 book: 
   page-navigation: true
-  title: "NOAA quarto book" 
-  site-url: "https://nmfs-opensci.github.io/NOAA-quarto-book" 
-  repo-url: "https://github.com/nmfs-opensci/NOAA-quarto-book"
+  title: "SEDAR 84" 
+  site-url: "https://solid-adventure-7j5gko7.pages.github.io/" 
+  repo-url: "https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STX-SLP-2022"
   repo-actions: [edit, source, issue]
   favicon: assets/favicon.ico
   downloads: [pdf, docx]
   search: true
   author:
-    - name: Jane Doe
-      affiliations:
-        - name: NOAA Fisheres
-          department: Northwest Fisheries Science Center
-    - name: Eva Nováková
-      institute: test
+    - name: Southeast Fisheries Science Center
       affiliations:
         - name: NOAA Fisheries
-          department: West Coast Regional Office
-          institute: test
-    - name: Matti Meikäläinen
-      affiliations:
-        - name: NOAA Fisheries
-          department: Southwest Fisheries Science Center
   chapters:
     - index.qmd
     - content/setup.qmd
@@ -61,14 +50,12 @@ execute:
   code-overflow: wrap
 
 format:
-  titlepage-pdf:
-    documentclass: scrbook
-    classoption: ["oneside", "open=any"]
-    titlepage: "plain"
-    keep-tex: true
+  pdf:
+    toc: true
+    toc-depth: 1
   docx:
     toc: true
-    toc-depth: 2
+    toc-depth: 1
     reference-doc: template.docx
     always_allow_html: true
   html:
@@ -81,6 +68,6 @@ filters:
   - quarto
 
 # Comment next 2 lines if the PDF is having trouble
-metadata-files:
-  - _frontmatter.yml
+# metadata-files:
+#   - _frontmatter.yml
  
