@@ -11,7 +11,7 @@ book:
   downloads: [pdf, docx]
   search: true
   author:
-    - name: Southeest Fisheries Science Center
+    - name: Southeast Fisheries Science Center
       affiliations:
         - name: NOAA Fisheries
   chapters:
