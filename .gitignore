@@ -8,3 +8,29 @@
 /.quarto/
 /_site/
 /_book/
+
+# CONTINUM FILES TO COPY IN
+.devcontainer/
+.history/
+CITATION.cff
+Example data files/
+Functions.r
+Previous SS versions/
+References/
+SSS.r
+global.r
+images/
+rsconnect/
+server.r
+shiny_bookmarks/
+ui.r
+www/
+
+# CONTINUM FILES TO DELETE
+#Example data files - Shorcut.Ink
+#README - Copy.md
+#README.md
+#SSS_files/
+#SS_LB_files/
+#SS_LO_F_files/
+#IMAGES/
