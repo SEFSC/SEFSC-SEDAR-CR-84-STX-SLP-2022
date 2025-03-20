@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -239,16 +219,11 @@ div.csl-indent {
 <p>The you can type <code>@</code> and you will see a dropdown of the references in your libraries. You can then select the ones to add. If you don’t see the one you need, you can paste in the DOI and it will be added to your references file (with all the info). The references will be added to your references section of your book automatically.</p>
 <p>See the <code>references.qmd</code> file for how to include the references.</p>
 <ul>
-<li><p><code>@ansley1981</code> will produce <span class="citation" data-cites="ansley1981">Ansley and Davis (<a href="references.html#ref-ansley1981" role="doc-biblioref">1981</a>)</span></p></li>
-<li><p><code>[@ansley1981]</code> will produce <span class="citation" data-cites="ansley1981">(<a href="references.html#ref-ansley1981" role="doc-biblioref">Ansley and Davis 1981</a>)</span>.</p></li>
+<li><p><code>@ansley1981</code> will produce <span class="citation" data-cites="ansley1981">(<a href="references.html#ref-ansley1981" role="doc-biblioref"><strong>ansley1981?</strong></a>)</span></p></li>
+<li><p><code>[@ansley1981]</code> will produce <span class="citation" data-cites="ansley1981">(<a href="references.html#ref-ansley1981" role="doc-biblioref"><strong>ansley1981?</strong></a>)</span>.</p></li>
 </ul>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-ansley1981" class="csl-entry" role="listitem">
-Ansley, H. L. H., and C. D. Davis. 1981. <span>“Migration and Standing Stock of Fishes Associated with Artificial and Natural Reefs on Georgia<span>’</span>s Outer Continental Shelf.”</span> Brunswick, Georgia, USA.
-</div>
-</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -23,7 +23,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -253,10 +273,22 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="executive-summary" class="level1 unnumbered">
 <h1 class="unnumbered">Executive Summary</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo gravida justo consectetur condimentum. Proin eget felis non nunc tristique malesuada vel ut tortor. Vivamus lacinia aliquet lorem in congue. In hac habitasse platea dictumst. Etiam non felis iaculis, efficitur libero in, porta nunc. Sed sit amet nisi non justo scelerisque feugiat. Pellentesque porta consectetur sapien, porttitor iaculis ligula fermentum ac. Pellentesque fermentum elementum lacus non tempus. Aenean eu leo lobortis, vulputate mi at, varius sapien. In congue consectetur ultricies. Maecenas volutpat facilisis arcu, eget sodales tellus consequat nec. Integer ullamcorper ex nec leo aliquam tempus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dui massa, facilisis at aliquet eu, malesuada vel neque. Donec fermentum elit eu tortor euismod, sed mollis lacus blandit.</p>
-<p>New paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo gravida justo consectetur condimentum. Proin eget felis non nunc tristique malesuada vel ut tortor. Vivamus lacinia aliquet lorem in congue. In hac habitasse platea dictumst. Etiam non felis iaculis, efficitur libero in, porta nunc. Sed sit amet nisi non justo scelerisque feugiat. Pellentesque porta consectetur sapien, porttitor iaculis ligula fermentum ac. Pellentesque fermentum elementum lacus non tempus. Aenean eu leo lobortis, vulputate mi at, varius sapien. In congue consectetur ultricies. Maecenas volutpat facilisis arcu, eget sodales tellus consequat nec. Integer ullamcorper ex nec leo aliquam tempus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dui massa, facilisis at aliquet eu, malesuada vel neque. Donec fermentum elit eu tortor euismod, sed mollis lacus blandit.</p>
+<p>The SEDAR 84 St.&nbsp;Croix Stoplight Parrotfish stock assessment process consisted of four webinars between April 2024 and October 2024. The assessment used Stock Synthesis (SS3), a statistical catch-at-age model <span class="citation" data-cites="methot2020">(<a href="content/references.html#ref-methot2020" role="doc-biblioref">Methot et al. 2020</a>)</span>. SS3 uses a population model, an observation model, and an estimation model and applies a likelihood function in the estimation process. SS3 has been applied extensively worldwide for stock assessment evaluations <span class="citation" data-cites="methot2013">(<a href="content/references.html#ref-methot2013" role="doc-biblioref">Methot and Wetzel 2013</a>)</span>.</p>
+<p>The Stock Assessment Continuum Tool was used to configure initial assessment models utilizing a data-limited modeling framework <span class="citation" data-cites="cope2024">(<a href="content/references.html#ref-cope2024" role="doc-biblioref">Cope 2024</a>)</span>. Models were initially configured using an annual catch time series and composite length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity, with some diagnostics, namely retrospective and likelihood profiling, being carried out at each step to examine the stability of parameter estimation. Two additional population features were configured outside the Stock Assessment Continuum Tool: hermaphroditism and continuous recruitment (i.e., protracted spawning throughout the year).</p>
+<p>Applying SS3 with a data-limited framework resulted in inconclusive results due to relatively few years of data, small sample sizes, and low contrast in the available time series. The high correlations between key parameters R0 and the initial equilibrium fishing mortality rate and associated flat likelihood profiles indicated that the stock status was not reliably estimable. Since the SEDAR 84 stock assessment cannot estimate the overfished status for the St.&nbsp;Croix Stoplight Parrotfish stock, their status remains unknown. However, the lack of decline in the fishery-independent abundance index concurrent with a decrease in landings suggests that the St.&nbsp;Croix Stoplight Parrotfish is not likely to be undergoing overfishing.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-cope2024" class="csl-entry" role="listitem">
+Cope, Jason. 2024. <em>Stock Assessment Continuum Tool</em>. <a href="https://github.com/shcaba/SS-DL-tool">https://github.com/shcaba/SS-DL-tool</a>.
+</div>
+<div id="ref-methot2020" class="csl-entry" role="listitem">
+Methot, Richard D., Chantel R. Wetzel, Ian G. Taylor, and Kathryn Doering. 2020. <span>“Stock Synthesis User Manual : Version 3.30.15.”</span> <em>Northwest Fisheries Science Center (U.S.)</em>. <a href="https://doi.org/10.25923/5WPN-QT71">https://doi.org/10.25923/5WPN-QT71</a>.
+</div>
+<div id="ref-methot2013" class="csl-entry" role="listitem">
+Methot, Richard D., and Chantell R. Wetzel. 2013. <span>“Stock Synthesis: A Biological and Statistical Framework for Fish Stock Assessment and Fishery Management.”</span> <em>Fisheries Research</em> 142 (May): 86–99. <a href="https://doi.org/10.1016/j.fishres.2012.10.012">https://doi.org/10.1016/j.fishres.2012.10.012</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
