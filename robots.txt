@@ -1,1 +1,1 @@
-Sitemap: https://nmfs-opensci.github.io/NOAA-quarto-book/sitemap.xml
+Sitemap: https://solid-adventure-7j5gko7.pages.github.io/sitemap.xml
