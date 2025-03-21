@@ -12,7 +12,7 @@ keep_parm <- c("SR_LN(R0)", "SR_sigmaR", "SR_BH_steep",
 # Specify derived quantities of interest
 keep_dq <- c("SSB_Virgin", "SSB_Initial", "Recr_Virgin", "Recr_Initial",
              "Dead_Catch_SPR", "SPR_MSY", "Dead_Catch_MSY", "Ret_Catch_MSY",
-             "F_2020", "F_2021", "SSB_2022")
+             "F_2012", "F_2022", "SSB_2022")
 
 # Specify selectivity strata of interest
 sizesel_factor <- c("Lsel")

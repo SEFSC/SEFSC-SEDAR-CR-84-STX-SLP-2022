@@ -1,8 +1,8 @@
 # Build a summary of file structure for awareness
-fs::dir_tree(
-  path = here::here(),
-  type = "directory"
-)
+# fs::dir_tree(
+#   path = here::here(),
+#   type = "directory"
+# )
 
 # Specify pattern and plots (plot 12 fails when using seasonal recruitment)
 pattern <- "010641"

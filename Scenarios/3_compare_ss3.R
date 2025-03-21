@@ -1,11 +1,11 @@
 # Specify pattern of runs (ex: "^84_stx_.*_m2$")
-pattern <- "v1_m2"
+pattern <- "84_stx"
 
 # Specify cutout string to match short names in scenarios.csv
 cutout <- "84_stx_f3_5cm_010641_0041_"
 
 # Specify plot_notes comparison labels (e.g., "sensitivity" or "scenario")
-note_label <- "sensitivity"
+note_label <- "scenario"
 
 # Specify sizeselex plot settings
 minbthresh <- -1
