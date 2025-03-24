@@ -530,8 +530,9 @@ dev.off()
 
 eqcatch <- purrr::map(profile_eqcatch_runs, "catch") |>
   purrr::imap_dfr(~ dplyr::mutate(.x, scenario = .y)) |>
-  dplyr::group_by(scenario) |>
   dplyr::filter(Yr == min(Yr)) |>
+  dplyr::group_by(scenario) |>
+  dplyr::summarize(Exp = sum(Exp)) |>
   dplyr::ungroup() |>
   dplyr::select(scenario, Exp) |>
   tidyr::pivot_wider(names_from = scenario, values_from = Exp) |>
