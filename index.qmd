@@ -1,10 +1,18 @@
 # Executive Summary {.unnumbered}
 
-The SEDAR 84 St. Croix Stoplight Parrotfish stock assessment process consisted of four webinars between April 2024 and October 2024. The assessment used Stock Synthesis (SS3), a statistical catch-at-age model [@methot2020]. SS3 uses a population model, an observation model, and an estimation model and applies a likelihood function in the estimation process. SS3 has been applied extensively worldwide for stock assessment evaluations [@methot2013].
+The SEDAR 84 St. Croix Stoplight Parrotfish stock assessment process consisted of four webinars between April 2024 and October 2024.
 
-The Stock Assessment Continuum Tool was used to configure initial assessment models utilizing a data-limited modeling framework [@cope2024]. Models were initially configured using an annual catch time series and composite length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity, with some diagnostics, namely retrospective and likelihood profiling, being carried out at each step to examine the stability of parameter estimation. Two additional population features were configured outside the Stock Assessment Continuum Tool: hermaphroditism and continuous recruitment (i.e., protracted spawning throughout the year).
+Data inputs spanned from 2012 to 2022 and included:
 
-Applying SS3 with a data-limited framework resulted in inconclusive results due to relatively few years of data, small sample sizes, and low contrast in the available time series. The high correlations between key parameters R0 and the initial equilibrium fishing mortality rate and associated flat likelihood profiles indicated that the stock status was not reliably estimable. Since the SEDAR 84 stock assessment cannot estimate the overfished status for the St. Croix Stoplight Parrotfish stock, their status remains unknown. However, the lack of decline in the fishery-independent abundance index concurrent with a decrease in landings suggests that the St. Croix Stoplight Parrotfish is not likely to be undergoing overfishing.
+-   An annual species-specific catch time series from a commercial logbook program
+-   Fishery-dependent length compositions from the port-sampling of commercial landings
+-   Diver observed fishery-independent length compositions from a stratified random sampling survey of reef fish
+-   A fishery-independent index of abundance derived from a stratified random sampling survey of reef fish
+-   Life history information to inform growth, longevity, and maturity parameters
+
+The assessment used Stock Synthesis, a statistical catch-at-age model [@methot2020]. Stock Synthesis models were initially configured using an annual catch time series and compositions that were aggregated across the available years for each source of length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity. Those sequential steps included the inclusion of the index of abundance and annual fishery-independent length compositions. Models were run with and without the estimation of recruitment deviations. Finally, the sensitivity of the assessment outcomes was investigated using alternative inputs for longevity-informed natural mortality, parameterization of hermaphroditism, and reweighting of the effective sample size associated across each source of the length composition data.
+
+All of the configurations resulted in inconclusive results, evidenced by high correlations between the scale of the average recruitment and the fishing mortality rate associated with an assumed initial equilibrium state. Likelihood profile diagnostics further indicate that the configurations explored could not reliably estimate the stock status. Thus, the overfished status of the St. Croix Stoplight Parrotfish stock remains unknown. However, the available data do not indicate a decline in the abundance index concurrent with a decrease in landings and show constant trends in size composition quarantines. These findings suggest that the St. Croix Stoplight Parrotfish is not likely to be undergoing overfishing in 2022.
 
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
