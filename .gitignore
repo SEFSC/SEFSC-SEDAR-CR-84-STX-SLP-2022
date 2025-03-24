@@ -9,6 +9,59 @@
 /_site/
 /_book/
 
+# Ignore files related to SSoutput
+archive/
+scenarios_summary.csv
+scenarios_size_selex.csv
+diagnostics/
+plots*/
+admodel.cov
+admodel.dep
+admodel.hes
+CompReport.sso
+control.ss_new
+covar.sso
+CumReport.sso
+data_echo.ss_new
+data_expval.ss
+derived_posteriors.sso
+echoinput.sso
+fmin.log
+Forecast-report.sso
+forecast.ss_new
+ParmTrace.sso
+posterior_obj_func.sso
+posterior_vectors.sso
+posteriors.sso
+rebuild.sso
+Report.sso
+runnumber.ss
+SIS_table.sso
+ss_summary.sso
+ss3.b01
+ss3.b02
+ss3.b03
+ss3.bar
+ss3.cor
+ss3.eva
+ss3.log
+ss3.p01
+ss3.p02
+ss3.p03
+ss3.par
+ss3.r01
+ss3.r02
+ss3.r03
+ss3.rep
+ss3.std
+ss3_linux
+ss3_osx
+ss3_osx_arm64
+starter.ss_new
+warning.sso
+wtatage.ss_new
+ss3.exe
+
 # CONTINUM FILES TO COPY IN
 .devcontainer/
 .history/
@@ -25,12 +78,12 @@ server.r
 shiny_bookmarks/
 ui.r
 www/
+SSS_files/
+SS_LB_files/
+SS_LO_F_files/
 
 # CONTINUM FILES TO DELETE
 #Example data files - Shorcut.Ink
 #README - Copy.md
 #README.md
-SSS_files/
-SS_LB_files/
-SS_LO_F_files/
 #IMAGES/
