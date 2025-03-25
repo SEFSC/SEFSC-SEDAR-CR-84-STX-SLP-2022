@@ -40,6 +40,7 @@ book:
     collapse-level: 1
 
 bibliography: [content/references.bib]
+csl: modern-language-association.csl
 
 execute:
   echo: false
@@ -58,7 +59,6 @@ format:
     theme: [cosmo, assets/theme.scss] 
     toc: true
     toc-depth: 3
-    csl: nature.csl
 
 filters:
   - assets/include-files.lua
