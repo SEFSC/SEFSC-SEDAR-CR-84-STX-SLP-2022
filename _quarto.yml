@@ -16,7 +16,7 @@ book:
         - name: NOAA Fisheries
   chapters:
     - index.qmd
-    - content/managment.qmd
+    - content/background.qmd
     - content/ss3.qmd
     - content/data.qmd
     - content/references.qmd
@@ -58,6 +58,7 @@ format:
     theme: [cosmo, assets/theme.scss] 
     toc: true
     toc-depth: 3
+    csl: nature.csl
 
 filters:
   - assets/include-files.lua
