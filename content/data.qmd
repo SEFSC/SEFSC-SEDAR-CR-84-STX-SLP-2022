@@ -1,0 +1,49 @@
+---
+title: "Available Data"
+---
+
+The data available for use in the current assessment are summarized in the SEDAR 84 US Caribbean Stoplight Parrotfish St. Croix Data Workshop Report [@sedar2024]. Additional details are provided across the respective references identified below:
+
+1.  Landings from self-reported commercial fisher logbook data [@martínezrivera2024]
+2.  Length compositions from shore-based port-sampling of commercial landings [@godwin2024]
+3.  Length compositions from a fishery-independent stratified random sampling survey of reef fish [@grove2024]
+4.  Index of abundance from a fishery-independent stratified random sampling survey of reef fish [@grove2024]
+5.  Life history information from otolith analysis and gonad histology [@riverahernández2024]
+
+**Based on the available data, the assessment was configured with one diving fleet and one fishery-independent survey.**
+
+The remainder of this section documents the input data, assumptions, configurations, and equations explored using Stock Synthesis based on the available data.
+
+## Commercial Dive Fleet
+
+### Catch Data
+
+The catch inputs for diving fleet came from the Caribbean Commercial Logbook data. 
+
+The years of the available species-specific logbook data determined the start and end years of the Stock Synthesis models. They were 2012 and 2022, respectively.
+Based on discussions at the data workshop  characterizing the diver fleet, the assessment assumed no discarding nor discard mortality associated with the dive fleet.
+- The catch was treated as if it as the available
+
+### Size Composition Data
+
+Corresponding gear-specific size compositions came from the Trip Interview Program. Since multiple fish can be obtained from a single sampled trip, the lengths are not independent observations. Therefore, the relative model weighting of the dive fleet length compositions was based on the number of trips sampled.
+
+
+
+**Due to low sample sizes, the fishery-dependent commercial dive fleet length composition data were collapsed across all years and used in the model to inform the fleet selectivity.**
+
+
+
+Additional fleet-fleet inputs required for the Stock Synthesis model included an input standard error for the landings and an equilibrium catch value. Since the data-limited implementation of Stock Synthesis is conditioned on landings, the input standard error for the landings was set to 0.01. Although the data-limited implementation of SS3 will inherently nearly exactly fit the annual landings time series, a higher CV of 0.3 was explored via sensitivity analysis (see @sec-methods-sensitivity). 
+
+
+
+It is important to note that the stock was not at an unexploited equilibrium at the start year of the available time series. The fishery had been ongoing for decades, and the total fishing effort in St. Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the Commercial undefined fishery, and an initial equilibrium catch was input as 30 metric tons, a little over twice the geometric mean of the catches from 2012-2014. The initial equilibrium catch was explored via likelihood profiling.
+
+One fishery-independent survey was modeled with an abundance index and associated length compositions for 2012, 2015, 2017, 2019, and 2021. The data were from the National Coral Reef Monitoring Program (NCRMP) Reef Visual Census [@grove2024]. The relative model weighting of the NCRMP survey length compositions across years was based on the number of paired dives.
+
+Although the three most recent years of the NCRMP survey provided counts by individual lengths measured to the nearest centimeter, the data in St. Croix before 2017 were collected in 5-centimeter bins. Therefore, the length data inputs for both the dive fleet and the three most recent years of the NCRMP survey 1-centimeter length measurements were binned to match the NCRMP 2012 and 2015 5-centimeter bins accordingly. Further, due to the large proportion of small fish observed in the NCRMP survey, the smallest two bins, \[1-6) and \[6-11), were collapsed into a single bin \[1-11). Note that SS3 allows the length bins of the data inputs to be larger than the bins used in the population model. Although the size bins of all the length data inputs were large (≥ 5 centimeters), the model's simulated population bin size was 1-centimeter bins, with a plus group for the largest bin, greater than or equal to 41 centimeters fork length. Although the population is modeled at a higher resolution concerning bin size, the likelihood function, which aims to match the observed data inputs and the simulated population estimates, operates at the resolution of the data inputs (≥5 centimeters).
+
+## Life History
+
+The life history data used in the assessment included longevity-informed natural mortality, growth (length-age), length-weight, maturity, and sex ratios obtained from 1,801 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024].
