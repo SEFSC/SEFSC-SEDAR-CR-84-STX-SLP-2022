@@ -16,13 +16,9 @@ book:
         - name: NOAA Fisheries
   chapters:
     - index.qmd
-    - content/setup.qmd
-    - content/add-content.qmd
-    - content/customizing.qmd
-    - content/rendering.qmd
-    - content/figures_and_tables.qmd
-    - content/code.qmd
-    - content/adding-refs.qmd
+    - content/managment.qmd
+    - content/ss3.qmd
+    - content/data.qmd
     - content/references.qmd
 
   page-footer:

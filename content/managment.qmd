@@ -1,6 +1,7 @@
 ---
 title: "Management Overview and Assessment History"
 ---
+The Stoplight Parrotfish (Sparisoma viride) is a sequential protogynous hermaphrodite that inhabits coral reefs in the Caribbean Sea, Florida, Gulf of Mexico, Bermuda, and Brazil. It is an herbivorous species that is targeted in reef fish fisheries throughout much of the Caribbean, including St. Croix, USVI. 
 
 St. Croix Stoplight Parrotfish is managed under the St. Croix Fishery Management Plan [@crabtree]. In 2023, the Caribbean Fisheries Management Council transitioned from species-based to island-based fisheries management (@fig-uscar). The management measures in the new island-based fishery management plans became effective on October 13, 2022. The Parrotfish 2 stock complex includes two indicator stocks and five other species. The indicator species are Redtail Parrotfish and Stoplight Parrotfish. The allowable biological catch for the complex was established using tier 4a of the 4-tired ABC control rule. The complex has an ABC of 85,135 and an ACL of 72,365 pounds whole weight (32,824.2 kg).
 
