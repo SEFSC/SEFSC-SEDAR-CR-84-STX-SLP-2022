@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; References – SEDAR 84</title>
+<title>2&nbsp; Modeling Framework – SEDAR 84</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -29,8 +49,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../content/references.html" rel="next">
-<link href="../content/code.html" rel="prev">
+<link href="../content/data.html" rel="next">
+<link href="../content/managment.html" rel="prev">
 <link href="../assets/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -81,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/adding-refs.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/ss3.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Modeling Framework</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -138,44 +158,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Set-up</span></span></a>
+  <a href="../content/managment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Management Overview and Assessment History</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/add-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Customize</span></span></a>
+  <a href="../content/ss3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Modeling Framework</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/customizing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Customization</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/rendering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Rendering</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/figures_and_tables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Figures and Tables</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Rendering with Code</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/adding-refs.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></span></a>
+  <a href="../content/data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Available Data</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -197,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Modeling Framework</span></h1>
 </div>
 
 
@@ -214,16 +210,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Quarto has powerful references functionality. You can easily insert citations from Zotero libraries that you maintain in the cloud (on Zotero). This allows the whole team to update the library and you can sync up to that library. Read about this on the Quarto documentation on <a href="https://quarto.org/docs/visual-editor/technical.html#citations">citations</a>. Google youtube videos on this also to see it in action.</p>
-<p>Add a <code>.bib</code> file in to your project or add a linked Zotero library via RStudio in Visual mode with Tools &gt; Project Options… &gt; R Markdown &gt; select custom libraries from the Zotero dropdown.</p>
-<p>The you can type <code>@</code> and you will see a dropdown of the references in your libraries. You can then select the ones to add. If you don’t see the one you need, you can paste in the DOI and it will be added to your references file (with all the info). The references will be added to your references section of your book automatically.</p>
-<p>See the <code>references.qmd</code> file for how to include the references.</p>
-<ul>
-<li><p><code>@ansley1981</code> will produce <span class="citation" data-cites="ansley1981">(<a href="references.html#ref-ansley1981" role="doc-biblioref"><strong>ansley1981?</strong></a>)</span></p></li>
-<li><p><code>[@ansley1981]</code> will produce <span class="citation" data-cites="ansley1981">(<a href="references.html#ref-ansley1981" role="doc-biblioref"><strong>ansley1981?</strong></a>)</span>.</p></li>
-</ul>
+<p><strong>Stock Synthesis was the modeling approach applied in this assessment because of its compatibility with the available data and consistent with standard practices.</strong></p>
+<p>Stock Synthesis is a statistical catch-at-age model that uses a population model, an observation model, and an estimation model and applies a likelihood function in the estimation process <span class="citation" data-cites="methot2020">(<a href="references.html#ref-methot2020" role="doc-biblioref">Methot et al. 2020</a>)</span>. Stock Synthesis, commonly referred to as SS3, has been applied extensively worldwide for stock assessment evaluations <span class="citation" data-cites="methot2013">(<a href="references.html#ref-methot2013" role="doc-biblioref">Methot and Wetzel 2013</a>)</span>. It has also been used for previous data-limited and data-moderate SEDAR assessments, including the SEDAR 57 assessments and subsequent updates for Caribbean Spiny Lobster, and the SEDAR 80 assessments for Queen Triggerfish <span class="citation" data-cites="sedar2019 sedar2022">(<a href="references.html#ref-sedar2019" role="doc-biblioref">SEDAR 2019</a>, <a href="references.html#ref-sedar2022" role="doc-biblioref">2022</a>)</span>. The Stock Synthesis modeling framework is a compatible tool for SEDAR stock assessments for species in the U.S. Caribbean because it can accommodate a wide range of model complexities, from data-limited to highly detailed assessments <span class="citation" data-cites="cope2024">(<a href="references.html#ref-cope2024" role="doc-biblioref">Cope 2024</a>)</span>. Stock Synthesis allows for the characterization of stock, fishing fleet, and survey dynamics through various parameters, which can be either fixed based on external data or estimated when sufficient assessment data are available. Furthermore, Stock Synthesis is particularly useful for incorporating complex biological dynamics, such as hermaphroditism and continuous recruitment, which are critical for accurately assessing St.&nbsp;Croix Stoplight Parrotfish. Hermaphroditism directly influences reproductive potential and stock sustainability, making it essential to model sex transitions appropriately. Additionally, assuming a single pulse of annual recruitment oversimplifies the population structure by failing to account for the continuous presence of multiple size classes in the stock. Continuous recruitment modeling enables the assessment to recognize that fish born within the same calendar year can reach vulnerable sizes at different times, affecting catch dynamics and stock projections. Finally, R packages such as R4ss and SS3diags allow critical evaluations of model reliability and facilitate model comparisons. across alternative assumptions and parameter values, to evaluate the sensitivity of results to modeling decisions implemented with the Stock Synthesis framework [<span class="citation" data-cites="taylor2021">Taylor et al. (<a href="references.html#ref-taylor2021" role="doc-biblioref">2021</a>)</span>; @carvalho2021]. R4SS provides visualization and diagnostic tools to summarize and interpret fit, convergence, and key output metrics. SS3diags focuses on retrospective analyses, hind-casting, and residual pattern evaluations. The integration of these tools allows rigorous uncertainty analysis, streamlined sensitivity analyses, and enhanced transparency in decision-making.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-cope2024" class="csl-entry" role="listitem">
+Cope, Jason. 2024. <em>Stock Assessment Continuum Tool</em>. <a href="https://github.com/shcaba/SS-DL-tool">https://github.com/shcaba/SS-DL-tool</a>.
+</div>
+<div id="ref-methot2020" class="csl-entry" role="listitem">
+Methot, Richard D., Chantel R. Wetzel, Ian G. Taylor, and Kathryn Doering. 2020. <span>“Stock Synthesis User Manual : Version 3.30.15.”</span> <em>Northwest Fisheries Science Center (U.S.)</em>. <a href="https://doi.org/10.25923/5WPN-QT71">https://doi.org/10.25923/5WPN-QT71</a>.
+</div>
+<div id="ref-methot2013" class="csl-entry" role="listitem">
+Methot, Richard D., and Chantell R. Wetzel. 2013. <span>“Stock Synthesis: A Biological and Statistical Framework for Fish Stock Assessment and Fishery Management.”</span> <em>Fisheries Research</em> 142 (May): 86–99. <a href="https://doi.org/10.1016/j.fishres.2012.10.012">https://doi.org/10.1016/j.fishres.2012.10.012</a>.
+</div>
+<div id="ref-sedar2019" class="csl-entry" role="listitem">
+SEDAR. 2019. <span>“SEDAR 57 Stock Assessment Report u.s. Caribbean Spiny Lobster.”</span> North Charleston SC. <a href="http://sedarweb.org/sedar-57">http://sedarweb.org/sedar-57</a>.
+</div>
+<div id="ref-sedar2022" class="csl-entry" role="listitem">
+———. 2022. <span>“SEDAR 80 <span></span> US Caribbean Queen Triggerfish <span></span> Puerto Rico Final Stock Assessment Report,”</span> July. <a href="https://sedarweb.org/documents/sedar-80-us-caribbean-queen-triggerfish-puerto-rico-final-stock-assessment-report/">https://sedarweb.org/documents/sedar-80-us-caribbean-queen-triggerfish-puerto-rico-final-stock-assessment-report/</a>.
+</div>
+<div id="ref-taylor2021" class="csl-entry" role="listitem">
+Taylor, Ian G., Kathryn L. Doering, Kelli F. Johnson, Chantel R. Wetzel, and Ian J. Stewart. 2021. <span>“Beyond Visualizing Catch-at-Age Models: Lessons Learned from the R4ss Package about Software to Support Stock Assessments.”</span> <em>Fisheries Research</em> 239 (July): 105924. <a href="https://doi.org/10.1016/j.fishres.2021.105924">https://doi.org/10.1016/j.fishres.2021.105924</a>.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -645,13 +655,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../content/code.html" class="pagination-link" aria-label="Rendering with Code">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Rendering with Code</span></span>
+      <a href="../content/managment.html" class="pagination-link" aria-label="Management Overview and Assessment History">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Management Overview and Assessment History</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../content/data.html" class="pagination-link" aria-label="Available Data">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Available Data</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -663,7 +673,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STX-SLP-2022/edit/main/content/adding-refs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STX-SLP-2022/blob/main/content/adding-refs.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STX-SLP-2022/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STX-SLP-2022/edit/main/content/ss3.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STX-SLP-2022/blob/main/content/ss3.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STX-SLP-2022/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

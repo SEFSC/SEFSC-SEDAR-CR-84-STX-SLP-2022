@@ -4,179 +4,59 @@
     "href": "index.html",
     "title": "SEDAR 84",
     "section": "",
-    "text": "Executive Summary\nThe SEDAR 84 St. Croix Stoplight Parrotfish stock assessment process consisted of four webinars between April 2024 and October 2024. The assessment used Stock Synthesis (SS3), a statistical catch-at-age model (Methot et al. 2020). SS3 uses a population model, an observation model, and an estimation model and applies a likelihood function in the estimation process. SS3 has been applied extensively worldwide for stock assessment evaluations (Methot and Wetzel 2013).\nThe Stock Assessment Continuum Tool was used to configure initial assessment models utilizing a data-limited modeling framework (Cope 2024). Models were initially configured using an annual catch time series and composite length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity, with some diagnostics, namely retrospective and likelihood profiling, being carried out at each step to examine the stability of parameter estimation. Two additional population features were configured outside the Stock Assessment Continuum Tool: hermaphroditism and continuous recruitment (i.e., protracted spawning throughout the year).\nApplying SS3 with a data-limited framework resulted in inconclusive results due to relatively few years of data, small sample sizes, and low contrast in the available time series. The high correlations between key parameters R0 and the initial equilibrium fishing mortality rate and associated flat likelihood profiles indicated that the stock status was not reliably estimable. Since the SEDAR 84 stock assessment cannot estimate the overfished status for the St. Croix Stoplight Parrotfish stock, their status remains unknown. However, the lack of decline in the fishery-independent abundance index concurrent with a decrease in landings suggests that the St. Croix Stoplight Parrotfish is not likely to be undergoing overfishing.\n\n\n\n\nCope, Jason. 2024. Stock Assessment Continuum Tool. https://github.com/shcaba/SS-DL-tool.\n\n\nMethot, Richard D., Chantel R. Wetzel, Ian G. Taylor, and Kathryn Doering. 2020. “Stock Synthesis User Manual : Version 3.30.15.” Northwest Fisheries Science Center (U.S.). https://doi.org/10.25923/5WPN-QT71.\n\n\nMethot, Richard D., and Chantell R. Wetzel. 2013. “Stock Synthesis: A Biological and Statistical Framework for Fish Stock Assessment and Fishery Management.” Fisheries Research 142 (May): 86–99. https://doi.org/10.1016/j.fishres.2012.10.012.",
+    "text": "Executive Summary\nThe SEDAR 84 St. Croix Stoplight Parrotfish stock assessment process consisted of four webinars between April 2024 and October 2024. The data available for the assessment included:\n\nAn annual species-specific catch time series from a commercial logbook program\nFishery-dependent length compositions from a commercial port-sampling program\nFishery-independent length compositions from a stratified random sampling survey of reef fish\nA fishery-independent index of abundance from a stratified random sampling survey of reef fish\nLife history information from otolith analysis and gonad histology\n\nThe assessment used Stock Synthesis, a statistical catch-at-age model (Methot et al. 2020). Stock Synthesis models were initially configured using an annual catch time series and compositions that were aggregated across the available years for each source of length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity. Those sequential steps included the inclusion of the index of abundance and annual fishery-independent length compositions. Models were run with and without the estimation of recruitment deviations. Finally, the sensitivity of the assessment outcomes was investigated using alternative inputs for longevity-informed natural mortality, parameterization of hermaphroditism, and reweighting of the effective sample size associated across each source of the length composition data.\nAll of the configurations resulted in inconclusive results, evidenced by high correlations between the scale of the average recruitment and the fishing mortality rate associated with an assumed initial equilibrium state. Likelihood profile diagnostics further indicate that the configurations explored could not reliably estimate the stock status. Thus, the overfished status of the St. Croix Stoplight Parrotfish stock remains unknown. However, the available data do not indicate a decline in the abundance index concurrent with a decrease in landings and show constant trends in size composition quarantines. These findings suggest that the St. Croix Stoplight Parrotfish is not likely to be undergoing overfishing in 2022.\n\n\n\n\nMethot, Richard D., Chantel R. Wetzel, Ian G. Taylor, and Kathryn Doering. 2020. “Stock Synthesis User Manual : Version 3.30.15.” Northwest Fisheries Science Center (U.S.). https://doi.org/10.25923/5WPN-QT71.",
     "crumbs": [
       "Executive Summary"
     ]
   },
   {
-    "objectID": "content/setup.html",
-    "href": "content/setup.html",
-    "title": "1  Set-up",
+    "objectID": "content/managment.html",
+    "href": "content/managment.html",
+    "title": "1  Management Overview and Assessment History",
     "section": "",
-    "text": "1.1 GitHub Set-up\nThis is a template for a simple Quarto book output to html, PDF or docx format. It includes a GitHub Action that will build the website automatically when you make changes to the files. The NOAA palette and fonts has been added to theme.scss. The webpage will be on the gh-pages branch. Serving the website files from this branch is a common way to keep all the website files from cluttering your main branch.\nThe GitHub Action installs R so you can have R code in your qmd or Rmd files. Note, you do not need to make changes to your Rmd files unless your need Quarto features like cross-references.",
+    "text": "The Stoplight Parrotfish (Sparisoma viride) is a sequential protogynous hermaphrodite that inhabits coral reefs in the Caribbean Sea, Florida, Gulf of Mexico, Bermuda, and Brazil. It is an herbivorous species that is targeted in reef fish fisheries throughout much of the Caribbean, including St. Croix, USVI.\nSt. Croix Stoplight Parrotfish is managed under the St. Croix Fishery Management Plan (Crabtree 2019). In 2023, the Caribbean Fisheries Management Council transitioned from species-based to island-based fisheries management (Figure 1.1). The management measures in the new island-based fishery management plans became effective on October 13, 2022. The Parrotfish 2 stock complex includes two indicator stocks and five other species. The indicator species are Redtail Parrotfish and Stoplight Parrotfish. The allowable biological catch for the complex was established using tier 4a of the 4-tired ABC control rule. The complex has an ABC of 85,135 and an ACL of 72,365 pounds whole weight (32,824.2 kg).\nThe Southeast Fisheries Science Center provided a SEDAR 84 Data Workshop working paper summarizing federal management actions for Stoplight Parrotfish in St. Croix. On August 29, 2013, a 9-inch federal size limit was instituted by Final Regulatory Amendment 4. The size limit only applies in the U.S. EEZ surrounding St. Croix, defined as the federal waters ranging from 3 to 200 nautical miles (nm) (5.6 – 370 kilometers [km]) from the nearest coastline point of the U.S. Virgin Islands (Figure 1.2).\nBefore the current assessment, only one St. Croix Stoplight Parrotfish stock assessment had been conducted (SEDAR 2016). The SEDAR 46 evaluations were performed using the Data-Limited Methods Toolkit (Carruthers and Hordyk 2018). The approach applied data-limited stock assessment models and management procedures. Ultimately, the results were not used for management advice.\n\n\n\n\n\n\nFigure 1.1: Jurisdictional boundaries of the Caribbean Fishery Management Council.\n\n\n\n\n\n\n\n\n\nFigure 1.2: The U.S. EEZ is defined as the federal waters ranging from 3 to 200 nautical miles (5.6 – 370 kilometers) from the nearest coastline point of the US Virgin Islands.\n\n\n\n\n\n\n\nCarruthers, Thomas R., and Adrian R. Hordyk. 2018. “The Data-Limited Methods Toolkit (DLMtool): An R Package for Informing Management of Data-Limited Populations.” Edited by Samantha Price. Methods in Ecology and Evolution 9 (12): 2388–95. https://doi.org/10.1111/2041-210x.13081.\n\n\nCrabtree, Roy E. 2019. “Comprehensive Fishery Management Plan for the St. Croix Exclusive Economic Zone Including Environmental Assessment, Regulatory Impact Review, and Fishery Impact Statement.” https://repository.library.noaa.gov/view/noaa/45275.\n\n\nSEDAR. 2016. “SEDAR 46 Caribbean Data-Limited Species Stock Assessment Report,” April. https://sedarweb.org/documents/sedar-46-final-stock-assessment-report-caribbean-data-limited-species/.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Set-up</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Management Overview and Assessment History</span>"
     ]
   },
   {
-    "objectID": "content/setup.html#github-set-up",
-    "href": "content/setup.html#github-set-up",
-    "title": "1  Set-up",
+    "objectID": "content/ss3.html",
+    "href": "content/ss3.html",
+    "title": "2  Modeling Framework",
     "section": "",
-    "text": "Click the green “use template” button to make a repository with this content. Make sure to make your repo public (since GitHub Pages doesn’t work on private repos unless you have a paid account) and check box to include all the branches (so that you get the gh-pages branch). \nTurn on GitHub Pages under Settings &gt; Pages . You will set pages to be made from the gh-pages branch and root directory. \nTurn on GitHub Actions under Settings &gt; Actions &gt; General \nEdit the repo description and Readme to add a link to the webpage. When you edit the description, you will see the link url in the url box or you can click on the Actions tab or the Settings &gt; Pages page to find the url.",
+    "text": "Stock Synthesis was the modeling approach applied in this assessment because of its compatibility with the available data and consistent with standard practices.\nStock Synthesis is a statistical catch-at-age model that uses a population model, an observation model, and an estimation model and applies a likelihood function in the estimation process (Methot et al. 2020). Stock Synthesis, commonly referred to as SS3, has been applied extensively worldwide for stock assessment evaluations (Methot and Wetzel 2013). It has also been used for previous data-limited and data-moderate SEDAR assessments, including the SEDAR 57 assessments and subsequent updates for Caribbean Spiny Lobster, and the SEDAR 80 assessments for Queen Triggerfish (SEDAR 2019, 2022). The Stock Synthesis modeling framework is a compatible tool for SEDAR stock assessments for species in the U.S. Caribbean because it can accommodate a wide range of model complexities, from data-limited to highly detailed assessments (Cope 2024). Stock Synthesis allows for the characterization of stock, fishing fleet, and survey dynamics through various parameters, which can be either fixed based on external data or estimated when sufficient assessment data are available. Furthermore, Stock Synthesis is particularly useful for incorporating complex biological dynamics, such as hermaphroditism and continuous recruitment, which are critical for accurately assessing St. Croix Stoplight Parrotfish. Hermaphroditism directly influences reproductive potential and stock sustainability, making it essential to model sex transitions appropriately. Additionally, assuming a single pulse of annual recruitment oversimplifies the population structure by failing to account for the continuous presence of multiple size classes in the stock. Continuous recruitment modeling enables the assessment to recognize that fish born within the same calendar year can reach vulnerable sizes at different times, affecting catch dynamics and stock projections. Finally, R packages such as R4ss and SS3diags allow critical evaluations of model reliability and facilitate model comparisons. across alternative assumptions and parameter values, to evaluate the sensitivity of results to modeling decisions implemented with the Stock Synthesis framework [Taylor et al. (2021); @carvalho2021]. R4SS provides visualization and diagnostic tools to summarize and interpret fit, convergence, and key output metrics. SS3diags focuses on retrospective analyses, hind-casting, and residual pattern evaluations. The integration of these tools allows rigorous uncertainty analysis, streamlined sensitivity analyses, and enhanced transparency in decision-making.\n\n\n\n\nCope, Jason. 2024. Stock Assessment Continuum Tool. https://github.com/shcaba/SS-DL-tool.\n\n\nMethot, Richard D., Chantel R. Wetzel, Ian G. Taylor, and Kathryn Doering. 2020. “Stock Synthesis User Manual : Version 3.30.15.” Northwest Fisheries Science Center (U.S.). https://doi.org/10.25923/5WPN-QT71.\n\n\nMethot, Richard D., and Chantell R. Wetzel. 2013. “Stock Synthesis: A Biological and Statistical Framework for Fish Stock Assessment and Fishery Management.” Fisheries Research 142 (May): 86–99. https://doi.org/10.1016/j.fishres.2012.10.012.\n\n\nSEDAR. 2019. “SEDAR 57 Stock Assessment Report u.s. Caribbean Spiny Lobster.” North Charleston SC. http://sedarweb.org/sedar-57.\n\n\n———. 2022. “SEDAR 80  US Caribbean Queen Triggerfish  Puerto Rico Final Stock Assessment Report,” July. https://sedarweb.org/documents/sedar-80-us-caribbean-queen-triggerfish-puerto-rico-final-stock-assessment-report/.\n\n\nTaylor, Ian G., Kathryn L. Doering, Kelli F. Johnson, Chantel R. Wetzel, and Ian J. Stewart. 2021. “Beyond Visualizing Catch-at-Age Models: Lessons Learned from the R4ss Package about Software to Support Stock Assessments.” Fisheries Research 239 (July): 105924. https://doi.org/10.1016/j.fishres.2021.105924.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Set-up</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Modeling Framework</span>"
     ]
   },
   {
-    "objectID": "content/add-content.html",
-    "href": "content/add-content.html",
-    "title": "2  Customize",
+    "objectID": "content/data.html",
+    "href": "content/data.html",
+    "title": "3  Available Data",
     "section": "",
-    "text": "2.1 Edit and add your pages\nEdit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation).",
+    "text": "3.1 Commercial Dive Fleet\nThe data available for use in the current assessment are summarized in the SEDAR 84 US Caribbean Stoplight Parrotfish St. Croix Data Workshop Report (SEDAR 2024). Additional details are provided across the respective references identified below:\nBased on the available data, the assessment was configured with one diving fleet and one fishery-independent survey.\nThe remainder of this section documents the input data, assumptions, configurations, and equations explored using Stock Synthesis based on the available data.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Customize</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Available Data</span>"
     ]
   },
   {
-    "objectID": "content/add-content.html#edit-and-add-your-pages",
-    "href": "content/add-content.html#edit-and-add-your-pages",
-    "title": "2  Customize",
+    "objectID": "content/data.html#commercial-dive-fleet",
+    "href": "content/data.html#commercial-dive-fleet",
+    "title": "3  Available Data",
     "section": "",
-    "text": "---\ntitle: your title\n---\n\n---\ntitle: your title\n---",
+    "text": "3.1.1 Catch Data\nThe catch inputs for diving fleet came from the Caribbean Commercial Logbook data.\nThe years of the available species-specific logbook data determined the start and end years of the Stock Synthesis models. They were 2012 and 2022, respectively. Based on discussions at the data workshop characterizing the diver fleet, the assessment assumed no discarding nor discard mortality associated with the dive fleet. - The catch was treated as if it as the available\n\n\n3.1.2 Size Composition Data\nCorresponding gear-specific size compositions came from the Trip Interview Program. Since multiple fish can be obtained from a single sampled trip, the lengths are not independent observations. Therefore, the relative model weighting of the dive fleet length compositions was based on the number of trips sampled.\nDue to low sample sizes, the fishery-dependent commercial dive fleet length composition data were collapsed across all years and used in the model to inform the fleet selectivity.\nAdditional fleet-fleet inputs required for the Stock Synthesis model included an input standard error for the landings and an equilibrium catch value. Since the data-limited implementation of Stock Synthesis is conditioned on landings, the input standard error for the landings was set to 0.01. Although the data-limited implementation of SS3 will inherently nearly exactly fit the annual landings time series, a higher CV of 0.3 was explored via sensitivity analysis (see ?sec-methods-sensitivity).\nIt is important to note that the stock was not at an unexploited equilibrium at the start year of the available time series. The fishery had been ongoing for decades, and the total fishing effort in St. Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the Commercial undefined fishery, and an initial equilibrium catch was input as 30 metric tons, a little over twice the geometric mean of the catches from 2012-2014. The initial equilibrium catch was explored via likelihood profiling.\nOne fishery-independent survey was modeled with an abundance index and associated length compositions for 2012, 2015, 2017, 2019, and 2021. The data were from the National Coral Reef Monitoring Program (NCRMP) Reef Visual Census (Grove, Blondeau, and Ault 2024). The relative model weighting of the NCRMP survey length compositions across years was based on the number of paired dives.\nAlthough the three most recent years of the NCRMP survey provided counts by individual lengths measured to the nearest centimeter, the data in St. Croix before 2017 were collected in 5-centimeter bins. Therefore, the length data inputs for both the dive fleet and the three most recent years of the NCRMP survey 1-centimeter length measurements were binned to match the NCRMP 2012 and 2015 5-centimeter bins accordingly. Further, due to the large proportion of small fish observed in the NCRMP survey, the smallest two bins, [1-6) and [6-11), were collapsed into a single bin [1-11). Note that SS3 allows the length bins of the data inputs to be larger than the bins used in the population model. Although the size bins of all the length data inputs were large (≥ 5 centimeters), the model’s simulated population bin size was 1-centimeter bins, with a plus group for the largest bin, greater than or equal to 41 centimeters fork length. Although the population is modeled at a higher resolution concerning bin size, the likelihood function, which aims to match the observed data inputs and the simulated population estimates, operates at the resolution of the data inputs (≥5 centimeters).",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Customize</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Available Data</span>"
     ]
   },
   {
-    "objectID": "content/add-content.html#add-your-pages-the-project",
-    "href": "content/add-content.html#add-your-pages-the-project",
-    "title": "2  Customize",
-    "section": "2.2 Add your pages the project",
-    "text": "2.2 Add your pages the project\n\nAdd the files to _quarto.yml",
+    "objectID": "content/data.html#life-history",
+    "href": "content/data.html#life-history",
+    "title": "3  Available Data",
+    "section": "3.2 Life History",
+    "text": "3.2 Life History\nThe life history data used in the assessment included longevity-informed natural mortality, growth (length-age), length-weight, maturity, and sex ratios obtained from 1,801 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 (Rivera Hernández and Shervette 2024).\n\n\n\n\nGodwin, Katherine, Adyan Rios, and Kyle Dettloff. 2024. “SEDAR 84 Trip Interview Program (TIP) Size Composition Analysis of Stoplight Parrotfish (Sparisoma Viride) in St. Croix, u.s. Caribbean, 1983-2022.” North Charleston, SC. https://sedarweb.org/documents/sedar-84-dw-11-sedar-84-trip-interview-program-tip-size-composition-analysis-of-stoplight-parrotfish-sparisoma-viride-in-st-croix-u-s-caribbean-1983-2022/.\n\n\nGrove, Laura Jay W., Jeremiah Blondeau, and J. Ault. 2024. “Fishery-Independent Reef Fish Visual Survey Population Density and Length Composition for Stoplight Parrotfish in the St. Croix.” North Charleston, SC. https://sedarweb.org/documents/sedar-84-dw-14-fishery-independent-reef-fish-visual-survey-population-density-and-length-composition-for-stoplight-parrotfish-in-the-st-croix/.\n\n\nMartínez Rivera, Stephanie, Kim Johnson, and M. Refik Orhun. 2024. “SEDAR 84 Commercial Fishery Landings of Stoplight Parrotfish (Sparisoma Viride) in St. Croix, US Caribbean, 2012-2022.” https://sedarweb.org/documents/sedar-84-dw-03-sedar-84-commercial-fishery-landings-of-stoplight-parrotfish-sparisoma-viride-in-st-croix-us-caribbean-2012-2022/.\n\n\nRivera Hernández, Jesús M., and Virginia Shervette. 2024. “Report on the Status of U.S. Caribbean Stoplight Parrotfish Sparisoma Viride Age, Growth, and Reproductive Biology for the SEDAR84 Stock Assessment.” https://sedarweb.org/documents/sedar-84-ap-01-report-on-the-status-of-u-s-caribbean-stoplight-parrotfish-sparisoma-viride-age-growth-and-reproductive-biology-for-the-sedar84-stock-assessment.\n\n\nSEDAR. 2024. “SEDAR 84 US Caribbean Stoplight Parrotfish St. Croix Data Workshop Report.” https://sedarweb.org/documents/sedar-84-us-caribbean-stoplight-parrotfish-st-croix-data-workshop-report/.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Customize</span>"
-    ]
-  },
-  {
-    "objectID": "content/customizing.html",
-    "href": "content/customizing.html",
-    "title": "3  Customization",
-    "section": "",
-    "text": "3.1 Quarto documentation\nQuarto allow many bells and whistles to make nice output. Read the documentation here Quarto documentation.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Customization</span>"
-    ]
-  },
-  {
-    "objectID": "content/customizing.html#examples",
-    "href": "content/customizing.html#examples",
-    "title": "3  Customization",
-    "section": "3.2 Examples",
-    "text": "3.2 Examples\nLooking at other people’s Quarto code is a great way to figure out how to do stuff. Most will have a link to a GitHub repo where you can see the raw code. Look for a link to edit page or see source code. This will usually be on the right. Or look for the GitHub icon somewhere.\n\nQuarto gallery\nnmfs-openscapes\nFaye lab manual\nquarto-titlepages Note the link to edit is broken. Go to repo and look in documentation directory.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Customization</span>"
-    ]
-  },
-  {
-    "objectID": "content/rendering.html",
-    "href": "content/rendering.html",
-    "title": "4  Rendering",
-    "section": "",
-    "text": "4.1 Step 1. Make sure you have a recent RStudio\nThe repo includes a GitHub Action that will render (build) the website automatically when you make changes to the files. It will be pushed to the gh-pages branch.\nBut when you are developing your content, you will want to render it locally.\nHave you updated RStudio since about August 2022? No? Then update to a newer version of RStudio. In general, you want to keep RStudio updated and it is required to have a recent version to use Quarto.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Rendering</span>"
-    ]
-  },
-  {
-    "objectID": "content/rendering.html#step-2.-clone-and-create-rstudio-project",
-    "href": "content/rendering.html#step-2.-clone-and-create-rstudio-project",
-    "title": "4  Rendering",
-    "section": "4.2 Step 2. Clone and create RStudio project",
-    "text": "4.2 Step 2. Clone and create RStudio project\nFirst, clone the repo onto your local computer. How? You can click File &gt; New Project and then select “Version Control”. Paste in the url of the repository. That will clone the repo on to your local computer. When you make changes, you will need to push those up.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Rendering</span>"
-    ]
-  },
-  {
-    "objectID": "content/rendering.html#step-3.-render-within-rstudio",
-    "href": "content/rendering.html#step-3.-render-within-rstudio",
-    "title": "4  Rendering",
-    "section": "4.3 Step 3. Render within RStudio",
-    "text": "4.3 Step 3. Render within RStudio\nRStudio will recognize that this is a Quarto project by the presence of the _quarto.yml file and will see the “Build” tab. Click the “Render website” button to render to the _site folder.\nPreviewing: You can either click index.html in the _site folder and specify “preview in browser” or set up RStudio to preview to the viewer panel. To do the latter, go to Tools &gt; Global Options &gt; R Markdown. Then select “Show output preview in: Viewer panel”.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Rendering</span>"
-    ]
-  },
-  {
-    "objectID": "content/figures_and_tables.html",
-    "href": "content/figures_and_tables.html",
-    "title": "5  Figures and Tables",
-    "section": "",
-    "text": "5.1 Code\nMarkdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nYou can embed an R code chunk like this:\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Figures and Tables</span>"
-    ]
-  },
-  {
-    "objectID": "content/figures_and_tables.html#including-plots",
-    "href": "content/figures_and_tables.html#including-plots",
-    "title": "5  Figures and Tables",
-    "section": "5.2 Including Plots",
-    "text": "5.2 Including Plots\nYou can also embed plots and reference them, like so Figure 5.1.\n\n\n\n\n\n\n\n\nFigure 5.1: Plot of pressure\n\n\n\n\n\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Figures and Tables</span>"
-    ]
-  },
-  {
-    "objectID": "content/figures_and_tables.html#including-tables",
-    "href": "content/figures_and_tables.html#including-tables",
-    "title": "5  Figures and Tables",
-    "section": "5.3 Including Tables",
-    "text": "5.3 Including Tables\nYou can also embed tables and reference them with Table 5.1.\n\nlibrary(knitr)\nkable(head(iris))\n\n\n\nTable 5.1: Iris Data\n\n\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Figures and Tables</span>"
-    ]
-  },
-  {
-    "objectID": "content/code.html",
-    "href": "content/code.html",
-    "title": "6  Rendering with Code",
-    "section": "",
-    "text": "6.1 Modify the GitHub Action\nYou can have code (R, Python or Julia) in your qmd file. You will need to have these installed on your local computer, but presumably you do already if you are adding code to your qmd files.\nYou will need to change the GitHub Action in .github/workflows to install these and any needed packages in order for GitHub to be able to render your webpage. The GitHub Action install R since I used that in code.qmd. If you use Python or Julia instead, then you will need to update the GitHub Action to install those.\nIf getting the GitHub Action to work is too much hassle (and that definitely happens), you can alway render locally and publish to the gh-pages branch. If you do this, make sure to delete or rename the GitHub Action to something like\nso GitHub does not keep trying to run it. Nothing bad will happen if you don’t do this, but if you are not using the action (because it keeps failing), then you don’t need GitHub to run it.",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Rendering with Code</span>"
-    ]
-  },
-  {
-    "objectID": "content/code.html#modify-the-github-action",
-    "href": "content/code.html#modify-the-github-action",
-    "title": "6  Rendering with Code",
-    "section": "",
-    "text": "render-and-publish.old_yml",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Rendering with Code</span>"
-    ]
-  },
-  {
-    "objectID": "content/code.html#render-locally-and-publish-to-gh-pages-branch",
-    "href": "content/code.html#render-locally-and-publish-to-gh-pages-branch",
-    "title": "6  Rendering with Code",
-    "section": "6.2 Render locally and publish to gh-pages branch",
-    "text": "6.2 Render locally and publish to gh-pages branch\nTo render locally and push up to the gh-pages branch, open a terminal window and then cd to the directory with the Quarto project. Type this in the terminal:\nquarto render gh-pages",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Rendering with Code</span>"
-    ]
-  },
-  {
-    "objectID": "content/adding-refs.html",
-    "href": "content/adding-refs.html",
-    "title": "7  References",
-    "section": "",
-    "text": "Quarto has powerful references functionality. You can easily insert citations from Zotero libraries that you maintain in the cloud (on Zotero). This allows the whole team to update the library and you can sync up to that library. Read about this on the Quarto documentation on citations. Google youtube videos on this also to see it in action.\nAdd a .bib file in to your project or add a linked Zotero library via RStudio in Visual mode with Tools &gt; Project Options… &gt; R Markdown &gt; select custom libraries from the Zotero dropdown.\nThe you can type @ and you will see a dropdown of the references in your libraries. You can then select the ones to add. If you don’t see the one you need, you can paste in the DOI and it will be added to your references file (with all the info). The references will be added to your references section of your book automatically.\nSee the references.qmd file for how to include the references.\n\n@ansley1981 will produce (ansley1981?)\n[@ansley1981] will produce (ansley1981?).",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>References</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Available Data</span>"
     ]
   },
   {
@@ -184,7 +64,7 @@
     "href": "content/references.html",
     "title": "References",
     "section": "",
-    "text": "Cope, Jason. 2024. Stock Assessment Continuum Tool. https://github.com/shcaba/SS-DL-tool.\n\n\nMethot, Richard D., Chantel R. Wetzel, Ian G. Taylor, and Kathryn\nDoering. 2020. “Stock Synthesis User Manual : Version\n3.30.15.” Northwest Fisheries Science Center (U.S.). https://doi.org/10.25923/5WPN-QT71.\n\n\nMethot, Richard D., and Chantell R. Wetzel. 2013. “Stock\nSynthesis: A Biological and Statistical Framework for Fish Stock\nAssessment and Fishery Management.” Fisheries Research\n142 (May): 86–99. https://doi.org/10.1016/j.fishres.2012.10.012.",
+    "text": "Carruthers, Thomas R., and Adrian R. Hordyk. 2018. “The\nData-Limited Methods Toolkit (DLMtool): An R Package for\nInforming Management of Data-Limited Populations.”\nEdited by Samantha Price. Methods in Ecology and Evolution 9\n(12): 2388–95. https://doi.org/10.1111/2041-210x.13081.\n\n\nCope, Jason. 2024. Stock Assessment Continuum Tool. https://github.com/shcaba/SS-DL-tool.\n\n\nCrabtree, Roy E. 2019. “Comprehensive Fishery Management Plan for\nthe St. Croix Exclusive Economic Zone Including Environmental\nAssessment, Regulatory Impact Review, and Fishery Impact\nStatement.” https://repository.library.noaa.gov/view/noaa/45275.\n\n\nGodwin, Katherine, Adyan Rios, and Kyle Dettloff. 2024. “SEDAR 84\nTrip Interview Program (TIP) Size Composition Analysis of Stoplight\nParrotfish (Sparisoma Viride) in St. Croix, u.s. Caribbean,\n1983-2022.” North Charleston, SC. https://sedarweb.org/documents/sedar-84-dw-11-sedar-84-trip-interview-program-tip-size-composition-analysis-of-stoplight-parrotfish-sparisoma-viride-in-st-croix-u-s-caribbean-1983-2022/.\n\n\nGrove, Laura Jay W., Jeremiah Blondeau, and J. Ault. 2024.\n“Fishery-Independent Reef Fish Visual Survey Population Density\nand Length Composition for Stoplight Parrotfish in the St.\nCroix.” North Charleston, SC. https://sedarweb.org/documents/sedar-84-dw-14-fishery-independent-reef-fish-visual-survey-population-density-and-length-composition-for-stoplight-parrotfish-in-the-st-croix/.\n\n\nMartínez Rivera, Stephanie, Kim Johnson, and M. Refik Orhun. 2024.\n“SEDAR 84 Commercial Fishery Landings of Stoplight Parrotfish\n(Sparisoma Viride) in St. Croix, US Caribbean, 2012-2022.” https://sedarweb.org/documents/sedar-84-dw-03-sedar-84-commercial-fishery-landings-of-stoplight-parrotfish-sparisoma-viride-in-st-croix-us-caribbean-2012-2022/.\n\n\nMethot, Richard D., Chantel R. Wetzel, Ian G. Taylor, and Kathryn\nDoering. 2020. “Stock Synthesis User Manual : Version\n3.30.15.” Northwest Fisheries Science Center (U.S.). https://doi.org/10.25923/5WPN-QT71.\n\n\nMethot, Richard D., and Chantell R. Wetzel. 2013. “Stock\nSynthesis: A Biological and Statistical Framework for Fish Stock\nAssessment and Fishery Management.” Fisheries Research\n142 (May): 86–99. https://doi.org/10.1016/j.fishres.2012.10.012.\n\n\nRivera Hernández, Jesús M., and Virginia Shervette. 2024. “Report\non the Status of U.S. Caribbean Stoplight Parrotfish Sparisoma Viride\nAge, Growth, and Reproductive Biology for the SEDAR84 Stock\nAssessment.” https://sedarweb.org/documents/sedar-84-ap-01-report-on-the-status-of-u-s-caribbean-stoplight-parrotfish-sparisoma-viride-age-growth-and-reproductive-biology-for-the-sedar84-stock-assessment.\n\n\nSEDAR. 2016. “SEDAR 46 Caribbean Data-Limited Species Stock\nAssessment Report,” April. https://sedarweb.org/documents/sedar-46-final-stock-assessment-report-caribbean-data-limited-species/.\n\n\n———. 2019. “SEDAR 57 Stock Assessment Report u.s. Caribbean Spiny\nLobster.” North Charleston SC. http://sedarweb.org/sedar-57.\n\n\n———. 2022. “SEDAR 80  US Caribbean Queen Triggerfish\n Puerto Rico Final Stock Assessment Report,” July.\nhttps://sedarweb.org/documents/sedar-80-us-caribbean-queen-triggerfish-puerto-rico-final-stock-assessment-report/.\n\n\n———. 2024. “SEDAR 84 US Caribbean Stoplight Parrotfish St. Croix\nData Workshop Report.” https://sedarweb.org/documents/sedar-84-us-caribbean-stoplight-parrotfish-st-croix-data-workshop-report/.\n\n\nTaylor, Ian G., Kathryn L. Doering, Kelli F. Johnson, Chantel R. Wetzel,\nand Ian J. Stewart. 2021. “Beyond Visualizing Catch-at-Age Models:\nLessons Learned from the R4ss Package about Software to Support Stock\nAssessments.” Fisheries Research 239 (July): 105924. https://doi.org/10.1016/j.fishres.2021.105924.",
     "crumbs": [
       "References"
     ]
