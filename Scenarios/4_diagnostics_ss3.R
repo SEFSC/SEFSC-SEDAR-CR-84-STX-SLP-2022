@@ -66,9 +66,12 @@ setup_path <- function(dir) {
   dir.create(dir)
 }
 
-# Set up all folders
-directories <- ls(pattern = "dir_")
-if (overwrite_all == TRUE) purrr::map(mget(directories), setup_path)
+# Set up diagnostic folders
+if (overwrite_all == TRUE) setup_path(dir_dx)
+
+# Set up sub folders
+sub_dir <- ls(pattern = "dir_")[ls(pattern = "dir_") != "dir_dx"]
+if (overwrite_all == TRUE) purrr::map(mget(sub_dir), setup_path)
 
 # Set up only some folders (specify which)
 overwrite_some <- c(NA)
@@ -533,8 +536,6 @@ eqcatch <- purrr::map(profile_eqcatch_runs, "catch") |>
   dplyr::filter(Yr == min(Yr)) |>
   dplyr::group_by(scenario) |>
   dplyr::summarize(Exp = sum(Exp)) |>
-  dplyr::ungroup() |>
-  dplyr::select(scenario, Exp) |>
   tidyr::pivot_wider(names_from = scenario, values_from = Exp) |>
   dplyr::mutate(Label = "eqcatch") |>
   data.frame()
