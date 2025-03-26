@@ -8,11 +8,7 @@ The Stoplight Parrotfish (Sparisoma viride) is a sequential protogynous hermaphr
 
 St. Croix Stoplight Parrotfish is managed under the St. Croix Fishery Management Plan [@crabtree]. In 2023, the Caribbean Fisheries Management Council transitioned from species-based to island-based fisheries management (@fig-uscar). The management measures in the new island-based fishery management plans became effective on October 13, 2022. The Parrotfish 2 stock complex includes two indicator stocks and five other species. The indicator species are Redtail Parrotfish and Stoplight Parrotfish. The allowable biological catch for the complex was established using tier 4a of the 4-tired ABC control rule. The complex has an ABC of 85,135 and an ACL of 72,365 pounds whole weight (32,824.2 kg).
 
-![`r fig_uscar_cap`](https://www.fisheries.noaa.gov/s3//styles/original/s3/dam-migration/island_group_management_areas.jpg?itok=5wvkxme2){#fig-uscar width="4.5in"}
-
 The Southeast Fisheries Science Center provided a SEDAR 84 Data Workshop working paper summarizing federal management actions for Stoplight Parrotfish in St. Croix. On August 29, 2013, a 9-inch federal size limit was instituted by Final Regulatory Amendment 4. The size limit only applies in the U.S. EEZ surrounding St. Croix, defined as the federal waters ranging from 3 to 200 nautical miles (nm) (5.6 – 370 kilometers \[km\]) from the nearest coastline point of the U.S. Virgin Islands (@fig-eez).
-
-![`r fig_eez_cap`](https://www.fisheries.noaa.gov/s3//styles/original/s3/dam-migration/carib_map_stx.jpg?itok=yeYHZ8gy){#fig-eez width="5in"}
 
 ## Assessment History
 
@@ -25,3 +21,7 @@ fig_eez_cap <- "The U.S. EEZ is defined as the federal waters ranging from 3 to 
   miles (5.6 – 370 kilometers) from the nearest coastline point of 
   the US Virgin Islands."
 ```
+
+![`r fig_uscar_cap`](https://www.fisheries.noaa.gov/s3//styles/original/s3/dam-migration/island_group_management_areas.jpg?itok=5wvkxme2){#fig-uscar width="4.5in"}
+
+![`r fig_eez_cap`](https://www.fisheries.noaa.gov/s3//styles/original/s3/dam-migration/carib_map_stx.jpg?itok=yeYHZ8gy){#fig-eez width="5in"}
