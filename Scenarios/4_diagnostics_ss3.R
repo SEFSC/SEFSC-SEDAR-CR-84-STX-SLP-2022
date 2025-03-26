@@ -358,9 +358,9 @@ lattice::barchart(value ~ Label | Label, group = factor(variable),
 dev.off()
 
 # Relativized Jitter plot
-limits <- jitter_likes %>%
-  dplyr::arrange(Label) %>%
-  dplyr::group_by(Label) %>%
+limits <- jitter_likes |>
+  dplyr::arrange(Label) |>
+  dplyr::group_by(Label) |>
   dplyr::summarize(ymin = min(value),
             ymax = max(value),
             diff = ymax - ymin,
@@ -519,7 +519,7 @@ r4ss::SSplotProfile(
 )
 dev.off()
 
-png(file = here::here(dir_profile_eqcatch, "profile_eqcatch.png"),
+png(file = here::here(dir_profile_eqcatch, "profile_eqcatch_f.png"),
     width = 500, height = 500)
 
 r4ss::SSplotProfile(
@@ -543,6 +543,9 @@ eqcatch <- purrr::map(profile_eqcatch_runs, "catch") |>
 profile_eqcatch_summary[["pars"]] <-
   eqcatch |>
   dplyr::bind_rows(profile_eqcatch_summary[["pars"]]) 
+
+png(file = here::here(dir_profile_eqcatch, "profile_eqcatch.png"),
+    width = 500, height = 500)
 
 r4ss::SSplotProfile(
   profile_eqcatch_summary,
