@@ -1,16 +1,16 @@
 # Executive Summary {.unnumbered}
 
-The SEDAR 84 St. Croix Stoplight Parrotfish stock assessment process consisted of four webinars between April 2024 and October 2024. The data available for the assessment included:
+The SEDAR 84 St. Croix stoplight parrotfish (Sparisoma viride) stock assessment process consisted of four webinars between April 2024 and October 2024. The data available for the assessment included:
 
 -   An annual species-specific catch time series from a commercial logbook program
--   Fishery-dependent length compositions from a commercial port-sampling program
+-   Fishery-dependent length compositions from a commercial port sampling program
 -   Fishery-independent length compositions from a stratified random sampling survey of reef fish
 -   A fishery-independent index of abundance from a stratified random sampling survey of reef fish
 -   Life history information from otolith analysis and gonad histology
 
-The assessment used Stock Synthesis, a statistical catch-at-age model [@methot2020]. Stock Synthesis models were initially configured using an annual catch time series and compositions that were aggregated across the available years for each source of length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity. Those sequential steps included the inclusion of the index of abundance and annual fishery-independent length compositions. Models were run with and without the estimation of recruitment deviations. Finally, the sensitivity of the assessment outcomes was investigated using alternative inputs for longevity-informed natural mortality, parameterization of hermaphroditism, and reweighting of the effective sample size associated across each source of the length composition data.
+The assessment used Stock Synthesis, a statistical catch-at-age model [@methot2020]. Stock Synthesis models were initially configured using an annual catch time series and compositions that were aggregated across the available years for each source of length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity. Those sequential steps included the inclusion of the index of abundance and annual fishery-independent length compositions. Models were run with and without the estimation of recruitment deviations. Finally, the sensitivity of the assessment outcomes was investigated using alternative inputs for longevity-informed natural mortality, parameterization of hermaphroditism, and reweighting of the effective sample size of the length composition data.
 
-All of the configurations resulted in inconclusive results, evidenced by high correlations between the scale of the average recruitment and the fishing mortality rate associated with an assumed initial equilibrium state. Likelihood profile diagnostics further indicate that the configurations explored could not reliably estimate the stock status. Thus, the overfished status of the St. Croix Stoplight Parrotfish stock remains unknown. However, the available data do not indicate a decline in the abundance index concurrent with a decrease in landings and show constant trends in size composition quarantines. These findings suggest that the St. Croix Stoplight Parrotfish is not likely to be undergoing overfishing in 2022.
+All of the configurations resulted in inconclusive results, evidenced by high correlations between the scale of the average recruitment and the fishing mortality rate of the initial equilibrium state. Likelihood profile diagnostics further indicate that the configurations explored could not reliably estimate the stock status. Thus, the overfished status of the St. Croix stoplight parrotfish stock remains unknown. However, the available data do not indicate a decline in the abundance index concurrent with a decrease in landings and show constant trends in size composition quarantines. These findings suggest that the St. Croix stoplight parrotfish is not likely to be undergoing overfishing in 2022.
 
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
