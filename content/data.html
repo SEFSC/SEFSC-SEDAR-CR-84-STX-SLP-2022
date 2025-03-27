@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Available Data – SEDAR 84</title>
+<title>3&nbsp; Data informed modeling configurations – SEDAR 84</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,7 +101,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/data.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Available Data</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/data.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data informed modeling configurations</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -171,7 +171,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/data.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Available Data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data informed modeling configurations</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -190,12 +190,24 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#commercial-dive-fleet" id="toc-commercial-dive-fleet" class="nav-link active" data-scroll-target="#commercial-dive-fleet"><span class="header-section-number">3.1</span> Commercial Dive Fleet</a>
+  <li><a href="#sec-data-fleet" id="toc-sec-data-fleet" class="nav-link active" data-scroll-target="#sec-data-fleet"><span class="header-section-number">3.1</span> Commercial Dive Fleet</a>
   <ul class="collapse">
-  <li><a href="#catch-data" id="toc-catch-data" class="nav-link" data-scroll-target="#catch-data"><span class="header-section-number">3.1.1</span> Catch Data</a></li>
-  <li><a href="#size-composition-data" id="toc-size-composition-data" class="nav-link" data-scroll-target="#size-composition-data"><span class="header-section-number">3.1.2</span> Size Composition Data</a></li>
+  <li><a href="#sec-data-fleet-catch" id="toc-sec-data-fleet-catch" class="nav-link" data-scroll-target="#sec-data-fleet-catch"><span class="header-section-number">3.1.1</span> Catch Data</a></li>
+  <li><a href="#sec-data-fleet-size" id="toc-sec-data-fleet-size" class="nav-link" data-scroll-target="#sec-data-fleet-size"><span class="header-section-number">3.1.2</span> Size Composition Data</a></li>
   </ul></li>
-  <li><a href="#life-history" id="toc-life-history" class="nav-link" data-scroll-target="#life-history"><span class="header-section-number">3.2</span> Life History</a></li>
+  <li><a href="#sec-data-survey" id="toc-sec-data-survey" class="nav-link" data-scroll-target="#sec-data-survey"><span class="header-section-number">3.2</span> Survey Data</a>
+  <ul class="collapse">
+  <li><a href="#sec-data-survey-index" id="toc-sec-data-survey-index" class="nav-link" data-scroll-target="#sec-data-survey-index"><span class="header-section-number">3.2.1</span> Index of abundance</a></li>
+  <li><a href="#sec-data-survey-size" id="toc-sec-data-survey-size" class="nav-link" data-scroll-target="#sec-data-survey-size"><span class="header-section-number">3.2.2</span> Size Composition Data</a></li>
+  </ul></li>
+  <li><a href="#sec-data-biology" id="toc-sec-data-biology" class="nav-link" data-scroll-target="#sec-data-biology"><span class="header-section-number">3.3</span> Life History Data</a>
+  <ul class="collapse">
+  <li><a href="#sec-methods-growth" id="toc-sec-methods-growth" class="nav-link" data-scroll-target="#sec-methods-growth"><span class="header-section-number">3.3.1</span> Growth</a></li>
+  <li><a href="#sec-methods-morpho" id="toc-sec-methods-morpho" class="nav-link" data-scroll-target="#sec-methods-morpho"><span class="header-section-number">3.3.2</span> Morphometric Conversion</a></li>
+  <li><a href="#sec-methods-m" id="toc-sec-methods-m" class="nav-link" data-scroll-target="#sec-methods-m"><span class="header-section-number">3.3.3</span> Natural Mortality</a></li>
+  <li><a href="#sec-methods-repro" id="toc-sec-methods-repro" class="nav-link" data-scroll-target="#sec-methods-repro"><span class="header-section-number">3.3.4</span> Maturity, Fecundity, and Hermaphroditism</a></li>
+  <li><a href="#sec-methods-sr" id="toc-sec-methods-sr" class="nav-link" data-scroll-target="#sec-methods-sr"><span class="header-section-number">3.3.5</span> Stock Recruitment</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STX-SLP-2022/edit/main/content/data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STX-SLP-2022/blob/main/content/data.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STX-SLP-2022/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -204,7 +216,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Available Data</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data informed modeling configurations</span></h1>
 </div>
 
 
@@ -221,39 +233,102 @@ div.csl-indent {
 </header>
 
 
-<p>The data available for use in the current assessment are summarized in the SEDAR 84 US Caribbean Stoplight Parrotfish St.&nbsp;Croix Data Workshop Report <span class="citation" data-cites="sedar2024">(<a href="references.html#ref-sedar2024" role="doc-biblioref">SEDAR</a>)</span>. Additional details are provided across the respective references identified below:</p>
+<p>The data considered for use in the current assessment are summarized in the SEDAR 84 US Caribbean Stoplight Parrotfish St.&nbsp;Croix Data Workshop Report <span class="citation" data-cites="sedar2024">(<a href="references.html#ref-sedar2024" role="doc-biblioref">SEDAR</a>)</span>. This section documents the five types of data inputs and their associated model configurations explored using Stock Synthesis.</p>
+<p>Additional details are provided across the respective references identified below:</p>
 <ol type="1">
 <li>Landings from self-reported commercial fisher logbook data <span class="citation" data-cites="martínezrivera2024">(<a href="references.html#ref-martínezrivera2024" role="doc-biblioref">Martínez Rivera et al.</a>)</span></li>
-<li>Length compositions from shore-based port-sampling of commercial landings <span class="citation" data-cites="godwin2024">(<a href="references.html#ref-godwin2024" role="doc-biblioref">Godwin et al.</a>)</span></li>
+<li>Length compositions from shore-based port sampling of commercial landings <span class="citation" data-cites="godwin2024">(<a href="references.html#ref-godwin2024" role="doc-biblioref">Godwin et al.</a>)</span></li>
 <li>Length compositions from a fishery-independent stratified random sampling survey of reef fish <span class="citation" data-cites="grove2024">(<a href="references.html#ref-grove2024" role="doc-biblioref">Grove et al.</a>)</span></li>
 <li>Index of abundance from a fishery-independent stratified random sampling survey of reef fish <span class="citation" data-cites="grove2024">(<a href="references.html#ref-grove2024" role="doc-biblioref">Grove et al.</a>)</span></li>
 <li>Life history information from otolith analysis and gonad histology <span class="citation" data-cites="riverahernández2024">(<a href="references.html#ref-riverahernández2024" role="doc-biblioref">Rivera Hernández and Shervette</a>)</span></li>
 </ol>
-<p><strong>Based on the available data, the assessment was configured with one diving fleet and one fishery-independent survey.</strong></p>
-<p>The remainder of this section documents the input data, assumptions, configurations, and equations explored using Stock Synthesis based on the available data.</p>
-<section id="commercial-dive-fleet" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="commercial-dive-fleet"><span class="header-section-number">3.1</span> Commercial Dive Fleet</h2>
-<section id="catch-data" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="catch-data"><span class="header-section-number">3.1.1</span> Catch Data</h3>
-<p>The catch inputs for diving fleet came from the Caribbean Commercial Logbook data.</p>
-<p>The years of the available species-specific logbook data determined the start and end years of the Stock Synthesis models. They were 2012 and 2022, respectively. Based on discussions at the data workshop characterizing the diver fleet, the assessment assumed no discarding nor discard mortality associated with the dive fleet. - The catch was treated as if it as the available</p>
+<p><strong>Based on the available data, the assessment was configured with one areas, one dive fleet and one fishery-independent survey.</strong></p>
+<section id="sec-data-fleet" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-data-fleet"><span class="header-section-number">3.1</span> Commercial Dive Fleet</h2>
+<section id="sec-data-fleet-catch" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="sec-data-fleet-catch"><span class="header-section-number">3.1.1</span> Catch Data</h3>
+<p>The catch data for the dive fleet came from the Caribbean Commercial Logbook program <span class="citation" data-cites="martínezrivera2024">(<a href="references.html#ref-martínezrivera2024" role="doc-biblioref">Martínez Rivera et al.</a>)</span>. <strong>Catch was input as biomass (in metric tons) and was treated as if it occurred over entire fishing season, e.g.&nbsp;the fishing year.</strong> The years of the available species-specific self-reported commercial fisher logbook data determined the start and end years of the Stock Synthesis models. <strong>The start and end years of the model were 2012 and 2022, respectively.</strong> Based on discussions at the data workshop characterizing the diver fleet, <strong>the assessment assumed no discarding nor discard mortality associated with the dive fleet</strong>.</p>
+<p><strong>The input standard error for the landings was set to 0.01.</strong> When implemented with few data inputs, Stock synthesis will inherently nearly exactly fit the annual landings time series, regardless of the input CV.</p>
+<p>It is important to note that the stock was not at an unexploited equilibrium at the start year of the available time series. The fishery had been ongoing for decades, and the total fishing effort in St.&nbsp;Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the dive fleet, and a corresponding initial equilibrium catch was input. In recent assessments, the initial equilibrium catch is initiated as the geometric mean of the first three years of available catches. Because of the known decline in effort preceding the start year of the assessment webinars, <strong>the initial equilibrium catch was 30 metric tons</strong>, a little over twice the geometric mean of the catches from 2012-2014.</p>
+<p>Alternative model configurations associated with the commercial dive fleet data are described later in this report. They included: - higher CV of 0.3 was explored via sensitivity analysis - Initial equilibrium catch was explored via likelihood profiling</p>
 </section>
-<section id="size-composition-data" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="size-composition-data"><span class="header-section-number">3.1.2</span> Size Composition Data</h3>
-<p>Corresponding gear-specific size compositions came from the Trip Interview Program. Since multiple fish can be obtained from a single sampled trip, the lengths are not independent observations. Therefore, the relative model weighting of the dive fleet length compositions was based on the number of trips sampled.</p>
-<p><strong>Due to low sample sizes, the fishery-dependent commercial dive fleet length composition data were collapsed across all years and used in the model to inform the fleet selectivity.</strong></p>
-<p>Additional fleet-fleet inputs required for the Stock Synthesis model included an input standard error for the landings and an equilibrium catch value. Since the data-limited implementation of Stock Synthesis is conditioned on landings, the input standard error for the landings was set to 0.01. Although the data-limited implementation of SS3 will inherently nearly exactly fit the annual landings time series, a higher CV of 0.3 was explored via sensitivity analysis (see <span class="quarto-unresolved-ref">?sec-methods-sensitivity</span>).</p>
-<p>It is important to note that the stock was not at an unexploited equilibrium at the start year of the available time series. The fishery had been ongoing for decades, and the total fishing effort in St.&nbsp;Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the Commercial undefined fishery, and an initial equilibrium catch was input as 30 metric tons, a little over twice the geometric mean of the catches from 2012-2014. The initial equilibrium catch was explored via likelihood profiling.</p>
-<p>One fishery-independent survey was modeled with an abundance index and associated length compositions for 2012, 2015, 2017, 2019, and 2021. The data were from the National Coral Reef Monitoring Program (NCRMP) Reef Visual Census <span class="citation" data-cites="grove2024">(<a href="references.html#ref-grove2024" role="doc-biblioref">Grove et al.</a>)</span>. The relative model weighting of the NCRMP survey length compositions across years was based on the number of paired dives.</p>
-<p>Although the three most recent years of the NCRMP survey provided counts by individual lengths measured to the nearest centimeter, the data in St.&nbsp;Croix before 2017 were collected in 5-centimeter bins. Therefore, the length data inputs for both the dive fleet and the three most recent years of the NCRMP survey 1-centimeter length measurements were binned to match the NCRMP 2012 and 2015 5-centimeter bins accordingly. Further, due to the large proportion of small fish observed in the NCRMP survey, the smallest two bins, [1-6) and [6-11), were collapsed into a single bin [1-11). Note that SS3 allows the length bins of the data inputs to be larger than the bins used in the population model. Although the size bins of all the length data inputs were large (≥ 5 centimeters), the model’s simulated population bin size was 1-centimeter bins, with a plus group for the largest bin, greater than or equal to 41 centimeters fork length. Although the population is modeled at a higher resolution concerning bin size, the likelihood function, which aims to match the observed data inputs and the simulated population estimates, operates at the resolution of the data inputs (≥5 centimeters).</p>
+<section id="sec-data-fleet-size" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="sec-data-fleet-size"><span class="header-section-number">3.1.2</span> Size Composition Data</h3>
+<p>Gear-specific annual length frequencies came from the commercial shore-based port-sampling Trip Interview Program <span class="citation" data-cites="godwin2024">(<a href="references.html#ref-godwin2024" role="doc-biblioref">Godwin et al.</a>)</span>. These data were used to characterize the size-based selectivity pattern for the dive fleet. Since multiple fish can be obtained from a single sampled trip, the lengths are not independent observations. <strong>The relative model weighting of the dive fleet length compositions was based on the number of trips sampled</strong>.</p>
+<p><strong>Due to low sample sizes, the fishery-dependent commercial dive fleet length composition data were collapsed across all years</strong></p>
+<p><strong>The length compositions of the commercial dive fleet were assumed to be representative of total catch.</strong> Although a federal minimum size limit exists, it does not apply in USVI territorial waters extending from land to 3 nautical miles offshore. Discussions emphasized that no regulations conclusively affecting retention were in place.</p>
+<p><strong>A double normal function was used to model the the relative vulnerability of capture by length for the dive fleet.</strong> However, only two parameters were estimated to describe a logistic selectivity for the commercial dive fleet. The double normal function allows for domed or logistic selectivity and combines two normal distributions; the first describes the ascending limb, while the second describes the descending limb. Domed selectivity was not explored for St.&nbsp;Croix Stoplight Parrotfish. However, achieving the logistic shape with the double normal Stock Synthesis pattern facilitated model configuration. The two parameters used to achieve a logistic selectivity shape were the size associated with peak selectivity and the width of the ascending limb.</p>
 </section>
 </section>
-<section id="life-history" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="life-history"><span class="header-section-number">3.2</span> Life History</h2>
+<section id="sec-data-survey" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-data-survey"><span class="header-section-number">3.2</span> Survey Data</h2>
+<section id="sec-data-survey-index" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="sec-data-survey-index"><span class="header-section-number">3.2.1</span> Index of abundance</h3>
+<p>Annual abundance observations and associated standard errors were from the National Coral Reef Monitoring Program Reef Visual Census <span class="citation" data-cites="grove2024">(<a href="references.html#ref-grove2024" role="doc-biblioref">Grove et al.</a>)</span>. In stock syntheses, this was configured as a index in numbers with a lognormal error distribution. The associated length composition data, described in the following subsection, suggested that the index reflected the abundance of juveniles and adults.</p>
+</section>
+<section id="sec-data-survey-size" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="sec-data-survey-size"><span class="header-section-number">3.2.2</span> Size Composition Data</h3>
+<p>Since multiple fish can be observed from a single dive, lengths are not independent observations. <strong>The relative model weighting of the National Coral Reef Monitoring Program survey length compositions across years was based on the number of paired dives.</strong></p>
+<p>The three most recent years of the National Coral Reef Monitoring Program survey in St.&nbsp;Croix provided counts by individual lengths measured to the nearest centimeter. However, prior to 2017 the length observations were collected in 5-centimeter bins. <strong>The length data inputs for both the dive fleet and the three years of the survey with 1-centimeter length measurements were binned to match the survey’s 2012 and 2015 5-centimeter bins.</strong></p>
+<p>Note that SS3 allows the length bins of the data inputs to be larger than the bins used in the population model. <strong>Although the size bins of all the length data inputs were large (≥ 5 centimeters), the model’s simulated population bin size was 1-centimeter bins, with a plus group for the largest bin, greater than or equal to 41 centimeters fork length.</strong> Although the population is modeled at a higher resolution concerning bin size, the likelihood function, which aims to match the observed data inputs and the simulated population estimates, operates at the resolution of the data inputs.</p>
+<p>A large proportion of small fish were observed in the National Coral Reef Monitoring Program survey. <strong>The smallest two bins, [1-6) and [6-11), were collapsed into a single bin [1-11).</strong></p>
+<p>The length compositions provided reasonable support that younger and older fish were available to the National Coral Reef Monitoring Program survey. <strong>Selectivity for the NCRMP survey was fixed at 1 for all sizes.</strong></p>
+<p>Models were initially configured in Stock Synthesis with length compositions aggregated across the available years for each source of length data and proceeded stepwise from the simplest configuration to those of moderate complexity. The steps included the inclusion of annual fishery-independent length compositions. The sequential model configurations are described later in this report.</p>
+</section>
+</section>
+<section id="sec-data-biology" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-data-biology"><span class="header-section-number">3.3</span> Life History Data</h2>
 <p>The life history data used in the assessment included longevity-informed natural mortality, growth (length-age), length-weight, maturity, and sex ratios obtained from 1,801 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 <span class="citation" data-cites="riverahernández2024">(<a href="references.html#ref-riverahernández2024" role="doc-biblioref">Rivera Hernández and Shervette</a>)</span>.</p>
+<p>Hermaphroditism directly influences reproductive potential and stock sustainability, making it essential to model sex transitions appropriately.</p>
+<p>Assuming a single pulse of annual recruitment oversimplifies the population structure by failing to account for the continuous presence of multiple size classes in the stock. Continuous recruitment modeling enables the assessment to recognize that fish born within the same calendar year can reach vulnerable sizes at different times, affecting catch dynamics and stock projections.</p>
+<p>Alternative model configurations associated with the life history data are described later in this report. They included:</p>
+<ul>
+<li>models configurations were explored with the estimation of recruitment deviations</li>
+<li>higher CV of 0.3 was explored via sensitivity analysis</li>
+</ul>
+<section id="sec-methods-growth" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="sec-methods-growth"><span class="header-section-number">3.3.1</span> Growth</h3>
+<p>The SS3 growth formulation requires five parameters:</p>
+<ul>
+<li>Length at the youngest age</li>
+<li>Length at the maximum age</li>
+<li>Von Bertalanffy growth parameter (K)</li>
+<li>Coefficient of variation at the youngest age</li>
+<li>Coefficient of variation at the maximum age</li>
+</ul>
+<p>Parameter estimates for K and the length at maximum age (L∞) were based on samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 <span class="citation" data-cites="riverahernández2024">(<a href="references.html#ref-riverahernández2024" role="doc-biblioref">Rivera Hernández and Shervette</a>)</span>.</p>
+<p><strong>The estimated size at age zero from otolith analysis by <span class="citation" data-cites="riverahernández2024">Rivera Hernández and Shervette</span> was modified in Stock Synthesis so that the size of the youngest age, age 0, was set to zero.</strong> Without this modification the model would be unable to fit to the substantial amounts of small (&lt;10cm) stoplight parrot observed in the survey data.</p>
+<p><strong>Coefficients of variation for both younger and older ages were initially set to 0.15.</strong> Ideally, growth coefficients of variation should be derived from observed length-at-age data, however the assumed values are consistent with species of moderate growth variability. Growth CV can be tested in sensitivity runs, especially if overly constrained values lead to poor model fits.</p>
+<p>Alternative model configurations associated with the growth data are described later in this report. They included: - higher growth CVs of 0.25 for younger ages was explored via sensitivity analysis - higher growth CVs of 0.25 for both younger and older ages was explored via sensitivity analysis</p>
+</section>
+<section id="sec-methods-morpho" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="sec-methods-morpho"><span class="header-section-number">3.3.2</span> Morphometric Conversion</h3>
+<p>The relationship between weight in grams and length in millimeters provided by <span class="citation" data-cites="riverahernández2024">Rivera Hernández and Shervette</span> was converted to weight in grams and length in centimeters and used as a fixed model input. The length-weight relationship was W = 3.18 x 10^-5 L^ 2.9, with weight in kilograms and length in centimeters.</p>
+</section>
+<section id="sec-methods-m" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="sec-methods-m"><span class="header-section-number">3.3.3</span> Natural Mortality</h3>
+<p>The Natural Mortality Tool and the SEDAR 84 life history values were used to obtain estimates of natural mortality <span class="citation" data-cites="cope2022">(<a href="references.html#ref-cope2022" role="doc-biblioref">Cope and Hamel</a>)</span>. A value of 0.3 was used in initial model runs based on <span class="citation" data-cites="then2014">Then et al.</span></p>
+</section>
+<section id="sec-methods-repro" class="level3" data-number="3.3.4">
+<h3 data-number="3.3.4" class="anchored" data-anchor-id="sec-methods-repro"><span class="header-section-number">3.3.4</span> Maturity, Fecundity, and Hermaphroditism</h3>
+<p>Maturity was modeled as a logistic function. Parameter estimates for maturity were based on 1,801 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 <span class="citation" data-cites="riverahernández2024">(<a href="references.html#ref-riverahernández2024" role="doc-biblioref">Rivera Hernández and Shervette</a>)</span>. The fecundity of Stoplight Parrotfish was estimated with a proxy (body weight * maturity at age).</p>
+<p>Hermaphroditism was parameterized into the SS3 assessment framework in two ways. The primary method used an average age of transition, an associated standard deviation, and a maximum transition rate input as fixed parameters in a two-sex model. Although this approach allows explicitly modeling numbers by sex and age over time, this approach could not capture the early age at transition and the overlap of both sexes directly observed across the range of ages studied by <span class="citation" data-cites="riverahernández2024">Rivera Hernández and Shervette</span>. A second method for parameterizing hermaphroditism was explored as a sensitivity analysis (see <span class="quarto-unresolved-ref">?sec-methods-sensitivity</span>). It involved using a female-only model and accounting for sex transition to males as a reduction in fecundity. A fecundity-at-age vector derived from a logistical fit to the sex-at-age data was multiplied by maturity-at-age and fecundity-at-age. A caveat of using a single-sex model is that the exclusion of males does not allow for any potential sperm limitation.</p>
+</section>
+<section id="sec-methods-sr" class="level3" data-number="3.3.5">
+<h3 data-number="3.3.5" class="anchored" data-anchor-id="sec-methods-sr"><span class="header-section-number">3.3.5</span> Stock Recruitment</h3>
+<p>A Beverton-Holt stock-recruit function was used to parametrize the relationship between spawning output and resulting recruitment of age-0 fish. The stock-recruit function requires three parameters:</p>
+<ul>
+<li>Steepness (h) characterizes the initial slope of the ascending limb (i.e., the fraction of recruits produced at 20% of the unfished spawning biomass)</li>
+<li>The virgin recruitment (R0; estimated in log space) represents the asymptote or unfished recruitment levels.</li>
+<li>The variance term (sigma R) is the standard deviation of the log of recruitment (it both penalizes deviations from the spawner-recruit curve and defines the offset between the arithmetic mean spawner-recruit curve and the expected geometric mean from which the deviations are calculated).</li>
+</ul>
+<p>Only the virgin recruitment (R0) was estimated. Sigma R and steepness were fixed at 0.7 and 0.99, respectively. The primary assumption for steepness was that this stock is not a closed population, so recruitment may not be strongly tied to the local spawning stock biomass. Annual deviations from the stock-recruit function were not estimated.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-cope2022" class="csl-entry" role="listitem">
+Cope, Jason, and Owen S. Hamel. <span>“Upgrading from M Version 0.2: An Application-Based Method for Practical Estimation, Evaluation and Uncertainty Characterization of Natural Mortality.”</span> <em>Fisheries Research</em>, vol. 256, Dec. 2022, p. 106493, <a href="https://doi.org/10.1016/j.fishres.2022.106493">https://doi.org/10.1016/j.fishres.2022.106493</a>.
+</div>
 <div id="ref-godwin2024" class="csl-entry" role="listitem">
 Godwin, Katherine, et al. <em>SEDAR 84 Trip Interview Program (TIP) Size Composition Analysis of Stoplight Parrotfish (Sparisoma Viride) in St. Croix, u.s. Caribbean, 1983-2022</em>. 2024, p. 10, <a href="https://sedarweb.org/documents/sedar-84-dw-11-sedar-84-trip-interview-program-tip-size-composition-analysis-of-stoplight-parrotfish-sparisoma-viride-in-st-croix-u-s-caribbean-1983-2022/">https://sedarweb.org/documents/sedar-84-dw-11-sedar-84-trip-interview-program-tip-size-composition-analysis-of-stoplight-parrotfish-sparisoma-viride-in-st-croix-u-s-caribbean-1983-2022/</a>.
 </div>
@@ -269,7 +344,11 @@ Rivera Hernández, Jesús M., and Virginia Shervette. <em>Report on the Status o
 <div id="ref-sedar2024" class="csl-entry" role="listitem">
 SEDAR. <em>SEDAR 84 US Caribbean Stoplight Parrotfish St. Croix Data Workshop Report</em>. 2024, <a href="https://sedarweb.org/documents/sedar-84-us-caribbean-stoplight-parrotfish-st-croix-data-workshop-report/">https://sedarweb.org/documents/sedar-84-us-caribbean-stoplight-parrotfish-st-croix-data-workshop-report/</a>.
 </div>
+<div id="ref-then2014" class="csl-entry" role="listitem">
+Then, Amy Y., et al. <span>“Evaluating the Predictive Performance of Empirical Estimators of Natural Mortality Rate Using Information on over 200 Fish Species.”</span> <em>ICES Journal of Marine Science</em>, vol. 72, no. 1, Aug. 2014, pp. 82–92, <a href="https://doi.org/10.1093/icesjms/fsu136">https://doi.org/10.1093/icesjms/fsu136</a>.
 </div>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
