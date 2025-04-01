@@ -19,6 +19,7 @@ book:
     - content/background.qmd
     - content/ss3.qmd
     - content/data.qmd
+    - content/methods.qmd
     - content/references.qmd
 
   page-footer:
@@ -40,7 +41,7 @@ book:
     collapse-level: 1
 
 bibliography: [content/references.bib]
-csl: modern-language-association.csl
+csl: apa.csl
 
 execute:
   echo: false

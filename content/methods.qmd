@@ -1,0 +1,34 @@
+---
+title: "Model Development"
+---
+
+Stock Synthesis models were initially configured using an annual catch time series and compositions that were aggregated across the available years for each source of length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity. Those sequential steps included the inclusion of the index of abundance and annual fishery-independent length compositions. 
+
+## Model Diagnostics {#sec-methods-diagnostics}
+
+### Residual Analysis {#sec-methods-residuals}
+
+The primary approach to address performance was a residual analysis of model fit to each data set (e.g., catch, length compositions, indices). Any temporal trend in model residuals or disproportionately high residual values can indicate model misspecification and poor performance. Ideally, residuals are randomly distributed, conform to the assumed error structure for that data source, and are not of extreme magnitude. Any extreme positive or negative residual patterns indicate poor model performance and potential unaccounted-for process or observation error.
+
+### Correlation Analysis {#sec-methods-corr}
+
+High correlation among parameters can lead to flat likelihood response surfaces and poor model stability. By performing a correlation analysis, modeling assumptions that lead to inadequate configurations can be identified. Because of the highly parameterized nature of stock assessment models, some parameters are expected to be correlated (e.g., stock recruit parameters). However, many strongly correlated parameters suggest reconsidering modeling assumptions and parameterization.
+
+### Jitter Analysis {#sec-methods-jitter}
+
+Jitter analysis is a relatively simple method that can be used to assess model stability and to determine whether the search algorithm has found a global, as opposed to local, solution. The premise is that all starting values are randomly altered (or ‘jittered’) by an input constant value, and the model is rerun from the new starting values. If the resulting population trajectories across many runs converge to the same solution, this provides reasonable support that a global minimum has been obtained. This process is not fault-proof; no guarantee can ever be made that the ‘true’ solution has been found or that the model does not contain misspecification. However, if the jitter analysis results are consistent, it provides additional support that the model is performing well and has come to a stable solution. For this assessment, a jitter value 0.2 was applied to the starting values, and 30 runs were completed. The jitter value defines a uniform distribution in cumulative normal space to generate new initial parameter values [@methot2020].
+
+### Retrospective Analysis {#sec-methods-retro}
+
+A retrospective analysis is a helpful approach for addressing the consistency of terminal year model estimates (e.g., SSB, Recruits, Fs) and is often considered a sensitivity exploration of impacts on key parameters from changes in data. The analysis sequentially removes a year of data at a time and reruns the model. Suppose the resulting estimates of derived quantities such as SSB or recruitment differ significantly. In such a case, serial over- or underestimation of important quantities can indicate that the model has some unidentified process error and could require reassessing model assumptions. It is expected that removing data will lead to slight differences between the new terminal year estimates and the estimates for that year in the model with the complete data. Estimates in years before the terminal year may have increasingly reliable information on cohort strength. Therefore, slight differences are usually expected between model runs as more years of size composition data are sequentially removed. Ideally, the difference in estimates will be slight and more or less randomly distributed above and below the estimates from the model with the complete data sets. A five-year retrospective analysis was carried out.
+
+### Profile Likelihoods {#sec-methods-profiles}
+
+Profile likelihoods are used to examine the change in negative log-likelihood for each data source to address the stability of a given parameter estimate and to see how each data source influences the estimate. The analysis is performed by holding a given parameter at a constant value and rerunning the model. The model is run repeatedly over a range of reasonable parameter values. Ideally, the graph of change in likelihood values against parameter values will yield a well-defined minimum. When the profile plot shows conflicting signals or is flat across its range, the given parameter may be poorly estimated.
+
+Typically, profiling is carried out for key parameters, particularly those defining the stock-recruit relationship (steepness, virgin recruitment, and sigma R). Profiles were explored across initial equilibrium catch, steepness, and virgin recruitment (R0).
+
+### Sensitivity Runs {#sec-methods-sensitivity}
+
+Sensitivity analyses were considered to evaluate the impact on key derived quantities. Sensitivities included considering alternatives for the CV associated with catch, the method used to model hermaphroditism, and data weighting. Although the data-limited implementation of SS3 will inherently nearly exactly fit the annual landings, a higher CV of 0.3 was explored via sensitivity analysis. The second method for parameterizing hermaphroditism involved using a female-only model and accounting for sex transition to males as a reduction in fecundity. Lastly, the Dirichlet multinomial approach was used to reweigh the composition data. This method allows an internal estimation of sampling variance for each source of length composition data and adjusts the effective sample sizes [@methot2013].
+

@@ -1,0 +1,16 @@
+ Input Source , Input Type , Input , M , Method ,Citation
+ @choat2003 , Maximum age ,30,0.18, Hamel_Amax ,@hamel2022
+ SEDAR84-AP-01 , Maximum age ,20,0.27, Hamel_Amax ,@hamel2022
+ Meta-analysis , Scientific name , *Sparisoma viride* ,0.397, FishLife ,@thorson2019
+ @choat2003 , Maximum age ,12,0.45, Hamel_Amax ,@hamel2022
+ @choat2003 , Maximum age ,9,0.6, Hamel_Amax ,@hamel2022
+ SEDAR84-AP-01 , Growth (k) ,0.39,0.604, Hamel_k ,@hamel2015
+ SEDAR84-AP-01 , Growth (k) ,0.39,0.585, Jensen_k 1 ,@jensen1996
+ SEDAR84-AP-01 , Growth (k) ,0.39,0.624, Jensen_k 2 ,@jensen1997
+ SEDAR84-AP-01 ," Growth (L?, k) "," 33.2, 0.39 ",0.576, Then_VBGF ,@then2015
+ SEDAR84-AP-01 , Growth (k) ,0.33,0.512, Hamel_k ,@hamel2015
+ SEDAR84-AP-01 , Growth (k) ,0.33,0.495, Jensen_k 1 ,@jensen1996
+ SEDAR84-AP-01 , Growth (k) ,0.33,0.528, Jensen_k 2 ,@jensen1997
+ SEDAR84-AP-01 ," Growth (L?, k) "," 33.8, 0.33 ",0.573, Then_VBGF ,@then2015
+ SEDAR84-AP-01 , Age at 50% maturity ,1.6,1.03, Jensen_Amat ,@jensen1997
+ SEDAR84-AP-01 , Age at 50% maturity ,1.6,0.924, Ri_Ef_Amat ,@rikhter1976
