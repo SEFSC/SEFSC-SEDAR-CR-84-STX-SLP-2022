@@ -171,7 +171,13 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data informed modeling configurations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data-Informed Modeling Configurations</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Model Development</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -211,32 +217,32 @@ div.csl-indent {
 
 
 <p><strong>Stock Synthesis was the modeling approach applied in this assessment because of its compatibility with the available data and consistent with standard practices.</strong></p>
-<p>Stock Synthesis is a statistical catch-at-age model that uses a population model, an observation model, and an estimation model and applies a likelihood function in the estimation process <span class="citation" data-cites="methot2020">(<a href="references.html#ref-methot2020" role="doc-biblioref">Methot et al.</a>)</span>. Stock Synthesis, commonly referred to as SS3, has been applied extensively worldwide for stock assessment evaluations <span class="citation" data-cites="methot2013">(<a href="references.html#ref-methot2013" role="doc-biblioref">Methot and Wetzel</a>)</span>. It has also been used for previous data-limited and data-moderate SEDAR assessments, including the SEDAR 57 assessments and subsequent updates for Caribbean Spiny Lobster (Panulirus argus), and the SEDAR 80 assessments for Queen Triggerfish (Belistes vetula) <span class="citation" data-cites="sedar2019 sedar2022">(<a href="references.html#ref-sedar2019" role="doc-biblioref">SEDAR, <em>SEDAR 57 Stock Assessment Report u.s. Caribbean Spiny Lobster</em></a>; <a href="references.html#ref-sedar2022" role="doc-biblioref">SEDAR, <em>SEDAR 80 <span></span> US Caribbean Queen Triggerfish <span></span> Puerto Rico Final Stock Assessment Report</em></a>)</span>.</p>
-<p>The Stock Synthesis modeling framework is a compatible tool for SEDAR stock assessments in the U.S. Caribbean because it can accommodate a wide range of model complexities, from data-limited to highly detailed assessments <span class="citation" data-cites="cope2024">(<a href="references.html#ref-cope2024" role="doc-biblioref">Cope</a>)</span>. Stock Synthesis allows for the characterization of stock, fishing fleet, and survey dynamics through various parameters, which can be either fixed based on external data or estimated when sufficient assessment data are available. Additionally, it can incorporate complex biological dynamics, such as hermaphroditism and continuous recruitment, which are critical for accurately assessing St.&nbsp;Croix Stoplight Parrotfish.</p>
-<p>Finally, R packages such as r4ss and ss3diags facilitate critical evaluations of model reliability and model comparisons <span class="citation" data-cites="taylor2021 carvalho2021">(<a href="references.html#ref-taylor2021" role="doc-biblioref">Taylor et al.</a>; <a href="references.html#ref-carvalho2021" role="doc-biblioref">Carvalho et al.</a>)</span>. For example, R4SS provides visualization and diagnostic tools to summarize and interpret fit, convergence, and key output metrics. SS3diags focuses on retrospective analyses, hind-casting, and residual pattern evaluations. The integration of these tools allows rigorous uncertainty analysis, streamlined sensitivity analyses, and enhanced transparency in decision-making.</p>
+<p>Stock Synthesis is a statistical catch-at-age model that uses a population model, an observation model, and an estimation model and applies a likelihood function in the estimation process <span class="citation" data-cites="methot2020">(<a href="references.html#ref-methot2020" role="doc-biblioref">Methot et al., 2020</a>)</span>. Stock Synthesis, commonly referred to as SS3, has been applied extensively worldwide for stock assessment evaluations <span class="citation" data-cites="methot2013">(<a href="references.html#ref-methot2013" role="doc-biblioref">Methot &amp; Wetzel, 2013</a>)</span>. It has also been used for previous data-limited and data-moderate SEDAR assessments, including the SEDAR 57 assessments and subsequent updates for Caribbean Spiny Lobster (Panulirus argus), and the SEDAR 80 assessments for Queen Triggerfish (Belistes vetula) <span class="citation" data-cites="sedar2019 sedar2022">(<a href="references.html#ref-sedar2019" role="doc-biblioref">SEDAR, 2019</a>, <a href="references.html#ref-sedar2022" role="doc-biblioref">2022</a>)</span>.</p>
+<p>The Stock Synthesis modeling framework is a compatible tool for SEDAR stock assessments in the U.S. Caribbean because it can accommodate a wide range of model complexities, from data-limited to highly detailed assessments <span class="citation" data-cites="cope2024">(<a href="references.html#ref-cope2024" role="doc-biblioref">Cope, 2024</a>)</span>. Stock Synthesis allows for the characterization of stock, fishing fleet, and survey dynamics through various parameters, which can be either fixed based on external data or estimated when sufficient assessment data are available. Additionally, it can incorporate complex biological dynamics, such as hermaphroditism and continuous recruitment, which are critical for accurately assessing St.&nbsp;Croix Stoplight Parrotfish.</p>
+<p>Finally, R packages such as r4ss and ss3diags facilitate critical evaluations of model reliability and model comparisons <span class="citation" data-cites="taylor2021 carvalho2021">(<a href="references.html#ref-carvalho2021" role="doc-biblioref">Carvalho et al., 2021</a>; <a href="references.html#ref-taylor2021" role="doc-biblioref">Taylor et al., 2021</a>)</span>. For example, R4SS provides visualization and diagnostic tools to summarize and interpret fit, convergence, and key output metrics. SS3diags focuses on retrospective analyses, hind-casting, and residual pattern evaluations. The integration of these tools allows rigorous uncertainty analysis, streamlined sensitivity analyses, and enhanced transparency in decision-making.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-carvalho2021" class="csl-entry" role="listitem">
-Carvalho, Felipe, et al. <span>“A Cookbook for Using Model Diagnostics in Integrated Stock Assessments.”</span> <em>Fisheries Research</em>, vol. 240, Aug. 2021, p. 105959, <a href="https://doi.org/10.1016/j.fishres.2021.105959">https://doi.org/10.1016/j.fishres.2021.105959</a>.
+Carvalho, F., Winker, H., Courtney, D., Kapur, M., Kell, L., Cardinale, M., Schirripa, M., Kitakado, T., Yemane, D., Piner, K. R., Maunder, M. N., Taylor, I., Wetzel, C. R., Doering, K., Johnson, K. F., &amp; Methot, R. D. (2021). A cookbook for using model diagnostics in integrated stock assessments. <em>Fisheries Research</em>, <em>240</em>, 105959. <a href="https://doi.org/10.1016/j.fishres.2021.105959">https://doi.org/10.1016/j.fishres.2021.105959</a>
 </div>
 <div id="ref-cope2024" class="csl-entry" role="listitem">
-Cope, Jason. <em>Stock Assessment Continuum Tool</em>. 2024, <a href="https://github.com/shcaba/SS-DL-tool">https://github.com/shcaba/SS-DL-tool</a>.
-</div>
-<div id="ref-methot2020" class="csl-entry" role="listitem">
-Methot, Richard D., et al. <span>“Stock Synthesis User Manual : Version 3.30.15.”</span> <em>Northwest Fisheries Science Center (U.S.)</em>, 2020, <a href="https://doi.org/10.25923/5WPN-QT71">https://doi.org/10.25923/5WPN-QT71</a>.
+Cope, J. (2024). <em>Stock assessment continuum tool</em>. <a href="https://github.com/shcaba/SS-DL-tool">https://github.com/shcaba/SS-DL-tool</a>
 </div>
 <div id="ref-methot2013" class="csl-entry" role="listitem">
-Methot, Richard D., and Chantell R. Wetzel. <span>“Stock Synthesis: A Biological and Statistical Framework for Fish Stock Assessment and Fishery Management.”</span> <em>Fisheries Research</em>, vol. 142, May 2013, pp. 86–99, <a href="https://doi.org/10.1016/j.fishres.2012.10.012">https://doi.org/10.1016/j.fishres.2012.10.012</a>.
+Methot, R. D., &amp; Wetzel, C. R. (2013). Stock synthesis: A biological and statistical framework for fish stock assessment and fishery management. <em>Fisheries Research</em>, <em>142</em>, 86–99. <a href="https://doi.org/10.1016/j.fishres.2012.10.012">https://doi.org/10.1016/j.fishres.2012.10.012</a>
+</div>
+<div id="ref-methot2020" class="csl-entry" role="listitem">
+Methot, R. D., Wetzel, C. R., Taylor, I. G., &amp; Doering, K. (2020). Stock synthesis user manual : Version 3.30.15. <em>Northwest Fisheries Science Center (U.S.)</em>. <a href="https://doi.org/10.25923/5WPN-QT71">https://doi.org/10.25923/5WPN-QT71</a>
 </div>
 <div id="ref-sedar2019" class="csl-entry" role="listitem">
-SEDAR. <em>SEDAR 57 Stock Assessment Report u.s. Caribbean Spiny Lobster</em>. 2019, p. 232, <a href="http://sedarweb.org/sedar-57">http://sedarweb.org/sedar-57</a>.
+SEDAR. (2019). <em>SEDAR 57 stock assessment report u.s. Caribbean spiny lobster</em> (p. 232). <a href="http://sedarweb.org/sedar-57">http://sedarweb.org/sedar-57</a>
 </div>
 <div id="ref-sedar2022" class="csl-entry" role="listitem">
----. <em>SEDAR 80 <span></span> US Caribbean Queen Triggerfish <span></span> Puerto Rico Final Stock Assessment Report</em>. July 2022, <a href="https://sedarweb.org/documents/sedar-80-us-caribbean-queen-triggerfish-puerto-rico-final-stock-assessment-report/">https://sedarweb.org/documents/sedar-80-us-caribbean-queen-triggerfish-puerto-rico-final-stock-assessment-report/</a>.
+SEDAR. (2022). <em>SEDAR 80 <span></span> US caribbean queen triggerfish <span></span> puerto rico final stock assessment report</em>. <a href="https://sedarweb.org/documents/sedar-80-us-caribbean-queen-triggerfish-puerto-rico-final-stock-assessment-report/">https://sedarweb.org/documents/sedar-80-us-caribbean-queen-triggerfish-puerto-rico-final-stock-assessment-report/</a>
 </div>
 <div id="ref-taylor2021" class="csl-entry" role="listitem">
-Taylor, Ian G., et al. <span>“Beyond Visualizing Catch-at-Age Models: Lessons Learned from the R4ss Package about Software to Support Stock Assessments.”</span> <em>Fisheries Research</em>, vol. 239, July 2021, p. 105924, <a href="https://doi.org/10.1016/j.fishres.2021.105924">https://doi.org/10.1016/j.fishres.2021.105924</a>.
+Taylor, I. G., Doering, K. L., Johnson, K. F., Wetzel, C. R., &amp; Stewart, I. J. (2021). Beyond visualizing catch-at-age models: Lessons learned from the r4ss package about software to support stock assessments. <em>Fisheries Research</em>, <em>239</em>, 105924. <a href="https://doi.org/10.1016/j.fishres.2021.105924">https://doi.org/10.1016/j.fishres.2021.105924</a>
 </div>
 </div>
 
@@ -665,8 +671,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/data.html" class="pagination-link" aria-label="Data informed modeling configurations">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data informed modeling configurations</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../content/data.html" class="pagination-link" aria-label="Data-Informed Modeling Configurations">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data-Informed Modeling Configurations</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
