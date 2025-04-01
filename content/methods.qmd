@@ -13,7 +13,7 @@ The simplest configurations utilized aggregated length compositions by implement
 The data-moderate complexity considerations explored in SEDAR 84 included incorporating (a) indices, (b) annual fishery-independent size composition, (c) annual fishery-dependent size composition, (d) recruitment deviations, (e) dome-shaped selectivity, and (f) timeblocks. Not all of these considerations were explored for St. Coix Stoplight Parrotfish. However, the process sets us a draft reusable workflow across species and islands of model development with sequential model steps that take into account methodological and intentional stepwise model explorations combining across individual complexity considerations.
 
 | Model Development Process | Code | Sequential modeling steps |
-|---------------------------------|:---:|---------------------------------|
+|---------------------------|:--:|-----------------------------|
 | Data-limited configuration | null | catch and super-year size data |
 | Data-moderate consideration | a | index |
 | Data-moderate consideration | b | annual fishery-independent size data |
@@ -35,7 +35,7 @@ The data-moderate complexity considerations explored in SEDAR 84 included incorp
 | Versions combining complexity steps | v12 | a + c + f |
 | Versions combining complexity steps | v13 | a + d + e |
 | Versions combining complexity steps | v14 | a + d + f |
-| Versions combining complexity steps | v15 |  |
+| Versions combining complexity steps | v15 | a + e + f |
 | Versions combining complexity steps | v16 | a + b + c + d |
 | Versions combining complexity steps | v17 | a + b + c + e |
 | Versions combining complexity steps | v18 | a + b + c + f |
