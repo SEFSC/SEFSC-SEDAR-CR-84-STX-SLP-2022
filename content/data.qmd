@@ -1,10 +1,10 @@
 ---
-title: "Data informed modeling configurations"
+title: "Data-Informed Modeling Configurations"
 ---
 
-The data considered for use in the current assessment are summarized in the SEDAR 84 US Caribbean Stoplight Parrotfish St. Croix Data Workshop Report [@sedar2024]. This section documents the five types of data inputs and their associated model configurations explored using Stock Synthesis.
+The data considered for use in the current assessment are documented in the SEDAR 84 US Caribbean Stoplight Parrotfish St. Croix Data Workshop Report [@sedar2024]. This section summarizes those data and their associated model configurations explored using Stock Synthesis.
 
-Additional details are provided across the respective references identified below:
+Additional details for each data input are provided across the respective references identified below:
 
 1.  Landings from self-reported commercial fisher logbook data [@martínezrivera2024]
 2.  Length compositions from shore-based port sampling of commercial landings [@godwin2024]
@@ -12,20 +12,23 @@ Additional details are provided across the respective references identified belo
 4.  Index of abundance from a fishery-independent stratified random sampling survey of reef fish [@grove2024]
 5.  Life history information from otolith analysis and gonad histology [@riverahernández2024]
 
-**Based on the available data, the assessment was configured with one areas, one dive fleet and one fishery-independent survey.**
+**Based on the available data, the assessment was configured with one area, one season, one fleet, and one fishery-independent survey.**
 
 ## Commercial Dive Fleet {#sec-data-fleet}
 
 ### Catch Data {#sec-data-fleet-catch}
 
-The catch data for the dive fleet came from the Caribbean Commercial Logbook program [@martínezrivera2024]. **Catch was input as biomass (in metric tons) and was treated as if it occurred over entire fishing season, e.g. the fishing year.** The years of the available species-specific self-reported commercial fisher logbook data determined the start and end years of the Stock Synthesis models. **The start and end years of the model were 2012 and 2022, respectively.** Based on discussions at the data workshop characterizing the diver fleet, **the assessment assumed no discarding nor discard mortality associated with the dive fleet**.
+The catch data for the dive fleet came from the Caribbean Commercial Logbook program [@martínezrivera2024]. **The catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season, i.e., each fishing year.** The years of the available species-specific self-reported commercial fisher logbook data determined the start and end years of the Stock Synthesis models. **The start and end years of the model were 2012 and 2022, respectively.** Based on discussions at the data workshop characterizing catch by the predominant dive gear, **the assessment assumed no discarding nor discard mortality associated with the dive fleet**.
 
-**The input standard error for the landings was set to 0.01.** When implemented with few data inputs, Stock synthesis will inherently nearly exactly fit the annual landings time series, regardless of the input CV.
+It is important to note that the stock was not at an unexploited equilibrium at the start year of the available time series. The fishery had been ongoing for decades, and the total fishing effort in St. Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the dive fleet, and a corresponding initial equilibrium catch was input. In recent assessments, the initial equilibrium catch is initiated as the geometric mean of the first three years of available catches. However, because of the known decline in effort preceding the start year of the assessment, **the initial equilibrium catch was configured in initial runs as 30 metric tons**, a little over twice the geometric mean of the catches from 2012 - 2014.
 
-It is important to note that the stock was not at an unexploited equilibrium at the start year of the available time series. The fishery had been ongoing for decades, and the total fishing effort in St. Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the dive fleet, and a corresponding initial equilibrium catch was input. In recent assessments, the initial equilibrium catch is initiated as the geometric mean of the first three years of available catches. Because of the known decline in effort preceding the start year of the assessment webinars, **the initial equilibrium catch was 30 metric tons**, a little over twice the geometric mean of the catches from 2012-2014.
+**The input standard error for the landings was set to 0.01.** When implemented with few data inputs, Stock synthesis will inherently nearly exactly fit the annual landings time series, regardless of the input standard error. 
 
-Alternative model configurations associated with the commercial dive fleet data are described later in this report. They included: - higher CV of 0.3 was explored via sensitivity analysis 
--   Initial equilibrium catch was explored via likelihood profiling
+Alternative model configurations associated with the dive fleet data are described later in this report. They included:
+
+-   A higher standard error of 0.3 was explored via sensitivity analysis
+
+-   The initial equilibrium catch was explored via likelihood profiling
 
 ### Size Composition Data {#sec-data-fleet-size}
 
@@ -33,15 +36,17 @@ Gear-specific annual length frequencies came from the commercial shore-based por
 
 **Due to low sample sizes, the fishery-dependent commercial dive fleet length composition data were collapsed across all years**
 
-**The length compositions of the commercial dive fleet were assumed to be representative of total catch.** Although a federal minimum size limit exists, it does not apply in USVI territorial waters extending from land to 3 nautical miles offshore. Discussions emphasized that no regulations conclusively affecting retention were in place.
+**The length compositions of the commercial dive fleet were assumed to be representative of the total catch.** Although a federal minimum size limit exists, it does not apply in USVI territorial waters extending from land to 3 nautical miles offshore. Discussion at the data workshop emphasized that the federal regulations do not conclusively affect retention.
 
-**A double normal function was used to model the the relative vulnerability of capture by length for the dive fleet.** However, only two parameters were estimated to describe a logistic selectivity for the commercial dive fleet. The double normal function allows for domed or logistic selectivity and combines two normal distributions; the first describes the ascending limb, while the second describes the descending limb. Domed selectivity was not explored for St. Croix Stoplight Parrotfish. However, achieving the logistic shape with the double normal Stock Synthesis pattern facilitated model configuration. The two parameters used to achieve a logistic selectivity shape were the size associated with peak selectivity and the width of the ascending limb.
+**A double normal function was used to model the relative vulnerability of capture by length for the dive fleet.** However, only two parameters were estimated, effectively describing a logistic selectivity for the commercial dive fleet. The double normal function allows for domed or logistic selectivity. It combines two normal distributions; the first describes the ascending limb, while the second describes the descending limb. Domed selectivity was not explored for St. Croix Stoplight Parrotfish. However, achieving the logistic shape with the double normal Stock Synthesis pattern facilitated model configuration. The two parameters used to achieve a logistic selectivity shape were the size associated with peak selectivity and the width of the ascending limb.
 
 ## Survey Data {#sec-data-survey}
 
 ### Index of abundance {#sec-data-survey-index}
 
-Annual abundance observations and associated standard errors were from the National Coral Reef Monitoring Program Reef Visual Census [@grove2024]. In stock syntheses, this was configured as a index in numbers with a lognormal error distribution. The associated length composition data, described in the following subsection, suggested that the index reflected the abundance of juveniles and adults.
+ADD YEARS
+
+Annual abundance observations and associated standard errors were from the National Coral Reef Monitoring Program Reef Visual Census [@grove2024]. In stock syntheses, **the survey was configured as an index in numbers with a lognormal error distribution**. The associated length composition data, described in the following subsection, suggested that **the index reflected the abundance of juveniles and adults**.
 
 ### Size Composition Data {#sec-data-survey-size}
 
@@ -51,24 +56,15 @@ The three most recent years of the National Coral Reef Monitoring Program survey
 
 Note that SS3 allows the length bins of the data inputs to be larger than the bins used in the population model. **Although the size bins of all the length data inputs were large (≥ 5 centimeters), the model's simulated population bin size was 1-centimeter bins, with a plus group for the largest bin, greater than or equal to 41 centimeters fork length.** Although the population is modeled at a higher resolution concerning bin size, the likelihood function, which aims to match the observed data inputs and the simulated population estimates, operates at the resolution of the data inputs.
 
-A large proportion of small fish were observed in the National Coral Reef Monitoring Program survey. **The smallest two bins, \[1-6) and \[6-11), were collapsed into a single bin \[1-11).**
+A large proportion of small fish were observed in the National Coral Reef Monitoring Program survey. **The smallest two bins, \[1 - 6) and \[6 - 11), were collapsed into a single bin \[1 - 11).**
 
-The length compositions provided reasonable support that younger and older fish were available to the National Coral Reef Monitoring Program survey. **Selectivity for the NCRMP survey was fixed at 1 for all sizes.**
+The length compositions provided reasonable support that younger and older fish were available to the National Coral Reef Monitoring Program survey. **Selectivity for the National Coral Reef Monitoring Program survey was fixed at 1 for all sizes.**
 
 Models were initially configured in Stock Synthesis with length compositions aggregated across the available years for each source of length data and proceeded stepwise from the simplest configuration to those of moderate complexity. The steps included the inclusion of annual fishery-independent length compositions. The sequential model configurations are described later in this report.
 
 ## Life History Data {#sec-data-biology}
 
-The life history data used in the assessment included longevity-informed natural mortality, growth (length-age), length-weight, maturity, and sex ratios obtained from 1,801 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024].
-
-Hermaphroditism directly influences reproductive potential and stock sustainability, making it essential to model sex transitions appropriately.
-
-Assuming a single pulse of annual recruitment oversimplifies the population structure by failing to account for the continuous presence of multiple size classes in the stock. Continuous recruitment modeling enables the assessment to recognize that fish born within the same calendar year can reach vulnerable sizes at different times, affecting catch dynamics and stock projections.
-
-Alternative model configurations associated with the life history data are described later in this report. They included:
-
--   models configurations were explored with the estimation of recruitment deviations
--   higher CV of 0.3 was explored via sensitivity analysis
+The life history data used in the assessment included longevity-informed natural mortality, growth, length-weight, and maturity analyzed from 1,801 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024]. Based on the available information, **the Stoplight Parrotfish population was modeled from age 0 through age 20, and from 0 to 41 centimeters fork length, in 1-centimeter bins, with the largest values for each as plus groups.**
 
 ### Growth {#sec-methods-growth}
 
@@ -80,34 +76,154 @@ The SS3 growth formulation requires five parameters:
 -   Coefficient of variation at the youngest age
 -   Coefficient of variation at the maximum age
 
-Parameter estimates for K and the length at maximum age (L∞) were based on samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024].
+**Parameter estimates for Von Bertalanffy growth parameter (K) and the length at maximum age (L∞) were based on samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024].**
 
-**The estimated size at age zero from otolith analysis by @riverahernández2024 was modified in Stock Synthesis so that the size of the youngest age, age 0, was set to zero.** Without this modification the model would be unable to fit to the substantial amounts of small (\<10cm) stoplight parrot observed in the survey data.
+**The estimated size at age zero from otolith analysis by @riverahernández2024 was modified in Stock Synthesis so that the length of the youngest age, age 0, was set to zero.** Without this modification the model would be unable to fit to the substantial amounts of small (\<10cm) stoplight parrot observed in the survey size composition data.
 
-**Coefficients of variation for both younger and older ages were initially set to 0.15.** Ideally, growth coefficients of variation should be derived from observed length-at-age data, however the assumed values are consistent with species of moderate growth variability. Growth CV can be tested in sensitivity runs, especially if overly constrained values lead to poor model fits.
+**Coefficients of variation for both younger and older ages were initially set to 0.15.** Ideally, growth coefficients of variation should be derived from observed length-at-age data, however the assumed values are consistent with species of moderate growth variability.
 
-Alternative model configurations associated with the growth data are described later in this report. They included: - higher growth CVs of 0.25 for younger ages was explored via sensitivity analysis - higher growth CVs of 0.25 for both younger and older ages was explored via sensitivity analysis
+Alternative model configurations associated with the growth data are described later in this report. They included:
+
+-   A higher growth coefficient of variation of 0.25 for younger ages was explored via sensitivity analysis
+
+-   Higher growth coefficients of variation of 0.25 for both younger and older ages were explored via sensitivity analysis
 
 ### Morphometric Conversion {#sec-methods-morpho}
 
-The relationship between weight in grams and length in millimeters provided by @riverahernández2024 was converted to weight in grams and length in centimeters and used as a fixed model input. The length-weight relationship was W = 3.18 x 10\^-5 L\^ 2.9, with weight in kilograms and length in centimeters.
+The relationship between weight in grams and length in millimeters provided by @riverahernández2024 was converted to weight in grams and length in centimeters and used as a fixed model input. **The length-weight relationship was W = 3.18 x 10\^-5 L\^ 2.9, with weight in kilograms and length in centimeters.**
 
-### Natural Mortality {#sec-methods-m}
+### Maximum Age and Natural Mortality {#sec-methods-m}
 
-The Natural Mortality Tool and the SEDAR 84 life history values were used to obtain estimates of natural mortality [@cope2022]. A value of 0.3 was used in initial model runs based on @then2014.
+Empirical estimates of natural mortality (M) can be derived using life history information such as longevity, growth, and maturity. For this assessment, the Natural Mortality Tool was used to estimate M [@cope2022]. Various methods were explored, incorporating factors such as maximum age, the Von Bertalanffy growth parameter (K), theoretical age at size zero (t0), asymptotic size (L∞), and age at 50% maturity.
+
+Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, who observed a maximum age of 20 years for stoplight parrotfish in the U.S. Caribbean. However, the average age of 1,649 sampled fish was 5.4 years, with fewer than 1% of aged individuals reaching 13 years or older. More broadly across the Caribbean, a lower maximum age of 9 years was observed, with a suggested maximum lifespan of 12 years. In contrast, a tagging study in Bonaire indicated a potential maximum longevity of 30 years [@choat2003].
+
+@tbl-test summarizes these studies and the empirical methods used to estimate M based on available life history data. The primary approach for determining natural mortality in this assessment was longevity-based [@hamel2022]. Lower values of maximum age obtained by @choat2003 corroborate with the higher estimate of mortality calculated using a meta-analysis available in the FishLife R package [@thorson2017, @thorson2019]. Although additional methods incorporating growth and maturity were explored using the Natural Mortality Tool, their applicability remains uncertain due to the species’ sex-changing nature. Specifically, the methods Hamel_K, Jensen_k 1, Jensen_k 2, Then_VBGF, Jensen_Amat, and Ri_Ef_Amat do not account for protogynous hermaphroditism [@hamel2015; @jensen1996, @jensen1997; @then2015, @rikhter1976]. Notably, the SEDAR 84 available inputs of age at 50% maturity reflect only the sexual maturity of females, while Von Bertalanffy's growth parameters (K), t0, and asymptotic size were fit across males, females, and transitional individuals combined.
+
+**A natural mortality value of 0.3 was used in the initial model runs**. This value corresponds with a theoretical maximum age of 18 years, approximately the average of the varoius maximum age values reported by @choat2003 and @riverahernández2024. Model configurations incorporating alternative M values were explored through sensitivity analyses, which are discussed later in this report.
+
+| Input Source | Input Type | Input | M | Method |
+|:-----------|:-----------|:--------:|:--:|:--------|
+| @choat2003 | Maximum age | 30 | 0.180 | Hamel_Amax |
+| SEDAR84-AP-01 | Maximum age | 20 | 0.270 | Hamel_Amax |
+| Meta-analysis | Scientific name | *Sparisoma viride* | 0.397 | FishLife |
+| @choat2003 | Maximum age | 12 | 0.450 | Hamel_Amax |
+| @choat2003 | Maximum age | 9 | 0.600 | Hamel_Amax |
+| SEDAR84-AP-01 | Growth (k) | 0.39 | 0.604 | Hamel_k |
+| SEDAR84-AP-01 | Growth (k) | 0.39 | 0.585 | Jensen_k 1 |
+| SEDAR84-AP-01 | Growth (k) | 0.39 | 0.624 | Jensen_k 2 |
+| SEDAR84-AP-01 | Growth (L∞, k) | 33.2, 0.39 | 0.576 | Then_VBGF |
+| SEDAR84-AP-01 | Growth (k) | 0.33 | 0.512 | Hamel_k |
+| SEDAR84-AP-01 | Growth (k) | 0.33 | 0.495 | Jensen_k 1 |
+| SEDAR84-AP-01 | Growth (k) | 0.33 | 0.528 | Jensen_k 2 |
+| SEDAR84-AP-01 | Growth (L∞, k) | 33.8, 0.33 | 0.573 | Then_VBGF |
+| SEDAR84-AP-01 | Age at 50% maturity | 1.6 | 1.030 | Jensen_Amat |
+| SEDAR84-AP-01 | Age at 50% maturity | 1.6 | 0.924 | Ri_Ef_Amat |
+
+: Empirical estimates of natural mortality (M) can be derived using life history information and the Natural Mortality Tool [@cope2022]. The SEDAR assessment process working paper by @riverahernández2024 is equivalent to the source input listed as SEDAR84-AP-01.  {#tbl-test}
 
 ### Maturity, Fecundity, and Hermaphroditism {#sec-methods-repro}
 
-Maturity was modeled as a logistic function. Parameter estimates for maturity were based on 1,801 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024]. The fecundity of Stoplight Parrotfish was estimated with a proxy (body weight \* maturity at age).
+**Maturity was modeled as a logistic function.** Parameter estimates for maturity were based on 1,801 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024]. **The fecundity of Stoplight Parrotfish was estimated with a proxy (body weight \* maturity at age).**
 
-Hermaphroditism was parameterized into the SS3 assessment framework in two ways. The primary method used an average age of transition, an associated standard deviation, and a maximum transition rate input as fixed parameters in a two-sex model. Although this approach allows explicitly modeling numbers by sex and age over time, this approach could not capture the early age at transition and the overlap of both sexes directly observed across the range of ages studied by @riverahernández2024. A second method for parameterizing hermaphroditism was explored as a sensitivity analysis. It involved using a female-only model and accounting for sex transition to males as a reduction in fecundity. A fecundity-at-age vector derived from a logistical fit to the sex-at-age data was multiplied by maturity-at-age and fecundity-at-age. A caveat of using a single-sex model is that the exclusion of males does not allow for any potential sperm limitation.
+Protogynous hermaphroditism was parameterized into the SS3 assessment framework in two ways. **The initial method to model hermaphroditism used the average age of transition, an associated standard deviation, and a maximum transition rate input as fixed parameters in a two-sex model.** Additionally, the sex ratio between female and male fish at recruitment was 1, such that all individuals were recruited as females. Although this approach allows explicitly modeling numbers by sex and age over time, this approach could not capture the early age at transition and the overlap of both sexes directly observed across the range of ages studied by @riverahernández2024.
+
+A second method for parameterizing hermaphroditism was explored as a sensitivity analysis. It involved using a female-only model and accounting for sex transition to males as a reduction in fecundity. A fecundity-at-age vector derived from a logistical fit to the @riverahernández2024 sex-at-age data was multiplied by maturity-at-age and fecundity-at-age. A caveat of using a single-sex model is that the exclusion of males does not allow for any potential sperm limitation. Although protogynous hermaphrodites tend to have sex ratios skewed towards male at larger sizes, the largest and oldest stoplight parrotfish observed by @riverahernández2024 were female.
 
 ### Stock Recruitment {#sec-methods-sr}
 
-A Beverton-Holt stock-recruit function was used to parametrize the relationship between spawning output and resulting recruitment of age-0 fish. The stock-recruit function requires three parameters:
+**A Beverton-Holt stock-recruit function was used to parametrize the relationship between spawning output and resulting recruitment of age-0 fish.** The stock-recruit function requires three parameters:
 
 -   Steepness (h) characterizes the initial slope of the ascending limb (i.e., the fraction of recruits produced at 20% of the unfished spawning biomass)
 -   The virgin recruitment (R0; estimated in log space) represents the asymptote or unfished recruitment levels.
 -   The variance term (sigma R) is the standard deviation of the log of recruitment (it both penalizes deviations from the spawner-recruit curve and defines the offset between the arithmetic mean spawner-recruit curve and the expected geometric mean from which the deviations are calculated).
 
-Only the virgin recruitment (R0) was estimated. Sigma R and steepness were fixed at 0.7 and 0.99, respectively. The primary assumption for steepness was that this stock is not a closed population, so recruitment may not be strongly tied to the local spawning stock biomass. Annual deviations from the stock-recruit function were not estimated.
+Only the virgin recruitment (R0) was estimated. **Sigma R and steepness were fixed at 0.7 and 0.99, respectively.** The primary assumption for steepness was that this stock is not a closed population, so recruitment may not be strongly tied to the local spawning stock biomass. **In initial model configurations, annual deviations from the stock-recruit function were not estimated.** In configurations where recruitment deviations were estimated, sigma R was explored via likelihood profiling.
+
+**Continuous recruitment was parameterized in SS3 using four settlement events.** Equal proportions of recruits were assigned to each settlement event, and they were spaced such that recruitment would happen in months 1, 4, 7, and 10. This allowed growth to be staggered, reflecting a closer approximation of the observed stock dynamic of year-round spawning activity.
+
+## Summary of Data-Informed Modeling Configurations
+
+-   Based on the available data, the assessment was configured with one area, one season, one fleet, and one fishery-independent survey.
+
+### Dive Fleet
+
+-   The catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season, i.e., each fishing year.
+
+-   The start and end years of the model were 2012 and 2022, respectively.
+
+-   The assessment assumed no discarding nor discard mortality associated with the dive fleet.
+
+-   The input standard error for the landings was set to 0.01.
+
+    -   A higher standard error of 0.3 was explored via sensitivity analysis.
+
+-   The initial equilibrium catch was configured in initial runs as 30 metric tons.
+
+    -   The initial equilibrium catch was explored via likelihood profiling.
+
+-   The relative model weighting of the dive fleet length compositions was based on the number of trips sampled.
+
+-   Due to low sample sizes, the fishery-dependent commercial dive fleet length composition data were combined across all years.
+
+-   The length compositions of the commercial dive fleet were assumed to be representative of the total catch.
+
+-   A double normal function was used to model the relative vulnerability of capture by length for the dive fleet.
+
+### National Coral Reef Monitoring Program Survey.
+
+-   The index reflected the abundance of juveniles and adults.
+
+-   The survey was configured as an index in numbers with a lognormal error distribution
+
+-   The relative model weighting of the survey length compositions across years was based on the number of paired dives.
+
+-   The length data inputs for both the dive fleet and the three years of the survey with 1-centimeter length measurements were binned to match the survey's 2012 and 2015 5-centimeter bins.
+
+-   Although the size bins of all the length data inputs were large (≥ 5 centimeters), the model's simulated population bin size was 1-centimeter bins, with a plus group for the largest bin, greater than or equal to 41 centimeters fork length.
+
+-   The smallest two bins, \[1-6) and \[6-11), were collapsed into a single bin \[1-11). 
+
+-   Selectivity for the survey was fixed at 1 for all sizes. 
+
+-   Models were initially configured in Stock Synthesis with length compositions aggregated across the available years for each source of length data and proceeded stepwise from the simplest configuration to those of moderate complexity.
+
+    -   The steps included the inclusion of annual fishery-independent length compositions.
+
+### Biology
+
+-   The Stoplight Parrotfish population was modeled from age 0 through age 20, and from 0 to 41 centimeters fork length, in 1-centimeter bins, with the largest values for each as plus groups.
+
+-   Parameter estimates for Von Bertalanffy growth parameter (K) and the length at maximum age (L∞) were based on samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023.
+
+-   The estimated size at age zero from otolith analysis by @riverahernández2024 was modified in Stock Synthesis so that the length of the youngest age, age 0, was set to zero.
+
+-   Coefficients of variation for both younger and older ages were initially set to 0.15.
+
+    -   A higher growth coefficient of variation of 0.25 for younger ages was explored via sensitivity analysis.
+
+    -   Higher growth coefficients of variation of 0.25 for both younger and older ages were explored via sensitivity analysis.
+
+-   The length-weight relationship was W = 3.18 x 10\^-5 L\^ 2.9, with weight in kilograms and length in centimeters.
+
+-   A natural mortality value of 0.3 was used in the initial model runs.
+
+    -   Alternative M values were explored through sensitivity analyses.
+
+-   Maturity was modeled as a logistic function.
+
+-   The fecundity of Stoplight Parrotfish was estimated with a proxy (body weight \* maturity at age).
+
+-   The initial method to model hermaphroditism used the average age of transition, an associated standard deviation, and a maximum transition rate input as fixed parameters in a two-sex model.
+
+    -   A second method for parameterizing hermaphroditism was explored as a sensitivity analysis.
+
+-   A Beverton-Holt stock-recruit function was used to parametrize the relationship between spawning output and resulting recruitment of age-0 fish.
+
+-   Sigma R and steepness were fixed at 0.7 and 0.99, respectively.
+
+-   In initial model configurations, annual deviations from the stock-recruit function were not estimated.
+
+    -   In configurations where recruitment deviations were estimated, sigma R was explored via likelihood profiling.
+    
+-   Continuous recruitment was parameterized in SS3 using four settlement events.
