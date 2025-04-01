@@ -2,7 +2,50 @@
 title: "Model Development"
 ---
 
-Stock Synthesis models were initially configured using an annual catch time series and compositions that were aggregated across the available years for each source of length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity. Those sequential steps included the inclusion of the index of abundance and annual fishery-independent length compositions. 
+Stock Synthesis models were initially configured using an annual catch time series and compositions that were aggregated across the available years for each source of length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity. Those sequential steps included the inclusion of the index of abundance and annual fishery-independent length compositions.
+
+## SEDAR 84 Model Development Overview
+
+Table x provides the short hand naming conventions used for SEDAR 84 assessments of parrot fish in St. Croix and Yellow tail Snapper, *Ocyurus chrysurus*, in Puerto Rico as well as St. Thomas and St. John. The table describes the model development process starting with the simplest data-limited configuration, followed by exploring data-moderate configurations, individually and combined.
+
+The simplest configurations utilized aggregated length compositions by implementing the "super-period" approach in Stock Synthesis. When using super-periods, the estimation model generates annual values, but the likelihood function will compare the expected composite to the data composite across the super-period. When using this approach on the size composition data, Stock Synthesis models will still aim to identify parameter values for selectivity that achieve a fit between the predicted and observed data.
+
+The data-moderate complexity considerations explored in SEDAR 84 included incorporating (a) indices, (b) annual fishery-independent size composition, (c) annual fishery-dependent size composition, (d) recruitment deviations, (e) dome-shaped selectivity, and (f) timeblocks. Not all of these considerations were explored for St. Coix Stoplight Parrotfish. However, the process sets us a draft reusable workflow across species and islands of model development with sequential model steps that take into account methodological and intentional stepwise model explorations combining across individual complexity considerations.
+
+| Model Development Process | Code | Sequential modeling steps |
+|---------------------------------|:---:|---------------------------------|
+| Data-limited configuration | null | catch and super-year size data |
+| Data-moderate consideration | a | index |
+| Data-moderate consideration | b | annual fishery-independent size data |
+| Data-moderate consideration | c | annual fishery-dependent size data |
+| Data-moderate consideration | d | recruitment deviations |
+| Data-moderate consideration | e | dome-shaped selectivity |
+| Data-moderate consideration | f | timeblocks |
+| Version combining complexity steps | v1 | a + b |
+| Versions combining complexity steps | v2 | a + c |
+| Versions combining complexity steps | v3 | a + d |
+| Versions combining complexity steps | v4 | a + e |
+| Versions combining complexity steps | v5 | a + f |
+| Versions combining complexity steps | v6 | a + b + c |
+| Versions combining complexity steps | v7 | a + b + d |
+| Versions combining complexity steps | v8 | a + b + e |
+| Versions combining complexity steps | v9 | a + b + f |
+| Versions combining complexity steps | v10 | a + c + d |
+| Versions combining complexity steps | v11 | a + c + e |
+| Versions combining complexity steps | v12 | a + c + f |
+| Versions combining complexity steps | v13 | a + d + e |
+| Versions combining complexity steps | v14 | a + d + f |
+| Versions combining complexity steps | v15 |  |
+| Versions combining complexity steps | v16 | a + b + c + d |
+| Versions combining complexity steps | v17 | a + b + c + e |
+| Versions combining complexity steps | v18 | a + b + c + f |
+| Versions combining complexity steps | v19 | a + b + d + e |
+| Versions combining complexity steps | v20 | a + b + d + f |
+| Versions combining complexity steps | v21 | a + b + e + f |
+| Versions combining complexity steps | v22 | a + b + c + d + e |
+| Versions combining complexity steps | v23 | a + b + c + d + f |
+| Versions combining complexity steps | v24 | a + b + c + e + f |
+| Versions combining complexity steps | v25 | a + b + c + d + e + f |
 
 ## Model Diagnostics {#sec-methods-diagnostics}
 
@@ -31,4 +74,3 @@ Typically, profiling is carried out for key parameters, particularly those defin
 ### Sensitivity Runs {#sec-methods-sensitivity}
 
 Sensitivity analyses were considered to evaluate the impact on key derived quantities. Sensitivities included considering alternatives for the CV associated with catch, the method used to model hermaphroditism, and data weighting. Although the data-limited implementation of SS3 will inherently nearly exactly fit the annual landings, a higher CV of 0.3 was explored via sensitivity analysis. The second method for parameterizing hermaphroditism involved using a female-only model and accounting for sex transition to males as a reduction in fecundity. Lastly, the Dirichlet multinomial approach was used to reweigh the composition data. This method allows an internal estimation of sampling variance for each source of length composition data and adjusts the effective sample sizes [@methot2013].
-
