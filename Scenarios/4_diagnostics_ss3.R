@@ -12,7 +12,7 @@ jitter_iterations <- 30
 jitter_fraction <- 0.2
 
 range_profile_k <- c(seq(.4, 0.95, by = 0.05), 0.99)
-range_profile_eqcatch <- seq(0.5, 2, by = 0.1)
+range_profile_eqcatch <- seq(0.5, 4, by = 0.1)
 range_profile_r0 <- round(log(seq(700, 3000, length = 40)), 4)
 
 # Prep for diagnostics ####
@@ -540,15 +540,16 @@ eqcatch <- purrr::map(profile_eqcatch_runs, "catch") |>
   dplyr::mutate(Label = "eqcatch") |>
   data.frame()
   
-profile_eqcatch_summary[["pars"]] <-
-  eqcatch |>
-  dplyr::bind_rows(profile_eqcatch_summary[["pars"]]) 
+profile_eqcatch_summary_new <- profile_eqcatch_summary
+profile_eqcatch_summary_new[["pars"]] <-
+  profile_eqcatch_summary[["pars"]] |>
+  dplyr::bind_rows(eqcatch) 
 
 png(file = here::here(dir_profile_eqcatch, "profile_eqcatch.png"),
     width = 500, height = 500)
 
 r4ss::SSplotProfile(
-  profile_eqcatch_summary,
+  profile_eqcatch_summary_new,
   plot = TRUE,
   profile.string = "eqcatch",
   profile.label = "eqcatch",
