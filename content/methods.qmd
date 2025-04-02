@@ -6,11 +6,11 @@ Stock Synthesis models were initially configured using an annual catch time seri
 
 ## SEDAR 84 Model Development Overview {#sec-methods-model-overview}
 
-The SEDAR 84 model development process started with simple data-limited configurations, followed by exploring data-moderate configurations, individually and combined. @tbl-overview provides the short hand naming conventions used for SEDAR 84 assessments of parrot fish in St. Croix and Yellow tail Snapper, *Ocyurus chrysurus*, in Puerto Rico as well as St. Thomas and St. John. 
+The SEDAR 84 model development process started with simple data-limited configurations, followed by exploring data-moderate configurations, individually and combined. @tbl-overview provides the shorthand naming conventions used for SEDAR 84 assessments of parrot fish in St. Croix and Yellowtail Snapper, *Ocyurus chrysurus*, in Puerto Rico as well as St. Thomas and St. John. 
 
 The simplest configurations aggregated length compositions across years by implementing the "super-period" approach in Stock Synthesis. When using super-periods, the estimation model generates annual values, but the likelihood function will compare the expected composite to the data composite across the super-period. When using this approach on the size composition data, Stock Synthesis models will still aim to identify parameter values for selectivity that achieve a fit between the predicted and observed data.
 
-The data-moderate considerations explored in SEDAR 84 included incorporating (a) indices, (b) annual fishery-independent size composition, (c) annual fishery-dependent size composition, (d) recruitment deviations, (e) dome-shaped selectivity, and (f) timeblocks. Not all of these considerations were explored for St. Croix Stoplight Parrotfish. However, the process sets us a draft reusable workflow across species and islands of model development with sequential model steps that take into account methodological and intentional stepwise model explorations combining across individual complexity considerations.
+The data-moderate considerations explored in SEDAR 84 included incorporating (a) indices, (b) annual fishery-independent size composition, (c) annual fishery-dependent size composition, (d) recruitment deviations, (e) dome-shaped selectivity, and (f) time blocks. Not all of these considerations were explored for St. Croix Stoplight Parrotfish. However, the process sets up a reproducible and adaptable workflow across species and islands of model development with sequential model steps that take into account methodological and intentional stepwise model explorations combined across individual complexity considerations.
 
 | Model Development Process | Code | Sequential modeling steps |
 |---------------------------|:----:|-----------------------------|
@@ -20,7 +20,7 @@ The data-moderate considerations explored in SEDAR 84 included incorporating (a)
 | Data-moderate consideration | c | annual fishery-dependent size data |
 | Data-moderate consideration | d | recruitment deviations |
 | Data-moderate consideration | e | dome-shaped selectivity |
-| Data-moderate consideration | f | timeblocks |
+| Data-moderate consideration | f | time blocks |
 | Version combining complexity steps | v1 | a + b |
 | Versions combining complexity steps | v2 | a + c |
 | Versions combining complexity steps | v3 | a + d |
@@ -51,7 +51,7 @@ The data-moderate considerations explored in SEDAR 84 included incorporating (a)
 
 ## SEDAR 84 St. Croix Stoplight Parrotfish Model Development {#sec-methods-model-key}
 
-The considerations detailed in @tbl-overview that were relevant for the St. Croix stoplight parrotfish assessment were (a) indices, (b) annual fishery-independent size composition, and (d) recruitment deviations. Annual fishery-dependent size data (c) was not explored due to low sample size. Dome-shaped selectivity (e) and selectivity related timeblocks (f) were also not considerations that factor into the dynamics and data reviewed for St. Corix stoplight parrotfish. The initial setup steps and description of the modeling scenarios documented in this report are listed in @tbl-ss3-stxslp.
+The considerations detailed in @tbl-overview that were relevant for the St. Croix stoplight parrotfish assessment were (a) indices, (b) annual fishery-independent size composition, and (d) recruitment deviations. Annual fishery-dependent size data (c) was not explored due to the low sample size. Dome-shaped selectivity (e) and selectivity-related time blocks (f) were also not considerations that factor into the dynamics and data reviewed for St. Corix stoplight parrotfish. The initial setup steps and description of the modeling scenarios documented in this report are listed in @tbl-ss3-stxslp.
 
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
@@ -72,7 +72,7 @@ The considerations detailed in @tbl-overview that were relevant for the St. Croi
 
 ## Model Diagnostics {#sec-methods-diagnostics}
 
-Model diagnostics aimed to follow the conceptual process described by @carvalho2021. This process flows along axis of diagnostics types evaluating goodness of fit, information sources and structure, prediction skill, convergence, and model plausibility. Although @carvalho2021 advises detours for additional model explorations when initial diagnostic tests fail, advanced diagnostics, such as likelihood profiles, retrospective analyses and jitter analyses, were conducted even when initial tests failed to comprehensively communicate the various model configurations explored to the extent possible.  
+Model diagnostics aimed to follow the conceptual process described by @carvalho2021. Their approach includes evaluating goodness of fit, information sources and structure, prediction skill, convergence, and model plausibility. Although @carvalho2021 advise detours and additional model explorations when initial diagnostic tests fail, advanced diagnostics, such as likelihood profiles, retrospective, and jitter analyses, were conducted even when initial tests failed to comprehensively communicate the various model configurations explored to the extent possible.
 
 ### Convergence {#sec-methods-convergence}
 
@@ -84,7 +84,7 @@ High correlation among parameters can lead to flat response surfaces and poor mo
 
 ### Evaluating Variance
 
-Parameters with high variance do not influence the fit to the data. To check for parameters with high variance, all parameter estimates are reported with their resulting standard deviations. 
+Parameters with high variance do not meaningfully influence the model's fit to the data. To check for parameters with high variance, all parameter estimates are reported with their resulting standard deviations. 
 
 ### Residual Analysis {#sec-methods-residuals}
 
@@ -92,7 +92,7 @@ The primary approach to address performance was a residual analysis of model fit
 
 ### Jitter Analysis {#sec-methods-jitter}
 
-Jitter analysis is a relatively simple method that can be used to assess model stability and to determine whether the search algorithm has found a global, as opposed to local, solution. The premise is that all starting values are randomly altered (or ‘jittered’) by an input constant value, and the model is rerun from the new starting values. If the resulting population trajectories across many runs converge to the same solution, this provides reasonable support that a global minimum has been obtained. This process is not fault-proof; no guarantee can ever be made that the ‘true’ solution has been found or that the model does not contain misspecification. However, if the jitter analysis results are consistent, it provides additional support that the model is performing well and has come to a stable solution. For this assessment, a jitter value 0.2 was applied to the starting values, and 30 runs were completed. The jitter value defines a uniform distribution in cumulative normal space to generate new initial parameter values [@methot2020].
+Jitter analysis is a relatively simple method that can be used to assess model stability and to determine whether the search algorithm has found a global, as opposed to local, solution. The premise is that all starting values are randomly altered (or ‘jittered’) by an input constant value, and the model is rerun from the new starting values. If the resulting population trajectories across many runs converge to the same solution, this provides reasonable support that a global minimum has been obtained. This process is not fault-proof; no guarantee can ever be made that the ‘true’ solution has been found or that the model does not contain misspecification. However, if the jitter analysis results are consistent, it provides additional support that the model is performing well and has come to a stable solution. For this assessment, a jitter value of 0.2 was applied to the starting values, and 30 runs were completed. The jitter value defines a uniform distribution in cumulative normal space to generate new initial parameter values [@methot2020].
 
 ### Retrospective Analysis {#sec-methods-retro}
 
@@ -106,4 +106,4 @@ Typically, profiling is carried out for key parameters, particularly those defin
 
 ### Sensitivity Runs {#sec-methods-sensitivity}
 
-Sensitivity analyses were considered to evaluate the impact on key derived quantities. Sensitivities included considering alternatives for the CV associated with catch, the method used to model hermaphroditism, and data weighting. Although the data-limited implementation of SS3 will inherently nearly exactly fit the annual landings, a higher CV of 0.3 was explored via sensitivity analysis. The second method for parameterizing hermaphroditism involved using a female-only model and accounting for sex transition to males as a reduction in fecundity. Lastly, the Dirichlet multinomial approach was used to reweigh the composition data. This method allows an internal estimation of sampling variance for each source of length composition data and adjusts the effective sample sizes [@methot2013].
+Sensitivity analyses were considered to evaluate the impact on key derived quantities. Sensitivities included considering alternatives for the CV associated with catch, the method used to model hermaphroditism and data weighting. Although the data-limited implementation of SS3 will inherently nearly exactly fit the annual landings, a higher CV of 0.3 was explored via sensitivity analysis. The second method for parameterizing hermaphroditism involved using a female-only model and accounting for sex transition to males as a reduction in fecundity. Lastly, the Dirichlet multinomial approach was used to reweigh the composition data. This method allows an internal estimation of sampling variance for each source of length composition data and adjusts the effective sample sizes [@methot2013].

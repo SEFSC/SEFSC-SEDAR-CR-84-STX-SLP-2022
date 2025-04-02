@@ -18,7 +18,7 @@ Additional details for each data input are available in their respective referen
 
 ### Catch Data {#sec-data-fleet-catch}
 
-The catch data for the dive fleet came from the Caribbean Commercial Logbook program [@martínezrivera2024]. Beginning in 1996, part of the commercial landings were reported by species group (e.g., snappers, groupers, parrotfishes, surgeonfishes, etc.), and by gear (hook and line, gill net, SCUBA, trap, etc.). All commercial fishery data reports included species groups beginning in 1998. In July of 2011, commercial landings were reported by species and gear. 
+The catch data for the dive fleet came from the Caribbean Commercial Logbook program [@martínezrivera2024]. Beginning in 1996, part of the commercial landings were reported by species groups (e.g., snappers, groupers, parrotfishes, surgeonfishes, etc.), and by gear (hook and line, gill net, SCUBA, trap, etc.). All commercial fishery data reports included species groups beginning in 1998. In July of 2011, commercial landings were reported by species and gear. 
 
 Various diving gears were combined to establish a dive gear group, and the catch from this group made up 80% of the reported landings (tbl-catch). Potential outliers were discussed during the assessment webinars and retained as valid trips.
 
@@ -56,9 +56,9 @@ Alternative model configurations associated with the dive fleet data are describ
 
 ### Size Composition Data {#sec-data-fleet-size}
 
-Gear-specific annual length frequencies for the dive fleet came from the commercial shore-based port-sampling Trip Interview Program [@godwin2024]. The NOAA Fisheries, Southeast Fisheries Science Center Trip Interview Program collects length and weight data from fish landed by commercial fishing vessels, along with information about fishing area and gear. Data collection began in 1983 with frequent updates in best practices; the latest being in 2017. The data pertaining to Stoplight Parrotfish in St. Croix comprises 29,582 length observations across 1,028 unique port sampling interviews.
+Gear-specific annual length frequencies for the dive fleet came from the commercial shore-based port-sampling Trip Interview Program [@godwin2024]. The NOAA Fisheries, Southeast Fisheries Science Center Trip Interview Program collects length and weight data from fish landed by commercial fishing vessels, along with information about fishing areas and gears. Data collection began in 1983 with frequent updates in best practices; the latest being in 2017. The Stoplight Parrotfish length data from St. Croix included 29,582 length observations across 1,028 unique port sampling interviews.
 
-Although the catch data can be separated into dive and non-dive related gears, 98% of the length measurements for St. Croix Stoplight parrotfish from 2012-2022 were associated with diving. These data were used to characterize the fleet's size-based selectivity pattern. Since multiple fish length measurements can be obtained from a single sampled trip, each length does not represent an independent observations. **The relative model weighting of the dive fleet length compositions was based on the number of trips sampled**. 
+Although the catch data can be separated into dive and non-dive related gears, 98% of the length measurements for St. Croix Stoplight parrotfish from 2012-2022 were associated with diving. These data were used to characterize the fleet's size-based selectivity pattern. Since multiple fish length measurements can be obtained from a single sampled trip, each length does not represent an independent observation. **The relative model weighting of the dive fleet length compositions was based on the number of trips sampled**. 
 
 From 2012 - 2022, the size data included 1,033 shore-based length measurements from dive gears obtained across 66 trips. Five trips were flagged and removed as potential outliers with unusually large lengths. **Due to low sample sizes of both fish and trips, the fishery-dependent commercial dive fleet length composition data were collapsed across all years 2012-2022**.
 
@@ -68,9 +68,9 @@ From 2012 - 2022, the size data included 1,033 shore-based length measurements f
 
 ## Survey Data {#sec-data-survey}
 
-### Index of abundance {#sec-data-survey-index}
+### Index of Abundance {#sec-data-survey-index}
 
-The National Coral Reef Monitoring Program supports reef fish sampling on hard-bottom habitats from 0 to 30 meters depth [@grove2021]. In St. Croix, sampling began in 2001 and was conducted every year from 2001 to 2012 and then every other year starting in 2015. The data used in SEDAR 84 were from 2012 - 2022, when the survey was conducted island-wide. Prior to 2017, the data are calibrated to account for the transition from belt transect to the cylinder survey method.
+The National Coral Reef Monitoring Program supports reef fish sampling on hard-bottom habitats from 0 to 30 meters depth [@grove2021]. In St. Croix, sampling began in 2001 and was conducted every year from 2001 to 2012 and then every other year starting in 2015. The data used in SEDAR 84 were from 2012 - 2022 when the survey was conducted island-wide. Before 2017, the data are calibrated to account for the transition from belt transect to the cylinder survey method.
 
 Annual mean density and associated standard errors for SEDAR 84 were provided by @grove2024.  In stock syntheses, the time series of mean density across all observed sizes **were input as an index in numbers with a lognormal error distribution**. The associated length composition data, described in the following subsection, suggested that **the index reflected the abundance of juveniles and adults**.
 
@@ -78,7 +78,7 @@ Annual mean density and associated standard errors for SEDAR 84 were provided by
 
 Since multiple fish can be observed from a single dive, individual lengths are not independent observations. **The relative model weighting of the National Coral Reef Monitoring Program survey length compositions across years was based on the number of paired dives.**
 
-The three most recent years of the National Coral Reef Monitoring Program survey in St. Croix provided counts by individual lengths measured to the nearest centimeter. However, prior to 2017 the length observations were collected in 5-centimeter bins. **The length data inputs for both the dive fleet and the three years of the survey with 1-centimeter length measurements were binned to match the survey's 2012 and 2015 5-centimeter bins.**
+The three most recent years of the National Coral Reef Monitoring Program survey in St. Croix provided counts by individual lengths measured to the nearest centimeter. However, before 2017 the length observations were collected in 5-centimeter bins. **The length data inputs for both the dive fleet and the three years of the survey with 1 centimeter length measurements were binned to match the survey's 2012 and 2015 5-centimeter bins.**
 
 A large proportion of small fish were observed in the National Coral Reef Monitoring Program survey. **The smallest two bins, \[1 - 6) and \[6 - 11), were collapsed into a single bin \[1 - 11).**
 
@@ -90,9 +90,9 @@ Models were initially configured in Stock Synthesis with length compositions agg
 
 The life history data used in the assessment included longevity-informed natural mortality, growth, length-weight, and maturity analyzed from 1,801 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024]. The largest fish was 43.3 centimeters fork length and the oldest was 20 years old.
 
-Based on the available information, **the Stoplight Parrotfish population was modeled from age 0 through age 20, and from 0 to 41 centimeters fork length, in 1-centimeter bins, with the largest values for each as plus groups.**
+Based on the available information, **the Stoplight Parrotfish population was modeled from age 0 through age 20, and from 0 to 41 centimeters fork length, in 1 centimeter bins, with the largest values for each as plus groups.**
 
-Note that SS3 allows the length bins of the data inputs to be larger than the bins used in the population model. **Although the size bins of all the length data inputs were large (≥ 5 centimeters), the model's simulated population bin size was 1-centimeter bins.** When the population is modeled at a higher resolution concerning bin size, the likelihood function, which aims to match the observed data inputs and the simulated population estimates, operates at the resolution of the data inputs.
+Note that SS3 allows the length bins of the data inputs to be larger than the bins used in the population model. **Although the size bins of all the length data inputs were large (≥ 5 centimeters), the model's simulated population bin size was 1 centimeter bins.** When the population is modeled at a higher resolution concerning bin size, the likelihood function, which aims to match the observed data inputs and the simulated population estimates, operates at the resolution of the data inputs.
 
 ### Growth {#sec-methods-growth}
 
@@ -104,11 +104,11 @@ The SS3 growth formulation requires five parameters:
 -   Coefficient of variation at the youngest age
 -   Coefficient of variation at the maximum age
 
-**Parameter estimates for Von Bertalanffy growth parameter (K) and the length at maximum age (L∞) were based on 1,649 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024].** When the t~0~ was fixed to -0.06, K was 0.39 and L∞ 33.2 centimeters fork length. When t~0~ estimated, it was -0.52, K was 0.33, and L∞ was 33.8 centimeters fork length. 
+**Parameter estimates for Von Bertalanffy growth parameter (K) and the length at maximum age (L∞) were based on 1,649 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024].** When t~0~ was fixed to -0.06, K was 0.39 and L∞ 33.2 centimeters fork length. When t~0~ was estimated, it was -0.52, K was 0.33, and L∞ was 33.8 centimeters fork length. 
 
-The SEDAR 84 assessment models were configured using the parameter estimates associated with the fixed t~0~ were used. Furthermore, **the estimated size at age zero from otolith analysis by @riverahernández2024 was modified in Stock Synthesis so that the length of the youngest age, age 0, was set to zero.** Without this modification the model would be unable to fit to the substantial amounts of small (\<10cm) stoplight parrot observed in the survey size composition data.
+The SEDAR 84 assessment models were configured using the parameter estimates associated with the fixed t~0~ were used. Furthermore, **the estimated size at age zero from otolith analysis by @riverahernández2024 was modified in Stock Synthesis so that the length of the youngest age, age 0, was set to zero.** Without this modification, the model would be unable to fit the substantial amounts of small (\<10cm) stoplight parrotfish observed in the survey size composition data.
 
-**Coefficients of variation for both younger and older ages were initially set to 0.15.** Ideally, growth coefficients of variation should be derived from observed length-at-age data, however the assumed values are consistent with species of moderate growth variability.
+**Coefficients of variation for both younger and older ages were initially set to 0.15.** Ideally, growth coefficients of variation should be derived from observed length-at-age data, however, the assumed values are consistent with species of moderate growth variability.
 
 Alternative model configurations associated with the growth data are described later in this report. They included:
 
@@ -156,7 +156,7 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
 Protogynous hermaphroditism was parameterized into the SS3 assessment framework in two ways. **The initial method to model hermaphroditism used the average age of transition, an associated standard deviation, and a maximum transition rate input as fixed parameters in a two-sex model.** Additionally, the sex ratio between female and male fish at recruitment was 1, such that all individuals were recruited as females. Although this approach allows explicitly modeling numbers by sex and age over time, this approach could not capture the early age at transition and the overlap of both sexes directly observed across the range of ages studied by @riverahernández2024.
 
-A second method for parameterizing hermaphroditism was explored as a sensitivity analysis. It involved using a female-only model and accounting for sex transition to males as a reduction in fecundity. A fecundity-at-age vector derived from a logistical fit to the @riverahernández2024 sex-at-age data was multiplied by maturity-at-age and fecundity-at-age. A caveat of using a single-sex model is that the exclusion of males does not allow for any potential sperm limitation. Although protogynous hermaphrodites tend to have sex ratios skewed towards male at larger sizes, the largest and oldest stoplight parrotfish observed by @riverahernández2024 were female.
+A second method for parameterizing hermaphroditism was explored as a sensitivity analysis. It involved using a female-only model and accounting for sex transition to males as a reduction in fecundity. A fecundity-at-age vector derived from a logistical fit to the @riverahernández2024 sex-at-age data was multiplied by maturity-at-age and fecundity-at-age. A caveat of using a single-sex model is that the exclusion of males does not allow for any potential sperm limitation. Although protogynous hermaphrodites tend to have sex ratios skewed towards males at larger sizes, the largest and oldest stoplight parrotfish observed by @riverahernández2024 were female.
 
 ### Stock Recruitment {#sec-methods-sr}
 
@@ -206,9 +206,9 @@ Only the virgin recruitment (R0) was estimated. **Sigma R and steepness were fix
 
 -   The relative model weighting of the survey length compositions across years was based on the number of paired dives.
 
--   The length data inputs for both the dive fleet and the three years of the survey with 1-centimeter length measurements were binned to match the survey's 2012 and 2015 5-centimeter bins.
+-   The length data inputs for both the dive fleet and the three years of the survey with 1 centimeter length measurements were binned to match the survey's 2012 and 2015 5-centimeter bins.
 
--   Although the size bins of all the length data inputs were large (≥ 5 centimeters), the model's simulated population bin size was 1-centimeter bins.
+-   Although the size bins of all the length data inputs were large (≥ 5 centimeters), the model's simulated population bin size was 1 centimeter bins.
 
 -   The smallest two bins, \[1-6) and \[6-11), were collapsed into a single bin \[1-11). 
 
@@ -220,7 +220,7 @@ Only the virgin recruitment (R0) was estimated. **Sigma R and steepness were fix
 
 ### Biology
 
--   The Stoplight Parrotfish population was modeled from age 0 through age 20, and from 0 to 41 centimeters fork length, in 1-centimeter bins, with the largest values for each as plus groups.
+-   The Stoplight Parrotfish population was modeled from age 0 through age 20, and from 0 to 41 centimeters fork length, in 1 centimeter bins, with the largest values for each as plus groups.
 
 -   Parameter estimates for Von Bertalanffy growth parameter (K) and the length at maximum age (L∞) were based on samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023.
 
