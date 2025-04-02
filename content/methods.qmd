@@ -13,7 +13,7 @@ The simplest configurations aggregated length compositions across years by imple
 The data-moderate considerations explored in SEDAR 84 included incorporating (a) indices, (b) annual fishery-independent size composition, (c) annual fishery-dependent size composition, (d) recruitment deviations, (e) dome-shaped selectivity, and (f) timeblocks. Not all of these considerations were explored for St. Croix Stoplight Parrotfish. However, the process sets us a draft reusable workflow across species and islands of model development with sequential model steps that take into account methodological and intentional stepwise model explorations combining across individual complexity considerations.
 
 | Model Development Process | Code | Sequential modeling steps |
-|---------------------------|:--:|-----------------------------|
+|---------------------------|:----:|-----------------------------|
 | Data-limited configuration | null | catch and super-year size data |
 | Data-moderate consideration | a | index |
 | Data-moderate consideration | b | annual fishery-independent size data |
@@ -58,7 +58,7 @@ The considerations detailed in @tbl-overview that were relevant for the St. Croi
 ```
 
 | Stage | Code | Sequential modeling steps |
-|--------|:-----:|---------------------------------------------------------------|
+|----------|:-----:|---------------------------------------------------------------|
 | Initial	| ct	| model initialized with continuum tool (ct) |
 | Initial	| m1	| ct + hermaphroditism |
 | Initial	| m2	| m1 + continuous recruitment |
