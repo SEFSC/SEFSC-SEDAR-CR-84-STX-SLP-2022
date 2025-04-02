@@ -1,5 +1,5 @@
 #C file created using an r4ss function
-#C file write time: 2024-10-24  10:46:34
+#C file write time: 2025-04-02  09:17:06
 #
 0 # 0 means do not read wtatage.ss; 1 means read and usewtatage.ss and also read and use growth parameters
 1 #_N_Growth_Patterns
@@ -49,7 +49,7 @@
 #
 #_growth_parms
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE	env_var&link	dev_link	dev_minyr	dev_maxyr	dev_PH	Block	Block_Fxn
-0.001	   2	      0.3	    -2.92	0.22	3	 -1	0	0	0	0	0	0	0	#_NatM_p_1_Fem_GP_1  
+0.001	   2	     0.27	    -2.92	0.22	3	 -1	0	0	0	0	0	0	0	#_NatM_p_1_Fem_GP_1  
   -50	 100	        0	        0	  10	0	 -3	0	0	0	0	0	0	0	#_L_at_Amin_Fem_GP_1 
     1	 500	     33.2	     33.2	  10	0	 -2	0	0	0	0	0	0	0	#_L_at_Amax_Fem_GP_1 
 0.001	   2	     0.39	     0.39	0.05	0	 -3	0	0	0	0	0	0	0	#_VonBert_K_Fem_GP_1 
@@ -121,7 +121,7 @@
 #
 #_initial_F_parms
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE
-0	10	0.01	1	999	0	1	#_InitF_seas_1_flt_1Fishery1
+0	10	0.01	1	999	0	1	#_InitF_seas_1_flt_1Commercial
 #
 #_Q_setup for fleets with cpue or survey data
 #_fleet	link	link_info	extra_se	biasadj	float  #  fleetname
@@ -134,28 +134,28 @@
 #
 #_size_selex_patterns
 #_Pattern	Discard	Male	Special
-24	0	0	0	#_1 Fishery1
-24	0	0	0	#_2 Fishery2
+24	0	0	0	#_1 Commercial
+24	0	0	0	#_2 NCRMP     
 #
 #_age_selex_patterns
 #_Pattern	Discard	Male	Special
-10	0	0	0	#_1 Fishery1
-10	0	0	0	#_2 Fishery2
+10	0	0	0	#_1 Commercial
+10	0	0	0	#_2 NCRMP     
 #
 #_SizeSelex
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE	env-var	use_dev	dev_mnyr	dev_mxyr	dev_PH	Block	Blk_Fxn  #  parm_name
-   1	41	     20	     20	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_1_Fishery1(1)
- -15	15	     15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_2_Fishery1(1)
-  -4	12	3.58539	3.58539	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_3_Fishery1(1)
- -15	 6	    -15	    -15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_4_Fishery1(1)
--999	15	    -15	    -10	99	0	-2	0	0	0	0	0	0	0	#_SizeSel_P_5_Fishery1(1)
- -15	20	     15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_6_Fishery1(1)
-   1	55	      6	      6	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_1_Fishery2(2)
- -15	15	     15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_2_Fishery2(2)
-  -4	12	3.95003	3.95003	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_3_Fishery2(2)
- -15	 6	    -15	    -15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_4_Fishery2(2)
--999	15	    -15	    -10	99	0	-2	0	0	0	0	0	0	0	#_SizeSel_P_5_Fishery2(2)
- -15	20	     15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_6_Fishery2(2)
+   1	41	     20	     20	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_1_Commercial(1)
+ -15	15	     15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_2_Commercial(1)
+  -4	12	3.58539	3.58539	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_3_Commercial(1)
+ -15	 6	    -15	    -15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_4_Commercial(1)
+-999	15	    -15	    -10	99	0	-2	0	0	0	0	0	0	0	#_SizeSel_P_5_Commercial(1)
+ -15	20	     15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_6_Commercial(1)
+   1	55	      6	      6	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_1_NCRMP(2)     
+ -15	15	     15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_2_NCRMP(2)     
+  -4	12	3.95003	3.95003	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_3_NCRMP(2)     
+ -15	 6	    -15	    -15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_4_NCRMP(2)     
+-999	15	    -15	    -10	99	0	-2	0	0	0	0	0	0	0	#_SizeSel_P_5_NCRMP(2)     
+ -15	20	     15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_6_NCRMP(2)     
 #_AgeSelex
 #_No age_selex_parm
 #_no timevary selex parameters
@@ -174,11 +174,11 @@
 1 #_sd_offset; must be 1 if any growthCV, sigmaR, or survey extraSD is an estimated parameter
 # read 4 changes to default Lambdas (default value is 1.0)
 #_like_comp	fleet	phase	value	sizefreq_method
-    8	1	1	1	1	#_catch_Fishery1_Phz1         
-    8	2	1	1	1	#_catch_Fishery2_Phz1         
-    9	1	1	1	1	#_init_equ_catch_Fishery_Phz1 
-    9	2	1	1	1	#_init_equ_catch_Fishery_Phz11
--9999	0	0	0	0	#_terminator                  
+    8	1	1	1	1	#_catch_Commercial_Phz1         
+    8	2	1	1	1	#_catch_NCRMP_Phz1              
+    9	1	1	1	1	#_init_equ_catch_Commercial_Phz1
+    9	2	1	1	1	#_init_equ_catch_NCRMP_Phz1     
+-9999	0	0	0	0	#_terminator                    
 #
 0 # 0/1 read specs for more stddev reporting
 #

@@ -1,11 +1,9 @@
 #C file created using an r4ss function
-#C file write time: 2024-10-24  10:46:34
+#C file write time: 2025-04-02  09:17:07
 #
 0 # 0 means do not read wtatage.ss; 1 means read and usewtatage.ss and also read and use growth parameters
 1 #_N_Growth_Patterns
 1 #_N_platoons_Within_GrowthPattern
-#0.7 #_Morph_between/within_stdev_ratio
-#-1 0.25 0.5 0.25 0.125 # vector_Morphdist_(-1_in_first_val_gives_normal_approx)
 4 # recr_dist_method for parameters
 1 # not yet implemented; Future usage:Spawner-Recruitment; 1=global; 2=by area
 1 # number of recruitment settlement assignments 
@@ -45,14 +43,14 @@
 0 #_First_Mature_Age
 2 #_fecundity option:(1)eggs=Wt*(a+b*Wt);(2)eggs=a*L^b;(3)eggs=a*Wt^b; (4)eggs=a+b*L; (5)eggs=a+b*W
 1 #_hermaphroditism option:  0=none; 1=female-to-male age-specific fxn; -1=male-to-female age-specific fxn
--1 # fraction_of_maleSSB_added_to_total_SSB
-0 #_parameter_offset_approach for M, G, CV_G:
+-1 # Hermaphro_season 
+0 # Hermaphro_maleSSB
 1 #_parameter_offset_approach (1=none, 2= M, G, CV_G as offset from female-GP1, 3=like SS2 V1.x)
 #
 #_growth_parms
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE	env_var&link	dev_link	dev_minyr	dev_maxyr	dev_PH	Block	Block_Fxn
-0.001	   2	      0.3	    -2.92	0.22	0	 -1	0	0	0	0	0	0	0	#_NatM_p_1_Fem_GP_1  
-  -50	 100	    0.001 	        0	  10	0	 -3	0	0	0	0	0	0	0	#_L_at_Amin_Fem_GP_1 
+0.001	   2	     0.27	    -2.92	0.22	0	 -1	0	0	0	0	0	0	0	#_NatM_p_1_Fem_GP_1  
+  -50	 100	    0.001	        0	  10	0	 -3	0	0	0	0	0	0	0	#_L_at_Amin_Fem_GP_1 
     1	 500	     33.2	     33.2	  10	0	 -2	0	0	0	0	0	0	0	#_L_at_Amax_Fem_GP_1 
 0.001	   2	     0.39	     0.39	0.05	0	 -3	0	0	0	0	0	0	0	#_VonBert_K_Fem_GP_1 
 0.001	   5	     0.15	     0.15	 0.5	0	 -4	0	0	0	0	0	0	0	#_CV_young_Fem_GP_1  
@@ -64,16 +62,16 @@
     0	   3	    1e-05	    1e-05	 0.8	0	 -3	0	0	0	0	0	0	0	#_Eggs_alpha_Fem_GP_1
     0	  10	        3	        3	 0.8	0	 -3	0	0	0	0	0	0	0	#_Eggs_beta_Fem_GP_1 
 0.001	   2	      0.3	    -2.92	0.22	0	 -1	0	0	0	0	0	0	0	#_NatM_p_1_Mal_GP_1  
-  -50	 100	    0.001 	        0	  10	0	 -3	0	0	0	0	0	0	0	#_L_at_Amin_Mal_GP_1 
+  -50	 100	    0.001	        0	  10	0	 -3	0	0	0	0	0	0	0	#_L_at_Amin_Mal_GP_1 
     1	 500	     33.2	     33.2	  10	0	 -2	0	0	0	0	0	0	0	#_L_at_Amax_Mal_GP_1 
 0.001	   2	     0.39	     0.39	0.05	0	 -3	0	0	0	0	0	0	0	#_VonBert_K_Mal_GP_1 
 0.001	   5	     0.15	     0.15	 0.5	0	 -4	0	0	0	0	0	0	0	#_CV_young_Mal_GP_1  
 0.001	   5	     0.15	     0.15	 0.5	0	 -4	0	0	0	0	0	0	0	#_CV_old_Mal_GP_1    
     0	   3	 3.18e-05	 3.18e-05	  99	0	-99	0	0	0	0	0	0	0	#_Wtlen_1_Mal_GP_1   
-    2	   4	      2.9	      2.9	  99	0	-99	0	0	0	0	0	0	0	#_Wtlen_2_Mal_GP_1
-    0	   6	 	  0.5	 3.18e-05	  99	0	-99	0	0	0	0	0	0	0	#_   
-    0	   4	    0.001	      2.9	  99	0	-99	0	0	0	0	0	0	0	#_	
-    0	   4	     0.05	      2.9	  99	0	-99	0	0	0	0	0	0	0	#_	
+    2	   4	      2.9	      2.9	  99	0	-99	0	0	0	0	0	0	0	#_Wtlen_2_Mal_GP_1   
+    0	   6	      0.5	 3.18e-05	  99	0	-99	0	0	0	0	0	0	0	#_Herm_Infl_ageFem   
+    0	   4	    0.001	      2.9	  99	0	-99	0	0	0	0	0	0	0	#_Herm_stdevFem      
+    0	   4	     0.05	      2.9	  99	0	-99	0	0	0	0	0	0	0	#_Herm_asymptoteFem  
   0.1	  10	        1	        1	   1	0	 -1	0	0	0	0	0	0	0	#_CohortGrowDev      
  0.01	   1	   0.9999	      0.5	 0.5	0	-99	0	0	0	0	0	0	0	#_FracFemale_GP_1    
 #_no timevary MG parameters
@@ -102,11 +100,11 @@
 -4 #_recdev_early_phase
 -4 #_forecast_recruitment phase (incl. late recr) (0 value resets to maxphase+1)
 1 #_lambda for Fcast_recr_like occurring before endyr+1
-2007.2   #_last_early_yr_nobias_adj_in_MPD 
-2012.1   #_first_yr_fullbias_adj_in_MPD 
-2021.2   #_last_yr_fullbias_adj_in_MPD 
-2021.3   #_first_recent_yr_nobias_adj_in_MPD 
-0.4779  #_max_bias_adj_in_MPD (1.0 to mimic pre-2009 models) 
+2007.2 #_last_yr_nobias_adj_in_MPD; begin of ramp
+2012.1 #_first_yr_fullbias_adj_in_MPD; begin of plateau
+2021.2 #_last_yr_fullbias_adj_in_MPD
+2021.3 #_end_yr_for_ramp_in_MPD (can be in forecast to shape ramp, but SS sets bias_adj to 0.0 for fcast yrs)
+0.4779 #_max_bias_adj_in_MPD (-1 to override ramp and set biasadj=1.0 for all estimated recdevs)
 0 #_period of cycles in recruitment (N parms read below)
 -5 #min rec_dev
 5 #max rec_dev
@@ -126,7 +124,7 @@
 #
 #_initial_F_parms
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE
-0	10	0.01	1	999	0	1	#_InitF_seas_1_flt_1Fishery1
+0	10	0.01	1	999	0	1	#_InitF_seas_1_flt_1Commercial
 #
 #_Q_setup for fleets with cpue or survey data
 #_fleet	link	link_info	extra_se	biasadj	float  #  fleetname
@@ -139,22 +137,22 @@
 #
 #_size_selex_patterns
 #_Pattern	Discard	Male	Special
-24	0	0	0	#_1 Fishery1
-0	0	0	0	#_2 Fishery2
+24	0	0	0	#_1 Commercial
+ 0	0	0	0	#_2 NCRMP     
 #
 #_age_selex_patterns
 #_Pattern	Discard	Male	Special
-0	0	0	0	#_1 Fishery1
-0	0	0	0	#_2 Fishery2
+0	0	0	0	#_1 Commercial
+0	0	0	0	#_2 NCRMP     
 #
 #_SizeSelex
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE	env-var	use_dev	dev_mnyr	dev_mxyr	dev_PH	Block	Blk_Fxn  #  parm_name
-   1.5	40.5	     20	     20	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_1_Fishery1(1)
- -15	15	     15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_2_Fishery1(1)
-  -4	12	3.58539	3.58539	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_3_Fishery1(1)
- -15	 6	    -15	    -15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_4_Fishery1(1)
--999	15	    -15	    -10	99	0	-2	0	0	0	0	0	0	0	#_SizeSel_P_5_Fishery1(1)
- -15	20	     15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_6_Fishery1(1)
+ 1.5	40.5	     20	     20	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_1_Commercial(1)
+ -15	  15	     15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_2_Commercial(1)
+  -4	  12	3.58539	3.58539	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_3_Commercial(1)
+ -15	   6	    -15	    -15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_4_Commercial(1)
+-999	  15	    -15	    -10	99	0	-2	0	0	0	0	0	0	0	#_SizeSel_P_5_Commercial(1)
+ -15	  20	     15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_6_Commercial(1)
 #_AgeSelex
 #_No age_selex_parm
 #_no timevary selex parameters
@@ -173,11 +171,11 @@
 1 #_sd_offset; must be 1 if any growthCV, sigmaR, or survey extraSD is an estimated parameter
 # read 4 changes to default Lambdas (default value is 1.0)
 #_like_comp	fleet	phase	value	sizefreq_method
-    8	1	1	1	1	#_catch_Fishery1_Phz1         
-    8	2	1	1	1	#_catch_Fishery2_Phz1         
-    9	1	1	1	1	#_init_equ_catch_Fishery_Phz1 
-    9	2	1	1	1	#_init_equ_catch_Fishery_Phz11
--9999	0	0	0	0	#_terminator                  
+    8	1	1	1	1	#_catch_Commercial_Phz1         
+    8	2	1	1	1	#_catch_NCRMP_Phz1              
+    9	1	1	1	1	#_init_equ_catch_Commercial_Phz1
+    9	2	1	1	1	#_init_equ_catch_NCRMP_Phz1     
+-9999	0	0	0	0	#_terminator                    
 #
 0 # 0/1 read specs for more stddev reporting
 #
