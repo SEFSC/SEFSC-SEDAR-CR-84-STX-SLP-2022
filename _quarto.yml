@@ -17,7 +17,6 @@ book:
   chapters:
     - index.qmd
     - content/background.qmd
-    - content/ss3.qmd
     - content/data.qmd
     - content/methods.qmd
     - content/references.qmd
