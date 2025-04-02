@@ -1,0 +1,33 @@
+Relevant Model Development Process,File name code,Description of sequential modeling steps
+Data-limited configuration,null,catch and super-year size composition
+Data-moderate complexity consideration,a,index
+Data-moderate complexity consideration,b,annual fishery-independent size composition
+Data-moderate complexity consideration,c,annual fishery-dependent size composition
+Data-moderate complexity consideration,d,recruitment deviations
+Data-moderate complexity consideration,e,dome-shaped selectivity
+Data-moderate complexity consideration,f,timeblocks
+Version combining complexity steps,v1,a + b
+Versions combining complexity steps,v2,a + c
+Versions combining complexity steps,v3,a + d
+Versions combining complexity steps,v4,a + e
+Versions combining complexity steps,v5,a + f
+Versions combining complexity steps,v6,a + b + c
+Versions combining complexity steps,v7,a + b + d
+Versions combining complexity steps,v8,a + b + e
+Versions combining complexity steps,v9,a + b + f
+Versions combining complexity steps,v10,a + c + d
+Versions combining complexity steps,v11,a + c + e
+Versions combining complexity steps,v12,a + c + f
+Versions combining complexity steps,v13,a + d + e
+Versions combining complexity steps,v14,a + d + f
+Versions combining complexity steps,v15,a + e + f
+Versions combining complexity steps,v16,a + b + c + d
+Versions combining complexity steps,v17,a + b + c + e
+Versions combining complexity steps,v18,a + b + c + f
+Versions combining complexity steps,v19,a + b + d + e
+Versions combining complexity steps,v20,a + b + d + f
+Versions combining complexity steps,v21,a + b + e + f
+Versions combining complexity steps,v22,a + b + c + d + e
+Versions combining complexity steps,v23,a + b + c + d + f
+Versions combining complexity steps,v24,a + b + c + e + f
+Versions combining complexity steps,v25,a + b + c + d + e + f

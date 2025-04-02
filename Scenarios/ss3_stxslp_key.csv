@@ -1,0 +1,11 @@
+ Model Development Process , Code , Sequential modeling steps 
+ Data bin range for scenario inputs,/_5cm_010641_," From 01 to 41 centimeters, 5 cm bins; First bin is 01 to 10 cm "
+ Model building initial steps, _ct, model initialized with continuum tool (ct) scenario inputs 
+ Model building initial steps, _m1, _ct modified for biology (adjust growth + hermaphroditism) 
+ Model building initial steps, _m2, _m1 modified to include continuous recruitment (four settlement events) 
+ Model building initial steps, _m3, _m2 +modified to use composition reweighting (Dirichlet) 
+ Scenario, a_m2, index + hermaphroditism + continuous recruitment 
+ Scenario, b_m2, annual comp FI + hermaphroditism + continuous recruitment 
+ Scenario, v1_m2,index + annual comp FI + hermaphroditism + continuous recruitment 
+ Scenario, v3_m2, index + recruitment deviations + hermaphroditism  + continuous recruitment 
+ Scenario, v7_m2, index + annual comp FI + recruitment deviations + hermaphroditism + continuous recruitment 
