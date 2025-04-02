@@ -2,9 +2,9 @@
 title: "Data-Informed Modeling Configurations"
 ---
 
-The data considered for use in the current assessment are documented in the SEDAR 84 US Caribbean Stoplight Parrotfish St. Croix Data Workshop Report [@sedar2024]. This section summarizes those data and their associated model configurations explored using Stock Synthesis.
+The data available for use in the current assessment are documented in the SEDAR 84 US Caribbean Stoplight Parrotfish St. Croix Data Workshop Report [@sedar2024]. Provided here is a summary of those data with a focus on the associated model configurations explored using Stock Synthesis.
 
-Additional details for each data input are provided across the respective references identified below:
+Additional details for each data input are available in their respective references:
 
 1.  Landings from self-reported commercial fisher logbook data [@martínezrivera2024]
 2.  Length compositions from shore-based port sampling of commercial landings [@godwin2024]
@@ -18,9 +18,9 @@ Additional details for each data input are provided across the respective refere
 
 ### Catch Data {#sec-data-fleet-catch}
 
-The catch data for the dive fleet came from the Caribbean Commercial Logbook program [@martínezrivera2024]. **The catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season, i.e., each fishing year.** The years of the available species-specific self-reported commercial fisher logbook data determined the start and end years of the Stock Synthesis models. **The start and end years of the model were 2012 and 2022, respectively.** Based on discussions at the data workshop characterizing catch by the predominant dive gear, **the assessment assumed no discarding nor discard mortality associated with the dive fleet**.
+The catch data for the dive fleet came from the Caribbean Commercial Logbook program [@martínezrivera2024]. **The catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season, i.e., each fishing year.** The years of the available species-specific self-reported commercial fisher logbook data determined the start and end years of the Stock Synthesis models. **The start and end years of the model were 2012 and 2022, respectively.** Based on discussions at the data workshop characterizing catch by the predominant dive gear, **the assessment assumed no discards**.
 
-It is important to note that the stock was not at an unexploited equilibrium at the start year of the available time series. The fishery had been ongoing for decades, and the total fishing effort in St. Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the dive fleet, and a corresponding initial equilibrium catch was input. In recent assessments, the initial equilibrium catch is initiated as the geometric mean of the first three years of available catches. However, because of the known decline in effort preceding the start year of the assessment, **the initial equilibrium catch was configured in initial runs as 30 metric tons**, a little over twice the geometric mean of the catches from 2012 - 2014.
+It is important to note that the stock was not unexploited at the start year of the available catch time series. The fishery had been ongoing for decades, and the total fishing effort in St. Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the dive fleet, and a corresponding initial equilibrium catch was input. A common option to define an initial equilibrium catch is to use the geometric mean of the first three years of available catches. However, because of the known decline in effort preceding the start year of the assessment, **the initial equilibrium catch was configured in initial runs as 30 metric tons**, a little over twice the geometric mean of the catches from 2012 - 2014.
 
 **The input standard error for the landings was set to 0.01.** When implemented with few data inputs, Stock synthesis will inherently nearly exactly fit the annual landings time series, regardless of the input standard error. 
 
@@ -32,13 +32,13 @@ Alternative model configurations associated with the dive fleet data are describ
 
 ### Size Composition Data {#sec-data-fleet-size}
 
-Gear-specific annual length frequencies came from the commercial shore-based port-sampling Trip Interview Program [@godwin2024]. These data were used to characterize the size-based selectivity pattern for the dive fleet. Since multiple fish can be obtained from a single sampled trip, the lengths are not independent observations. **The relative model weighting of the dive fleet length compositions was based on the number of trips sampled**.
+Gear-specific annual length frequencies for the dive fleet came from the commercial shore-based port-sampling Trip Interview Program [@godwin2024]. These data were used to characterize the fleet's size-based selectivity pattern. Since multiple fish length measurements can be obtained from a single sampled trip, each length does not represent an independent observations. **The relative model weighting of the dive fleet length compositions was based on the number of trips sampled**.
 
 **Due to low sample sizes, the fishery-dependent commercial dive fleet length composition data were collapsed across all years**
 
-**The length compositions of the commercial dive fleet were assumed to be representative of the total catch.** Although a federal minimum size limit exists, it does not apply in USVI territorial waters extending from land to 3 nautical miles offshore. Discussion at the data workshop emphasized that the federal regulations do not conclusively affect retention.
+**The Trip Interview Program length compositions of the commercial dive fleet were assumed to be representative of the total catch.** Although a federal minimum size limit exists, it does not apply in USVI territorial waters extending from land to 3 nautical miles offshore. Discussion at the data workshop emphasized that the federal regulations do not conclusively affect retention.
 
-**A double normal function was used to model the relative vulnerability of capture by length for the dive fleet.** However, only two parameters were estimated, effectively describing a logistic selectivity for the commercial dive fleet. The double normal function allows for domed or logistic selectivity. It combines two normal distributions; the first describes the ascending limb, while the second describes the descending limb. Domed selectivity was not explored for St. Croix Stoplight Parrotfish. However, achieving the logistic shape with the double normal Stock Synthesis pattern facilitated model configuration. The two parameters used to achieve a logistic selectivity shape were the size associated with peak selectivity and the width of the ascending limb.
+**A double normal function was used to model the relative vulnerability of capture by length for the dive fleet.** However, only two parameters were estimated, effectively describing a logistic selectivity for the commercial dive fleet. The double normal function allows for domed or logistic selectivity. It combines two normal distributions; the first describes the ascending limb, while the second describes the descending limb. Domed selectivity was not explored for St. Croix Stoplight Parrotfish. However, achieving the logistic shape with the double normal Stock Synthesis pattern facilitated model configurations for SEDAR 84. The two parameters used to achieve a logistic selectivity shape were the size associated with peak selectivity and the width of the ascending limb.
 
 ## Survey Data {#sec-data-survey}
 
@@ -50,11 +50,9 @@ Annual abundance observations and associated standard errors were from the Natio
 
 ### Size Composition Data {#sec-data-survey-size}
 
-Since multiple fish can be observed from a single dive, lengths are not independent observations. **The relative model weighting of the National Coral Reef Monitoring Program survey length compositions across years was based on the number of paired dives.**
+Since multiple fish can be observed from a single dive, individual lengths are not independent observations. **The relative model weighting of the National Coral Reef Monitoring Program survey length compositions across years was based on the number of paired dives.**
 
 The three most recent years of the National Coral Reef Monitoring Program survey in St. Croix provided counts by individual lengths measured to the nearest centimeter. However, prior to 2017 the length observations were collected in 5-centimeter bins. **The length data inputs for both the dive fleet and the three years of the survey with 1-centimeter length measurements were binned to match the survey's 2012 and 2015 5-centimeter bins.**
-
-Note that SS3 allows the length bins of the data inputs to be larger than the bins used in the population model. **Although the size bins of all the length data inputs were large (≥ 5 centimeters), the model's simulated population bin size was 1-centimeter bins, with a plus group for the largest bin, greater than or equal to 41 centimeters fork length.** Although the population is modeled at a higher resolution concerning bin size, the likelihood function, which aims to match the observed data inputs and the simulated population estimates, operates at the resolution of the data inputs.
 
 A large proportion of small fish were observed in the National Coral Reef Monitoring Program survey. **The smallest two bins, \[1 - 6) and \[6 - 11), were collapsed into a single bin \[1 - 11).**
 
@@ -64,7 +62,11 @@ Models were initially configured in Stock Synthesis with length compositions agg
 
 ## Life History Data {#sec-data-biology}
 
-The life history data used in the assessment included longevity-informed natural mortality, growth, length-weight, and maturity analyzed from 1,801 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024]. Based on the available information, **the Stoplight Parrotfish population was modeled from age 0 through age 20, and from 0 to 41 centimeters fork length, in 1-centimeter bins, with the largest values for each as plus groups.**
+The life history data used in the assessment included longevity-informed natural mortality, growth, length-weight, and maturity analyzed from 1,801 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024]. 
+
+Based on the available information, **the Stoplight Parrotfish population was modeled from age 0 through age 20, and from 0 to 41 centimeters fork length, in 1-centimeter bins, with the largest values for each as plus groups.**
+
+Note that SS3 allows the length bins of the data inputs to be larger than the bins used in the population model. **Although the size bins of all the length data inputs were large (≥ 5 centimeters), the model's simulated population bin size was 1-centimeter bins.** When the population is modeled at a higher resolution concerning bin size, the likelihood function, which aims to match the observed data inputs and the simulated population estimates, operates at the resolution of the data inputs.
 
 ### Growth {#sec-methods-growth}
 
@@ -152,7 +154,7 @@ Only the virgin recruitment (R0) was estimated. **Sigma R and steepness were fix
 
 -   The start and end years of the model were 2012 and 2022, respectively.
 
--   The assessment assumed no discarding nor discard mortality associated with the dive fleet.
+-   The assessment assumed no discards.
 
 -   The input standard error for the landings was set to 0.01.
 
@@ -180,7 +182,7 @@ Only the virgin recruitment (R0) was estimated. **Sigma R and steepness were fix
 
 -   The length data inputs for both the dive fleet and the three years of the survey with 1-centimeter length measurements were binned to match the survey's 2012 and 2015 5-centimeter bins.
 
--   Although the size bins of all the length data inputs were large (≥ 5 centimeters), the model's simulated population bin size was 1-centimeter bins, with a plus group for the largest bin, greater than or equal to 41 centimeters fork length.
+-   Although the size bins of all the length data inputs were large (≥ 5 centimeters), the model's simulated population bin size was 1-centimeter bins.
 
 -   The smallest two bins, \[1-6) and \[6-11), were collapsed into a single bin \[1-11). 
 

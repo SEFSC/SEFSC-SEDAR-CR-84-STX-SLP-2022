@@ -24,6 +24,8 @@ foreach::foreach(i = seq_along(full_names)) %do% {
   ctl$MG_parms
   ctl$MG_parms[1,3]
   ctl$MG_parms[1,3] = 0.27
+  ctl$MG_parms[13,3]
+  ctl$MG_parms[13,3] = 0.27
   
   # r4ss::SS_writedat(
   #   datlist = dat,

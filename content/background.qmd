@@ -6,11 +6,11 @@ The stoplight parrotfish (Sparisoma viride) is a sequential protogynous hermaphr
 
 ## Management
 
-St. Croix stoplight parrotfish is managed under the St. Croix Fishery Management Plan [@crabtree]. In 2023, the Caribbean Fisheries Management Council transitioned from species-based to island-based fisheries management (@fig-uscar). The management measures in the new island-based fishery management plans became effective on October 13, 2022. 
+St. Croix stoplight parrotfish is managed under the St. Croix Fishery Management Plan [@crabtree]. In 2023, the Caribbean Fisheries Management Council transitioned from species-based to island-based fisheries management (@fig-uscar). The management measures in the new island-based fishery management plans became effective on October 13, 2022.
 
-The Parrotfish 2 stock complex includes two indicator stocks and five other species. The indicator species are stoplight parrotfish and redtail parrotfish (Sparisoma chrysopterum). The allowable biological catch for the complex was established using tier 4a of the 4-tired ABC control rule. The allowable biological catch and the annual catch limit are 85,135 and 72,365 pounds whole weight, respectively.
+The Parrotfish 2 stock complex includes two indicator stocks and five other species. The indicator species are stoplight parrotfish and redtail parrotfish (Sparisoma chrysopterum). The allowable biological catch for the complex was established using tier 4a of the 4-tired control rule. The allowable biological catch and the annual catch limit are 85,135 and 72,365 pounds whole weight, respectively.
 
-The Southeast Fisheries Science Center provided a SEDAR 84 Data Workshop working paper summarizing federal management actions for stoplight parrotfish in St. Croix. On August 29, 2013, a 9-inch federal size limit was instituted by Final Regulatory Amendment 4. The size limit only applies in the U.S. EEZ surrounding St. Croix, defined as the federal waters ranging from 3 to 200 nautical miles (nm) (5.6 – 370 kilometers \[km\]) from the nearest coastline point of the U.S. Virgin Islands (@fig-eez).
+A SEDAR 84 Data Workshop working paper summarizes federal management actions for stoplight parrotfish in St. Croix [@malone2024]. On August 29, 2013, a 9-inch federal size limit was instituted by Final Regulatory Amendment 4. The size limit only applies in the U.S. EEZ surrounding St. Croix, defined as the federal waters ranging from 3 to 200 nautical miles (nm) (5.6 – 370 kilometers \[km\]) from the nearest coastline point of the U.S. Virgin Islands (@fig-eez).
 
 ## Assessment History
 
@@ -27,3 +27,13 @@ fig_eez_cap <- "The U.S. EEZ is defined as the federal waters ranging from 3 to 
 ![`r fig_uscar_cap`](https://www.fisheries.noaa.gov/s3//styles/original/s3/dam-migration/island_group_management_areas.jpg?itok=5wvkxme2){#fig-uscar width="4.5in"}
 
 ![`r fig_eez_cap`](https://www.fisheries.noaa.gov/s3//styles/original/s3/dam-migration/carib_map_stx.jpg?itok=yeYHZ8gy){#fig-eez width="5in"}
+
+## Modeling Framework
+
+**Stock Synthesis was the modeling approach applied in the current SEDAR 84 assessment because of compatibility with the available data and consistency with standard practices.**
+
+Stock Synthesis is a statistical catch-at-age model that uses a population model, an observation model, and an estimation model and applies a likelihood function in the estimation process [@methot2020]. Stock Synthesis, commonly referred to as SS3, has been applied extensively worldwide for stock assessment evaluations [@methot2013]. It has also been used for previous data-limited and data-moderate SEDAR assessments, including the SEDAR 57 assessments and subsequent updates for Caribbean Spiny Lobster (Panulirus argus), and the SEDAR 80 assessments for Queen Triggerfish (Belistes vetula) [@sedar2019; @sedar2022].
+
+The Stock Synthesis modeling framework is a compatible tool for SEDAR stock assessments in the U.S. Caribbean because it can accommodate a wide range of model complexities, from data-limited to highly detailed assessments [@cope2024]. Stock Synthesis allows for the characterization of stock, fishing fleet, and survey dynamics through various parameters, which can be either fixed based on external data or estimated when sufficient assessment data are available. Additionally, it can incorporate complex biological dynamics, such as hermaphroditism and continuous recruitment, which are critical for accurately assessing St. Croix Stoplight Parrotfish.
+
+Finally, R packages such as r4ss and ss3diags facilitate critical evaluations of model reliability and model comparisons [@taylor2021; @carvalho2021]. For example, R4SS provides visualization and diagnostic tools to summarize and interpret fit, convergence, and key output metrics. SS3diags focuses on retrospective analyses, hind-casting, and residual pattern evaluations. The integration of these tools allows rigorous uncertainty analysis, streamlined sensitivity analyses, and enhanced transparency in decision-making.

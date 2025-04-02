@@ -58,7 +58,7 @@ The considerations detailed in @tbl-overview that were relevant for the St. Croi
 ```
 
 | Model Development Process | Code | Sequential modeling steps |
-|---------------------------|:--:|-----------------------------|
+|-------------------------|---------|-----------------------------|
 | Data bin range for scenario inputs |	\_5cm_010641\_	| From 01 to 41 centimeters, 5 cm bins; First bin is 01 to 10 cm |
 | Model building initial steps	| \_ct	| model initialized with continuum tool (ct) scenario inputs |
 | Model building initial steps	| \_m1	| \_ct modified for biology (adjust growth + hermaphroditism) |
