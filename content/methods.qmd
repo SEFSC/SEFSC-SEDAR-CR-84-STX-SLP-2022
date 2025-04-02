@@ -53,6 +53,10 @@ The data-moderate considerations explored in SEDAR 84 included incorporating (a)
 
 The considerations detailed in @tbl-overview that were relevant for the St. Croix stoplight parrotfish assessment were (a) indices, (b) annual fishery-independent size composition, and (d) recruitment deviations. Annual fishery-dependent size data (c) was not explored due to low sample size. Dome-shaped selectivity (e) and selectivity related timeblocks (f) were also not considerations that factor into the dynamics and data reviewed for the stoplight parrotfish population or fleet dynamics. The scenarios documented in this report are listed in table @tbl-ss3-stxslp
 
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
 | Model Development Process | Code | Sequential modeling steps |
 |---------------------------|:--:|-----------------------------|
 | Data bin range for scenario inputs |	\_5cm_010641\_	| From 01 to 41 centimeters, 5 cm bins; First bin is 01 to 10 cm |
