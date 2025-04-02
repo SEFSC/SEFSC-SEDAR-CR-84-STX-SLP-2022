@@ -37,7 +37,7 @@ Alternative model configurations associated with the dive fleet data are describ
 -   The initial equilibrium catch was explored via likelihood profiling
 
 | Year	| Metric Tons	| Pounds	| Dive | Other |
-|:--:-|---:|---:|---:|---:|
+|:---:|---:|---:|---:|---:|
 | 2012	| 18.99	 | 41,869	 | 	97%	 |	3%	 |
 | 2013	| 15.32	 | 33,773	 | 	98%	 |	2%	 |
 | 2014	| 9.88	 | 21,774	 | 	87%	 |	13%	 |
@@ -70,7 +70,7 @@ From 2012 - 2022, the size data included 1,033 shore-based length measurements f
 
 ### Index of abundance {#sec-data-survey-index}
 
-The National Coral Reef Monitoring Program supports reef fish sampling on hard-bottom (coral) habitats from 0 to 30 meters depth [@grove2021]. In St. Croix, sampling began in 2001 and was conducted every year from 2001 to 2012 and then every other year starting in 2015. The data used in SEDAR 84 were from 2012 - 2022, when the survey was conducted island-wide. Prior to 2017, the data are calibrated to account for the transition from belt transect to the cylinder survey method.
+The National Coral Reef Monitoring Program supports reef fish sampling on hard-bottom habitats from 0 to 30 meters depth [@grove2021]. In St. Croix, sampling began in 2001 and was conducted every year from 2001 to 2012 and then every other year starting in 2015. The data used in SEDAR 84 were from 2012 - 2022, when the survey was conducted island-wide. Prior to 2017, the data are calibrated to account for the transition from belt transect to the cylinder survey method.
 
 Annual mean density and associated standard errors for SEDAR 84 were provided by @grove2024.  In stock syntheses, the time series of mean density across all observed sizes **were input as an index in numbers with a lognormal error distribution**. The associated length composition data, described in the following subsection, suggested that **the index reflected the abundance of juveniles and adults**.
 
