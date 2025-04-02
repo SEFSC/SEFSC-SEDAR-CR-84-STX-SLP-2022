@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Data-Informed Modeling Configurations – SEDAR 84</title>
+<title>2&nbsp; Data-Informed Modeling Decisions – SEDAR 84</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,7 +101,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/data.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data-Informed Modeling Configurations</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/data.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data-Informed Modeling Decisions</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -165,7 +165,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/data.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data-Informed Modeling Configurations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data-Informed Modeling Decisions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -222,7 +222,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data-Informed Modeling Configurations</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data-Informed Modeling Decisions</span></h1>
 </div>
 
 
@@ -282,7 +282,7 @@ div.csl-indent {
 <section id="sec-data-survey-index" class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="sec-data-survey-index"><span class="header-section-number">2.2.1</span> Index of abundance</h3>
 <p>The National Coral Reef Monitoring Program supports reef fish sampling on hard-bottom (coral) habitats from 0 to 30 meters depth <span class="citation" data-cites="grove2021">(<a href="references.html#ref-grove2021" role="doc-biblioref">Grove et al., 2021</a>)</span>. In St.&nbsp;Croix, sampling began in 2001 and was conducted every year from 2001 to 2012 and then every other year starting in 2015. The data used in SEDAR 84 were from 2012 - 2022, when the survey was conducted island-wide. Prior to 2017, the data are calibrated to account for the transition from belt transect to the cylinder survey method.</p>
-<p>Annual abundance observations and associated standard errors for SEDAR 84 were provided by <span class="citation" data-cites="grove2024">Grove et al. (<a href="references.html#ref-grove2024" role="doc-biblioref">2024</a>)</span>. In stock syntheses, <strong>the survey was configured as an index in numbers with a lognormal error distribution</strong>. The associated length composition data, described in the following subsection, suggested that <strong>the index reflected the abundance of juveniles and adults</strong>.</p>
+<p>Annual mean density and associated standard errors for SEDAR 84 were provided by <span class="citation" data-cites="grove2024">Grove et al. (<a href="references.html#ref-grove2024" role="doc-biblioref">2024</a>)</span>. In stock syntheses, the time series of mean density across all observed sizes <strong>were input as an index in numbers with a lognormal error distribution</strong>. The associated length composition data, described in the following subsection, suggested that <strong>the index reflected the abundance of juveniles and adults</strong>.</p>
 </section>
 <section id="sec-data-survey-size" class="level3" data-number="2.2.2">
 <h3 data-number="2.2.2" class="anchored" data-anchor-id="sec-data-survey-size"><span class="header-section-number">2.2.2</span> Size Composition Data</h3>
@@ -319,14 +319,14 @@ div.csl-indent {
 </section>
 <section id="sec-methods-morpho" class="level3" data-number="2.3.2">
 <h3 data-number="2.3.2" class="anchored" data-anchor-id="sec-methods-morpho"><span class="header-section-number">2.3.2</span> Morphometric Conversion</h3>
-<p>The relationship between weight in grams and length in millimeters provided by <span class="citation" data-cites="riverahernández2024">Rivera Hernández &amp; Shervette (<a href="references.html#ref-riverahernández2024" role="doc-biblioref">2024</a>)</span> was converted to weight in grams and length in centimeters and used as a fixed model input. <strong>The length-weight relationship was W = 3.18 x 10^-5 L^ 2.9, with weight in kilograms and length in centimeters.</strong></p>
+<p>The relationship between weight in grams and length in millimeters provided by <span class="citation" data-cites="riverahernández2024">Rivera Hernández &amp; Shervette (<a href="references.html#ref-riverahernández2024" role="doc-biblioref">2024</a>)</span> was converted to weight in grams and length in centimeters and used as a fixed model input. <strong>The length-weight relationship was W = 3.18 x 10<sup>-5</sup> * L<sup>2.9</sup>, with weight in kilograms and length in centimeters.</strong></p>
 </section>
 <section id="sec-methods-m" class="level3" data-number="2.3.3">
 <h3 data-number="2.3.3" class="anchored" data-anchor-id="sec-methods-m"><span class="header-section-number">2.3.3</span> Maximum Age and Natural Mortality</h3>
 <p>Empirical estimates of natural mortality (M) can be derived using life history information such as longevity, growth, and maturity. For this assessment, the Natural Mortality Tool was used to estimate M <span class="citation" data-cites="cope2022">(<a href="references.html#ref-cope2022" role="doc-biblioref">Cope &amp; Hamel, 2022</a>)</span>. Various methods were explored, incorporating factors such as maximum age, the Von Bertalanffy growth parameter (K), theoretical age at size zero (t0), asymptotic size (L∞), and age at 50% maturity.</p>
 <p>Inputs for the Natural Mortality Tool were sourced from <span class="citation" data-cites="riverahernández2024">Rivera Hernández &amp; Shervette (<a href="references.html#ref-riverahernández2024" role="doc-biblioref">2024</a>)</span>, who observed a maximum age of 20 years for stoplight parrotfish in the U.S. Caribbean. However, the average age of 1,649 sampled fish was 5.4 years, with fewer than 1% of aged individuals reaching 13 years or older. More broadly across the Caribbean, a lower maximum age of 9 years was observed, with a suggested maximum lifespan of 12 years. In contrast, a tagging study in Bonaire indicated a potential maximum longevity of 30 years <span class="citation" data-cites="choat2003">(<a href="references.html#ref-choat2003" role="doc-biblioref">Choat et al., 2003</a>)</span>.</p>
 <p><a href="#tbl-m" class="quarto-xref">Table&nbsp;<span>2.1</span></a> summarizes these studies and the empirical methods used to estimate M based on available life history data. The primary approach for determining natural mortality in this assessment was longevity-based <span class="citation" data-cites="hamel2022">(<a href="references.html#ref-hamel2022" role="doc-biblioref">Hamel &amp; Cope, 2022</a>)</span>. Lower values of maximum age obtained by <span class="citation" data-cites="choat2003">Choat et al. (<a href="references.html#ref-choat2003" role="doc-biblioref">2003</a>)</span> corroborate with the higher estimate of mortality calculated using a meta-analysis available in the FishLife R package <span class="citation" data-cites="thorson2017">Thorson (<a href="references.html#ref-thorson2019" role="doc-biblioref">2019</a>)</span>. Although additional methods incorporating growth and maturity were explored using the Natural Mortality Tool, their applicability remains uncertain due to the species’ sex-changing nature. Specifically, the methods Hamel_K, Jensen_k 1, Jensen_k 2, Then_VBGF, Jensen_Amat, and Ri_Ef_Amat do not account for protogynous hermaphroditism <span class="citation" data-cites="hamel2015 jensen1996 then2015">Rikhter &amp; Efanov (<a href="references.html#ref-rikhter1976" role="doc-biblioref">1976</a>)</span>. Notably, the SEDAR 84 available inputs of age at 50% maturity reflect only the sexual maturity of females, while Von Bertalanffy’s growth parameters (K), t0, and asymptotic size were fit across males, females, and transitional individuals combined.</p>
-<p><strong>A natural mortality value of 0.3 was used in the initial model runs</strong>. This value corresponds with a theoretical maximum age of 18 years, approximately the average of the varoius maximum age values reported by <span class="citation" data-cites="choat2003">Choat et al. (<a href="references.html#ref-choat2003" role="doc-biblioref">2003</a>)</span> and <span class="citation" data-cites="riverahernández2024">Rivera Hernández &amp; Shervette (<a href="references.html#ref-riverahernández2024" role="doc-biblioref">2024</a>)</span>. Model configurations incorporating alternative M values were explored through sensitivity analyses, which are discussed later in this report.</p>
+<p><strong>A natural mortality value of 0.27 was used in the initial model runs</strong>. This value corresponds with the maximum age of 20 years reported by <span class="citation" data-cites="riverahernández2024">Rivera Hernández &amp; Shervette (<a href="references.html#ref-riverahernández2024" role="doc-biblioref">2024</a>)</span>. Model configurations incorporating alternative M values were explored through sensitivity analyses, which are discussed later in this report.</p>
 <div id="tbl-m" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-m-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
