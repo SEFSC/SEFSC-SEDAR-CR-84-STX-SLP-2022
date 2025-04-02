@@ -18,7 +18,13 @@ Additional details for each data input are available in their respective referen
 
 ### Catch Data {#sec-data-fleet-catch}
 
-The catch data for the dive fleet came from the Caribbean Commercial Logbook program [@martínezrivera2024]. **The catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season, i.e., each fishing year.** The years of the available species-specific self-reported commercial fisher logbook data determined the start and end years of the Stock Synthesis models. **The start and end years of the model were 2012 and 2022, respectively.** Based on discussions at the data workshop characterizing catch by the predominant dive gear, **the assessment assumed no discards**.
+The catch data for the dive fleet came from the Caribbean Commercial Logbook program [@martínezrivera2024]. Beginning in 1996, part of the commercial landings were reported by species group (e.g., snappers, groupers, parrotfishes, surgeonfishes, etc.), and by gear (hook and line, gill net, SCUBA, trap, etc.). All commercial fishery data reports included species groups beginning in 1998. In July of 2011, commercial landings were reported by species and gear. 
+
+Various diving gears were combined to establish a dive gear group, and the catch from this group made up 80% of the reported landings (tbl-catch). Potential outliers were discussed during the assessment webinars and retained as valid trips.
+
+**The catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season, i.e., each fishing year.** The years of the available species-specific self-reported commercial fisher logbook data determined the start and end years of the Stock Synthesis models. **The start and end years of the model were 2012 and 2022, respectively.** 
+
+Commercial discards reported by calendar year by @martínezrivera2024 were not significant and based on the nature of spearfishing with the predominant dive gear, **the assessment assumed no discards**.
 
 It is important to note that the stock was not unexploited at the start year of the available catch time series. The fishery had been ongoing for decades, and the total fishing effort in St. Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the dive fleet, and a corresponding initial equilibrium catch was input. A common option to define an initial equilibrium catch is to use the geometric mean of the first three years of available catches. However, because of the known decline in effort preceding the start year of the assessment, **the initial equilibrium catch was configured in initial runs as 30 metric tons**, a little over twice the geometric mean of the catches from 2012 - 2014.
 
@@ -30,11 +36,31 @@ Alternative model configurations associated with the dive fleet data are describ
 
 -   The initial equilibrium catch was explored via likelihood profiling
 
+| Year	| Metric Tons	| Pounds	| Dive | Other |
+|:--:-|---:|---:|---:|---:|
+| 2012	| 18.99	 | 41,869	 | 	97%	 |	3%	 |
+| 2013	| 15.32	 | 33,773	 | 	98%	 |	2%	 |
+| 2014	| 9.88	 | 21,774	 | 	87%	 |	13%	 |
+| 2015	| 11.25	 | 24,808	 | 	68%	 |	32%	 |
+| 2016	| 11.10	 | 24,481	 | 	58%	 |	42%	 |
+| 2017	| 10.67	 | 23,533	 | 	68%	 |	32%	 |
+| 2018	| 3.29	 | 7,262	 | 	90%	 |	10%	 |
+| 2019	| 3.42	 | 7,540	 | 	80%	 |	20%	 |
+| 2020	| 9.93	 | 21,883	 | 	71%	 |	29%	 |
+| 2021	| 11.07	 | 24,412	 | 	90%	 |	10%	 |
+| 2022	| 7.44	 | 16,398	 | 	74%	 |	26%	 |
+| Total	| 112.37 | 247,733 | 	82%	 |	18%	 |
+
+:  Commercial landings of Stoplight Parrotfish reported in St. Croix from
+2012-2022 and the percentage of those landing that came from each gear group.  {#tbl-catch}
+
 ### Size Composition Data {#sec-data-fleet-size}
 
-Gear-specific annual length frequencies for the dive fleet came from the commercial shore-based port-sampling Trip Interview Program [@godwin2024]. These data were used to characterize the fleet's size-based selectivity pattern. Since multiple fish length measurements can be obtained from a single sampled trip, each length does not represent an independent observations. **The relative model weighting of the dive fleet length compositions was based on the number of trips sampled**.
+Gear-specific annual length frequencies for the dive fleet came from the commercial shore-based port-sampling Trip Interview Program [@godwin2024]. The NOAA Fisheries, Southeast Fisheries Science Center Trip Interview Program collects length and weight data from fish landed by commercial fishing vessels, along with information about fishing area and gear. Data collection began in 1983 with frequent updates in best practices; the latest being in 2017. The data pertaining to Stoplight Parrotfish in St. Croix comprises 29,582 length observations across 1,028 unique port sampling interviews.
 
-**Due to low sample sizes, the fishery-dependent commercial dive fleet length composition data were collapsed across all years**
+Although the catch data can be separated into dive and non-dive related gears, 98% of the length measurements for St. Croix Stoplight parrotfish from 2012-2022 were associated with diving. These data were used to characterize the fleet's size-based selectivity pattern. Since multiple fish length measurements can be obtained from a single sampled trip, each length does not represent an independent observations. **The relative model weighting of the dive fleet length compositions was based on the number of trips sampled**. 
+
+From 2012 - 2022, the size data included 1,033 shore-based length measurements from dive gears obtained across 66 trips. Five trips were flagged and removed as potential outliers with unusually large lengths. **Due to low sample sizes of both fish and trips, the fishery-dependent commercial dive fleet length composition data were collapsed across all years 2012-2022**.
 
 **The Trip Interview Program length compositions of the commercial dive fleet were assumed to be representative of the total catch.** Although a federal minimum size limit exists, it does not apply in USVI territorial waters extending from land to 3 nautical miles offshore. Discussion at the data workshop emphasized that the federal regulations do not conclusively affect retention.
 
@@ -44,9 +70,9 @@ Gear-specific annual length frequencies for the dive fleet came from the commerc
 
 ### Index of abundance {#sec-data-survey-index}
 
-ADD YEARS
+The National Coral Reef Monitoring Program supports reef fish sampling on hard-bottom (coral) habitats from 0 to 30 meters depth [@grove2021]. In St. Croix, sampling began in 2001 and was conducted every year from 2001 to 2012 and then every other year starting in 2015. The data used in SEDAR 84 were from 2012 - 2022, when the survey was conducted island-wide. Prior to 2017, the data are calibrated to account for the transition from belt transect to the cylinder survey method.
 
-Annual abundance observations and associated standard errors were from the National Coral Reef Monitoring Program Reef Visual Census [@grove2024]. In stock syntheses, **the survey was configured as an index in numbers with a lognormal error distribution**. The associated length composition data, described in the following subsection, suggested that **the index reflected the abundance of juveniles and adults**.
+Annual abundance observations and associated standard errors for SEDAR 84 were provided by @grove2024. In stock syntheses, **the survey was configured as an index in numbers with a lognormal error distribution**. The associated length composition data, described in the following subsection, suggested that **the index reflected the abundance of juveniles and adults**.
 
 ### Size Composition Data {#sec-data-survey-size}
 
@@ -62,7 +88,7 @@ Models were initially configured in Stock Synthesis with length compositions agg
 
 ## Life History Data {#sec-data-biology}
 
-The life history data used in the assessment included longevity-informed natural mortality, growth, length-weight, and maturity analyzed from 1,801 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024]. 
+The life history data used in the assessment included longevity-informed natural mortality, growth, length-weight, and maturity analyzed from 1,801 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024]. The largest fish was 43.3 centimeters fork length and the oldest was 20 years old.
 
 Based on the available information, **the Stoplight Parrotfish population was modeled from age 0 through age 20, and from 0 to 41 centimeters fork length, in 1-centimeter bins, with the largest values for each as plus groups.**
 
@@ -78,9 +104,9 @@ The SS3 growth formulation requires five parameters:
 -   Coefficient of variation at the youngest age
 -   Coefficient of variation at the maximum age
 
-**Parameter estimates for Von Bertalanffy growth parameter (K) and the length at maximum age (L∞) were based on samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024].**
+**Parameter estimates for Von Bertalanffy growth parameter (K) and the length at maximum age (L∞) were based on 1,649 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024].** When the t~0~ was fixed to -0.06, K was 0.39 and L∞ 33.2 centimeters fork length. When t~0~ estimated, it was -0.52, K was 0.33, and L∞ was 33.8 centimeters fork length. 
 
-**The estimated size at age zero from otolith analysis by @riverahernández2024 was modified in Stock Synthesis so that the length of the youngest age, age 0, was set to zero.** Without this modification the model would be unable to fit to the substantial amounts of small (\<10cm) stoplight parrot observed in the survey size composition data.
+The SEDAR 84 assessment models were configured using the parameter estimates associated with the fixed t~0~ were used. Furthermore, **the estimated size at age zero from otolith analysis by @riverahernández2024 was modified in Stock Synthesis so that the length of the youngest age, age 0, was set to zero.** Without this modification the model would be unable to fit to the substantial amounts of small (\<10cm) stoplight parrot observed in the survey size composition data.
 
 **Coefficients of variation for both younger and older ages were initially set to 0.15.** Ideally, growth coefficients of variation should be derived from observed length-at-age data, however the assumed values are consistent with species of moderate growth variability.
 
