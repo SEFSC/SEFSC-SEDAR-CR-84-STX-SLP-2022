@@ -231,8 +231,8 @@ div.csl-indent {
 <p>Stock Synthesis models were initially configured using an annual catch time series and compositions that were aggregated across the available years for each source of length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity. Those sequential steps included the inclusion of the index of abundance and annual fishery-independent length compositions.</p>
 <section id="sec-methods-model-overview" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="sec-methods-model-overview"><span class="header-section-number">3.1</span> SEDAR 84 Model Development Overview</h2>
-<p>Table x provides the short hand naming conventions used for SEDAR 84 assessments of parrot fish in St.&nbsp;Croix and Yellow tail Snapper, <em>Ocyurus chrysurus</em>, in Puerto Rico as well as St.&nbsp;Thomas and St.&nbsp;John. <a href="#tbl-overview" class="quarto-xref">Table&nbsp;<span>3.1</span></a> describes the model development process starting with the simplest data-limited configuration, followed by exploring data-moderate configurations, individually and combined.</p>
-<p>The simplest configurations utilized aggregated length compositions by implementing the “super-period” approach in Stock Synthesis. When using super-periods, the estimation model generates annual values, but the likelihood function will compare the expected composite to the data composite across the super-period. When using this approach on the size composition data, Stock Synthesis models will still aim to identify parameter values for selectivity that achieve a fit between the predicted and observed data.</p>
+<p>The SEDAR 84 model development process started with simple data-limited configurations, followed by exploring data-moderate configurations, individually and combined. <a href="#tbl-overview" class="quarto-xref">Table&nbsp;<span>3.1</span></a> provides the short hand naming conventions used for SEDAR 84 assessments of parrot fish in St.&nbsp;Croix and Yellow tail Snapper, <em>Ocyurus chrysurus</em>, in Puerto Rico as well as St.&nbsp;Thomas and St.&nbsp;John.</p>
+<p>The simplest configurations aggregated length compositions across years by implementing the “super-period” approach in Stock Synthesis. When using super-periods, the estimation model generates annual values, but the likelihood function will compare the expected composite to the data composite across the super-period. When using this approach on the size composition data, Stock Synthesis models will still aim to identify parameter values for selectivity that achieve a fit between the predicted and observed data.</p>
 <p>The data-moderate considerations explored in SEDAR 84 included incorporating (a) indices, (b) annual fishery-independent size composition, (c) annual fishery-dependent size composition, (d) recruitment deviations, (e) dome-shaped selectivity, and (f) timeblocks. Not all of these considerations were explored for St.&nbsp;Croix Stoplight Parrotfish. However, the process sets us a draft reusable workflow across species and islands of model development with sequential model steps that take into account methodological and intentional stepwise model explorations combining across individual complexity considerations.</p>
 <div id="tbl-overview" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -422,71 +422,66 @@ Table&nbsp;3.1: Summary of process and naming conventions used for SEDAR 84 asse
 </section>
 <section id="sec-methods-model-key" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="sec-methods-model-key"><span class="header-section-number">3.2</span> SEDAR 84 St.&nbsp;Croix Stoplight Parrotfish Model Development</h2>
-<p>The considerations detailed in <a href="#tbl-overview" class="quarto-xref">Table&nbsp;<span>3.1</span></a> that were relevant for the St.&nbsp;Croix stoplight parrotfish assessment were (a) indices, (b) annual fishery-independent size composition, and (d) recruitment deviations. Annual fishery-dependent size data (c) was not explored due to low sample size. Dome-shaped selectivity (e) and selectivity related timeblocks (f) were also not considerations that factor into the dynamics and data reviewed for the stoplight parrotfish population or fleet dynamics. The scenarios documented in this report are listed in table <a href="#tbl-ss3-stxslp" class="quarto-xref">Table&nbsp;<span>3.2</span></a></p>
+<p>The considerations detailed in <a href="#tbl-overview" class="quarto-xref">Table&nbsp;<span>3.1</span></a> that were relevant for the St.&nbsp;Croix stoplight parrotfish assessment were (a) indices, (b) annual fishery-independent size composition, and (d) recruitment deviations. Annual fishery-dependent size data (c) was not explored due to low sample size. Dome-shaped selectivity (e) and selectivity related timeblocks (f) were also not considerations that factor into the dynamics and data reviewed for St.&nbsp;Corix stoplight parrotfish. The initial setup steps and description of the modeling scenarios documented in this report are listed in <a href="#tbl-ss3-stxslp" class="quarto-xref">Table&nbsp;<span>3.2</span></a>.</p>
 <div id="tbl-ss3-stxslp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ss3-stxslp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3.2: Summary of process and naming conventions used for SEDAR 84 St.&nbsp;Croix Stoplight Parrotfish model development.
+Table&nbsp;3.2: Summary of process and naming conventions used across different model development stages of the SEDAR 84 St.&nbsp;Croix Stoplight Parrotfish stock assessment.
 </figcaption>
 <div aria-describedby="tbl-ss3-stxslp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 22%">
-<col style="width: 17%">
-<col style="width: 60%">
+<col style="width: 10%">
+<col style="width: 8%">
+<col style="width: 80%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Model Development</th>
-<th>Code</th>
+<th>Stage</th>
+<th style="text-align: center;">Code</th>
 <th>Sequential modeling steps</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Scenario inputs</td>
-<td>5cm_010641</td>
-<td>01 - 41 centimeters, 5 cm bins; First bin is 10 cm</td>
+<td>Initial</td>
+<td style="text-align: center;">ct</td>
+<td>model initialized with continuum tool (ct)</td>
 </tr>
 <tr class="even">
-<td>Initial steps</td>
-<td>ct</td>
-<td>model initialized with continuum tool (ct) scenario inputs</td>
+<td>Initial</td>
+<td style="text-align: center;">m1</td>
+<td>ct + hermaphroditism</td>
 </tr>
 <tr class="odd">
-<td>Initial steps</td>
-<td>m1</td>
-<td>ct modified for biology (adjust growth + hermaphroditism)</td>
-</tr>
-<tr class="even">
-<td>Initial steps</td>
-<td>m2</td>
-<td>m1 modified for continuous recruitment (4 settlement events)</td>
-</tr>
-<tr class="odd">
-<td>Scenario</td>
-<td>a_m2</td>
-<td>index + hermaphroditism + continuous recruitment</td>
+<td>Initial</td>
+<td style="text-align: center;">m2</td>
+<td>m1 + continuous recruitment</td>
 </tr>
 <tr class="even">
 <td>Scenario</td>
-<td>b_m2</td>
-<td>annual comp FI + hermaphroditism + continuous recruitment</td>
+<td style="text-align: center;">a</td>
+<td>index</td>
 </tr>
 <tr class="odd">
 <td>Scenario</td>
-<td>v1_m2</td>
-<td>index + annual comp FI + hermaphroditism + continuous recruitment</td>
+<td style="text-align: center;">b</td>
+<td>annual fishery-independent size data</td>
 </tr>
 <tr class="even">
 <td>Scenario</td>
-<td>v3_m2</td>
-<td>index + recruitment deviations + hermaphroditism + continuous recruitment</td>
+<td style="text-align: center;">v1</td>
+<td>index + annual fishery-independent size data</td>
 </tr>
 <tr class="odd">
 <td>Scenario</td>
-<td>v7_m2</td>
-<td>index + annual comp FI + recruitment deviations + hermaphroditism + continuous recruitment</td>
+<td style="text-align: center;">v3</td>
+<td>index + recruitment deviations</td>
+</tr>
+<tr class="even">
+<td>Scenario</td>
+<td style="text-align: center;">v7</td>
+<td>index + annual fishery-independent size data + recruitment deviations</td>
 </tr>
 </tbody>
 </table>
