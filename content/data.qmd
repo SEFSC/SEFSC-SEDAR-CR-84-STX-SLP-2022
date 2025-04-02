@@ -1,5 +1,5 @@
 ---
-title: "Data-Informed Modeling Configurations"
+title: "Data-Informed Modeling Decisions"
 ---
 
 The data available for use in the current assessment are documented in the SEDAR 84 US Caribbean Stoplight Parrotfish St. Croix Data Workshop Report [@sedar2024]. Provided here is a summary of those data with a focus on the associated model configurations explored using Stock Synthesis.
@@ -72,7 +72,7 @@ From 2012 - 2022, the size data included 1,033 shore-based length measurements f
 
 The National Coral Reef Monitoring Program supports reef fish sampling on hard-bottom (coral) habitats from 0 to 30 meters depth [@grove2021]. In St. Croix, sampling began in 2001 and was conducted every year from 2001 to 2012 and then every other year starting in 2015. The data used in SEDAR 84 were from 2012 - 2022, when the survey was conducted island-wide. Prior to 2017, the data are calibrated to account for the transition from belt transect to the cylinder survey method.
 
-Annual abundance observations and associated standard errors for SEDAR 84 were provided by @grove2024. In stock syntheses, **the survey was configured as an index in numbers with a lognormal error distribution**. The associated length composition data, described in the following subsection, suggested that **the index reflected the abundance of juveniles and adults**.
+Annual mean density and associated standard errors for SEDAR 84 were provided by @grove2024.  In stock syntheses, the time series of mean density across all observed sizes **were input as an index in numbers with a lognormal error distribution**. The associated length composition data, described in the following subsection, suggested that **the index reflected the abundance of juveniles and adults**.
 
 ### Size Composition Data {#sec-data-survey-size}
 
@@ -118,7 +118,7 @@ Alternative model configurations associated with the growth data are described l
 
 ### Morphometric Conversion {#sec-methods-morpho}
 
-The relationship between weight in grams and length in millimeters provided by @riverahernández2024 was converted to weight in grams and length in centimeters and used as a fixed model input. **The length-weight relationship was W = 3.18 x 10\^-5 L\^ 2.9, with weight in kilograms and length in centimeters.**
+The relationship between weight in grams and length in millimeters provided by @riverahernández2024 was converted to weight in grams and length in centimeters and used as a fixed model input. **The length-weight relationship was W = 3.18 x 10^-5^ * L^2.9^, with weight in kilograms and length in centimeters.**
 
 ### Maximum Age and Natural Mortality {#sec-methods-m}
 
@@ -128,7 +128,7 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
 @tbl-m summarizes these studies and the empirical methods used to estimate M based on available life history data. The primary approach for determining natural mortality in this assessment was longevity-based [@hamel2022]. Lower values of maximum age obtained by @choat2003 corroborate with the higher estimate of mortality calculated using a meta-analysis available in the FishLife R package [@thorson2017, @thorson2019]. Although additional methods incorporating growth and maturity were explored using the Natural Mortality Tool, their applicability remains uncertain due to the species’ sex-changing nature. Specifically, the methods Hamel_K, Jensen_k 1, Jensen_k 2, Then_VBGF, Jensen_Amat, and Ri_Ef_Amat do not account for protogynous hermaphroditism [@hamel2015; @jensen1996, @jensen1997; @then2015, @rikhter1976]. Notably, the SEDAR 84 available inputs of age at 50% maturity reflect only the sexual maturity of females, while Von Bertalanffy's growth parameters (K), t0, and asymptotic size were fit across males, females, and transitional individuals combined.
 
-**A natural mortality value of 0.3 was used in the initial model runs**. This value corresponds with a theoretical maximum age of 18 years, approximately the average of the varoius maximum age values reported by @choat2003 and @riverahernández2024. Model configurations incorporating alternative M values were explored through sensitivity analyses, which are discussed later in this report.
+**A natural mortality value of 0.27 was used in the initial model runs**. This value corresponds with the maximum age of 20 years reported by @riverahernández2024. Model configurations incorporating alternative M values were explored through sensitivity analyses, which are discussed later in this report.
 
 | Input Source | Input Type | Input | M | Method |
 |:-----------|:-----------|:--------:|:--:|:--------|
