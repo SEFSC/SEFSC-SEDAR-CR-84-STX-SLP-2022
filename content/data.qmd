@@ -52,7 +52,7 @@ Alternative model configurations associated with the dive fleet data are describ
 | Total	| 112.37 | 247,733 | 	82%	 |	18%	 |
 
 :  Commercial landings of Stoplight Parrotfish reported in St. Croix from
-2012-2022 and the percentage of those landing that came from each gear group.  {#tbl-catch}
+2012-2022 in metric tons and pounds by year, along with the percentage of landings that came from each gear group.  {#tbl-catch}
 
 ### Size Composition Data {#sec-data-fleet-size}
 
