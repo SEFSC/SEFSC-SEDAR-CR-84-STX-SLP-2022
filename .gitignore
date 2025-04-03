@@ -41,6 +41,7 @@ ss_summary.sso
 ss3.b01
 ss3.b02
 ss3.b03
+ss3.b04
 ss3.bar
 ss3.cor
 ss3.eva
@@ -48,10 +49,12 @@ ss3.log
 ss3.p01
 ss3.p02
 ss3.p03
+ss3.p04
 ss3.par
 ss3.r01
 ss3.r02
 ss3.r03
+ss3.r04
 ss3.rep
 ss3.std
 ss3_linux

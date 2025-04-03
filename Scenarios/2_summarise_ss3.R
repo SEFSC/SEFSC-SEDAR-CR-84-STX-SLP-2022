@@ -5,9 +5,13 @@ pattern <- "^84_stx_"
 cutout <- "84_stx_f3_5cm_010641_0041_"
 
 # Specify parameters of interest
-keep_parm <- c("SR_LN(R0)", "SR_sigmaR", "SR_BH_steep",
-               "InitF_seas_1_flt_1Com_1", "L_at_Amax_Fem_GP_1",
-               "VonBert_K_Fem_GP_1", "CV_young_Fem_GP_1", "CV_old_Fem_GP_1")
+keep_parm <- c(
+  "SR_LN(R0)", "SR_sigmaR", "SR_BH_steep",
+  "NatM_uniform_Fem_GP_1", "InitF_seas_1_flt_1Com_1",
+  "L_at_Amin_Fem_GP_1", "L_at_Amax_Fem_GP_1",
+  "VonBert_K_Fem_GP_1", "CV_young_Fem_GP_1", "CV_old_Fem_GP_1",
+  "Size_DblN_peak_Commercial(1)", "Size_DblN_ascend_se_Commercial(1)",
+  )
 
 # Specify derived quantities of interest
 keep_dq <- c("SSB_Virgin", "SSB_Initial", "Recr_Virgin", "Recr_Initial",
@@ -74,6 +78,18 @@ short_parm <- parms |>
     names_from = c("Label"),
     values_from = c("Value")
   )
+
+est_parm <- parms |>
+  dplyr::select(scenario, Label, Status, Phase, Value, Parm_StDev) |>
+  dplyr::filter(!is.na(Parm_StDev)) |>
+  dplyr::mutate(cv = Parm_StDev/Value*100)
+  tidyr::pivot_wider(
+    id_cols = "scenario",
+    names_from = c("Label"),
+    values_from = c("Value")
+  ) |>
+  dplyr::select(tidyselect::where(function(x) any(!is.na(x)))) |>
+  dplyr::mutate(value = "estimate")
 
 short_dq <- dq |>
   dplyr::select(scenario, Label, Value) |>
