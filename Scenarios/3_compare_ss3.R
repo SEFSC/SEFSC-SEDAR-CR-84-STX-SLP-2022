@@ -1,4 +1,4 @@
-# Specify pattern of runs (ex: "^84_stx_.*_m2$")
+# Specify pattern of runs (ex: "84_stx", "m2$")
 pattern <- "84_stx"
 
 # Specify cutout string to match short names in scenarios.csv
