@@ -1,5 +1,5 @@
 #C file created using an r4ss function
-#C file write time: 2025-04-02  09:17:07
+#C file write time: 2025-04-07  11:25:25
 #
 0 # 0 means do not read wtatage.ss; 1 means read and usewtatage.ss and also read and use growth parameters
 1 #_N_Growth_Patterns
@@ -82,11 +82,11 @@
 0 # 0/1 to use steepness in initial equ recruitment calculation
 0 # future feature: 0/1 to make realized sigmaR a function of SR curvature
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE	env-var	use_dev	dev_mnyr	dev_mxyr	dev_PH	Block	Blk_Fxn # parm_name
-1e-04	20	   7	   7	  99	0	  1	0	0	0	0	0	0	0	#_SR_LN(R0)  
-  0.2	 1	0.99	0.99	0.24	0	 -1	0	0	0	0	0	0	0	#_SR_BH_steep
-    0	 2	 0.7	 0.7	  99	0	 -6	0	0	0	0	0	0	0	#_SR_sigmaR  
-   -5	 5	   0	   0	  99	0	-99	0	0	0	0	0	0	0	#_SR_regime  
-    0	 2	   0	   1	  99	0	-99	0	0	0	0	0	0	0	#_SR_autocorr
+  4	7	   5	   7	  99	0	  1	0	0	0	0	0	0	0	#_SR_LN(R0)  
+0.2	1	0.99	0.99	0.24	0	 -1	0	0	0	0	0	0	0	#_SR_BH_steep
+  0	2	 0.7	 0.7	  99	0	 -6	0	0	0	0	0	0	0	#_SR_sigmaR  
+ -5	5	   0	   0	  99	0	-99	0	0	0	0	0	0	0	#_SR_regime  
+  0	2	   0	   1	  99	0	-99	0	0	0	0	0	0	0	#_SR_autocorr
 #_no timevary SR parameters
 0 #do_recdev:  0=none; 1=devvector (R=F(SSB)+dev); 2=deviations (R=F(SSB)+dev); 3=deviations (R=R0*dev; dev2=R-f(SSB)); 4=like 3 with sum(dev2) adding penalty
 2012 # first year of main recr_devs; early devs can preceed this era
@@ -121,7 +121,7 @@
 #
 #_initial_F_parms
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE
-0	10	0.01	1	999	0	1	#_InitF_seas_1_flt_1Commercial
+0	4	1.2	1	999	0	1	#_InitF_seas_1_flt_1Commercial
 #
 #_Q_setup for fleets with cpue or survey data
 #_fleet	link	link_info	extra_se	biasadj	float  #  fleetname
@@ -144,12 +144,12 @@
 #
 #_SizeSelex
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE	env-var	use_dev	dev_mnyr	dev_mxyr	dev_PH	Block	Blk_Fxn  #  parm_name
- 1.5	40.5	     20	     20	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_1_Commercial(1)
- -15	  15	     15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_2_Commercial(1)
-  -4	  12	3.58539	3.58539	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_3_Commercial(1)
- -15	   6	    -15	    -15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_4_Commercial(1)
--999	  15	    -15	    -10	99	0	-2	0	0	0	0	0	0	0	#_SizeSel_P_5_Commercial(1)
- -15	  20	     15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_6_Commercial(1)
+  15	35	 25	     20	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_1_Commercial(1)
+ -15	15	 15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_2_Commercial(1)
+  -2	 6	  2	3.58539	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_3_Commercial(1)
+ -15	 6	-15	    -15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_4_Commercial(1)
+-999	15	-15	    -10	99	0	-2	0	0	0	0	0	0	0	#_SizeSel_P_5_Commercial(1)
+ -15	20	 15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_6_Commercial(1)
 #_AgeSelex
 #_No age_selex_parm
 #_no timevary selex parameters
