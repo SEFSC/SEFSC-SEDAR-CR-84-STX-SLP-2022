@@ -20,21 +20,7 @@ Additional details for each data input are available in their respective referen
 
 The catch data for the dive fleet came from the Caribbean Commercial Logbook program [@martínezrivera2024]. Beginning in 1996, part of the commercial landings were reported by species groups (e.g., snappers, groupers, parrotfishes, surgeonfishes, etc.), and by gear (hook and line, gill net, SCUBA, trap, etc.). All commercial fishery data reports included species groups beginning in 1998. In July of 2011, commercial landings were reported by species and gear. 
 
-Various diving gears were combined to establish a dive gear group, and the catch from this group made up 80% of the reported landings (tbl-catch). Potential outliers were discussed during the assessment webinars and retained as valid trips.
-
-**The catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season, i.e., each fishing year.** The years of the available species-specific self-reported commercial fisher logbook data determined the start and end years of the Stock Synthesis models. **The start and end years of the model were 2012 and 2022, respectively.** 
-
-Commercial discards reported by calendar year by @martínezrivera2024 were not significant and based on the nature of spearfishing with the predominant dive gear, **the assessment assumed no discards**.
-
-It is important to note that the stock was not unexploited at the start year of the available catch time series. The fishery had been ongoing for decades, and the total fishing effort in St. Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the dive fleet, and a corresponding initial equilibrium catch was input. A common option to define an initial equilibrium catch is to use the geometric mean of the first three years of available catches. However, because of the known decline in effort preceding the start year of the assessment, **the initial equilibrium catch was configured in initial runs as 30 metric tons**, a little over twice the geometric mean of the catches from 2012 - 2014.
-
-**The input standard error for the landings was set to 0.01.** When implemented with few data inputs, Stock synthesis will inherently nearly exactly fit the annual landings time series, regardless of the input standard error. 
-
-Alternative model configurations associated with the dive fleet data are described later in this report. They included:
-
--   A higher standard error of 0.3 was explored via sensitivity analysis
-
--   The initial equilibrium catch was explored via likelihood profiling
+Various diving gears were combined to establish a dive gear group, and the catch from this group made up 80% of the reported landings (@tbl-catch). Potential outliers were discussed during the assessment webinars and retained as valid trips.
 
 | Year	| Metric Tons	| Pounds	| Dive | Other |
 |:---:|---:|---:|---:|---:|
@@ -53,6 +39,20 @@ Alternative model configurations associated with the dive fleet data are describ
 
 :  Commercial landings of Stoplight Parrotfish reported in St. Croix from
 2012-2022 in metric tons and pounds by year, along with the percentage of landings that came from each gear group.  {#tbl-catch}
+
+**The catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season, i.e., each fishing year.** The years of the available species-specific self-reported commercial fisher logbook data determined the start and end years of the Stock Synthesis models. **The start and end years of the model were 2012 and 2022, respectively.** 
+
+Commercial discards reported by calendar year by @martínezrivera2024 were not significant and based on the nature of spearfishing with the predominant dive gear, **the assessment assumed no discards**.
+
+It is important to note that the stock was not unexploited at the start year of the available catch time series. The fishery had been ongoing for decades, and the total fishing effort in St. Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the dive fleet, and a corresponding initial equilibrium catch was input. A common option to define an initial equilibrium catch is to use the geometric mean of the first three years of available catches. However, because of the known decline in effort preceding the start year of the assessment, **the initial equilibrium catch was configured in initial runs as 30 metric tons**, a little over twice the geometric mean of the catches from 2012 - 2014.
+
+**The input standard error for the landings was set to 0.01.** When implemented with few data inputs, Stock synthesis will inherently nearly exactly fit the annual landings time series, regardless of the input standard error. 
+
+Alternative model configurations associated with the dive fleet data are described later in this report. They included:
+
+-   A higher standard error of 0.3 was explored via sensitivity analysis
+
+-   The initial equilibrium catch was explored via likelihood profiling
 
 ### Size Composition Data {#sec-data-fleet-size}
 
@@ -128,8 +128,6 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
 @tbl-m summarizes these studies and the empirical methods used to estimate M based on available life history data. The primary approach for determining natural mortality in this assessment was longevity-based [@hamel2022]. Lower values of maximum age obtained by @choat2003 corroborate with the higher estimate of mortality calculated using a meta-analysis available in the FishLife R package [@thorson2017, @thorson2019]. Although additional methods incorporating growth and maturity were explored using the Natural Mortality Tool, their applicability remains uncertain due to the species’ sex-changing nature. Specifically, the methods Hamel_K, Jensen_k 1, Jensen_k 2, Then_VBGF, Jensen_Amat, and Ri_Ef_Amat do not account for protogynous hermaphroditism [@hamel2015; @jensen1996, @jensen1997; @then2015, @rikhter1976]. Notably, the SEDAR 84 available inputs of age at 50% maturity reflect only the sexual maturity of females, while Von Bertalanffy's growth parameters (K), t0, and asymptotic size were fit across males, females, and transitional individuals combined.
 
-**A natural mortality value of 0.27 was used in the initial model runs**. This value corresponds with the maximum age of 20 years reported by @riverahernández2024. Model configurations incorporating alternative M values were explored through sensitivity analyses, which are discussed later in this report.
-
 | Input Source | Input Type | Input | M | Method |
 |:-----------|:-----------|:--------:|:--:|:--------|
 | @choat2003 | Maximum age | 30 | 0.180 | Hamel_Amax |
@@ -150,6 +148,8 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
 : Empirical estimates of natural mortality (M) can be derived using life history information and the Natural Mortality Tool [@cope2022]. The SEDAR assessment working paper SEDAR84-AP-01 is equivalent to @riverahernández2024.  {#tbl-m}
 
+**A natural mortality value of 0.27 was used in the initial model runs**. This value corresponds with the maximum age of 20 years reported by @riverahernández2024. Model configurations incorporating alternative M values were explored through sensitivity analyses, which are discussed later in this report.
+
 ### Maturity, Fecundity, and Hermaphroditism {#sec-methods-repro}
 
 **Maturity was modeled as a logistic function.** Parameter estimates for maturity were based on 1,801 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024]. **The fecundity of Stoplight Parrotfish was estimated with a proxy (body weight \* maturity at age).**
@@ -169,6 +169,10 @@ A second method for parameterizing hermaphroditism was explored as a sensitivity
 Only the virgin recruitment (R0) was estimated. **Sigma R and steepness were fixed at 0.7 and 0.99, respectively.** The primary assumption for steepness was that this stock is not a closed population, so recruitment may not be strongly tied to the local spawning stock biomass. **In initial model configurations, annual deviations from the stock-recruit function were not estimated.** In configurations where recruitment deviations were estimated, sigma R was explored via likelihood profiling.
 
 **Continuous recruitment was parameterized in SS3 using four settlement events.** Equal proportions of recruits were assigned to each settlement event, and they were spaced such that recruitment would happen in months 1, 4, 7, and 10. This allowed growth to be staggered, reflecting a closer approximation of the observed stock dynamic of year-round spawning activity.
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
 
 ## Summary of Data-Informed Modeling Configurations
 
