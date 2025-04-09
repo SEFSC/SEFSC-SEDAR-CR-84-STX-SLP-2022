@@ -365,10 +365,12 @@ Table&nbsp;2.1: Commercial landings of Stoplight Parrotfish reported in St.&nbsp
 </div>
 </figure>
 </div>
-<p><strong>The catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season, i.e., each fishing year.</strong> The years of the available species-specific self-reported commercial fisher logbook data determined the start and end years of the Stock Synthesis models. <strong>The start and end years of the model were 2012 and 2022, respectively.</strong></p>
+<p><strong>The catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season, i.e., each fishing year.</strong></p>
+<p>The years of the available species-specific self-reported commercial fisher logbook data determined the start and end years of the Stock Synthesis models. <strong>The start and end years of the model were 2012 and 2022, respectively.</strong></p>
 <p>Commercial discards reported by calendar year by <span class="citation" data-cites="martínezrivera2024">Martínez Rivera et al. (<a href="references.html#ref-martínezrivera2024" role="doc-biblioref">2024</a>)</span> were not significant and based on the nature of spearfishing with the predominant dive gear, <strong>the assessment assumed no discards</strong>.</p>
 <p>It is important to note that the stock was not unexploited at the start year of the available catch time series. The fishery had been ongoing for decades, and the total fishing effort in St.&nbsp;Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the dive fleet, and a corresponding initial equilibrium catch was input. A common option to define an initial equilibrium catch is to use the geometric mean of the first three years of available catches. However, because of the known decline in effort preceding the start year of the assessment, <strong>the initial equilibrium catch was configured in initial runs as 30 metric tons</strong>, a little over twice the geometric mean of the catches from 2012 - 2014.</p>
-<p><strong>The input standard error for the landings was set to 0.01.</strong> When implemented with few data inputs, Stock synthesis will inherently nearly exactly fit the annual landings time series, regardless of the input standard error. Alternative model configurations associated with the dive fleet data are described later in this report. They included:</p>
+<p><strong>The input standard error for the landings was set to 0.01.</strong> When implemented with few data inputs, Stock synthesis will inherently nearly exactly fit the annual landings time series, regardless of the input standard error.</p>
+<p>Alternative model configurations associated with the dive fleet data are described later in this report. They included:</p>
 <ul>
 <li><p>A higher standard error of 0.3 was explored via sensitivity analysis</p></li>
 <li><p>The initial equilibrium catch was explored via likelihood profiling</p></li>
@@ -580,7 +582,7 @@ Table&nbsp;2.2: Empirical estimates of natural mortality (M) can be derived usin
 <ul>
 <li>Steepness (h) characterizes the initial slope of the ascending limb (i.e., the fraction of recruits produced at 20% of the unfished spawning biomass)</li>
 <li>The virgin recruitment (R0; estimated in log space) represents the asymptote or unfished recruitment levels.</li>
-<li>The variance term (sigma R) is the standard deviation of the log of recruitment (it both penalizes deviations from the spawner-recruit curve and defines the offset between the arithmetic mean spawner-recruit curve and the expected geometric mean from which the deviations are calculated).</li>
+<li>The variance term (sigma R) is the standard deviation of the log of recruitment and describes the amount of year-to-year variation in recruitment.</li>
 </ul>
 <p>Only the virgin recruitment (R0) was estimated. <strong>Sigma R and steepness were fixed at 0.7 and 0.99, respectively.</strong> The primary assumption for steepness was that this stock is not a closed population, so recruitment may not be strongly tied to the local spawning stock biomass. <strong>In initial model configurations, annual deviations from the stock-recruit function were not estimated.</strong> In configurations where recruitment deviations were estimated, sigma R was explored via likelihood profiling.</p>
 <p><strong>Continuous recruitment was parameterized in SS3 using four settlement events.</strong> Equal proportions of recruits were assigned to each settlement event, and they were spaced such that recruitment would happen in months 1, 4, 7, and 10. This allowed growth to be staggered, reflecting a closer approximation of the observed stock dynamic of year-round spawning activity.</p>
