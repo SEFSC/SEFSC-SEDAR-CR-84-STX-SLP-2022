@@ -54,10 +54,10 @@ tbl_corr
 
 ### Evaluating Variance
 
-@tbl-corr presents the model-estimated values and standard deviations for the main active parameters. While it’s important to consider the scale of each parameter, the results suggest that some key parameters are not being estimated with high precision. In particular, the coefficients of variation for initial fishing mortality are relatively high across all models, indicating considerable uncertainty in these estimates.
+@tbl_parm presents the model-estimated values and standard deviations for the main active parameters. While it’s important to consider the scale of each parameter, the results suggest that some key parameters are not being estimated with high precision. In particular, the coefficients of variation for initial fishing mortality are relatively high across all models, indicating considerable uncertainty in these estimates.
 
 ```{r}
-#| label: tbl-corr
+#| label: tbl-parm
 #| tbl-cap: "St. Croix stoplight parrotfish parameters, standard deviations (SD), and coeficient of variation (CV) by modeling scenario. CV is calcuated as the SD devided by the paramter estimate."
 
 est_parm_short <- read.csv(here::here("Scenarios", "scenarios_parm.csv")) |>
