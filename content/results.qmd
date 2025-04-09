@@ -12,9 +12,9 @@ Despite achieving a solution and having unbounded parameters, the gradient warni
 
 ### Correlation Analysis
 
-High correlations (> 0.95) were observed in nearly all model configurations (@tbl-corr). A particularly important correlation was between the estimate of initial fishing mortality (Initial F) and unfished recruitment (R0). This correlation exceeded 0.99 in all models except for Model v3, where it was slightly lower but still moderately high at -0.90.
+High correlations (\> 0.95) were observed in nearly all model configurations (@tbl-corr). A particularly important correlation was between the estimate of initial fishing mortality (Initial F) and unfished recruitment (R0). This correlation exceeded 0.99 in all models except for Model v3, where it was slightly lower but still moderately high at -0.90.
 
-Similarly, all models, except Model v3, showed moderately high correlations (> 0.90) between the two parameters used to define logistic selectivity: the size at peak selectivity and the width of the ascending limb.
+Similarly, all models, except Model v3, showed moderately high correlations (\> 0.90) between the two parameters used to define logistic selectivity: the size at peak selectivity and the width of the ascending limb.
 
 Correlations between these selectivity parameters are expected. While estimated values varied slightly among models, they produced similar size-based selectivity curves for the commercial dive fleet.
 
@@ -86,5 +86,4 @@ tbl_parm
 
 @fig-r0 illustrates how the estimate and uncertainty for the unfished recruitment (R0) changes throughout the sequential steps of model development. The uncertainty in these key parameters is further examined later in the report using likelihood profiles.
 
-!["St. Croix stoplight parrotfish parameter distribution plot by model scenario."](Scenarios/plots_m2$/compare16_densities_SR_LN(R0).png){#fig-r0}
-
+!["St. Croix stoplight parrotfish parameter distribution plot by model scenario."](/Scenarios/plots_m2$/compare16_densities_SR_LN(R0).png){#fig-r0}

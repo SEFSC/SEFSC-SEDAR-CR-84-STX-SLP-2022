@@ -19,8 +19,9 @@ book:
     - content/background.qmd
     - content/data.qmd
     - content/methods.qmd
-    - content/references.qmd
     - content/results.qmd
+    #- content/discussion.qmd
+    - content/references.qmd
 
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
