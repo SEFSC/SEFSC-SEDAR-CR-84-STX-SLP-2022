@@ -54,7 +54,7 @@ tbl_corr
 
 ### Evaluating Variance
 
-@tbl-corr provides the model estimated values and standard deviations for the main active parameters. While it is important to take into account the scale of the parameter, these results indicate that the models are not estimating some of the key parameters with high precision. In particular the coefficients of variation for initial F are high across models are relatively high. 
+@tbl-corr presents the model-estimated values and standard deviations for the main active parameters. While it’s important to consider the scale of each parameter, the results suggest that some key parameters are not being estimated with high precision. In particular, the coefficients of variation for initial fishing mortality are relatively high across all models, indicating considerable uncertainty in these estimates.
 
 ```{r}
 #| label: tbl-corr
@@ -84,7 +84,7 @@ tbl_parm
 
 ```
 
-@fig-r0 shows how the estimate of the unfished recruitment changes across the sequential steps of model development. The lack of defined values for key parameters such as unfished recruitment (R0) and initial F are further investigated later in the report using likelihood profiles.
+@fig-r0 illustrates how the estimate and uncertainty for the unfished recruitment (R0) changes throughout the sequential steps of model development. The uncertainty in these key parameters is further examined later in the report using likelihood profiles.
 
 !["St. Croix stoplight parrotfish parameter distribution plot by model scenario."](Scenarios/plots_m2$/compare16_densities_SR_LN(R0).png){#fig-r0}
 
