@@ -20,7 +20,7 @@ Additional details for each data input are available in their respective referen
 
 The catch data for the dive fleet came from the Caribbean Commercial Logbook program [@martínezrivera2024]. Beginning in 1996, part of the commercial landings were reported by species groups (e.g., snappers, groupers, parrotfishes, surgeonfishes, etc.), and by gear (hook and line, gill net, SCUBA, trap, etc.). All commercial fishery data reports included species groups beginning in 1998. In July of 2011, commercial landings were reported by species and gear. 
 
-Various diving gears were combined to establish a dive gear group, and the catch from this group made up 80% of the reported landings (@tbl-catch). Potential outliers were discussed during the assessment webinars and retained as valid trips.
+Various diving gears were combined to establish a dive gear group, and the catch of stoplight parrotfish in St. Croix from this group made up 80% of the reported landings (@tbl-catch). Potential outliers discussed during the assessment webinars were investigated and retained as valid trips.
 
 | Year	| Metric Tons	| Pounds	| Dive | Other |
 |:---:|---:|---:|---:|---:|
@@ -40,15 +40,15 @@ Various diving gears were combined to establish a dive gear group, and the catch
 :  Commercial landings of Stoplight Parrotfish reported in St. Croix from
 2012-2022 in metric tons and pounds by year, along with the percentage of landings that came from each gear group.  {#tbl-catch}
 
-**The catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season, i.e., each fishing year.** 
+In the SEDAR 84 Stock Synthesis models, **the catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season, i.e., each fishing year.** 
 
 The years of the available species-specific self-reported commercial fisher logbook data determined the start and end years of the Stock Synthesis models. **The start and end years of the model were 2012 and 2022, respectively.** 
 
-Commercial discards reported by calendar year by @martínezrivera2024 were not significant and based on the nature of spearfishing with the predominant dive gear, **the assessment assumed no discards**.
-
 It is important to note that the stock was not unexploited at the start year of the available catch time series. The fishery had been ongoing for decades, and the total fishing effort in St. Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the dive fleet, and a corresponding initial equilibrium catch was input. A common option to define an initial equilibrium catch is to use the geometric mean of the first three years of available catches. However, because of the known decline in effort preceding the start year of the assessment, **the initial equilibrium catch was configured in initial runs as 30 metric tons**, a little over twice the geometric mean of the catches from 2012 - 2014.
 
-**The input standard error for the landings was set to 0.01.** When implemented with few data inputs, Stock synthesis will inherently nearly exactly fit the annual landings time series, regardless of the input standard error. 
+**The input standard error for the landings was set to a 0.01 default.** When implemented with few data inputs, Stock synthesis will inherently nearly exactly fit the annual landings time series, regardless of the input standard error.
+
+Commercial discards reported by calendar year by @martínezrivera2024 were not significant and based on the nature of spearfishing with the predominant dive gear, **the assessment assumed no discards**.
 
 Alternative model configurations associated with the dive fleet data are described later in this report. They included:
 
@@ -74,15 +74,15 @@ From 2012 - 2022, the size data included 1,033 shore-based length measurements f
 
 The National Coral Reef Monitoring Program supports reef fish sampling on hard-bottom habitats from 0 to 30 meters depth [@grove2021]. In St. Croix, sampling began in 2001 and was conducted every year from 2001 to 2012 and then every other year starting in 2015. The data used in SEDAR 84 were from 2012 - 2022 when the survey was conducted island-wide. Before 2017, the data are calibrated to account for the transition from belt transect to the cylinder survey method.
 
-Annual mean density and associated standard errors for SEDAR 84 were provided by @grove2024.  In stock syntheses, the time series of mean density across all observed sizes **were input as an index in numbers with a lognormal error distribution**. The associated length composition data, described in the following subsection, suggested that **the index reflected the abundance of juveniles and adults**.
+Annual mean density and associated standard errors for SEDAR 84 were provided by @grove2024.  In Stock Synthesis, the time series of mean density across all observed sizes **were input as an index in numbers with a lognormal error distribution**. The associated length composition data, described in the following subsection, suggested that **the index reflected the abundance of juveniles and adults**.
 
 ### Size Composition Data {#sec-data-survey-size}
-
-Since multiple fish can be observed from a single dive, individual lengths are not independent observations. **The relative model weighting of the National Coral Reef Monitoring Program survey length compositions across years was based on the number of paired dives.**
 
 The three most recent years of the National Coral Reef Monitoring Program survey in St. Croix provided counts by individual lengths measured to the nearest centimeter. However, before 2017 the length observations were collected in 5-centimeter bins. **The length data inputs for both the dive fleet and the three years of the survey with 1 centimeter length measurements were binned to match the survey's 2012 and 2015 5-centimeter bins.**
 
 A large proportion of small fish were observed in the National Coral Reef Monitoring Program survey. **The smallest two bins, \[1 - 6) and \[6 - 11), were collapsed into a single bin \[1 - 11).**
+
+Since multiple fish can be observed from a single dive, individual lengths are not independent observations. **The relative model weighting of the National Coral Reef Monitoring Program survey length compositions across years was based on the number of paired dives.**
 
 The length compositions provided reasonable support that younger and older fish were available to the National Coral Reef Monitoring Program survey. **Selectivity for the National Coral Reef Monitoring Program survey was fixed at 1 for all sizes.**
 
@@ -108,7 +108,7 @@ The SS3 growth formulation requires five parameters:
 
 **Parameter estimates for Von Bertalanffy growth parameter (K) and the length at maximum age (L∞) were based on 1,649 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024].** When t~0~ was fixed to -0.06, K was 0.39 and L∞ 33.2 centimeters fork length. When t~0~ was estimated, it was -0.52, K was 0.33, and L∞ was 33.8 centimeters fork length. 
 
-The SEDAR 84 assessment models were configured using the parameter estimates associated with the fixed t~0~ were used. Furthermore, **the estimated size at age zero from otolith analysis by @riverahernández2024 was modified in Stock Synthesis so that the length of the youngest age, age 0, was set to zero.** Without this modification, the model would be unable to fit the substantial amounts of small (\<10cm) stoplight parrotfish observed in the survey size composition data.
+The SEDAR 84 assessment models were configured using the parameter estimates associated with the fixed t~0~. Furthermore, **the estimated size at age zero from otolith analysis by @riverahernández2024 was modified in Stock Synthesis so that the length of the youngest age, age 0, was set to zero.** Without this modification, the model would be unable to fit the substantial amounts of small (\<10cm) stoplight parrotfish observed in the survey size composition data.
 
 **Coefficients of variation for both younger and older ages were initially set to 0.15.** Ideally, growth coefficients of variation should be derived from observed length-at-age data, however, the assumed values are consistent with species of moderate growth variability.
 
@@ -156,7 +156,7 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
 **Maturity was modeled as a logistic function.** Parameter estimates for maturity were based on 1,801 samples of Stoplight Parrotfish collected across the U.S. Caribbean from 2013 to 2023 [@riverahernández2024]. **The fecundity of Stoplight Parrotfish was estimated with a proxy (body weight \* maturity at age).**
 
-Protogynous hermaphroditism was parameterized into the SS3 assessment framework in two ways. **The initial method to model hermaphroditism used the average age of transition, an associated standard deviation, and a maximum transition rate input as fixed parameters in a two-sex model.** Additionally, the sex ratio between female and male fish at recruitment was 1, such that all individuals were recruited as females. Although this approach allows explicitly modeling numbers by sex and age over time, this approach could not capture the early age at transition and the overlap of both sexes directly observed across the range of ages studied by @riverahernández2024.
+Protogynous hermaphroditism was parameterized into the SS3 assessment framework in two ways. **The initial method to model hermaphroditism in Stock Synthesis used the average age of transition, an associated standard deviation, and a maximum transition rate input as fixed parameters in a two-sex model.** Additionally, the sex ratio between female and male fish at recruitment was 1, such that all individuals were recruited as females. Although this approach allows explicitly modeling numbers by sex and age over time, this approach could not capture the early age at transition and the overlap of both sexes directly observed across the range of ages studied by @riverahernández2024.
 
 A second method for parameterizing hermaphroditism was explored as a sensitivity analysis. It involved using a female-only model and accounting for sex transition to males as a reduction in fecundity. A fecundity-at-age vector derived from a logistical fit to the @riverahernández2024 sex-at-age data was multiplied by maturity-at-age and fecundity-at-age. A caveat of using a single-sex model is that the exclusion of males does not allow for any potential sperm limitation. Although protogynous hermaphrodites tend to have sex ratios skewed towards males at larger sizes, the largest and oldest stoplight parrotfish observed by @riverahernández2024 were female.
 
@@ -168,7 +168,7 @@ A second method for parameterizing hermaphroditism was explored as a sensitivity
 -   The virgin recruitment (R0; estimated in log space) represents the asymptote or unfished recruitment levels.
 -   The variance term (sigma R) is the standard deviation of the log of recruitment and describes the amount of year-to-year variation in recruitment.
 
-Only the virgin recruitment (R0) was estimated. **Sigma R and steepness were fixed at 0.7 and 0.99, respectively.** The primary assumption for steepness was that this stock is not a closed population, so recruitment may not be strongly tied to the local spawning stock biomass. **In initial model configurations, annual deviations from the stock-recruit function were not estimated.** In configurations where recruitment deviations were estimated, sigma R was explored via likelihood profiling.
+Only the virgin recruitment (R0) was estimated. **Sigma R and steepness were fixed at 0.7 and 0.99, respectively.** The primary assumption for steepness was that this stock is not a closed population, so recruitment may not be strongly tied to the local spawning stock biomass. **In initial model configurations, annual deviations from the stock-recruit function were not estimated.** Steepness and R0 were explored via likelihood profiling. Additionally, in configurations where recruitment deviations were estimated, sigma R was explored via likelihood profiling.
 
 **Continuous recruitment was parameterized in SS3 using four settlement events.** Equal proportions of recruits were assigned to each settlement event, and they were spaced such that recruitment would happen in months 1, 4, 7, and 10. This allowed growth to be staggered, reflecting a closer approximation of the observed stock dynamic of year-round spawning activity.
 

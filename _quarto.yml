@@ -20,6 +20,7 @@ book:
     - content/data.qmd
     - content/methods.qmd
     - content/references.qmd
+    - content/results.qmd
 
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
@@ -49,11 +50,9 @@ execute:
 include-in-header: 
   - text: |
       \raggedright
-
-header-includes:
-  - \usepackage{caption}
-  - \captionsetup[table]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
-  - \captionsetup[figure]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
+      \usepackage{caption}
+      \captionsetup[table]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
+      \captionsetup[figure]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
 
 format:
   pdf:

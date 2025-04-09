@@ -6,15 +6,15 @@ Stock Synthesis models were initially configured using an annual catch time seri
 
 ## SEDAR 84 Model Development Overview {#sec-methods-model-overview}
 
-The SEDAR 84 model development process started with simple data-limited configurations, followed by exploring data-moderate configurations, individually and combined. @tbl-overview provides the shorthand naming conventions used for SEDAR 84 assessments of parrot fish in St. Croix and Yellowtail Snapper, *Ocyurus chrysurus*, in Puerto Rico as well as St. Thomas and St. John. 
+The SEDAR 84 model development process started with simple data-limited configurations, followed by exploring data-moderate configurations, individually and combined. @tbl-overview provides the shorthand naming conventions used for SEDAR 84 assessments of Caribbean yellowtail snapper, *Ocyurus chrysurus*, and stoplight parrotfish 
 
-The simplest configurations aggregated length compositions across years by implementing the "super-period" approach in Stock Synthesis. When using super-periods, the estimation model generates annual values, but the likelihood function will compare the expected composite to the data composite across the super-period. When using this approach on the size composition data, Stock Synthesis models will still aim to identify parameter values for selectivity that achieve a fit between the predicted and observed data.
+The simplest configurations aggregated length compositions across years by implementing the super-period approach in Stock Synthesis. When using super-periods, the estimation model generates annual values, but the likelihood function will compare the expected composite to the data composite across the super-period. When using this approach on the size composition data, Stock Synthesis models will still aim to identify parameter values for selectivity that achieve a fit between the predicted and observed data.
 
 The data-moderate considerations explored in SEDAR 84 included incorporating (a) indices, (b) annual fishery-independent size composition, (c) annual fishery-dependent size composition, (d) recruitment deviations, (e) dome-shaped selectivity, and (f) time blocks. Not all of these considerations were explored for St. Croix Stoplight Parrotfish. However, the process sets up a reproducible and adaptable workflow across species and islands of model development with sequential model steps that take into account methodological and intentional stepwise model explorations combined across individual complexity considerations.
 
 | Model Development Process | Code | Sequential modeling steps |
 |---------------------------|:----:|-----------------------------|
-| Data-limited configuration | null | catch and super-year size data |
+| Data-limited configuration | null | super-year size data |
 | Data-moderate consideration | a | index |
 | Data-moderate consideration | b | annual fishery-independent size data |
 | Data-moderate consideration | c | annual fishery-dependent size data |
@@ -49,9 +49,9 @@ The data-moderate considerations explored in SEDAR 84 included incorporating (a)
 
 :  Summary of process and naming conventions used for SEDAR 84 assessments describing  model development noting the simplest data-limited configuration, exploring individual data-moderate considerations, individually and combined.  {#tbl-overview}
 
-## SEDAR 84 St. Croix Stoplight Parrotfish Model Development {#sec-methods-model-key}
+## SEDAR 84 Stoplight Parrotfish Model Development {#sec-methods-model-key}
 
-The considerations detailed in @tbl-overview that were relevant for the St. Croix stoplight parrotfish assessment were (a) indices, (b) annual fishery-independent size composition, and (d) recruitment deviations. Annual fishery-dependent size data (c) was not explored due to the low sample size. Dome-shaped selectivity (e) and selectivity-related time blocks (f) were also not considerations that factor into the dynamics and data reviewed for St. Corix stoplight parrotfish. The initial setup steps and description of the modeling scenarios documented in this report are listed in @tbl-ss3-stxslp.
+The considerations detailed in @tbl-overview that were relevant for the stoplight parrotfish assessment were (a) indices, (b) annual fishery-independent size composition, and (d) recruitment deviations. Annual fishery-dependent size data (c) was not explored due to the low sample size. Dome-shaped selectivity (e) and selectivity-related time blocks (f) were also not considerations that factor into the dynamics and data reviewed for fishery in St. Croix. The initial setup steps and description of the modeling scenarios documented in this report are listed in @tbl-ss3-stxslp.
 
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
@@ -78,13 +78,13 @@ Model diagnostics aimed to follow the conceptual process described by @carvalho2
 
 Three approaches were used to check for model convergence. They were investigating for the presence of (1) bounded parameters, (2) high final gradients, and (3) a positive definite hessian. As described by @carvalho2021 checking for bounded parameters can indicate discrepancies with data or model structure. Additionally, small final gradients and a positive definite hessian can indicate that the objective function achieved good convergence.
 
-### Correlation Analysis {#sec-methods-corr}
-
-High correlation among parameters can lead to flat response surfaces and poor model stability. By performing a correlation analysis, modeling assumptions that lead to inadequate configurations can be identified. Because of the highly parameterized nature of stock assessment models, some parameters are expected to be correlated (e.g., stock recruit parameters). However, many strongly correlated parameters (e.g., > 0.95) suggest reconsidering modeling assumptions and parameterization.
-
 ### Evaluating Variance
 
 Parameters with high variance do not meaningfully influence the model's fit to the data. To check for parameters with high variance, all parameter estimates are reported with their resulting standard deviations. 
+
+### Correlation Analysis {#sec-methods-corr}
+
+High correlation among parameters can lead to flat response surfaces and poor model stability. By performing a correlation analysis, modeling assumptions that lead to inadequate configurations can be identified. Because of the highly parameterized nature of stock assessment models, some parameters are expected to be correlated (e.g., stock recruit parameters). However, many strongly correlated parameters (e.g., > 0.95) suggest reconsidering modeling assumptions and parameterization.
 
 ### Residual Analysis {#sec-methods-residuals}
 

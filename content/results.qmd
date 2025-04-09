@@ -1,0 +1,40 @@
+---
+title: "Model results"
+---
+
+### Convergence
+
+All three models presented in this report had a positive definite Hessian, indicating that each reached a local minimum and a locally optimal fit. None of the models had parameters that were bounded, suggesting the optimization was not constrained by parameter limits. However, all models showed high final gradients for F~MSY~, indicating poor convergence.
+
+Despite achieving a solution and having unbounded parameters, the elevated gradients in F~MSY~ raise concerns about model stability. The following sections further explore these convergence issues by examining parameter correlations, variances, and likelihood profiles to identify factors contributing to poor convergence and potential inconsistencies in the data.
+
+### Correlation Analysis
+
+High correlations (> 0.95) were observed in nearly all model configurations. A particularly important correlation was between the estimate of initial fishing mortality (InitF_seas_1_flt_1Commercial) and unfished recruitment (SR_LN(R0)). This correlation exceeded 0.99 in all models except for Model v3, where it was slightly lower but still moderately high at -0.904.
+
+Similarly, all models—except Model v3—showed moderately high correlations (> 0.90) between the two parameters used to define logistic selectivity: the size at peak selectivity (Size_DblN_peak_Commercial(1)) and the width of the ascending limb (Size_DblN_ascend_se_Commercial(1)).
+
+Correlations between these selectivity parameters are expected. While estimated values varied slightly among models, they produced similar size-based selectivity curves for the commercial dive fleet.
+
+
+```{r}
+
+short_covar <- read.csv(here::here("Scenarios", "scenarios_covar.csv"))
+
+var_corr <- c(
+  "Scenario",
+  "Estimated Parameters", 
+  "Estimated Parameters", 
+  "Correlation")
+
+tbl_corr <- short_covar |>
+  flextable::flextable() |>
+  flextable::autofit() |>
+  flextable::align(align = "center", part = "all") |>
+  flextable::set_header_labels(values = var_corr) |>
+  flextable::merge_h(part = "header") |>
+  flextable::color(color = "red", j = "corr", i = ~ abs(corr) > 0.95) 
+
+tbl_corr
+
+```
