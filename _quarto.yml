@@ -45,6 +45,15 @@ csl: apa.csl
 execute:
   echo: false
   code-overflow: wrap
+  
+include-in-header: 
+  - text: |
+      \raggedright
+
+header-includes:
+  - \usepackage{caption}
+  - \captionsetup[table]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
+  - \captionsetup[figure]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
 
 format:
   pdf:
