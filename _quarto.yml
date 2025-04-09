@@ -47,17 +47,18 @@ execute:
   echo: false
   code-overflow: wrap
   
-include-in-header: 
-  - text: |
-      \raggedright
-      \usepackage{caption}
-      \captionsetup[table]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
-      \captionsetup[figure]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
+
 
 format:
   pdf:
     toc: true
     toc-depth: 3
+    include-in-header: 
+      - text: |
+          \raggedright
+          \usepackage{caption}
+          \captionsetup[table]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
+          \captionsetup[figure]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
   docx:
     toc: true
     toc-depth: 3

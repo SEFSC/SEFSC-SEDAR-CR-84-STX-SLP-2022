@@ -1,0 +1,10 @@
+"scenario","label.i","label.j","corr"
+"a_m2","InitF_seas_1_flt_1Commercial","SR_LN(R0)",-0.997
+"a_m2","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.901
+"b_m2","InitF_seas_1_flt_1Commercial","SR_LN(R0)",-0.995
+"b_m2","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.911
+"v1_m2","InitF_seas_1_flt_1Commercial","SR_LN(R0)",-0.995
+"v1_m2","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.913
+"v3_m2","InitF_seas_1_flt_1Commercial","SR_LN(R0)",-0.904
+"v7_m2","InitF_seas_1_flt_1Commercial","SR_LN(R0)",-0.997
+"v7_m2","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.919
