@@ -2,24 +2,38 @@
 title: "Model results"
 ---
 
+## Model Diagnostics
+
 ### Convergence
 
 All three models presented in this report had a positive definite Hessian, indicating that each reached a local minimum and a locally optimal fit. None of the models had parameters that were bounded, suggesting the optimization was not constrained by parameter limits. However, all models showed high final gradients for F~MSY~, indicating poor convergence.
 
-Despite achieving a solution and having unbounded parameters, the elevated gradients in F~MSY~ raise concerns about model stability. The following sections further explore these convergence issues by examining parameter correlations, variances, and likelihood profiles to identify factors contributing to poor convergence and potential inconsistencies in the data.
+Despite achieving a solution and having unbounded parameters, the gradient warning for F~MSY~ raise concerns about model stability. The following sections further explore the convergence issues by examining parameter correlations, variances, and likelihood profiles to identify factors contributing to poor convergence and potential inconsistencies in the data.
 
 ### Correlation Analysis
 
-High correlations (> 0.95) were observed in nearly all model configurations. A particularly important correlation was between the estimate of initial fishing mortality (InitF_seas_1_flt_1Commercial) and unfished recruitment (SR_LN(R0)). This correlation exceeded 0.99 in all models except for Model v3, where it was slightly lower but still moderately high at -0.904.
+High correlations (> 0.95) were observed in nearly all model configurations (@tbl-corr). A particularly important correlation was between the estimate of initial fishing mortality (Initial F) and unfished recruitment (R0). This correlation exceeded 0.99 in all models except for Model v3, where it was slightly lower but still moderately high at -0.90.
 
-Similarly, all models—except Model v3—showed moderately high correlations (> 0.90) between the two parameters used to define logistic selectivity: the size at peak selectivity (Size_DblN_peak_Commercial(1)) and the width of the ascending limb (Size_DblN_ascend_se_Commercial(1)).
+Similarly, all models, except Model v3, showed moderately high correlations (> 0.90) between the two parameters used to define logistic selectivity: the size at peak selectivity and the width of the ascending limb.
 
 Correlations between these selectivity parameters are expected. While estimated values varied slightly among models, they produced similar size-based selectivity curves for the commercial dive fleet.
 
-
 ```{r}
+#| label: tbl-corr
+#| tbl-cap: "St. Croix stoplight parrotfish correlations between estimated parameters by . The table shows correlations greater than 0.9 or less than -0.9. Correlations values that are greater than 0.95 or less than -0.95 are shown in red."
 
-short_covar <- read.csv(here::here("Scenarios", "scenarios_covar.csv"))
+short_covar <- read.csv(here::here("Scenarios", "scenarios_covar.csv")) |>
+  dplyr::mutate(
+    label.i = dplyr::case_when(
+      label.i == "InitF_seas_1_flt_1Commercial" ~ "Initial F",
+      label.i == "Size_DblN_ascend_se_Commercial(1)" ~ "Dive Selectivity Asend."
+    ),
+    label.j = dplyr::case_when(
+      label.j == "SR_LN(R0)" ~ "Unfished Recruitment (R0)",
+      label.j == "Size_DblN_peak_Commercial(1)" ~ "Dive Selectivity Peak"
+    )
+  )
+
 
 var_corr <- c(
   "Scenario",
@@ -38,3 +52,7 @@ tbl_corr <- short_covar |>
 tbl_corr
 
 ```
+
+### Evaluating Variance
+
+
