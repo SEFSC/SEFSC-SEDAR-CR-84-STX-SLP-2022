@@ -49,7 +49,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../content/references.html" rel="next">
+<link href="../content/results.html" rel="next">
 <link href="../content/data.html" rel="prev">
 <link href="../assets/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -88,15 +88,11 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-</head><body class="nav-sidebar docked">\raggedright
-\usepackage{caption}
-\captionsetup[table]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
-\captionsetup[figure]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
 
 
+</head>
 
-
-
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -180,6 +176,12 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../content/results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Model results</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../content/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -195,12 +197,12 @@ div.csl-indent {
    
   <ul>
   <li><a href="#sec-methods-model-overview" id="toc-sec-methods-model-overview" class="nav-link active" data-scroll-target="#sec-methods-model-overview"><span class="header-section-number">3.1</span> SEDAR 84 Model Development Overview</a></li>
-  <li><a href="#sec-methods-model-key" id="toc-sec-methods-model-key" class="nav-link" data-scroll-target="#sec-methods-model-key"><span class="header-section-number">3.2</span> SEDAR 84 St.&nbsp;Croix Stoplight Parrotfish Model Development</a></li>
+  <li><a href="#sec-methods-model-key" id="toc-sec-methods-model-key" class="nav-link" data-scroll-target="#sec-methods-model-key"><span class="header-section-number">3.2</span> SEDAR 84 Stoplight Parrotfish Model Development</a></li>
   <li><a href="#sec-methods-diagnostics" id="toc-sec-methods-diagnostics" class="nav-link" data-scroll-target="#sec-methods-diagnostics"><span class="header-section-number">3.3</span> Model Diagnostics</a>
   <ul class="collapse">
   <li><a href="#sec-methods-convergence" id="toc-sec-methods-convergence" class="nav-link" data-scroll-target="#sec-methods-convergence"><span class="header-section-number">3.3.1</span> Convergence</a></li>
-  <li><a href="#sec-methods-corr" id="toc-sec-methods-corr" class="nav-link" data-scroll-target="#sec-methods-corr"><span class="header-section-number">3.3.2</span> Correlation Analysis</a></li>
-  <li><a href="#evaluating-variance" id="toc-evaluating-variance" class="nav-link" data-scroll-target="#evaluating-variance"><span class="header-section-number">3.3.3</span> Evaluating Variance</a></li>
+  <li><a href="#evaluating-variance" id="toc-evaluating-variance" class="nav-link" data-scroll-target="#evaluating-variance"><span class="header-section-number">3.3.2</span> Evaluating Variance</a></li>
+  <li><a href="#sec-methods-corr" id="toc-sec-methods-corr" class="nav-link" data-scroll-target="#sec-methods-corr"><span class="header-section-number">3.3.3</span> Correlation Analysis</a></li>
   <li><a href="#sec-methods-residuals" id="toc-sec-methods-residuals" class="nav-link" data-scroll-target="#sec-methods-residuals"><span class="header-section-number">3.3.4</span> Residual Analysis</a></li>
   <li><a href="#sec-methods-jitter" id="toc-sec-methods-jitter" class="nav-link" data-scroll-target="#sec-methods-jitter"><span class="header-section-number">3.3.5</span> Jitter Analysis</a></li>
   <li><a href="#sec-methods-retro" id="toc-sec-methods-retro" class="nav-link" data-scroll-target="#sec-methods-retro"><span class="header-section-number">3.3.6</span> Retrospective Analysis</a></li>
@@ -235,8 +237,8 @@ div.csl-indent {
 <p>Stock Synthesis models were initially configured using an annual catch time series and compositions that were aggregated across the available years for each source of length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity. Those sequential steps included the inclusion of the index of abundance and annual fishery-independent length compositions.</p>
 <section id="sec-methods-model-overview" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="sec-methods-model-overview"><span class="header-section-number">3.1</span> SEDAR 84 Model Development Overview</h2>
-<p>The SEDAR 84 model development process started with simple data-limited configurations, followed by exploring data-moderate configurations, individually and combined. <a href="#tbl-overview" class="quarto-xref">Table&nbsp;<span>3.1</span></a> provides the shorthand naming conventions used for SEDAR 84 assessments of parrot fish in St.&nbsp;Croix and Yellowtail Snapper, <em>Ocyurus chrysurus</em>, in Puerto Rico as well as St.&nbsp;Thomas and St.&nbsp;John.</p>
-<p>The simplest configurations aggregated length compositions across years by implementing the “super-period” approach in Stock Synthesis. When using super-periods, the estimation model generates annual values, but the likelihood function will compare the expected composite to the data composite across the super-period. When using this approach on the size composition data, Stock Synthesis models will still aim to identify parameter values for selectivity that achieve a fit between the predicted and observed data.</p>
+<p>The SEDAR 84 model development process started with simple data-limited configurations, followed by exploring data-moderate configurations, individually and combined. <a href="#tbl-overview" class="quarto-xref">Table&nbsp;<span>3.1</span></a> provides the shorthand naming conventions used for SEDAR 84 assessments of Caribbean yellowtail snapper, <em>Ocyurus chrysurus</em>, and stoplight parrotfish</p>
+<p>The simplest configurations aggregated length compositions across years by implementing the super-period approach in Stock Synthesis. When using super-periods, the estimation model generates annual values, but the likelihood function will compare the expected composite to the data composite across the super-period. When using this approach on the size composition data, Stock Synthesis models will still aim to identify parameter values for selectivity that achieve a fit between the predicted and observed data.</p>
 <p>The data-moderate considerations explored in SEDAR 84 included incorporating (a) indices, (b) annual fishery-independent size composition, (c) annual fishery-dependent size composition, (d) recruitment deviations, (e) dome-shaped selectivity, and (f) time blocks. Not all of these considerations were explored for St.&nbsp;Croix Stoplight Parrotfish. However, the process sets up a reproducible and adaptable workflow across species and islands of model development with sequential model steps that take into account methodological and intentional stepwise model explorations combined across individual complexity considerations.</p>
 <div id="tbl-overview" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -261,7 +263,7 @@ Table&nbsp;3.1: Summary of process and naming conventions used for SEDAR 84 asse
 <tr class="odd">
 <td>Data-limited configuration</td>
 <td style="text-align: center;">null</td>
-<td>catch and super-year size data</td>
+<td>super-year size data</td>
 </tr>
 <tr class="even">
 <td>Data-moderate consideration</td>
@@ -425,8 +427,8 @@ Table&nbsp;3.1: Summary of process and naming conventions used for SEDAR 84 asse
 </div>
 </section>
 <section id="sec-methods-model-key" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="sec-methods-model-key"><span class="header-section-number">3.2</span> SEDAR 84 St.&nbsp;Croix Stoplight Parrotfish Model Development</h2>
-<p>The considerations detailed in <a href="#tbl-overview" class="quarto-xref">Table&nbsp;<span>3.1</span></a> that were relevant for the St.&nbsp;Croix stoplight parrotfish assessment were (a) indices, (b) annual fishery-independent size composition, and (d) recruitment deviations. Annual fishery-dependent size data (c) was not explored due to the low sample size. Dome-shaped selectivity (e) and selectivity-related time blocks (f) were also not considerations that factor into the dynamics and data reviewed for St.&nbsp;Corix stoplight parrotfish. The initial setup steps and description of the modeling scenarios documented in this report are listed in <a href="#tbl-ss3-stxslp" class="quarto-xref">Table&nbsp;<span>3.2</span></a>.</p>
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-methods-model-key"><span class="header-section-number">3.2</span> SEDAR 84 Stoplight Parrotfish Model Development</h2>
+<p>The considerations detailed in <a href="#tbl-overview" class="quarto-xref">Table&nbsp;<span>3.1</span></a> that were relevant for the stoplight parrotfish assessment were (a) indices, (b) annual fishery-independent size composition, and (d) recruitment deviations. Annual fishery-dependent size data (c) was not explored due to the low sample size. Dome-shaped selectivity (e) and selectivity-related time blocks (f) were also not considerations that factor into the dynamics and data reviewed for fishery in St.&nbsp;Croix. The initial setup steps and description of the modeling scenarios documented in this report are listed in <a href="#tbl-ss3-stxslp" class="quarto-xref">Table&nbsp;<span>3.2</span></a>.</p>
 <div id="tbl-ss3-stxslp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ss3-stxslp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -500,13 +502,13 @@ Table&nbsp;3.2: Summary of process and naming conventions used across different 
 <h3 data-number="3.3.1" class="anchored" data-anchor-id="sec-methods-convergence"><span class="header-section-number">3.3.1</span> Convergence</h3>
 <p>Three approaches were used to check for model convergence. They were investigating for the presence of (1) bounded parameters, (2) high final gradients, and (3) a positive definite hessian. As described by <span class="citation" data-cites="carvalho2021">Carvalho et al. (<a href="references.html#ref-carvalho2021" role="doc-biblioref">2021</a>)</span> checking for bounded parameters can indicate discrepancies with data or model structure. Additionally, small final gradients and a positive definite hessian can indicate that the objective function achieved good convergence.</p>
 </section>
-<section id="sec-methods-corr" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="sec-methods-corr"><span class="header-section-number">3.3.2</span> Correlation Analysis</h3>
-<p>High correlation among parameters can lead to flat response surfaces and poor model stability. By performing a correlation analysis, modeling assumptions that lead to inadequate configurations can be identified. Because of the highly parameterized nature of stock assessment models, some parameters are expected to be correlated (e.g., stock recruit parameters). However, many strongly correlated parameters (e.g., &gt; 0.95) suggest reconsidering modeling assumptions and parameterization.</p>
-</section>
-<section id="evaluating-variance" class="level3" data-number="3.3.3">
-<h3 data-number="3.3.3" class="anchored" data-anchor-id="evaluating-variance"><span class="header-section-number">3.3.3</span> Evaluating Variance</h3>
+<section id="evaluating-variance" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="evaluating-variance"><span class="header-section-number">3.3.2</span> Evaluating Variance</h3>
 <p>Parameters with high variance do not meaningfully influence the model’s fit to the data. To check for parameters with high variance, all parameter estimates are reported with their resulting standard deviations.</p>
+</section>
+<section id="sec-methods-corr" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="sec-methods-corr"><span class="header-section-number">3.3.3</span> Correlation Analysis</h3>
+<p>High correlation among parameters can lead to flat response surfaces and poor model stability. By performing a correlation analysis, modeling assumptions that lead to inadequate configurations can be identified. Because of the highly parameterized nature of stock assessment models, some parameters are expected to be correlated (e.g., stock recruit parameters). However, many strongly correlated parameters (e.g., &gt; 0.95) suggest reconsidering modeling assumptions and parameterization.</p>
 </section>
 <section id="sec-methods-residuals" class="level3" data-number="3.3.4">
 <h3 data-number="3.3.4" class="anchored" data-anchor-id="sec-methods-residuals"><span class="header-section-number">3.3.4</span> Residual Analysis</h3>
@@ -969,8 +971,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../content/results.html" class="pagination-link" aria-label="Model results">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Model results</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
