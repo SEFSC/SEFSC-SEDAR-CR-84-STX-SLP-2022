@@ -86,4 +86,16 @@ tbl_parm
 
 @fig-r0 illustrates how the estimate and uncertainty for the unfished recruitment (R0) changes throughout the sequential steps of model development. The uncertainty in these key parameters is further examined later in the report using likelihood profiles.
 
-!["St. Croix stoplight parrotfish parameter distribution plot by model scenario."](/Scenarios/plots_m2$/compare16_densities_SR_LN(R0).png){#fig-r0}
+!["St. Croix stoplight parrotfish parameter distribution forhe natural log of the unfished recruitment parameter of the Beverton – Holt stock-recruit function by model scenario."](/Scenarios/plots_m2$/compare16_densities_SR_LN(R0).png){#fig-r0}
+
+### Jitter Analysis
+
+Consistent with earlier results indicating that the models reached local minima (as shown by the positive definite Hessians), the jitter analysis also performed well across all model scenarios (@fig-jitter). Importantly, no jitter runs produced a lower likelihood than the best fit already identified for each model.
+
+::: {#fig-jitter layout-ncol="2"}
+!["test"](/Scenarios/84_stx_f3_5cm_010641_0041_a_m2/diagnostics/jitter/Total%20Likelihood.png)
+
+!["test"](/Scenarios/plots_m2$/compare16_densities_SR_LN(R0).png)
+
+St. Croix stoplight parrotfish jitter analysis total likelihood. Each panel gives the results of 30 model runs where the starting parameter values for each run were randomly changed (‘jittered’) by 20% from the base model's values using a uniform distribution in cumulative normal space.
+:::
