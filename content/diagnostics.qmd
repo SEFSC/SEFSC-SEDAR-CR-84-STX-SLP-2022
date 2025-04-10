@@ -1,0 +1,147 @@
+---
+title: "Model Diagnostics"
+---
+
+Model diagnostics aimed to follow the conceptual process described by @carvalho2021. Their approach includes evaluating goodness of fit, information sources and structure, prediction skill, convergence, and model plausibility. Although @carvalho2021 advise detours and additional model explorations when initial diagnostic tests fail, advanced diagnostics, such as likelihood profiles, retrospective, and jitter analyses, were conducted even when initial tests failed to comprehensively communicate the various model configurations explored to the extent possible.
+
+## Convergence
+
+Three approaches were used to check for model convergence. They were investigating for the presence of (1) bounded parameters, (2) high final gradients, and (3) a positive definite hessian. As described by @carvalho2021 checking for bounded parameters can indicate discrepancies with data or model structure. Additionally, small final gradients and a positive definite hessian can indicate that the objective function achieved good convergence.
+
+The models presented in this report all had a positive definite Hessian, indicating that each reached a local minimum and a locally optimal fit. None of the models had parameters that were bounded, suggesting the optimization was not constrained by parameter limits. However, all models showed high final gradients for F~MSY~, indicating poor convergence.
+
+Despite achieving a solution and having unbounded parameters, the gradient warning for F~MSY~ raise concerns about model stability. The following sections further explore the convergence issues by examining parameter correlations, variances, and likelihood profiles to identify factors contributing to poor convergence and potential inconsistencies in the data.
+
+{{< pagebreak >}}
+
+## Correlation Analysis
+
+High correlation among parameters can lead to flat response surfaces and poor model stability. By performing a correlation analysis, modeling assumptions that lead to inadequate configurations can be identified. Because of the highly parameterized nature of stock assessment models, some parameters are expected to be correlated (e.g., stock recruit parameters). However, many strongly correlated parameters (e.g., > 0.95) suggest reconsidering modeling assumptions and parameterization.
+
+High correlations (\> 0.95) were observed in nearly all model configurations (@tbl-corr). A particularly important correlation was between the estimate of initial fishing mortality (Initial F) and unfished recruitment (R0). This correlation exceeded 0.99 in all models except for Model v3, where it was slightly lower but still moderately high at -0.90.
+
+Similarly, all models, except Model v3, showed moderately high correlations (\> 0.90) between the two parameters used to define logistic selectivity: the size at peak selectivity and the width of the ascending limb. Correlations between these selectivity parameters are expected. While estimated values varied slightly among models, they produced similar size-based selectivity curves for the commercial dive fleet.
+
+\
+
+```{r}
+#| label: tbl-corr
+#| tbl-cap: "St. Croix stoplight parrotfish correlations between estimated parameters by modeling scenario. The table shows correlations greater than 0.9 or less than -0.9. Correlations that are greater than 0.95 or less than -0.95 are shown in red."
+
+short_covar <- read.csv(here::here("Scenarios", "scenarios_covar.csv")) |>
+  dplyr::mutate(
+    label.i = dplyr::case_when(
+      label.i == "InitF_seas_1_flt_1Commercial" ~ "Initial F",
+      label.i == "Size_DblN_ascend_se_Commercial(1)" ~ "Dive Selectivity Asend."
+    ),
+    label.j = dplyr::case_when(
+      label.j == "SR_LN(R0)" ~ "Unfished Recruitment (R0)",
+      label.j == "Size_DblN_peak_Commercial(1)" ~ "Dive Selectivity Peak"
+    )
+  )
+
+var_corr <- c(
+  "Scenario",
+  "Estimated Parameters", 
+  "Estimated Parameters", 
+  "Correlation")
+
+tbl_corr <- short_covar |>
+  flextable::flextable() |>
+  flextable::autofit() |>
+  flextable::align(align = "center", part = "all") |>
+  flextable::set_header_labels(values = var_corr) |>
+  flextable::merge_h(part = "header") |>
+  flextable::color(color = "red", j = "corr", i = ~ abs(corr) > 0.95) |>
+  flextable::fontsize(size = 11, part = "all") |>
+  flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_corr
+
+```
+
+## Evaluating Variance
+
+Parameters with high variance do not meaningfully influence the model's fit to the data. To check for parameters with high variance, all parameter estimates are reported with their resulting standard deviations. 
+
+@tbl-parm presents the model-estimated values and standard deviations for the main active parameters. While it’s important to consider the scale of each parameter, the results suggest that some key parameters are not being estimated with high precision. In particular, the coefficients of variation for initial fishing mortality are relatively high across all models, indicating considerable uncertainty in these estimates.
+
+@fig-r0 illustrates how the estimate and uncertainty for the unfished recruitment (R0) changes throughout the sequential steps of model development. The uncertainty in these key parameters is further examined later in the report using likelihood profiles.
+
+\
+
+![St. Croix stoplight parrotfish parameter distribution forhe natural log of the unfished recruitment parameter of the Beverton – Holt stock-recruit function by model scenario.](/Scenarios/plots_m2$/compare16_densities_SR_LN(R0).png){#fig-r0 width="70%"}
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-parm
+#| tbl-cap: "St. Croix stoplight parrotfish parameters, standard deviations (SD), and coeficient of variation (CV) by modeling scenario. CV is calcuated as the SD devided by the paramter estimate."
+
+est_parm_short <- read.csv(here::here("Scenarios", "scenarios_parm.csv")) |>
+  dplyr::mutate(
+    Parameter = dplyr::case_when(
+      Parameter == "InitF_seas_1_flt_1Commercial" ~ "Initial F",
+      Parameter == "Size_DblN_ascend_se_Commercial(1)" ~ "Dive Selectivity Asend.",
+      Parameter == "SR_LN(R0)" ~ "Unfished Recruitment (R0)",
+      Parameter == "Size_DblN_peak_Commercial(1)" ~ "Dive Selectivity Peak"
+    )
+  ) |>
+  dplyr::select(Parameter, Scenario, Estimate, SD, CV) |>
+  dplyr::arrange(Parameter, Scenario)
+
+
+tbl_parm <- est_parm_short |>
+  flextable::flextable() |>
+  flextable::autofit() |>
+  flextable::theme_box() |>
+  flextable::align(align = "center", part = "all") |>
+  flextable::merge_v(j = "Parameter") |>
+  flextable::fontsize(size = 11, part = "all") |>
+  flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_parm
+
+```
+
+
+{{< pagebreak >}}
+
+## Jitter Analysis
+Jitter analysis is a relatively simple method that can be used to assess model stability and to determine whether the search algorithm has found a global, as opposed to local, solution. The premise is that all starting values are randomly altered (or ‘jittered’) by an input constant value, and the model is rerun from the new starting values. If the resulting population trajectories across many runs converge to the same solution, this provides reasonable support that a global minimum has been obtained. This process is not fault-proof; no guarantee can ever be made that the ‘true’ solution has been found or that the model does not contain misspecification. However, if the jitter analysis results are consistent, it provides additional support that the model is performing well and has come to a stable solution. For this assessment, a jitter value of 0.2 was applied to the starting values, and 30 runs were completed. The jitter value defines a uniform distribution in cumulative normal space to generate new initial parameter values [@methot2020].
+
+Consistent with earlier results indicating that the models reached local minima (positive definite Hessian), the jitter analysis also performed well across all model scenarios (@fig-jitter). Importantly, no jitter runs produced a lower likelihood than the best fit already identified for each model.
+
+::: {#fig-jitter layout-ncol="2"}
+![Model a_m2](/Scenarios/84_stx_f3_5cm_010641_0041_a_m2/diagnostics/jitter/Total_Likelihood.png){width="70%"}
+
+![Model b_m2](/Scenarios/84_stx_f3_5cm_010641_0041_b_m2/diagnostics/jitter/Total_Likelihood.png){width="70%"}
+
+![Model v1_m2](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m2/diagnostics/jitter/Total_Likelihood.png){width="70%"}
+
+![Model v3_m2](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m2/diagnostics/jitter/Total_Likelihood.png){width="70%"}
+
+![Model v7_m2](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m2/diagnostics/jitter/Total_Likelihood1.png){width="70%"}
+
+St. Croix stoplight parrotfish jitter analysis total likelihood. Each panel gives the results of 30 model runs where the starting parameter values for each run were randomly changed by 20% from the base model's values using a uniform distribution in cumulative normal space.
+:::
+
+{{< pagebreak >}}
+
+## Residual Analysis 
+
+The primary approach to address performance was a residual analysis of model fit to each data set (e.g., catch, length compositions, indices). Any temporal trend in model residuals or disproportionately high residual values can indicate model misspecification and poor performance. Ideally, residuals are randomly distributed, conform to the assumed error structure for that data source, and are not of extreme magnitude. Any extreme positive or negative residual patterns indicate poor model performance and potential unaccounted-for process or observation error.
+
+## Retrospective Analysis
+
+A retrospective analysis is a helpful approach for addressing the consistency of terminal year model estimates (e.g., SSB, Recruits, Fs) and is often considered a sensitivity exploration of impacts on key parameters from changes in data. The analysis sequentially removes a year of data at a time and reruns the model. Suppose the resulting estimates of derived quantities such as SSB or recruitment differ significantly. In such a case, serial over- or underestimation of important quantities can indicate that the model has some unidentified process error and could require reassessing model assumptions. It is expected that removing data will lead to slight differences between the new terminal year estimates and the estimates for that year in the model with the complete data. Estimates in years before the terminal year may have increasingly reliable information on cohort strength. Therefore, slight differences are usually expected between model runs as more years of size composition data are sequentially removed. Ideally, the difference in estimates will be slight and more or less randomly distributed above and below the estimates from the model with the complete data sets. A five-year retrospective analysis was carried out.
+
+## Likelihood Profiles
+
+Profile likelihoods are used to examine the change in negative log-likelihood for each data source to address the stability of a given parameter estimate and to see how each data source influences the estimate. The analysis is performed by holding a given parameter at a constant value and rerunning the model. The model is run repeatedly over a range of reasonable parameter values. Ideally, the graph of change in likelihood values against parameter values will yield a well-defined minimum. When the profile plot shows conflicting signals or is flat across its range, the given parameter may be poorly estimated.
+
+Typically, profiling is carried out for key parameters, particularly those defining the stock-recruit relationship (steepness, virgin recruitment, and sigma R). Profiles were explored across initial equilibrium catch, steepness, and virgin recruitment (R0).
+
+## Sensitivity Runs
+
+Sensitivity analyses were considered to evaluate the impact on key derived quantities. Sensitivities included considering alternatives for the CV associated with catch, the method used to model hermaphroditism and data weighting. Although the data-limited implementation of SS3 will inherently nearly exactly fit the annual landings, a higher CV of 0.3 was explored via sensitivity analysis. The second method for parameterizing hermaphroditism involved using a female-only model and accounting for sex transition to males as a reduction in fecundity. Lastly, the Dirichlet multinomial approach was used to reweigh the composition data. This method allows an internal estimation of sampling variance for each source of length composition data and adjusts the effective sample sizes [@methot2013].

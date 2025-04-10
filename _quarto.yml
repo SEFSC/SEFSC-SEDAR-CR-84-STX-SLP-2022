@@ -19,7 +19,7 @@ book:
     - content/background.qmd
     - content/data.qmd
     - content/methods.qmd
-    - content/results.qmd
+    - content/diagnostics.qmd
     #- content/discussion.qmd
     - content/references.qmd
 
