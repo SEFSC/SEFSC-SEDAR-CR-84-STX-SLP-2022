@@ -22,6 +22,9 @@ Correlations between these selectivity parameters are expected. While estimated 
 #| label: tbl-corr
 #| tbl-cap: "St. Croix stoplight parrotfish correlations between estimated parameters by modeling scenario. The table shows correlations greater than 0.9 or less than -0.9. Correlations that are greater than 0.95 or less than -0.95 are shown in red."
 
+install.packages("dplyr", quiet = TRUE)
+install.packages("flextable", quiet = TRUE)
+
 library(dplyr)
 library(flextable)
 
@@ -93,12 +96,14 @@ tbl_parm
 
 ### Jitter Analysis
 
-Consistent with earlier results indicating that the models reached local minima (as shown by the positive definite Hessians), the jitter analysis also performed well across all model scenarios (@fig-jitter). Importantly, no jitter runs produced a lower likelihood than the best fit already identified for each model.
+Consistent with earlier results indicating that the models reached local minima (positive definite Hessian), the jitter analysis also performed well across all model scenarios (@fig-jitter). Importantly, no jitter runs produced a lower likelihood than the best fit already identified for each model.
 
 ::: {#fig-jitter layout-ncol="2"}
-!["test"](/Scenarios/84_stx_f3_5cm_010641_0041_a_m2/diagnostics/jitter/Total%20Likelihood.png)
-
-!["test"](/Scenarios/plots_m2$/compare16_densities_SR_LN(R0).png)
+!["a"](/Scenarios/84_stx_f3_5cm_010641_0041_a_m2/diagnostics/jitter/Total_Likelihood.png)
+!["b"](/Scenarios/84_stx_f3_5cm_010641_0041_b_m2/diagnostics/jitter/Total_Likelihood.png)
+!["v1"](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m2/diagnostics/jitter/Total_Likelihood.png)
+!["v3"](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m2/diagnostics/jitter/Total_Likelihood.png)
+!["v7"](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m2/diagnostics/jitter/Total_Likelihood.png)
 
 St. Croix stoplight parrotfish jitter analysis total likelihood. Each panel gives the results of 30 model runs where the starting parameter values for each run were randomly changed (‘jittered’) by 20% from the base model's values using a uniform distribution in cumulative normal space.
 :::
