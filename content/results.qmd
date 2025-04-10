@@ -58,3 +58,6 @@ tbl_corr
 
 ```
 
+@fig-r0 illustrates how the estimate and uncertainty for the unfished recruitment (R0) changes throughout the sequential steps of model development. The uncertainty in these key parameters is further examined later in the report using likelihood profiles.
+
+![St. Croix stoplight parrotfish parameter distribution forhe natural log of the unfished recruitment parameter of the Beverton – Holt stock-recruit function by model scenario.](/Scenarios/plots_m2$/compare16_densities_SR_LN(R0).png){#fig-r0}
