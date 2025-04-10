@@ -40,7 +40,13 @@ var_corr <- c(
   "Estimated Parameters", 
   "Correlation")
 
-tbl_corr <- short_covar 
+tbl_corr <- short_covar |>
+  flextable::flextable() |>
+  flextable::autofit() |>
+  flextable::align(align = "center", part = "all") |>
+  flextable::set_header_labels(values = var_corr) |>
+  flextable::merge_h(part = "header") |>
+  flextable::color(color = "red", j = "corr", i = ~ abs(corr) > 0.95) 
 
 tbl_corr
 
