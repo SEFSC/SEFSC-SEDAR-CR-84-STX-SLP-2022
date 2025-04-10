@@ -22,11 +22,11 @@ Correlations between these selectivity parameters are expected. While estimated 
 #| label: tbl-corr
 #| tbl-cap: "St. Croix stoplight parrotfish correlations between estimated parameters by modeling scenario. The table shows correlations greater than 0.9 or less than -0.9. Correlations that are greater than 0.95 or less than -0.95 are shown in red."
 
-# install.packages("dplyr", quiet = TRUE)
-# install.packages("flextable", quiet = TRUE)
+install.packages("dplyr", quiet = TRUE)
+install.packages("flextable", quiet = TRUE)
 
-# library(dplyr)
-# library(flextable)
+library(dplyr)
+library(flextable)
 
 short_covar <- read.csv(here::here("Scenarios", "scenarios_covar.csv")) |>
   dplyr::mutate(
@@ -57,3 +57,4 @@ tbl_corr <- short_covar |>
 tbl_corr
 
 ```
+
