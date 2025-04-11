@@ -1,5 +1,5 @@
 # Specify pattern of runs (ex: "^84_stx_.*_m2$")
-pattern <- "^84_stx_"
+pattern <- ".*0041_.*_m2$"
 
 # Specify cutout string to match short names in scenarios.csv
 cutout <- "84_stx_f3_5cm_010641_0041_"
@@ -10,7 +10,7 @@ keep_parm <- c(
   "NatM_uniform_Fem_GP_1", "InitF_seas_1_flt_1Com_1",
   "L_at_Amin_Fem_GP_1", "L_at_Amax_Fem_GP_1",
   "VonBert_K_Fem_GP_1", "CV_young_Fem_GP_1", "CV_old_Fem_GP_1",
-  "Size_DblN_peak_Commercial(1)", "Size_DblN_ascend_se_Commercial(1)",
+  "Size_DblN_peak_Commercial(1)", "Size_DblN_ascend_se_Commercial(1)"
   )
 
 # Specify derived quantities of interest
@@ -52,6 +52,17 @@ likelihood <- purrr::map(full_data, "likelihoods_used") |>
   purrr::map(~ tibble::rownames_to_column(.x, "Label")) |>
   purrr::imap_dfr(~ dplyr::mutate(.x, scenario = .y))
 
+covar <- purrr::map(full_data, "CoVar") |>
+  purrr::map(~ tibble::rownames_to_column(.x, "Label")) |>
+  purrr::imap_dfr(~ dplyr::mutate(.x, scenario = .y))
+
+short_covar <- covar |>
+  dplyr::filter(Par..i == "Par",
+         Par..j == "Par",
+         abs(corr) > 0.9) |>
+  dplyr::select(scenario, label.i, label.j, corr) |>
+  dplyr::mutate(corr = round(corr, 3)) 
+
 par_count <- purrr::map_dfr(full_data, "N_estimated_parameters") |>
   tidyr::pivot_longer(
     cols = everything(),
@@ -81,15 +92,54 @@ short_parm <- parms |>
 
 est_parm <- parms |>
   dplyr::select(scenario, Label, Status, Phase, Value, Parm_StDev) |>
-  dplyr::filter(!is.na(Parm_StDev)) |>
-  dplyr::mutate(cv = Parm_StDev/Value*100)
-  tidyr::pivot_wider(
-    id_cols = "scenario",
-    names_from = c("Label"),
-    values_from = c("Value")
+  dplyr::filter(!is.na(Parm_StDev), 	
+                Status != "act") |>
+  dplyr::mutate(CV = round(Parm_StDev/Value*100, 2)) 
+
+est_parm_short <- est_parm |>
+  dplyr::select(-Status, -Phase) |>
+  dplyr::rename(
+    Parameter = Label,
+    Scenario = scenario,
+    Estimate = Value,
+    SD = Parm_StDev,
   ) |>
-  dplyr::select(tidyselect::where(function(x) any(!is.na(x)))) |>
-  dplyr::mutate(value = "estimate")
+  tidyr::pivot_longer(
+    cols = c("Estimate", "SD", "CV"),
+    names_to = "Type",
+    values_to = "Value"
+  ) |>
+  dplyr::mutate(Value = round(Value, 2)) |>
+  tidyr::pivot_wider(
+    names_from = Type,
+    values_from = Value
+  )
+  
+est_dq <- dq |>
+  dplyr::select(scenario, Label, Value, StdDev) |>
+  dplyr::mutate(CV = round(StdDev/Value*100, 2))  |>
+  dplyr::filter(Label %in% c(
+    "SSB_unfished",
+    "SSB_Initial",
+    "Bratio_2012"
+    )
+  ) |>
+  dplyr::rename(
+    Parameter = Label,
+    Scenario = scenario,
+    Estimate = Value,
+    SD = StdDev,
+  ) |>
+  tidyr::pivot_longer(
+    cols = c("Estimate", "SD", "CV"),
+    names_to = "Type",
+    values_to = "Value"
+  ) |>
+  dplyr::mutate(Value = round(Value, 2)) |>
+  tidyr::pivot_wider(
+    names_from = Type,
+    values_from = Value
+  ) 
 
 short_dq <- dq |>
   dplyr::select(scenario, Label, Value) |>
@@ -149,4 +199,19 @@ write.csv(run_summary,
 write.csv(short_sizeselex,
   here::here("Scenarios", "scenarios_size_selex.csv"),
   row.names = FALSE
+)
+
+write.csv(short_covar,
+          here::here("Scenarios", "scenarios_covar.csv"),
+          row.names = FALSE
+)
+
+write.csv(est_parm_short,
+          here::here("Scenarios", "scenarios_parm.csv"),
+          row.names = FALSE
+)
+
+write.csv(est_dq,
+          here::here("Scenarios", "scenarios_dq.csv"),
+          row.names = FALSE
 )

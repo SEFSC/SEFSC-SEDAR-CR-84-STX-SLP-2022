@@ -1,0 +1,195 @@
+---
+title: "Tables"
+---
+
+| Year	| Metric Tons	| Pounds	| Dive | Other |
+|:---:|---:|---:|---:|---:|
+| 2012	| 18.99	 | 41,869	 | 	97%	 |	3%	 |
+| 2013	| 15.32	 | 33,773	 | 	98%	 |	2%	 |
+| 2014	| 9.88	 | 21,774	 | 	87%	 |	13%	 |
+| 2015	| 11.25	 | 24,808	 | 	68%	 |	32%	 |
+| 2016	| 11.10	 | 24,481	 | 	58%	 |	42%	 |
+| 2017	| 10.67	 | 23,533	 | 	68%	 |	32%	 |
+| 2018	| 3.29	 | 7,262	 | 	90%	 |	10%	 |
+| 2019	| 3.42	 | 7,540	 | 	80%	 |	20%	 |
+| 2020	| 9.93	 | 21,883	 | 	71%	 |	29%	 |
+| 2021	| 11.07	 | 24,412	 | 	90%	 |	10%	 |
+| 2022	| 7.44	 | 16,398	 | 	74%	 |	26%	 |
+| Total	| 112.37 | 247,733 | 	82%	 |	18%	 |
+
+:  Commercial landings of Stoplight Parrotfish reported in St. Croix from
+2012-2022 in metric tons and pounds by year, along with the percentage of landings that came from each gear group.  {#tbl-catch}
+
+{{< pagebreak >}}
+
+| Input Source | Input Type | Input | M | Method |
+|:-----------|:-----------|:--------:|:--:|:--------|
+| @choat2003 | Maximum age | 30 | 0.180 | Hamel_Amax |
+| SEDAR84-AP-01 | Maximum age | 20 | 0.270 | Hamel_Amax |
+| Meta-analysis | Scientific name | *Sparisoma viride* | 0.397 | FishLife |
+| @choat2003 | Maximum age | 12 | 0.450 | Hamel_Amax |
+| @choat2003 | Maximum age | 9 | 0.600 | Hamel_Amax |
+| SEDAR84-AP-01 | Growth (k) | 0.39 | 0.604 | Hamel_k |
+| SEDAR84-AP-01 | Growth (k) | 0.39 | 0.585 | Jensen_k 1 |
+| SEDAR84-AP-01 | Growth (k) | 0.39 | 0.624 | Jensen_k 2 |
+| SEDAR84-AP-01 | Growth (L∞, k) | 33.2, 0.39 | 0.576 | Then_VBGF |
+| SEDAR84-AP-01 | Growth (k) | 0.33 | 0.512 | Hamel_k |
+| SEDAR84-AP-01 | Growth (k) | 0.33 | 0.495 | Jensen_k 1 |
+| SEDAR84-AP-01 | Growth (k) | 0.33 | 0.528 | Jensen_k 2 |
+| SEDAR84-AP-01 | Growth (L∞, k) | 33.8, 0.33 | 0.573 | Then_VBGF |
+| SEDAR84-AP-01 | Age at 50% maturity | 1.6 | 1.030 | Jensen_Amat |
+| SEDAR84-AP-01 | Age at 50% maturity | 1.6 | 0.924 | Ri_Ef_Amat |
+
+: Empirical estimates of natural mortality (M) can be derived using life history information and the Natural Mortality Tool [@cope2022]. The SEDAR assessment working paper SEDAR84-AP-01 is equivalent to @riverahernández2024.  {#tbl-m}
+
+{{< pagebreak >}}
+
+| Model Development Process | Code | Sequential modeling steps |
+|---------------------------|:----:|-----------------------------|
+| Data-limited configuration | null | super-year size data |
+| Data-moderate consideration | a | index |
+| Data-moderate consideration | b | annual fishery-independent size data |
+| Data-moderate consideration | c | annual fishery-dependent size data |
+| Data-moderate consideration | d | recruitment deviations |
+| Data-moderate consideration | e | dome-shaped selectivity |
+| Data-moderate consideration | f | time blocks |
+| Version combining complexity steps | v1 | a + b |
+| Versions combining complexity steps | v2 | a + c |
+| Versions combining complexity steps | v3 | a + d |
+| Versions combining complexity steps | v4 | a + e |
+| Versions combining complexity steps | v5 | a + f |
+| Versions combining complexity steps | v6 | a + b + c |
+| Versions combining complexity steps | v7 | a + b + d |
+| Versions combining complexity steps | v8 | a + b + e |
+| Versions combining complexity steps | v9 | a + b + f |
+| Versions combining complexity steps | v10 | a + c + d |
+| Versions combining complexity steps | v11 | a + c + e |
+| Versions combining complexity steps | v12 | a + c + f |
+| Versions combining complexity steps | v13 | a + d + e |
+| Versions combining complexity steps | v14 | a + d + f |
+| Versions combining complexity steps | v15 | a + e + f |
+| Versions combining complexity steps | v16 | a + b + c + d |
+| Versions combining complexity steps | v17 | a + b + c + e |
+| Versions combining complexity steps | v18 | a + b + c + f |
+| Versions combining complexity steps | v19 | a + b + d + e |
+| Versions combining complexity steps | v20 | a + b + d + f |
+| Versions combining complexity steps | v21 | a + b + e + f |
+| Versions combining complexity steps | v22 | a + b + c + d + e |
+| Versions combining complexity steps | v23 | a + b + c + d + f |
+| Versions combining complexity steps | v24 | a + b + c + e + f |
+| Versions combining complexity steps | v25 | a + b + c + d + e + f |
+
+:  Summary of process and naming conventions used for SEDAR 84 assessments describing  model development noting the simplest data-limited configuration, exploring individual data-moderate considerations, individually and combined.  {#tbl-overview}
+
+| Stage | Code | Sequential modeling steps |
+|--------|:-----:|---------------------------------------------------------------|
+| Initial	| ct	| model initialized with continuum tool (ct) |
+| Initial	| m1	| ct + hermaphroditism |
+| Initial	| m2	| m1 + continuous recruitment |
+| Scenario	| a	| index |
+| Scenario	| b	| annual fishery-independent size data |
+| Scenario	| v1	| index + annual fishery-independent size data |
+| Scenario	| v3	| index + recruitment deviations |
+| Scenario	| v7	| index + annual fishery-independent size data + recruitment deviations |
+
+:  Summary of process and naming conventions used across different model development stages of the SEDAR 84 St. Croix Stoplight Parrotfish stock assessment.  {#tbl-ss3-stxslp}
+
+\
+
+```{r}
+#| label: tbl-corr
+#| tbl-cap: "St. Croix stoplight parrotfish correlations between estimated parameters by modeling scenario. The table shows correlations greater than 0.9 or less than -0.9. Correlations that are greater than 0.95 or less than -0.95 are shown in red."
+
+short_covar <- read.csv(here::here("Scenarios", "scenarios_covar.csv")) |>
+  dplyr::mutate(
+    label.i = dplyr::case_when(
+      label.i == "InitF_seas_1_flt_1Commercial" ~ "Initial F",
+      label.i == "Size_DblN_ascend_se_Commercial(1)" ~ "Dive Selectivity Asend."
+    ),
+    label.j = dplyr::case_when(
+      label.j == "SR_LN(R0)" ~ "Unfished Recruitment (R0)",
+      label.j == "Size_DblN_peak_Commercial(1)" ~ "Dive Selectivity Peak"
+    )
+  )
+
+var_corr <- c(
+  "Scenario",
+  "Estimated Parameters", 
+  "Estimated Parameters", 
+  "Correlation")
+
+tbl_corr <- short_covar |>
+  flextable::flextable() |>
+  flextable::autofit() |>
+  flextable::align(align = "center", part = "all") |>
+  flextable::set_header_labels(values = var_corr) |>
+  flextable::merge_h(part = "header") |>
+  flextable::color(color = "red", j = "corr", i = ~ abs(corr) > 0.95) |>
+  flextable::fontsize(size = 11, part = "all") |>
+  flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_corr
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-parm
+#| tbl-cap: "St. Croix stoplight parrotfish parameters, standard deviations (SD), and coeficient of variation (CV) by modeling scenario. CV is calcuated as the SD devided by the paramter estimate."
+
+est_parm_short <- read.csv(here::here("Scenarios", "scenarios_parm.csv")) |>
+  dplyr::mutate(
+    Parameter = dplyr::case_when(
+      Parameter == "InitF_seas_1_flt_1Commercial" ~ "Initial F",
+      Parameter == "Size_DblN_ascend_se_Commercial(1)" ~ "Dive Selectivity Asend.",
+      Parameter == "SR_LN(R0)" ~ "Unfished Recruitment (R0)",
+      Parameter == "Size_DblN_peak_Commercial(1)" ~ "Dive Selectivity Peak"
+    )
+  ) |>
+  dplyr::select(Parameter, Scenario, Estimate, SD, CV) |>
+  dplyr::arrange(Parameter, Scenario)
+
+
+tbl_parm <- est_parm_short |>
+  flextable::flextable() |>
+  flextable::autofit() |>
+  flextable::theme_box() |>
+  flextable::align(align = "center", part = "all") |>
+  flextable::merge_v(j = "Parameter") |>
+  flextable::fontsize(size = 11, part = "all") |>
+  flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_parm
+
+```
+
+```{r}
+#| label: tbl-dq
+#| tbl-cap: "St. Croix stoplight parrotfishderived quantities for unfished and initial spawning stock biomass in metric tons (mt) along with standard deviations (SD) and coeficient of variation (CV) by modeling scenario. CV is calcuated as the SD devided by the paramter estimate."
+
+est_dq <- read.csv(here::here("Scenarios", "scenarios_dq.csv")) |>
+  dplyr::mutate(
+    Parameter = dplyr::case_when(
+      Parameter == "SSB_Initial" ~ "SSB Initial (mt)",
+      Parameter == "Bratio_2012" ~ "Ratio SSB \nInitial:Unfished",
+      Parameter == "SSB_unfished" ~ "SSB Unfished (mt)"
+    )
+  ) |>
+  dplyr::select(Parameter, Scenario, Estimate, SD, CV) |>
+  dplyr::arrange(desc(Parameter), Scenario)
+
+
+tbl_dq <- est_dq |>
+  dplyr::rename("Derived Quantity" = Parameter) |>
+  flextable::flextable() |>
+  flextable::autofit() |>
+  flextable::theme_box() |>
+  flextable::align(align = "center", part = "all") |>
+  flextable::merge_v(j = "Derived Quantity") |>
+  flextable::fontsize(size = 11, part = "all") |>
+  flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_dq
+
+```

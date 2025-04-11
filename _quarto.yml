@@ -20,7 +20,9 @@ book:
     - content/data.qmd
     - content/methods.qmd
     - content/diagnostics.qmd
-    #- content/discussion.qmd
+    - content/discussion.qmd
+    - content/tables.qmd
+    - content/figures.qmd
     - content/references.qmd
 
   page-footer:

@@ -1,0 +1,16 @@
+"Scenario","Parameter","Estimate","SD","CV"
+"a_m2","SSB_Initial",69.83,20.49,29.34
+"a_m2","Bratio_2012",0.64,0.08,11.89
+"a_m2","SSB_unfished",109.34,19.26,17.61
+"b_m2","SSB_Initial",107.38,27.84,25.92
+"b_m2","Bratio_2012",0.74,0.05,7.33
+"b_m2","SSB_unfished",145.04,27.14,18.71
+"v1_m2","SSB_Initial",115.59,34.48,29.83
+"v1_m2","Bratio_2012",0.75,0.06,7.76
+"v1_m2","SSB_unfished",153.66,34.04,22.15
+"v3_m2","SSB_Initial",15.98,7.16,44.8
+"v3_m2","Bratio_2012",0.25,0.1,38.78
+"v3_m2","SSB_unfished",63.51,4.58,7.22
+"v7_m2","SSB_Initial",117.84,45.98,39.02
+"v7_m2","Bratio_2012",0.76,0.08,9.92
+"v7_m2","SSB_unfished",154.91,45.15,29.14

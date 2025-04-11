@@ -50,26 +50,6 @@ From 2012 - 2022, the size data included 1,033 shore-based length measurements f
 
 **A double normal function was used to model the relative vulnerability of capture by length for the dive fleet.** However, only two parameters were estimated, effectively describing a logistic selectivity for the commercial dive fleet. The double normal function allows for domed or logistic selectivity. It combines two normal distributions; the first describes the ascending limb, while the second describes the descending limb. Domed selectivity was not explored for St. Croix Stoplight Parrotfish. However, achieving the logistic shape with the double normal Stock Synthesis pattern facilitated model configurations for SEDAR 84. The two parameters used to achieve a logistic selectivity shape were the size associated with peak selectivity and the width of the ascending limb.
 
-\
-
-| Year	| Metric Tons	| Pounds	| Dive | Other |
-|:---:|---:|---:|---:|---:|
-| 2012	| 18.99	 | 41,869	 | 	97%	 |	3%	 |
-| 2013	| 15.32	 | 33,773	 | 	98%	 |	2%	 |
-| 2014	| 9.88	 | 21,774	 | 	87%	 |	13%	 |
-| 2015	| 11.25	 | 24,808	 | 	68%	 |	32%	 |
-| 2016	| 11.10	 | 24,481	 | 	58%	 |	42%	 |
-| 2017	| 10.67	 | 23,533	 | 	68%	 |	32%	 |
-| 2018	| 3.29	 | 7,262	 | 	90%	 |	10%	 |
-| 2019	| 3.42	 | 7,540	 | 	80%	 |	20%	 |
-| 2020	| 9.93	 | 21,883	 | 	71%	 |	29%	 |
-| 2021	| 11.07	 | 24,412	 | 	90%	 |	10%	 |
-| 2022	| 7.44	 | 16,398	 | 	74%	 |	26%	 |
-| Total	| 112.37 | 247,733 | 	82%	 |	18%	 |
-
-:  Commercial landings of Stoplight Parrotfish reported in St. Croix from
-2012-2022 in metric tons and pounds by year, along with the percentage of landings that came from each gear group.  {#tbl-catch}
-
 ## Survey Data {#sec-data-survey}
 
 ### Index of Abundance {#sec-data-survey-index}
@@ -153,30 +133,6 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 @tbl-m summarizes these studies and the empirical methods used to estimate M based on available life history data. The primary approach for determining natural mortality in this assessment was longevity-based [@hamel2022]. Lower values of maximum age obtained by @choat2003 corroborate with the higher estimate of mortality calculated using a meta-analysis available in the FishLife R package [@thorson2017, @thorson2019]. Although additional methods incorporating growth and maturity were explored using the Natural Mortality Tool, their applicability remains uncertain due to the species’ sex-changing nature. Specifically, the methods Hamel_K, Jensen_k 1, Jensen_k 2, Then_VBGF, Jensen_Amat, and Ri_Ef_Amat do not account for protogynous hermaphroditism [@hamel2015; @jensen1996; @jensen1997; @then2015; @rikhter1976]. Notably, the SEDAR 84 available inputs of age at 50% maturity reflect only the sexual maturity of females, while Von Bertalanffy's growth parameters (K), t0, and asymptotic size were fit across males, females, and transitional individuals combined.
 
 **A natural mortality value of 0.27 was used in the initial model runs**. This value corresponds with the maximum age of 20 years reported by @riverahernández2024. Model configurations incorporating alternative M values were explored through sensitivity analyses, which are discussed later in this report.
-
-\
-
-| Input Source | Input Type | Input | M | Method |
-|:-----------|:-----------|:--------:|:--:|:--------|
-| @choat2003 | Maximum age | 30 | 0.180 | Hamel_Amax |
-| SEDAR84-AP-01 | Maximum age | 20 | 0.270 | Hamel_Amax |
-| Meta-analysis | Scientific name | *Sparisoma viride* | 0.397 | FishLife |
-| @choat2003 | Maximum age | 12 | 0.450 | Hamel_Amax |
-| @choat2003 | Maximum age | 9 | 0.600 | Hamel_Amax |
-| SEDAR84-AP-01 | Growth (k) | 0.39 | 0.604 | Hamel_k |
-| SEDAR84-AP-01 | Growth (k) | 0.39 | 0.585 | Jensen_k 1 |
-| SEDAR84-AP-01 | Growth (k) | 0.39 | 0.624 | Jensen_k 2 |
-| SEDAR84-AP-01 | Growth (L∞, k) | 33.2, 0.39 | 0.576 | Then_VBGF |
-| SEDAR84-AP-01 | Growth (k) | 0.33 | 0.512 | Hamel_k |
-| SEDAR84-AP-01 | Growth (k) | 0.33 | 0.495 | Jensen_k 1 |
-| SEDAR84-AP-01 | Growth (k) | 0.33 | 0.528 | Jensen_k 2 |
-| SEDAR84-AP-01 | Growth (L∞, k) | 33.8, 0.33 | 0.573 | Then_VBGF |
-| SEDAR84-AP-01 | Age at 50% maturity | 1.6 | 1.030 | Jensen_Amat |
-| SEDAR84-AP-01 | Age at 50% maturity | 1.6 | 0.924 | Ri_Ef_Amat |
-
-: Empirical estimates of natural mortality (M) can be derived using life history information and the Natural Mortality Tool [@cope2022]. The SEDAR assessment working paper SEDAR84-AP-01 is equivalent to @riverahernández2024.  {#tbl-m}
-
-{{< pagebreak >}}
 
 ## Summary of Data-Informed Modeling Configurations
 

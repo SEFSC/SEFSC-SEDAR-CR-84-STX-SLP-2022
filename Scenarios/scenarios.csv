@@ -6,11 +6,6 @@ b_m2,annual comp FI + hermaphroditism + continous recruitment,
 v1_ct,index + annual comp FI,
 v1_m1,index + annual comp FI + hermaphroditism,
 v1_m2,(base) index + annual comp FI + hermaphroditism + continous recruitment,base
-v1_m2_s1,index + annual comp FI + hermaphroditism + continous recruitment + fecundity sensitivity,fecundity
-v1_m2_s2,index + annual comp FI + hermaphroditism + continous recruitment + 0.3 Catch CV,0.3_CatchCV
-v1_m2_s3,index + annual comp FI + hermaphroditism + continous recruitment + reweigh,reweigh
-v1_m2_s4,index + annual comp FI + hermaphroditism + continous recruitment + reweigh,Lorenzen M
-v1_m2_s5,index + annual comp FI + hermaphroditism + continous recruitment + reweigh,F method 4
 v3_m1,index + recruitment deviations + hermaphroditism,
 v3_m2,index + recruitment deviations + hermaphroditism  + continous recruitment,
 v7_m2,index + annual comp FI + recruitment deviations + hermaphroditism + continous recruitment,

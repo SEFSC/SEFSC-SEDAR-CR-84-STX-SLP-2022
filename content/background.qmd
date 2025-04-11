@@ -12,18 +12,6 @@ The Parrotfish 2 stock complex includes two indicator stocks and five other spec
 
 A SEDAR 84 Data Workshop working paper summarizes federal management actions for stoplight parrotfish in St. Croix [@malone2024]. On August 29, 2013, a 9-inch federal size limit was instituted by Final Regulatory Amendment 4. The size limit only applies in the U.S. EEZ surrounding St. Croix, defined as the federal waters ranging from 3 to 200 nautical miles (nm) (5.6 – 370 kilometers \[km\]) from the nearest coastline point of the U.S. Virgin Islands (@fig-eez).
 
-```{r managment}
-fig_uscar_cap <- "Jurisdictional boundaries of the Caribbean Fishery Management Council."
-
-fig_eez_cap <- "The U.S. EEZ is defined as the federal waters ranging from 3 to 200 nautical 
-  miles (5.6 – 370 kilometers) from the nearest coastline point of 
-  the US Virgin Islands."
-```
-
-![`r fig_uscar_cap`](https://www.fisheries.noaa.gov/s3//styles/original/s3/dam-migration/island_group_management_areas.jpg?itok=5wvkxme2){#fig-uscar width="4.5in"}
-
-![`r fig_eez_cap`](https://www.fisheries.noaa.gov/s3//styles/original/s3/dam-migration/carib_map_stx.jpg?itok=yeYHZ8gy){#fig-eez width="5in"}
-
 ## Assessment History
 
 Before the current assessment, only one stock assessment had been attempted for St. Croix stoplight parrotfish [@sedar2016]. The St. Croix Stoplight Parrotfish SEDAR 46 evaluations were performed using the Data-Limited Methods Toolkit [@carruthers2018]. The approach applied data-limited stock assessment models and management procedures. Ultimately, the results were not used for management advice.

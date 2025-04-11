@@ -2,9 +2,9 @@
 title: "Model Development"
 ---
 
-Stock Synthesis models were initially configured using an annual catch time series and compositions that were aggregated across the available years for each source of length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity. Those sequential steps included the inclusion of the index of abundance and annual fishery-independent length compositions.
+Stock Synthesis models were initially configured using an annual catch time series and compositions that were aggregated across the available years for each source of length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity.
 
-## SEDAR 84 Model Development Overview {#sec-methods-model-overview}
+## Overview {#sec-methods-model-overview}
 
 The SEDAR 84 model development process started with simple data-limited configurations, followed by exploring data-moderate configurations, individually and combined. @tbl-overview provides the shorthand naming conventions used for SEDAR 84 assessments of Caribbean yellowtail snapper, *Ocyurus chrysurus*, and stoplight parrotfish 
 
@@ -12,62 +12,4 @@ The simplest configurations aggregated length compositions across years by imple
 
 The data-moderate considerations explored in SEDAR 84 included incorporating (a) indices, (b) annual fishery-independent size composition, (c) annual fishery-dependent size composition, (d) recruitment deviations, (e) dome-shaped selectivity, and (f) time blocks. Not all of these considerations were explored for St. Croix Stoplight Parrotfish. However, the process sets up a reproducible and adaptable workflow across species and islands of model development with sequential model steps that take into account methodological and intentional stepwise model explorations combined across individual complexity considerations.
 
-{{< pagebreak >}}
-
-| Model Development Process | Code | Sequential modeling steps |
-|---------------------------|:----:|-----------------------------|
-| Data-limited configuration | null | super-year size data |
-| Data-moderate consideration | a | index |
-| Data-moderate consideration | b | annual fishery-independent size data |
-| Data-moderate consideration | c | annual fishery-dependent size data |
-| Data-moderate consideration | d | recruitment deviations |
-| Data-moderate consideration | e | dome-shaped selectivity |
-| Data-moderate consideration | f | time blocks |
-| Version combining complexity steps | v1 | a + b |
-| Versions combining complexity steps | v2 | a + c |
-| Versions combining complexity steps | v3 | a + d |
-| Versions combining complexity steps | v4 | a + e |
-| Versions combining complexity steps | v5 | a + f |
-| Versions combining complexity steps | v6 | a + b + c |
-| Versions combining complexity steps | v7 | a + b + d |
-| Versions combining complexity steps | v8 | a + b + e |
-| Versions combining complexity steps | v9 | a + b + f |
-| Versions combining complexity steps | v10 | a + c + d |
-| Versions combining complexity steps | v11 | a + c + e |
-| Versions combining complexity steps | v12 | a + c + f |
-| Versions combining complexity steps | v13 | a + d + e |
-| Versions combining complexity steps | v14 | a + d + f |
-| Versions combining complexity steps | v15 | a + e + f |
-| Versions combining complexity steps | v16 | a + b + c + d |
-| Versions combining complexity steps | v17 | a + b + c + e |
-| Versions combining complexity steps | v18 | a + b + c + f |
-| Versions combining complexity steps | v19 | a + b + d + e |
-| Versions combining complexity steps | v20 | a + b + d + f |
-| Versions combining complexity steps | v21 | a + b + e + f |
-| Versions combining complexity steps | v22 | a + b + c + d + e |
-| Versions combining complexity steps | v23 | a + b + c + d + f |
-| Versions combining complexity steps | v24 | a + b + c + e + f |
-| Versions combining complexity steps | v25 | a + b + c + d + e + f |
-
-:  Summary of process and naming conventions used for SEDAR 84 assessments describing  model development noting the simplest data-limited configuration, exploring individual data-moderate considerations, individually and combined.  {#tbl-overview}
-
-{{< pagebreak >}}
-
-## SEDAR 84 Stoplight Parrotfish Model Development {#sec-methods-model-key}
-
 The considerations detailed in @tbl-overview that were relevant for the stoplight parrotfish assessment were (a) indices, (b) annual fishery-independent size composition, and (d) recruitment deviations. Annual fishery-dependent size data (c) was not explored due to the low sample size. Dome-shaped selectivity (e) and selectivity-related time blocks (f) were also not considerations that factor into the dynamics and data reviewed for fishery in St. Croix. The initial setup steps and description of the modeling scenarios documented in this report are listed in @tbl-ss3-stxslp.
-
-\
-
-| Stage | Code | Sequential modeling steps |
-|--------|:-----:|---------------------------------------------------------------|
-| Initial	| ct	| model initialized with continuum tool (ct) |
-| Initial	| m1	| ct + hermaphroditism |
-| Initial	| m2	| m1 + continuous recruitment |
-| Scenario	| a	| index |
-| Scenario	| b	| annual fishery-independent size data |
-| Scenario	| v1	| index + annual fishery-independent size data |
-| Scenario	| v3	| index + recruitment deviations |
-| Scenario	| v7	| index + annual fishery-independent size data + recruitment deviations |
-
-:  Summary of process and naming conventions used across different model development stages of the SEDAR 84 St. Croix Stoplight Parrotfish stock assessment.  {#tbl-ss3-stxslp}

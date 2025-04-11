@@ -2,7 +2,7 @@
 library(foreach)
 
 # Choose scenario for retro, jitter, and profiles  ####
-scenario <- here::here("Scenarios", "84_stx_f3_5cm_010641_0041_v7_m2")
+scenario <- here::here("Scenarios", "84_stx_f3_5cm_010641_0041_b_m2")
 
 # Choose settings ####
 overwrite_all <- TRUE
@@ -13,7 +13,7 @@ jitter_fraction <- 0.2
 
 range_profile_k <- c(seq(.4, 0.95, by = 0.05), 0.99)
 range_profile_eqcatch <- seq(0.5, 4, by = 0.1)
-range_profile_r0 <- round(log(seq(700, 3000, length = 40)), 4)
+range_profile_r0 <- round(log(seq(200, 600, length = 40)), 4)
 
 # Prep for diagnostics ####
 
@@ -74,7 +74,7 @@ sub_dir <- ls(pattern = "dir_")[ls(pattern = "dir_") != "dir_dx"]
 if (overwrite_all == TRUE) purrr::map(mget(sub_dir), setup_path)
 
 # Set up only some folders (specify which)
-overwrite_some <- c(NA)
+overwrite_some <- c("dir_profile_r0", "dir_profile_r0_runs", "dir_profile_r0_plots")
 if (overwrite_all == FALSE) purrr::map(mget(overwrite_some), setup_path)
 
 # Copy and rename files into diagnostics and jitter folders
@@ -347,12 +347,12 @@ save_summaries(profile_eqcatch_summary, dir_profile_eqcatch)
 jitter_likes <- as.data.frame(reshape::melt(jitter_summary$likelihoods))
 jitter_total <- reshape::melt(jitter_summary$likelihoods[1, ])
 
-png(file = here::here(dir_jitter, "Likelihood by Data Source.png"))
+png(file = here::here(dir_jitter, "Likelihood_by_Data_Source.png"))
 lattice::barchart(value ~ Label | Label, group = factor(variable),
                   data = jitter_likes, scales = "free")
 dev.off()
 
-png(file = here::here(dir_jitter, "Total Likelihood.png"))
+png(file = here::here(dir_jitter, "Total_Likelihood.png"))
 lattice::barchart(value ~ Label | Label, group = factor(variable),
                   data = jitter_total, scales = "free")
 dev.off()
@@ -372,7 +372,7 @@ limits <- jitter_likes |>
 # Use purrr::map2() to turn two vectors into list of pairs
 limit_pairs <- purrr::map2(limits$lower, limits$upper, c)
 
-png(file = here::here(dir_jitter, "Likelihood by Data Source New.png"))
+png(file = here::here(dir_jitter, "Likelihood_by_Data_Source_New.png"))
 lattice::barchart(
   value ~ Label | Label, group = factor(variable),
   data = jitter_likes,
