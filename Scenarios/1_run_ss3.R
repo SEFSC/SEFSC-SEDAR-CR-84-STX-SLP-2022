@@ -16,7 +16,7 @@ full_names <- list.files(
   full.names = TRUE
 )
 
-# full_names <- c(here::here("Scenarios","84_stx_f3_5cm_010641_0041_v1_m2", "diagnostics", "aspm"))
+# full_names <- c(here::here("Scenarios","84_stx_f3_5cm_010641_0041_v1_m2"))
 
 # View file names
 full_names
@@ -52,6 +52,6 @@ runplot <- function(plots, minbthresh) {
     if (dir.exists(paste0(model_run, "/plots"))) {
       unlink(paste0(model_run, "/plots"), recursive = TRUE)
     }
-    r4ss::SS_plots(replist = myreplist, plot = plots, minbthresh = minbthresh)
+    r4ss::SS_plots(replist = myreplist, plot = plots, minbthresh = minbthresh, pwidth = 4, pheight = 3, pheight_tall = 4)
   }
 }
