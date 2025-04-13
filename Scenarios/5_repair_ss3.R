@@ -22,6 +22,20 @@ foreach::foreach(i = seq_along(full_names)) %do% {
   # Update age
   dat$Nages
   dat$Nages = 20
+  dat$Nages
+  
+  dat$N_agebins
+  dat$N_agebins = dat$Nages
+  dat$N_agebins
+  
+  dat$agebin_vector
+  dat$agebin_vector = c(0:(dat$Nages-1))
+  dat$agebin_vector
+  
+  dat$ageerror
+  dat$ageerror = cbind(dat$ageerror, dat$ageerror[dat$Nages])
+  dat$ageerror
+  
   
   # Update M
   # ctl$MG_parms
@@ -66,11 +80,11 @@ foreach::foreach(i = seq_along(full_names)) %do% {
   )
 
   
-  r4ss::SS_writectl(
-    ctllist = ctl,
-    outfile = here::here(full_names[i], start$ctlfile),
-    overwrite = TRUE
-  )
+  # r4ss::SS_writectl(
+  #   ctllist = ctl,
+  #   outfile = here::here(full_names[i], start$ctlfile),
+  #   overwrite = TRUE
+  # )
   
   return(NULL)
 }
