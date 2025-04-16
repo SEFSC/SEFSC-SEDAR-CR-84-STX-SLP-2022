@@ -85,10 +85,10 @@ title: "Tables"
 | Versions combining complexity steps | v24 | a + b + c + e + f |
 | Versions combining complexity steps | v25 | a + b + c + d + e + f |
 
-\
-\
-
 :  Summary of process and naming conventions used for SEDAR 84 assessments describing  model development noting the simplest data-limited configuration, exploring individual data-moderate considerations, individually and combined.  {#tbl-overview}
+
+\
+\
 
 | Stage | Code | Sequential modeling steps |
 |--------|:-----:|---------------------------------------------------------------|
