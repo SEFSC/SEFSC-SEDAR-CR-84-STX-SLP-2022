@@ -1,5 +1,5 @@
 # Specify pattern of runs (ex: "^84_stx_.*_m2$")
-pattern <- ".*0041_.*_m2$"
+pattern <- ".*0041_.*_m3$"
 
 # Specify cutout string to match short names in scenarios.csv
 cutout <- "84_stx_f3_5cm_010641_0041_"
@@ -42,6 +42,22 @@ full_data <- full_names |>
   rlang::set_names(short_names)
 
 # EXTRACT PARAMETERS AND DERIVED QUANTITIES
+catch <- purrr::map(full_data, "catch") |>
+  purrr::imap_dfr(~ dplyr::mutate(.x, scenario = .y))
+
+short_catch <- catch |>
+  dplyr::select("scenario", "Fleet_Name", "Yr", "Obs", "Exp", "se")
+
+eq_catch <- short_catch |>
+  dplyr::filter(Yr == min(Yr)) |>
+  dplyr::select("Fleet_Name", "scenario", "Exp") |>
+  dplyr::rename(
+    Parameter = Fleet_Name,
+    Scenario = scenario,
+    Estimate = Exp
+  ) |>
+  dplyr::mutate(Parameter = paste0(Parameter, "\n Equilibrium Catch"))
+
 parms <- purrr::map(full_data, "parameters") |>
   purrr::imap_dfr(~ dplyr::mutate(.x, scenario = .y))
 
@@ -213,5 +229,10 @@ write.csv(est_parm_short,
 
 write.csv(est_dq,
           here::here("Scenarios", "scenarios_dq.csv"),
+          row.names = FALSE
+)
+
+write.csv(eq_catch, 
+          here::here("Scenarios", "eq_catch.csv"),
           row.names = FALSE
 )

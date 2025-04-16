@@ -1,7 +1,7 @@
 library(foreach)
 
 # Specify pattern ####
-pattern <- "84_stx_f3_5cm_010641_0041.*m3$"
+pattern <- "84_stx_f3_5cm_010641_0041.*v3_m3$"
 
 ## Get folder names ####
 full_names <- list.files(
@@ -18,15 +18,15 @@ jitter_iterations <- 30
 jitter_fraction <- 0.2
 range_profile_k <- c(seq(.4, 0.95, by = 0.05), 0.99)
 range_profile_eqcatch <- seq(0.5, 4, by = 0.1)
-range_profile_r0 <- round(log(seq(200, 600, length = 40)), 4)
+range_profile_r0 <- seq(.7, 1.3, by = 0.02)
 
 # Choose what to run ####
-run_retro <- TRUE
-run_jitter <- TRUE
-run_profile_r0 <- TRUE
-run_profile_eqcatch <- TRUE
-run_profile_k <- TRUE
-run_aspm <- FALSE
+run_retro <- FALSE
+run_jitter <- FALSE
+run_profile_r0 <- FALSE
+run_profile_eqcatch <- FALSE
+run_profile_k <- FALSE
+run_aspm <- TRUE
 reset_all <- FALSE
 
 # START AUTOMATED RUN ####
@@ -75,6 +75,7 @@ foreach::foreach(i = seq_along(full_names)) %do% {
   dir_profile_k_plots <- here::here(dir_profile_k, "plots")
   
   dir_aspm <- here::here(dir_dx, "aspm")
+  dir_aspm_compare <- here::here(dir_aspm, "compare")
   
   setup_path <- function(dir) {
     if (dir.exists(dir)) {
@@ -157,7 +158,6 @@ foreach::foreach(i = seq_along(full_names)) %do% {
     
     # Create dir
     purrr::map(mget(profile_r0_dir), setup_path) 
-    
     # Set up files
     foreach::foreach(i = seq_along(range_profile_r0)) %do% {
       profile_run <- paste0("r0_", range_profile_r0[i])
@@ -175,8 +175,12 @@ foreach::foreach(i = seq_along(full_names)) %do% {
       ctl <- r4ss::SS_readctl(file = here::here(profile_folder, start$ctlfile),
                               datlist = dat, verbose = FALSE)
       
+      
+      r0_est = exp(ctl$SR_parms[1, 3])
+      r0_range = round(log(range_profile_r0 * r0_est),4)
+      
       ctl$SR_parms[1, 7] <- -1
-      ctl$SR_parms[1, 3] <- range_profile_r0[i]
+      ctl$SR_parms[1, 3] <- r0_range[i]
       
       r4ss::SS_writectl(
         ctllist = ctl,
@@ -217,6 +221,8 @@ foreach::foreach(i = seq_along(full_names)) %do% {
       geomean_3yr <- psych::geometric.mean(dat$catch[2:4, 4])
       
       dat$catch[1, 4] <- range_profile_eqcatch[i] * geomean_3yr
+      
+      dat$catch[1, 5] <- 0.001
       
       r4ss::SS_writedat(
         datlist = dat,
@@ -271,6 +277,7 @@ foreach::foreach(i = seq_along(full_names)) %do% {
     run_folder(dir_profile_k_runs)
   }
   
+  # ASPM ####
   if (run_aspm == TRUE) {
     purrr::map(mget(aspm_dir), setup_path) 
     
@@ -326,6 +333,13 @@ foreach::foreach(i = seq_along(full_names)) %do% {
       verbose = FALSE
     )
     
+    dat <- r4ss:::SS_readdat(file = file.path(dir_aspm, "data_echo.ss_new"),
+                             version = 3.3, verbose = FALSE)
+    
+    dat$lencomp[,1]
+    dat$lencomp[,1] = dat$lencomp[,1]*-1
+    dat$lencomp[,1]
+    
     control$SR_parms
     # control$SR_parms[c(2,3),"PHASE"] <- c(-4,-4)
     
@@ -365,6 +379,13 @@ foreach::foreach(i = seq_along(full_names)) %do% {
     r4ss::SS_writectl_3.30(control,
                            outfile = file.path(dir_aspm, "control.ss_new"),
                            overwrite = TRUE, verbose = FALSE
+    )
+    
+    r4ss::SS_writedat(
+      datlist = dat,
+      outfile = here::here(dir_aspm, "data_echo.ss_new"),
+      overwrite = TRUE,
+      verbose = FALSE
     )
     
     r4ss::run(dir = dir_aspm, exe = "ss3", skipfinished = FALSE, verbose = FALSE)

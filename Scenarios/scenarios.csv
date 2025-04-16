@@ -1,11 +1,31 @@
 scenario,note,sensitivity
 a_m1,index + hermaphroditism,
 a_m2,index + hermaphroditism + continous recruitment,
+a_m3,index + hermaphroditism + continous recruitment + catch uncertainty,
 b_m1,annual comp FI + hermaphroditism,
 b_m2,annual comp FI + hermaphroditism + continous recruitment,
+b_m3,annual comp FI + hermaphroditism + continous recruitment + catch uncertainty,
 v1_ct,index + annual comp FI,
 v1_m1,index + annual comp FI + hermaphroditism,
 v1_m2,(base) index + annual comp FI + hermaphroditism + continous recruitment,base
+v1_m3,(base) index + annual comp FI + hermaphroditism + continous recruitment + catch uncertainty,base
 v3_m1,index + recruitment deviations + hermaphroditism,
 v3_m2,index + recruitment deviations + hermaphroditism  + continous recruitment,
+v3_m3,index + recruitment deviations + hermaphroditism  + continous recruitment + catch uncertainty,
 v7_m2,index + annual comp FI + recruitment deviations + hermaphroditism + continous recruitment,
+v7_m3,index + annual comp FI + recruitment deviations + hermaphroditism + continous recruitment + catch uncertainty,
+a_m3_s1,index + hermaphroditism + continous recruitment + catch uncertainty,
+b_m3,annual comp FI + hermaphroditism + continous recruitment + catch uncertainty,
+v1_m3_s1,(base) index + annual comp FI + hermaphroditism + continous recruitment + catch uncertainty,base
+v3_m3_s1,index + recruitment deviations + hermaphroditism  + continous recruitment + catch uncertainty,
+v7_m3_s1,index + annual comp FI + recruitment deviations + hermaphroditism + continous recruitment + catch uncertainty,
+a_m3_s2,index + hermaphroditism + continous recruitment + catch uncertainty,
+b_m3_s2,annual comp FI + hermaphroditism + continous recruitment + catch uncertainty,
+v1_m3_s2,(base) index + annual comp FI + hermaphroditism + continous recruitment + catch uncertainty,base
+v3_m3_s2,index + recruitment deviations + hermaphroditism  + continous recruitment + catch uncertainty,
+v7_m3_s2,index + annual comp FI + recruitment deviations + hermaphroditism + continous recruitment + catch uncertainty,
+a_m3_s3,index + hermaphroditism + continous recruitment + catch uncertainty,
+b_m3_s3,annual comp FI + hermaphroditism + continous recruitment + catch uncertainty,
+v1_m3_s3,(base) index + annual comp FI + hermaphroditism + continous recruitment + catch uncertainty,base
+v3_m3_s3,index + recruitment deviations + hermaphroditism  + continous recruitment + catch uncertainty,
+v7_m3_s3,index + annual comp FI + recruitment deviations + hermaphroditism + continous recruitment + catch uncertainty,

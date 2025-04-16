@@ -1,0 +1,117 @@
+#C should work with SS version:
+#C file created using an r4ss function
+#C file write time: 2025-04-15  11:31:45
+#
+2012 #_styr
+2022 #_endyr
+1 #_nseas
+12 #_months_per_seas
+2 #_Nsubseasons
+1 #_spawn_month
+2 #_Nsexes
+20 #_Nages
+1 #_N_areas
+2 #_Nfleets
+#_fleetinfo
+#_type	surveytiming	area	units	need_catch_mult	fleetname
+1	-1	1	1	0	Commercial	#_1
+3	 1	1	1	0	NCRMP     	#_2
+#_Catch data
+#_year	season	fleet	catch	catch_se
+ -999	1	1	     30	0.1	#_1         
+ 2012	1	1	18.9915	0.1	#_2         
+ 2013	1	1	15.3192	0.1	#_3         
+ 2014	1	1	 9.8765	0.1	#_4         
+ 2015	1	1	11.2527	0.1	#_5         
+ 2016	1	1	11.1044	0.1	#_6         
+ 2017	1	1	10.6744	0.1	#_7         
+ 2018	1	1	  3.294	0.1	#_8         
+ 2019	1	1	 3.4201	0.1	#_9         
+ 2020	1	1	  9.926	0.1	#_10        
+ 2021	1	1	11.0731	0.1	#_11        
+ 2022	1	1	  7.438	0.1	#_12        
+-9999	0	0	      0	  0	#_terminator
+#_CPUE_and_surveyabundance_observations
+#_Units:  0=numbers; 1=biomass; 2=F; >=30 for special types
+#_Errtype:  -1=normal; 0=lognormal; >0=T
+#_SD_Report: 0=no sdreport; 1=enable sdreport
+#_fleet	units	errtype	SD_report
+1	1	0	0	#_Commercial
+2	0	0	0	#_NCRMP     
+#
+#_CPUE_data
+#_year	month	index	obs	se_log
+ 2012	7	2	0.871164	 0.102958	#_1         
+ 2015	7	2	 1.09365	 0.169673	#_2         
+ 2017	7	2	 1.31561	 0.182166	#_3         
+ 2019	7	2	0.610952	0.0637007	#_4         
+ 2021	7	2	0.870112	 0.151606	#_5         
+-9999	0	0	       0	        0	#_terminator
+0 #_N_discard_fleets
+#_discard_units (1=same_as_catchunits(bio/num); 2=fraction; 3=numbers)
+#_discard_errtype:  >0 for DF of T-dist(read CV below); 0 for normal with CV; -1 for normal with se; -2 for lognormal
+#
+#_discard_fleet_info
+#
+#_discard_data
+#
+#_meanbodywt
+0 #_use_meanbodywt
+ #_DF_for_meanbodywt_T-distribution_like
+#
+#_population_length_bins
+2 # length bin method: 1=use databins; 2=generate from binwidth,min,max below; 3=read vector
+1 # binwidth for population size comp
+0 # minimum size in the population (lower edge of first bin and size at age 0.00)
+41 # maximum size in the population (lower edge of last bin)
+1 #_use_lencomp
+#
+#_len_info
+#_mintailcomp	addtocomp	combine_M_F	CompressBins	CompError	ParmSelect	minsamplesize
+-1	0.001	0	0	0	0	0.001	#_Commercial
+-1	0.001	0	0	0	0	0.001	#_NCRMP     
+8 #_N_lbins
+#_lbin_vector
+1 11 16 21 26 31 36 41 #_lbin_vector
+#
+#_lencomp
+#_year	month	fleet	sex	part	Nsamp	f1	f11	f16	f21	f26	f31	f36	f41	m1	m11	m16	m21	m26	m31	m36	m41
+ 2016	-7	 1	0	0	 61	     0	     0	0.0068	0.2736	0.5048	0.2007	0.0141	    0	0	0	0	0	0	0	0	0	#_1         
+ 2017	 7	-1	0	0	 23	     0	     0	 0.005	0.2975	0.5075	 0.175	 0.015	    0	0	0	0	0	0	0	0	0	#_2         
+ 2018	 7	-1	0	0	 14	     0	     0	0.0156	0.2374	0.4397	0.2996	0.0078	    0	0	0	0	0	0	0	0	0	#_3         
+ 2019	-7	-1	0	0	  3	     0	     0	     0	0.1818	0.6136	0.2045	     0	    0	0	0	0	0	0	0	0	0	#_4         
+ 2012	 7	 2	0	0	262	0.2049	0.1176	0.0908	0.2164	0.2121	0.1539	0.0042	    0	0	0	0	0	0	0	0	0	#_5         
+ 2015	 7	 2	0	0	239	0.4395	0.1952	0.1865	0.1228	0.0441	0.0116	     0	2e-04	0	0	0	0	0	0	0	0	#_6         
+ 2017	 7	 2	0	0	181	0.1843	0.1338	0.2513	0.1981	0.1083	0.1018	0.0224	    0	0	0	0	0	0	0	0	0	#_7         
+ 2019	 7	 2	0	0	314	0.3214	0.1096	0.0873	0.1716	0.1313	0.1644	0.0141	2e-04	0	0	0	0	0	0	0	0	#_8         
+ 2021	 7	 2	0	0	148	0.1978	0.1391	0.1461	0.1947	0.2323	0.0712	0.0188	    0	0	0	0	0	0	0	0	0	#_9         
+-9999	 0	 0	0	0	  0	     0	     0	     0	     0	     0	     0	     0	    0	0	0	0	0	0	0	0	0	#_terminator
+20 #_N_agebins
+#
+#_agebin_vector
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #_agebin_vector
+#
+#_ageing_error
+1 #_N_ageerror_definitions
+#_age0	age1	age2	age3	age4	age5	age6	age7	age8	age9	age10	age11	age12	age13	age14	age15	age16	age17	age18	age19	age20
+   -1	   -1	   -1	   -1	   -1	   -1	   -1	   -1	   -1	   -1	   -1	   -1	   -1	   -1	   -1	   -1	   -1	   -1	   -1	   -1	   -1	#_1
+0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	#_2
+#
+#_age_info
+#_mintailcomp	addtocomp	combine_M_F	CompressBins	CompError	ParmSelect	minsamplesize
+-1	0.001	0	0	0	0	0.001	#_Commercial
+-1	0.001	0	0	0	0	0.001	#_NCRMP     
+3 #_Lbin_method: 1=poplenbins; 2=datalenbins; 3=lengths
+ #_combine males into females at or below this bin number
+#_X.9999	X0	X0.1	X0.2	X0.3	X0.4	X0.5	X0.6	X0.7	X0.8	X0.9	X0.10	X0.11	X0.12	X0.13	X0.14	X0.15	X0.16	X0.17	X0.18	X0.19	X0.20	X0.21	X0.22	X0.23	X0.24	X0.25	X0.26	X0.27	X0.28	X0.29	X0.30	X0.31	X0.32	X0.33	X0.34	X0.35	X0.36	X0.37	X0.38	X0.39	X0.40	X0.41	X0.42	X0.43	X0.44	X0.45	X0.46	X0.47
+-9999	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	#_terminator
+#
+#_MeanSize_at_Age_obs
+0 #_use_MeanSize_at_Age_obs
+0 #_N_environ_variables
+0 #_N_sizefreq_methods
+0 #_do_tags
+0 #_morphcomp_data
+0 #_use_selectivity_priors
+#
+999

@@ -5,7 +5,7 @@
 # )
 
 # Specify pattern and plots (plot 12 fails when using seasonal recruitment)
-pattern <- "s1"
+pattern <- "84_stx.*_s3"
 plots <- c(1:11, 13:26)
 minbthresh <- -1
 
@@ -16,7 +16,9 @@ full_names <- list.files(
   full.names = TRUE
 )
 
-# full_names <- c(here::here("Scenarios","84_stx_f3_5cm_010641_0041_v1_m2"))
+ # full_names <- c(here::here("Scenarios",
+ #                            "archive",
+ #                            "84_stx_f3_5cm_010641_0041_v1_m2_s1"))
 
 # View file names
 full_names

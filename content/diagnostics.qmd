@@ -20,7 +20,7 @@ High correlation among parameters can lead to flat response surfaces and poor mo
 
 High correlations (\> 0.95) were observed in nearly all model configurations (@tbl-corr). A particularly important correlation was between the estimate of initial fishing mortality (Initial F) and unfished recruitment (R0). This correlation exceeded 0.99 in all models except for model v3_m2, where it was slightly lower but still moderately high at -0.90.
 
-Similarly, all models, except model v3_m2, showed moderately high correlations (\> 0.90) between the two parameters used to define logistic selectivity: the size at peak selectivity and the width of the ascending limb. Correlations between these selectivity parameters are expected. While estimated values varied slightly among models, they produced similar size-based selectivity curves for the commercial dive fleet (@fig-sel).
+Similarly, all models, except model v3_m2, showed moderately high correlations (\> 0.90) between the two parameters used to define logistic selectivity: the size at peak selectivity and the width of the ascending limb. Correlations between these selectivity parameters are expected. While estimated values varied slightly among models, they produced similar size-based selectivity curves for the commercial dive fleet (fig-sel).
 
 ## Evaluating Variance
 
@@ -64,7 +64,7 @@ Typically, profiling is carried out for key parameters, particularly those defin
 
 ### Unfished Recruitment (R0)
 
-### Initial equilibrium catch
+### Initial Equilibrium Catch
 
 
 

@@ -86,6 +86,7 @@ title: "Tables"
 | Initial	| ct	| model initialized with continuum tool (ct) |
 | Initial	| m1	| ct + hermaphroditism |
 | Initial	| m2	| m1 + continuous recruitment |
+| Initial | m3  | m2 + catch uncertainty |
 | Scenario	| a	| index |
 | Scenario	| b	| annual fishery-independent size data |
 | Scenario	| v1	| index + annual fishery-independent size data |
@@ -135,8 +136,31 @@ tbl_corr
 {{< pagebreak >}}
 
 ```{r}
+#| label: tbl-eqcatch
+#| tbl-cap: "St. Croix stoplight parrotfish estimated initial equilibrium catch in metric tons by model scenario. The input value was 30 metric tons with a standard error of 0.3."
+
+est_eqcatch_short <- read.csv(here::here("Scenarios", "eq_catch.csv")) |>
+  dplyr::mutate(Estimate = round(Estimate, 2))
+
+
+tbl_eqcatch <- est_eqcatch_short |>
+  flextable::flextable() |>
+  flextable::autofit() |>
+  flextable::theme_box() |>
+  flextable::align(align = "center", part = "all") |>
+  flextable::merge_v(j = "Parameter") |>
+  flextable::fontsize(size = 11, part = "all") |>
+  flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_eqcatch
+
+```
+
+{{< pagebreak >}}
+
+```{r}
 #| label: tbl-parm
-#| tbl-cap: "St. Croix stoplight parrotfish parameters, standard deviations (SD), and coeficient of variation (CV) by modeling scenario. CV is calcuated as the SD devided by the paramter estimate."
+#| tbl-cap: "St. Croix stoplight parrotfish parameters, standard deviations (SD), and coefficient of variation (CV) by modeling scenario. CV is calculated as the SD divided by the parameter estimate."
 
 est_parm_short <- read.csv(here::here("Scenarios", "scenarios_parm.csv")) |>
   dplyr::mutate(
@@ -166,7 +190,7 @@ tbl_parm
 
 ```{r}
 #| label: tbl-dq
-#| tbl-cap: "St. Croix stoplight parrotfishderived quantities for unfished and initial spawning stock biomass in metric tons (mt) along with standard deviations (SD) and coeficient of variation (CV) by modeling scenario. CV is calcuated as the SD devided by the paramter estimate."
+#| tbl-cap: "St. Croix stoplight parrotfish derived quantities for unfished and initial spawning stock biomass in metric tons (mt) along with standard deviations (SD) and coefficient of variation (CV) by modeling scenario. CV is calculated as the SD divided by the parameter estimate."
 
 est_dq <- read.csv(here::here("Scenarios", "scenarios_dq.csv")) |>
   dplyr::mutate(
