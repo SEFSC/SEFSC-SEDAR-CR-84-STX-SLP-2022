@@ -12,12 +12,15 @@ fig_eez_cap <- "The U.S. EEZ is defined as the federal waters ranging from 3 to 
 
 ![`r fig_uscar_cap`](https://www.fisheries.noaa.gov/s3//styles/original/s3/dam-migration/island_group_management_areas.jpg?itok=5wvkxme2){#fig-uscar width="4.6in"}
 
+\
+\
+\
+
 ![`r fig_eez_cap`](https://www.fisheries.noaa.gov/s3//styles/original/s3/dam-migration/carib_map_stx.jpg?itok=yeYHZ8gy){#fig-eez width="6in"}
 
 \
 \
-
-{{< pagebreak >}}
+\
 
 ::: {#fig-par layout-ncol="2"}
 
@@ -31,11 +34,12 @@ fig_eez_cap <- "The U.S. EEZ is defined as the federal waters ranging from 3 to 
 
 ![Recruitment](/Scenarios/plots_m3_plain/compare10_recruits_uncertainty.png){#fig-recruits}
 
-\
-\
-
 St. Croix stoplight parrotfish parameter distribution for the natural log of the unfished recruitment parameter of the Beverton – Holt stock-recruit function by model scenario.
 :::
+
+\
+\
+\
 
 ::: {#fig-jitter layout-ncol="2"}
 ![Model a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/diagnostics/jitter/Total_Likelihood.png){width="70%"}
@@ -53,6 +57,7 @@ St. Croix stoplight parrotfish jitter analysis total likelihood. Each panel give
 
 \
 \
+\
 
 ::: {#fig-cpue layout-ncol="2"}
 
@@ -68,6 +73,7 @@ St. Croix stoplight parrotfish jitter analysis total likelihood. Each panel give
 St. Croix stoplight parrotfish National Coral Reef Monitoring Program observed (open circles) and predicted (blue line) indices of relative abundance and associated standard errors by modeling scenario. Lines indicate 95% uncertainty interval around observed index values based on the model assumption of lognormal error.
 :::
 
+\
 \
 \
 
@@ -88,6 +94,7 @@ St. Croix stoplight parrotfish observed and predicted length distributions aggre
 
 \
 \
+\
 
 ::: {#fig-lenfit-ncrmp layout-ncol="2"}
 
@@ -102,6 +109,7 @@ St. Croix stoplight parrotfish observed and predicted length distributions for t
 
 \
 \
+\
 
 ::: {#fig-meanlen-ncrmp layout-ncol="2"}
 
@@ -114,6 +122,7 @@ St. Croix stoplight parrotfish observed and predicted length distributions for t
 St. Croix stoplight parrotfish observed (open circles) and predicted (blue line) mean length by year and modeling scenario.
 :::
 
+\
 \
 \
 
@@ -135,6 +144,7 @@ St. Croix stoplight parrotfish retrospective analysis of spawning stock biomass 
 
 \
 \
+\
 
 ::: {#fig-profile-r0 layout-ncol="2"}
 
@@ -154,6 +164,7 @@ St. Croix stoplight parrotfish R0 profile.
 
 \
 \
+\
 
 ::: {#fig-profile-eqcatch layout-ncol="2"}
 
@@ -171,6 +182,7 @@ St. Croix stoplight parrotfish R0 profile.
 St. Croix stoplight parrotfish Initial F profile.
 :::
 
+\
 \
 \
 
