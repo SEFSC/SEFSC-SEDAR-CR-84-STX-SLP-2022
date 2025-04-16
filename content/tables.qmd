@@ -20,6 +20,9 @@ title: "Tables"
 :  Commercial landings of Stoplight Parrotfish reported in St. Croix from
 2012-2022 in metric tons and pounds by year, along with the percentage of landings that came from each gear group.  {#tbl-catch}
 
+\
+\
+
 {{< pagebreak >}}
 
 | Input Source | Input Type | Input | M | Method |
@@ -41,6 +44,9 @@ title: "Tables"
 | SEDAR84-AP-01 | Age at 50% maturity | 1.6 | 0.924 | Ri_Ef_Amat |
 
 : Empirical estimates of natural mortality (M) can be derived using life history information and the Natural Mortality Tool [@cope2022]. The SEDAR assessment working paper SEDAR84-AP-01 is equivalent to @riverahernández2024.  {#tbl-m}
+
+\
+\
 
 {{< pagebreak >}}
 
@@ -79,6 +85,9 @@ title: "Tables"
 | Versions combining complexity steps | v24 | a + b + c + e + f |
 | Versions combining complexity steps | v25 | a + b + c + d + e + f |
 
+\
+\
+
 :  Summary of process and naming conventions used for SEDAR 84 assessments describing  model development noting the simplest data-limited configuration, exploring individual data-moderate considerations, individually and combined.  {#tbl-overview}
 
 | Stage | Code | Sequential modeling steps |
@@ -95,6 +104,7 @@ title: "Tables"
 
 :  Summary of process and naming conventions used across different model development stages of the SEDAR 84 St. Croix Stoplight Parrotfish stock assessment.  {#tbl-ss3-stxslp}
 
+\
 \
 
 ```{r}
@@ -136,6 +146,10 @@ tbl_corr
 
 ```
 
+
+\
+\
+
 {{< pagebreak >}}
 
 ```{r}
@@ -158,6 +172,10 @@ tbl_eqcatch <- est_eqcatch_short |>
 tbl_eqcatch
 
 ```
+
+
+\
+\
 
 {{< pagebreak >}}
 
@@ -190,6 +208,9 @@ tbl_parm <- est_parm_short |>
 tbl_parm
 
 ```
+
+\
+\
 
 ```{r}
 #| label: tbl-dq
