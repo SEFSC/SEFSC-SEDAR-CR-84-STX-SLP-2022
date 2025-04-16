@@ -22,6 +22,7 @@ title: "Tables"
 
 \
 \
+\
 
 {{< pagebreak >}}
 
@@ -45,6 +46,7 @@ title: "Tables"
 
 : Empirical estimates of natural mortality (M) can be derived using life history information and the Natural Mortality Tool [@cope2022]. The SEDAR assessment working paper SEDAR84-AP-01 is equivalent to @riverahernández2024.  {#tbl-m}
 
+\
 \
 \
 
@@ -89,6 +91,7 @@ title: "Tables"
 
 \
 \
+\
 
 | Stage | Code | Sequential modeling steps |
 |--------|:-----:|---------------------------------------------------------------|
@@ -106,11 +109,13 @@ title: "Tables"
 
 \
 \
+\
 
 ```{r}
 #| label: tbl-corr
 #| tbl-cap: "St. Croix stoplight parrotfish correlations between estimated parameters by modeling scenario. The table shows correlations greater than 0.9 or less than -0.9. Correlations that are greater than 0.95 or less than -0.95 are shown in red."
 
+library(here)
 library(dplyr)
 library(flextable)
 
@@ -149,6 +154,7 @@ tbl_corr
 
 \
 \
+\
 
 {{< pagebreak >}}
 
@@ -158,7 +164,6 @@ tbl_corr
 
 est_eqcatch_short <- read.csv(here::here("Scenarios", "eq_catch.csv")) |>
   dplyr::mutate(Estimate = round(Estimate, 2))
-
 
 tbl_eqcatch <- est_eqcatch_short |>
   flextable::flextable() |>
@@ -174,6 +179,7 @@ tbl_eqcatch
 ```
 
 
+\
 \
 \
 
@@ -209,6 +215,7 @@ tbl_parm
 
 ```
 
+\
 \
 \
 
