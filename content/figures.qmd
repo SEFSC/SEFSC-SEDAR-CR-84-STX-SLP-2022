@@ -148,15 +148,15 @@ St. Croix stoplight parrotfish retrospective analysis of spawning stock biomass 
 
 ::: {#fig-profile-r0 layout-ncol="2"}
 
-![a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="75%"}
+![a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
 
-![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="75%"}
+![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
 
-![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="75%"}
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
 
-![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="75%"}
+![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
 
-![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="75%"}
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
 
 
 St. Croix stoplight parrotfish R0 profile.
@@ -168,15 +168,15 @@ St. Croix stoplight parrotfish R0 profile.
 
 ::: {#fig-profile-eqcatch layout-ncol="2"}
 
-![a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="75%"}
+![a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
 
-![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="75%"}
+![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
 
-![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="75%"}
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
 
-![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="75%"}
+![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
 
-![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="75%"}
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
 
 
 St. Croix stoplight parrotfish Initial F profile.
@@ -188,15 +188,15 @@ St. Croix stoplight parrotfish Initial F profile.
 
 ::: {#fig-profile-k layout-ncol="2"}
 
-![a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="75%"}
+![a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
 
-![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="75%"}
+![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
 
-![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="75%"}
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
 
-![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="75%"}
+![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
 
-![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="75%"}
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
 
 
 St. Croix stoplight parrotfish Initial F profile.
