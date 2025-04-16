@@ -98,11 +98,11 @@ St. Croix stoplight parrotfish observed and predicted length distributions aggre
 
 ::: {#fig-lenfit-ncrmp layout-ncol="2"}
 
-![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/plots/comp_lenfit_flt2mkt0.png){width="107%"}
+![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/plots/comp_lenfit_flt2mkt0.png)
 
-![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/plots/comp_lenfit_flt2mkt0.png){width="107%"}
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/plots/comp_lenfit_flt2mkt0.png)
 
-![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/comp_lenfit_flt2mkt0.png){width="107%"}
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/comp_lenfit_flt2mkt0.png)
 
 St. Croix stoplight parrotfish observed and predicted length distributions for the NCRMP length composition data by year and modeling scenario. Green lines represent predicted length compositions, while gray regions represent observed length compositions. The effective sample size used to weight the length composition data is provided by N adj (the input sample size), and N eff (the calculated effective sample size used in the McAllister-Ianelli tuning method), are shown in the upper right corners.
 :::
