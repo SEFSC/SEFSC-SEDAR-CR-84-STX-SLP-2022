@@ -1,5 +1,6 @@
 project: 
   type: book
+  output-dir: docs
 
 book: 
   page-navigation: true
@@ -16,14 +17,14 @@ book:
         - name: NOAA Fisheries
   chapters:
     - index.qmd
-    #- content/background.qmd
-    #- content/data.qmd
-    #- content/methods.qmd
-    #- content/diagnostics.qmd
-    #- content/discussion.qmd
-    #- content/tables.qmd
+    - content/background.qmd
+    - content/data.qmd
+    - content/methods.qmd
+    - content/diagnostics.qmd
+    - content/discussion.qmd
+    - content/tables.qmd
     - content/figures.qmd
-    #- content/references.qmd
+    - content/references.qmd
 
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
@@ -71,6 +72,11 @@ format:
     theme: [cosmo, assets/theme.scss] 
     toc: true
     toc-depth: 3
+    default-image-extension: png
+    include-in-header: 
+      - text: |
+          <style>figure { padding: 2em 0 2em 0; }</style
+          <style>table { padding: 2em 0 2em 0; }</style
 
 filters:
   - assets/include-files.lua
