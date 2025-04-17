@@ -1,5 +1,5 @@
 # Specify pattern of runs (ex: "^84_stx_.*_m2$")
-pattern <- ".*0041_.*_m3$"
+pattern <- ".*0041_.*"
 
 # Specify cutout string to match short names in scenarios.csv
 cutout <- "84_stx_f3_5cm_010641_0041_"

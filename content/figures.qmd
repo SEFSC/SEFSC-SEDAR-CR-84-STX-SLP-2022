@@ -12,19 +12,134 @@ fig_eez_cap <- "The U.S. EEZ is defined as the federal waters ranging from 3 to 
 
 ![`r fig_uscar_cap`](https://www.fisheries.noaa.gov/s3//styles/original/s3/dam-migration/island_group_management_areas.jpg?itok=5wvkxme2){#fig-uscar width="4.6in"}
 
-\
-\
-\
-
 ![`r fig_eez_cap`](https://www.fisheries.noaa.gov/s3//styles/original/s3/dam-migration/carib_map_stx.jpg?itok=yeYHZ8gy){#fig-eez width="6in"}
 
-\
-\
-\
-
 ::: {#fig-par layout-ncol="2"}
+![Unfished recruitment (r0)](/Scenarios/plots_m3/compare16_densities_SR_LN(R0).png){#fig-r0}
 
-![Unfished recruitment (r0)](/Scenarios/compare16_densities_SR_LN(R0).png){#fig-r0}
+![Spawning Biomass](/Scenarios/plots_m3_plain/compare2_spawnbio_uncertainty.png){#fig-ssb}
 
-St. Croix stoplight parrotfish Initial F profile.
+![Spawning Biomass Ratio](/Scenarios/plots_m3_plain/compare4_Bratio_uncertainty.png){#fig-ssb-ratio}
+
+![Fishing Mortality](/Scenarios/plots_m3/compare8_Fvalue_uncertainty.png){#fig-f}
+
+![Recruitment](/Scenarios/plots_m3_plain/compare10_recruits_uncertainty.png){#fig-recruits}
+
+St. Croix stoplight parrotfish parameter distribution for the natural log of the unfished recruitment parameter of the Beverton – Holt stock-recruit function by model scenario. (*ADD MORE HERE ABOUT THE OTHER PLOTS*)
+:::
+
+::: {#fig-jitter layout-ncol="2"}
+![Model a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/diagnostics/jitter/Total_Likelihood.png){width="70%"}
+
+![Model b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/diagnostics/jitter/Total_Likelihood.png){width="70%"}
+
+![Model v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/diagnostics/jitter/Total_Likelihood.png){width="70%"}
+
+![Model v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/diagnostics/jitter/Total_Likelihood.png){width="70%"}
+
+![Model v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/jitter/Total_Likelihood.png){width="70%"}
+
+St. Croix stoplight parrotfish jitter analysis total likelihood. Each panel gives the results of 30 model runs where the starting parameter values for each run were randomly changed by 20% from the base model's values using a uniform distribution in cumulative normal space.
+:::
+
+::: {#fig-cpue layout-ncol="2"}
+![a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/plots/index2_cpuefit_NCRMP.png)
+
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/plots/index2_cpuefit_NCRMP.png)
+
+![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/plots/index2_cpuefit_NCRMP.png)
+
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/index2_cpuefit_NCRMP.png)
+
+St. Croix stoplight parrotfish National Coral Reef Monitoring Program observed (open circles) and predicted (blue line) indices of relative abundance and associated standard errors by modeling scenario. Lines indicate 95% uncertainty interval around observed index values based on the model assumption of lognormal error.
+:::
+
+::: {#fig-lenfit layout-ncol="2"}
+![a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/plots/comp_lenfit__aggregated_across_time.png){width="50%"}
+
+![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/plots/comp_lenfit__aggregated_across_time.png){width="50%"}
+
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/plots/comp_lenfit__aggregated_across_time.png){width="50%"}
+
+![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/plots/comp_lenfit__aggregated_across_time.png){width="50%"}
+
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/comp_lenfit__aggregated_across_time.png){width="50%"}
+
+St. Croix stoplight parrotfish observed and predicted length distributions aggregated across years for the Commercial Dive and NCRMP length compositions by modeling scenario. Green lines represent predicted length compositions, while gray regions represent observed length compositions. The effective sample size used to weight the length composition data is provided by N adj (the input sample size), and N eff (the calculated effective sample size used in the McAllister-Ianelli tuning method), are shown in the upper right corners.
+:::
+
+::: {#fig-lenfit-ncrmp layout-ncol="2"}
+![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/plots/comp_lenfit_flt2mkt0.png){width="50%"}
+
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/plots/comp_lenfit_flt2mkt0.png){width="50%"}
+
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/comp_lenfit_flt2mkt0.png){width="50%"}
+
+St. Croix stoplight parrotfish observed and predicted length distributions for the NCRMP length composition data by year and modeling scenario. Green lines represent predicted length compositions, while gray regions represent observed length compositions. The effective sample size used to weight the length composition data is provided by N adj (the input sample size), and N eff (the calculated effective sample size used in the McAllister-Ianelli tuning method), are shown in the upper right corners.
+:::
+
+::: {#fig-meanlen-ncrmp layout-ncol="2"}
+![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/plots/comp_lenfit_data_weighting_TA1-8_NCRMP.png)
+
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/plots/comp_lenfit_data_weighting_TA1-8_NCRMP.png)
+
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/comp_lenfit_data_weighting_TA1-8_NCRMP.png)
+
+St. Croix stoplight parrotfish observed (open circles) and predicted (blue line) mean length by year and modeling scenario.
+:::
+
+::: {#fig-retro layout-ncol="2"}
+![a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+
+![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+
+![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+
+St. Croix stoplight parrotfish retrospective analysis of spawning stock biomass (SSB) conducted by refitting models after removing five years of observation, one year at a time sequentially. Mohn's rho statistics and the corresponding "hindcast rho" measure the severity of retrospective patterns. One-year-ahead projections denoted by color-coded dashed lines with terminal points. Grey shaded areas are the 95% confidence intervals.
+:::
+
+::: {#fig-profile-r0 layout-ncol="2"}
+![a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+
+![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+
+![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+
+St. Croix stoplight parrotfish unfished recruitment profile.
+:::
+
+::: {#fig-profile-eqcatch layout-ncol="2"}
+![a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+
+![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+
+![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+
+St. Croix stoplight parrotfish initial equilibrium catch profile (*ADD MORE HERE ABOUT THE PLOTS*).
+:::
+
+::: {#fig-profile-k layout-ncol="2"}
+![a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+
+![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+
+![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+
+St. Croix stoplight parrotfish steepness profile (*ADD MORE HERE ABOUT THE PLOTS*).
 :::

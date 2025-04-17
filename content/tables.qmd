@@ -20,10 +20,6 @@ title: "Tables"
 :  Commercial landings of Stoplight Parrotfish reported in St. Croix from
 2012-2022 in metric tons and pounds by year, along with the percentage of landings that came from each gear group.  {#tbl-catch}
 
-\
-\
-\
-
 {{< pagebreak >}}
 
 | Input Source | Input Type | Input | M | Method |
@@ -46,28 +42,24 @@ title: "Tables"
 
 : Empirical estimates of natural mortality (M) can be derived using life history information and the Natural Mortality Tool [@cope2022]. The SEDAR assessment working paper SEDAR84-AP-01 is equivalent to @riverahernández2024.  {#tbl-m}
 
-\
-\
-\
-
 {{< pagebreak >}}
 
 | Model Development Process | Code | Sequential modeling steps |
 |---------------------------|:----:|-----------------------------|
 | Data-limited configuration | null | super-year size data |
-| Data-moderate consideration | a | index |
-| Data-moderate consideration | b | annual fishery-independent size data |
+| *Data-moderate consideration* | *a* | *index* |
+| *Data-moderate consideration* | *b* | *annual fishery-independent size data* |
 | Data-moderate consideration | c | annual fishery-dependent size data |
 | Data-moderate consideration | d | recruitment deviations |
 | Data-moderate consideration | e | dome-shaped selectivity |
 | Data-moderate consideration | f | time blocks |
-| Version combining complexity steps | v1 | a + b |
+| *Version combining complexity steps* | *v1* | *a + b* |
 | Versions combining complexity steps | v2 | a + c |
-| Versions combining complexity steps | v3 | a + d |
+| *Versions combining complexity steps* | *v3* | *a + d* |
 | Versions combining complexity steps | v4 | a + e |
 | Versions combining complexity steps | v5 | a + f |
 | Versions combining complexity steps | v6 | a + b + c |
-| Versions combining complexity steps | v7 | a + b + d |
+| *Versions combining complexity steps* | *v7* | *a + b + d* |
 | Versions combining complexity steps | v8 | a + b + e |
 | Versions combining complexity steps | v9 | a + b + f |
 | Versions combining complexity steps | v10 | a + c + d |
@@ -89,29 +81,27 @@ title: "Tables"
 
 :  Summary of process and naming conventions used for SEDAR 84 assessments describing  model development noting the simplest data-limited configuration, exploring individual data-moderate considerations, individually and combined.  {#tbl-overview}
 
-\
-\
-\
-
 | Stage | Code | Sequential modeling steps |
 |--------|:-----:|---------------------------------------------------------------|
 | Initial	| ct	| model initialized with continuum tool (ct) |
 | Initial	| m1	| ct + hermaphroditism |
 | Initial	| m2	| m1 + continuous recruitment |
-| Initial | m3  | m2 + catch uncertainty |
+| *Initial* | *m3*  | *m2 + catch uncertainty* |
 | Scenario	| a	| index |
 | Scenario	| b	| annual fishery-independent size data |
 | Scenario	| v1	| index + annual fishery-independent size data |
 | Scenario	| v3	| index + recruitment deviations |
 | Scenario	| v7	| index + annual fishery-independent size data + recruitment deviations |
+| Sensitivity	| s1	| higher CV on growth young |
+| Sensitivity	| s2	| higher age and lower m |
+| Sensitivity	| s3	| one sex (age-based fecundity = maturity * weight * sex ratio)  |
+| Sensitivity	| s4	| lower standard error on initial equilibrium catch |
 
 :  Summary of process and naming conventions used across different model development stages of the SEDAR 84 St. Croix Stoplight Parrotfish stock assessment.  {#tbl-ss3-stxslp}
 
-\
-\
-\
-
 ```{r}
+#| echo: false
+#| warning: false
 #| label: tbl-corr
 #| tbl-cap: "St. Croix stoplight parrotfish correlations between estimated parameters by modeling scenario. The table shows correlations greater than 0.9 or less than -0.9. Correlations that are greater than 0.95 or less than -0.95 are shown in red."
 
@@ -138,6 +128,7 @@ var_corr <- c(
   "Correlation")
 
 tbl_corr <- short_covar |>
+  dplyr::filter(stringr::str_detect(scenario, "m2$|m3$" )) |>
   flextable::flextable() |>
   flextable::autofit() |>
   flextable::align(align = "center", part = "all") |>
@@ -151,11 +142,6 @@ tbl_corr
 
 ```
 
-
-\
-\
-\
-
 {{< pagebreak >}}
 
 ```{r}
@@ -163,7 +149,12 @@ tbl_corr
 #| tbl-cap: "St. Croix stoplight parrotfish estimated initial equilibrium catch in metric tons by model scenario. The input value was 30 metric tons with a standard error of 0.3."
 
 est_eqcatch_short <- read.csv(here::here("Scenarios", "eq_catch.csv")) |>
-  dplyr::mutate(Estimate = round(Estimate, 2))
+  dplyr::mutate(Estimate = round(Estimate, 2)) |>
+  dplyr::filter(!stringr::str_detect(Scenario, "ct|m1" )) |>
+  tidyr::separate(Scenario, c('run', 'Scenario'), sep = "_", extra = "merge") |>
+  tidyr::pivot_wider(
+    names_from = c(run),
+    values_from = c(Estimate))
 
 tbl_eqcatch <- est_eqcatch_short |>
   flextable::flextable() |>
@@ -177,11 +168,6 @@ tbl_eqcatch <- est_eqcatch_short |>
 tbl_eqcatch
 
 ```
-
-
-\
-\
-\
 
 {{< pagebreak >}}
 
@@ -199,7 +185,8 @@ est_parm_short <- read.csv(here::here("Scenarios", "scenarios_parm.csv")) |>
     )
   ) |>
   dplyr::select(Parameter, Scenario, Estimate, SD, CV) |>
-  dplyr::arrange(Parameter, Scenario)
+  dplyr::arrange(Parameter, Scenario) |>
+  dplyr::filter(stringr::str_detect(Scenario, "\\w*m3$"))
 
 
 tbl_parm <- est_parm_short |>
@@ -215,10 +202,6 @@ tbl_parm
 
 ```
 
-\
-\
-\
-
 ```{r}
 #| label: tbl-dq
 #| tbl-cap: "St. Croix stoplight parrotfish derived quantities for unfished and initial spawning stock biomass in metric tons (mt) along with standard deviations (SD) and coefficient of variation (CV) by modeling scenario. CV is calculated as the SD divided by the parameter estimate."
@@ -232,7 +215,8 @@ est_dq <- read.csv(here::here("Scenarios", "scenarios_dq.csv")) |>
     )
   ) |>
   dplyr::select(Parameter, Scenario, Estimate, SD, CV) |>
-  dplyr::arrange(desc(Parameter), Scenario)
+  dplyr::arrange(desc(Parameter), Scenario) |>
+  dplyr::filter(stringr::str_detect(Scenario, "\\w*m3$"))
 
 
 tbl_dq <- est_dq |>

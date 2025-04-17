@@ -28,13 +28,14 @@ The years of the available species-specific self-reported commercial fisher logb
 
 It is important to note that the stock was not unexploited at the start year of the available catch time series. The fishery had been ongoing for decades, and the total fishing effort in St. Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the dive fleet, and a corresponding initial equilibrium catch was input. A common option to define an initial equilibrium catch is to use the geometric mean of the first three years of available catches. However, because of the known decline in effort preceding the start year of the assessment, **the initial equilibrium catch was configured in initial runs as 30 metric tons**, a little over twice the geometric mean of the catches from 2012 - 2014.
 
-**The input standard error for the landings was set to a 0.3.** When implemented with few data inputs, Stock synthesis will inherently nearly exactly fit the annual landings time series, regardless of the input standard error. Initial models were set up with a default standard error of 0.01. In addition to nearly exactly fitting the annual landings time series, the models also exactly fit the input initial equilibrium catch. The higher standard error value of 0.3 was used to free up the estimation of the initial equilibrium catch.
+**The input standard error for the landings was set to a 0.3.** When implemented with few data inputs, Stock synthesis will inherently nearly exactly fit the annual landings time series, regardless of the input standard error. Initial models were set up with a default standard error of 0.01. In addition to exactly fitting the annual landings time series, the models also exactly fit the input initial equilibrium catch. A higher standard error value of 0.3 was used to free up the estimation of the initial equilibrium catch. The sequential model configurations and model development are described later in this report.
 
 Commercial discards reported by calendar year by @martínezrivera2024 were not significant and based on the nature of spearfishing with the predominant dive gear, **the assessment assumed no discards**.
 
 Alternative model configurations associated with the dive fleet data are described later in this report. They included:
 
--   The initial equilibrium catch was explored via likelihood profiling
+-   The initial equilibrium catch was explored via likelihood profiling.
+-   A lower standard error of 0.3 was explored via sensitivity analysis.
 
 ### Size Composition Data {#sec-data-fleet-size}
 
@@ -144,7 +145,7 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
 -   The input standard error for the landings was set to 0.3.
 
-    -   A higher standard error of 0.3 was explored via sensitivity analysis.
+    -   A lower standard error of 0.1 was explored via sensitivity analysis.
 
 -   The initial equilibrium catch was configured in initial runs as 30 metric tons.
 
@@ -190,11 +191,9 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
     -   A higher growth coefficient of variation of 0.25 for younger ages was explored via sensitivity analysis.
 
-    -   Higher growth coefficients of variation of 0.25 for both younger and older ages were explored via sensitivity analysis.
-
 -   The length-weight relationship was W = 3.18 x 10\^-5 L\^ 2.9, with weight in kilograms and length in centimeters.
 
--   A natural mortality value of 0.3 was used in the initial model runs.
+-   A natural mortality value of 0.27 was used in the initial model runs.
 
     -   Alternative M values were explored through sensitivity analyses.
 

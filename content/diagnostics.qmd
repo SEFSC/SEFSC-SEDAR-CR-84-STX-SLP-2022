@@ -18,28 +18,39 @@ Despite achieving a solution and having unbounded parameters, the gradient warni
 
 High correlation among parameters can lead to flat response surfaces and poor model stability. By performing a correlation analysis, modeling assumptions that lead to inadequate configurations can be identified. Because of the highly parameterized nature of stock assessment models, some parameters are expected to be correlated (e.g., stock recruit parameters). However, many strongly correlated parameters (e.g., > 0.95) suggest reconsidering modeling assumptions and parameterization.
 
-High correlations (\> 0.95) were observed in nearly all model configurations (@tbl-corr). A particularly important correlation was between the estimate of initial fishing mortality (Initial F) and unfished recruitment (R0). This correlation exceeded 0.99 in all models except for model v3_m2, where it was slightly lower but still moderately high at -0.90.
+High correlations (> 0.95) were observed across nearly all _m2 model configurations (@tbl-corr). One particularly noteworthy correlation was between the estimates of initial fishing mortality (Initial F) and unfished recruitment (R0), which exceeded 0.99 in all models except for version v3_m2, where it was slightly lower but still substantial at -0.90.
 
-Similarly, all models, except model v3_m2, showed moderately high correlations (\> 0.90) between the two parameters used to define logistic selectivity: the size at peak selectivity and the width of the ascending limb. Correlations between these selectivity parameters are expected. While estimated values varied slightly among models, they produced similar size-based selectivity curves for the commercial dive fleet (fig-sel).
+In the initial default configurations of both the _m1 and _m2 models, the standard error on the initial equilibrium catch was fixed at a low value of 0.01. This tightly constrained the model to the input catch of 30 metric tons, effectively limiting flexibility in estimating the corresponding initial fishing mortality. To address this issue, the standard error was increased to 0.3, allowing the estimated initial catch to diverge from the fixed input value (@tbl-eqcatch). This adjustment reduced the overly strong correlation between Initial F and R0 by relaxing the constraint on initial fishing mortality.
+
+Most models showed moderately high correlations (\> 0.90) between the two parameters used to define logistic selectivity: the size at peak selectivity and the width of the ascending limb. Correlations between these selectivity parameters are expected. While estimated values varied slightly among models, they produced similar size-based selectivity curves for the commercial dive fleet (*ADD SELECTIVITY FIGURE*).
 
 ## Evaluating Variance
 
 To check for parameters with high variance,  parameter estimates are reported with their resulting standard deviations. @tbl-parm presents the model-estimated values and standard deviations for the main active parameters. While it’s important to consider the scale of each parameter, the results suggest that key parameters are not being estimated with high precision. In particular, the coefficients of variation for initial fishing mortality are relatively high across all models, indicating considerable uncertainty in these estimates. @fig-r0 illustrates how the estimate and uncertainty for the unfished recruitment (R0) changes throughout the sequential steps of model development. The uncertainty in response surface for key parameters are further examined later in the report using likelihood profiles.
 
-Stock Synthesis also provides estimates and standard deviations for derived quantities such as annual and unfished spawning biomass, annual fishing mortality and depletion (fraction of unfished). @tbl-dq shows this information and it is also plotted in @fig-ssb and @fig-ssb-ratio.  The uncertainty associated with unfished recruitment (R0) was highest for model v7_m2. Conversely, the uncertainty in unfished recruitment was lowest for model v3_m2, however, model v3_m2 was also associated with the highest uncertainty for fishing mortality (@fig-f). The configurations for models v3_m2 and v7_m2 include estimation of recruitment deviations, the high uncertainty resulting from these model scenarios is expected due to the data limited nature of the data inputs.
+Stock Synthesis also provides estimates and standard deviations for derived quantities such as annual and unfished spawning biomass depletion (as a fraction of unfished spawning biomass). @tbl-dq shows this information and it is also plotted in @fig-ssb and @fig-ssb-ratio.  
+
+Compared to the other m3 models, Model v3_m2 had extremely highest uncertainty for fishing mortality and other derived quantities (@fig-f). The configurations for models v3_m2 and v7_m2 include estimation of recruitment deviations, the high uncertainty resulting from these model scenarios is expected due to the data limited nature of the data inputs. (*ADD MORE HERE ABOUT THE PLOTS*)
 
 ## Jitter Analysis
 Jitter analysis is a relatively simple method that can be used to assess model stability and to determine whether the search algorithm has found a global, as opposed to local, solution. The premise is that all starting values are randomly altered (or ‘jittered’) by an input constant value, and the model is rerun from the new starting values. If the resulting population trajectories across many runs converge to the same solution, this provides reasonable support that a global minimum has been obtained. This process is not fault-proof; no guarantee can ever be made that the ‘true’ solution has been found or that the model does not contain misspecification. However, if the jitter analysis results are consistent, it provides additional support that the model is performing well and has come to a stable solution. For this assessment, a jitter value of 0.2 was applied to the starting values, and 30 runs were completed. The jitter value defines a uniform distribution in cumulative normal space to generate new initial parameter values [@methot2020].
 
-Consistent with earlier results indicating that the models reached local minima (positive definite Hessian), the jitter analysis also performed well across all model scenarios (@fig-jitter). Importantly, no jitter runs produced a lower likelihood than the best fit already identified for each model.
+Consistent with earlier results indicating that the models reached local minima (positive definite Hessian), the jitter analysis also performed well across all model scenarios (@fig-jitter). Importantly, no jitter runs produced a lower likelihood than the best fit already identified for each model. (*RERUN AND INCREASE JITTER*)
 
 ## Residual Analysis 
 
 The primary approach to address performance was a residual analysis of model fit to each data set (e.g., catch, length compositions, indices). Any temporal trend in model residuals or disproportionately high residual values can indicate model misspecification and poor performance. Ideally, residuals are randomly distributed, conform to the assumed error structure for that data source, and are not of extreme magnitude. Any extreme positive or negative residual patterns indicate poor model performance and potential unaccounted-for process or observation error.
 
+@fig-cpue 
+@fig-lenfit
+@fig-lenfit-ncrmp
+@fig-meanlen-ncrmp
+
+(*ADD MORE HERE ABOUT THE PLOTS*)
+
 ### Catch
 
-All models nearly exactly fit the catch data. This was expected due to the low CV on catch and the date-limited and data-moderate configurations that do not provide the model with other information that would result in potentially differences between the estimated and observed catch data. Model with higher coefficients of variation on the catch data are compared in the sensitivity analyses.
+All models closely matched the observed catch data, which was expected given the data-limited configurations used. These setups don’t provide much additional information beyond the catch itself, so the model has little room to estimate catch values that differ from the input data. The effect of increasing the standard error on catch to 0.3 was to give the model more flexibility in estimating initial fishing mortality. This adjustment allowed the model to explore alternative fits while still remaining reasonable. This topic will also be revisited in the sensitivity analyses, where model runs with a lower catch standard error of 0.1 are compared. (*ADD PLOTS SHOWING EXACT ESTIMATE OF CATCH*)
 
 ### Indices
 For the models without recruitment deviation being estimated (models b_m2, and v1_m2), the predicted National Coral Reef Monitoring Program index is flat (@fig-cpue). In the models with estimated recruitment deviations, there is some improved fit to the index, whereby the slightly improved fits. Notably, the error rate was higher in 2014 and 2015, and none of models fit well to the highest value observed in 2015 (@fig-cpue).
@@ -61,13 +72,27 @@ Profile likelihoods are used to examine the change in negative log-likelihood fo
 Typically, profiling is carried out for key parameters, particularly those defining the stock-recruit relationship (steepness, virgin recruitment, and sigma R). Profiles were explored across initial equilibrium catch, steepness, and virgin recruitment (R0).
 
 ### Steepness
+@fig-profile-k
 
 ### Unfished Recruitment (R0)
+@fig-profile-r0
 
 ### Initial Equilibrium Catch
-
+@fig-profile-eqcatch 
 
 
 ## Sensitivity Runs
 
-Sensitivity analyses were considered to evaluate the impact on key derived quantities. Sensitivities included considering alternatives for the CV associated with catch, the method used to model hermaphroditism and data weighting. Although the data-limited implementation of SS3 will inherently nearly exactly fit the annual landings, a higher CV of 0.3 was explored via sensitivity analysis. The second method for parameterizing hermaphroditism involved using a female-only model and accounting for sex transition to males as a reduction in fecundity. Lastly, the Dirichlet multinomial approach was used to reweigh the composition data. This method allows an internal estimation of sampling variance for each source of length composition data and adjusts the effective sample sizes [@methot2013].
+Sensitivity analyses were considered to evaluate the impact on key derived quantities. Sensitivities included considering alternatives for the CV on growth, the standard error associated with catch, the maximum age, the method used to model hermaphroditism and data weighting.
+
+### Growth CV
+
+### Natural Mortality
+
+### Single Sex Model
+The second method for parameterizing hermaphroditism involved using a female-only model and accounting for sex transition to males as a reduction in fecundity.
+
+### Standard Error on Catch
+
+
+
