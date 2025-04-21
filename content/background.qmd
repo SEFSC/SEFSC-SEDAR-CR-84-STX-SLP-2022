@@ -8,7 +8,7 @@ The stoplight parrotfish (Sparisoma viride) is a sequential protogynous hermaphr
 
 St. Croix stoplight parrotfish is managed under the St. Croix Fishery Management Plan [@crabtree]. In 2023, the Caribbean Fisheries Management Council transitioned from species-based to island-based fisheries management (@fig-uscar). The management measures in the new island-based fishery management plans became effective on October 13, 2022.
 
-The Parrotfish 2 stock complex includes two indicator stocks and five other species. The indicator species are stoplight parrotfish and redtail parrotfish (Sparisoma chrysopterum). The allowable biological catch for the complex was established using tier 4a of the 4-tired control rule. The allowable biological catch and the annual catch limit are 85,135 and 72,365 pounds whole weight, respectively.
+The Parrotfish two stock complex includes two indicator stocks and five other species. The indicator species are stoplight parrotfish and redtail parrotfish (Sparisoma chrysopterum). The allowable biological catch for the complex was established using tier 4a of the 4-tiered control rule. The allowable biological catch and the annual catch limit are 85,135 and 72,365 pounds whole weight, respectively.
 
 A SEDAR 84 Data Workshop working paper summarizes federal management actions for stoplight parrotfish in St. Croix [@malone2024]. On August 29, 2013, a 9-inch federal size limit was instituted by Final Regulatory Amendment 4. The size limit only applies in the U.S. EEZ surrounding St. Croix, defined as the federal waters ranging from 3 to 200 nautical miles (nm) (5.6 – 370 kilometers \[km\]) from the nearest coastline point of the U.S. Virgin Islands (@fig-eez).
 

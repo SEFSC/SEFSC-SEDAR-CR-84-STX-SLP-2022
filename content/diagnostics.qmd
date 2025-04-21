@@ -22,7 +22,7 @@ High correlations (> 0.95) were observed across nearly all _m2 model configurati
 
 In the initial default configurations of both the _m1 and _m2 models, the standard error on the initial equilibrium catch was fixed at a low value of 0.01. This tightly constrained the model to the input catch of 30 metric tons, effectively limiting flexibility in estimating the corresponding initial fishing mortality. To address this issue, the standard error was increased to 0.3, allowing the estimated initial catch to diverge from the fixed input value (@tbl-eqcatch). This adjustment reduced the overly strong correlation between Initial F and R0 by relaxing the constraint on initial fishing mortality.
 
-Most models showed moderately high correlations (\> 0.90) between the two parameters used to define logistic selectivity: the size at peak selectivity and the width of the ascending limb. Correlations between these selectivity parameters are expected. While estimated values varied slightly among models, they produced similar size-based selectivity curves for the commercial dive fleet (*ADD SELECTIVITY FIGURE*).
+Most models showed moderately high correlations (\> 0.90) between the two parameters used to define logistic selectivity: the size at peak selectivity and the width of the ascending limb. Correlations between these selectivity parameters are expected. While estimated values varied slightly among models, they produced similar size-based selectivity curves for the commercial fleet (*ADD SELECTIVITY FIGURE*).
 
 ## Evaluating Variance
 

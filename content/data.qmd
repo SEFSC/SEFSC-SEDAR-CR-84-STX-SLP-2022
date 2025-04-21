@@ -12,42 +12,42 @@ Additional details for each data input are available in their respective referen
 4.  Index of abundance from a fishery-independent survey of reef fish [@grove2024]
 5.  Life history information from otolith analysis and gonad histology [@riverahernández2024]
 
-**Based on the available data, the assessment was configured with one area, one season, one fleet, and one fishery-independent survey.**
+**Based on the available data, the assessment was configured with one area, one season, one commercial commercial fleet, and one fishery-independent survey.**
 
 {{< pagebreak >}}
 
-## Commercial Dive Fleet {#sec-data-fleet}
+## Commercial Fleet {#sec-data-fleet}
 
 ### Catch Data {#sec-data-fleet-catch}
 
-The catch data for the dive fleet came from the Caribbean Commercial Logbook program [@martínezrivera2024]. Beginning in 1996, part of the commercial landings was reported by species groups (e.g., snappers, groupers, parrotfishes, surgeonfishes, etc.), and by gear (hook and line, gill net, SCUBA, trap, etc.). All commercial fishery data reports included species groups beginning in 1998. In July of 2011, commercial landings were reported by species and gear. Various diving gears were combined to establish a dive gear group, and the catch of stoplight parrotfish in St. Croix from this group made up 80% of the reported landings (@tbl-catch). Potential outliers discussed during the assessment webinars were investigated and retained as valid trips.
+The catch data for the commercial fleet came from the Caribbean Commercial Logbook program [@martínezrivera2024]. Beginning in 1996, part of the commercial landings was reported by species groups (e.g., snappers, groupers, parrotfishes, surgeonfishes, etc.), and by gear (hook and line, gill net, SCUBA, trap, etc.). All commercial fishery data reports included species groups beginning in 1998. In July of 2011, commercial landings were reported by species and gear. Various diving gears were combined to establish a dive gear group since the catch of stoplight parrotfish in St. Croix from this group made up 80% of the reported landings, all gears (dive and other) were included into a single commercial fleet (@tbl-catch). Potential outliers discussed during the assessment webinars were investigated and retained as valid trips.
 
 In the SEDAR 84 Stock Synthesis models, **the catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season, i.e., each fishing year.** 
 
 The years of the available species-specific self-reported commercial fisher logbook data determined the start and end years of the Stock Synthesis models. **The start and end years of the model were 2012 and 2022, respectively.** 
 
-It is important to note that the stock was not unexploited at the start year of the available catch time series. The fishery had been ongoing for decades, and the total fishing effort in St. Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the dive fleet, and a corresponding initial equilibrium catch was input. A common option to define an initial equilibrium catch is to use the geometric mean of the first three years of available catches. However, because of the known decline in effort preceding the start year of the assessment, **the initial equilibrium catch was configured in initial runs as 30 metric tons**, a little over twice the geometric mean of the catches from 2012 - 2014.
+It is important to note that the stock was not unexploited at the start year of the available catch time series. The fishery had been ongoing for decades, and the total fishing effort in St. Croix in 2012 was undergoing a meaningful decline; thus, an initial F was estimated for the commercial fleet, and a corresponding initial equilibrium catch was input. A common option to define an initial equilibrium catch is to use the geometric mean of the first three years of available catches. However, because of the known decline in effort preceding the start year of the assessment, **the initial equilibrium catch was configured in initial runs as 30 metric tons**, a little over twice the geometric mean of the catches from 2012 - 2014.
 
 **The input standard error for the landings was set to a 0.3.** When implemented with few data inputs, Stock synthesis will inherently nearly exactly fit the annual landings time series, regardless of the input standard error. Initial models were set up with a default standard error of 0.01. In addition to exactly fitting the annual landings time series, the models also exactly fit the input initial equilibrium catch. A higher standard error value of 0.3 was used to free up the estimation of the initial equilibrium catch. The sequential model configurations and model development are described later in this report.
 
 Commercial discards reported by calendar year by @martínezrivera2024 were not significant and based on the nature of spearfishing with the predominant dive gear, **the assessment assumed no discards**.
 
-Alternative model configurations associated with the dive fleet data are described later in this report. They included:
+Alternative model configurations associated with the commercial fleet data are described later in this report. They included:
 
 -   The initial equilibrium catch was explored via likelihood profiling.
 -   A lower standard error of 0.3 was explored via sensitivity analysis.
 
 ### Size Composition Data {#sec-data-fleet-size}
 
-Gear-specific annual length frequencies for the dive fleet came from the commercial shore-based port-sampling Trip Interview Program [@godwin2024]. The NOAA Fisheries, Southeast Fisheries Science Center Trip Interview Program collects length and weight data from fish landed by commercial fishing vessels, along with information about fishing areas and gears. Data collection began in 1983 with frequent updates in best practices; the latest being in 2017. The Stoplight Parrotfish length data from St. Croix included 29,582 length observations across 1,028 unique port sampling interviews.
+Gear-specific annual length frequencies for the commercial fleet came from the commercial shore-based port-sampling Trip Interview Program [@godwin2024]. The NOAA Fisheries, Southeast Fisheries Science Center Trip Interview Program collects length and weight data from fish landed by commercial fishing vessels, along with information about fishing areas and gears. Data collection began in 1983 with frequent updates in best practices; the latest being in 2017. The Stoplight Parrotfish length data from St. Croix included 29,582 length observations across 1,028 unique port sampling interviews.
 
-Although the catch data can be separated into dive and non-dive related gears, 98% of the length measurements for St. Croix Stoplight parrotfish from 2012-2022 were associated with diving. These data were used to characterize the fleet's size-based selectivity pattern. Since multiple fish length measurements can be obtained from a single sampled trip, each length does not represent an independent observation. **The relative model weighting of the dive fleet length compositions was based on the number of trips sampled**. 
+Although the catch data can be separated into dive and non-dive related gears, 98% of the length measurements for St. Croix Stoplight parrotfish from 2012-2022 were associated with diving. These data were used to characterize the fleet's size-based selectivity pattern. Since multiple fish length measurements can be obtained from a single sampled trip, each length does not represent an independent observation. **The relative model weighting of the commercial fleet length compositions was based on the number of trips sampled**. 
 
-From 2012 - 2022, the size data included 1,033 shore-based length measurements from dive gears obtained across 66 trips. Five trips were flagged and removed as potential outliers with unusually large lengths. **Due to low sample sizes of both fish and trips, the fishery-dependent commercial dive fleet length composition data were collapsed across all years 2012-2022**.
+From 2012 - 2022, the size data included 1,033 shore-based length measurements obtained across 66 trips. Five trips were flagged and removed as potential outliers with unusually large lengths. **Due to low sample sizes of both fish and trips, the fishery-dependent commercial fleet length composition data were collapsed across all years 2012-2022** by implementing the super-period approach in Stock Synthesis.
 
-**The Trip Interview Program length compositions of the commercial dive fleet were assumed to be representative of the total catch.** Although a federal minimum size limit exists, it does not apply in USVI territorial waters extending from land to 3 nautical miles offshore. Discussion at the data workshop emphasized that the federal regulations do not conclusively affect retention.
+**The Trip Interview Program length compositions of the commercial fleet were assumed to be representative of the total catch.** Although a federal minimum size limit exists, it does not apply in USVI territorial waters extending from land to 3 nautical miles offshore. Discussion at the data workshop emphasized that the federal regulations do not conclusively affect retention.
 
-**A double normal function was used to model the relative vulnerability of capture by length for the dive fleet.** However, only two parameters were estimated, effectively describing a logistic selectivity for the commercial dive fleet. The double normal function allows for domed or logistic selectivity. It combines two normal distributions; the first describes the ascending limb, while the second describes the descending limb. Domed selectivity was not explored for St. Croix Stoplight Parrotfish. However, achieving the logistic shape with the double normal Stock Synthesis pattern facilitated model configurations for SEDAR 84. The two parameters used to achieve a logistic selectivity shape were the size associated with peak selectivity and the width of the ascending limb.
+**A double normal function was used to model the relative vulnerability of capture by length for the commercial fleet.** However, only two parameters were estimated, effectively describing a logistic selectivity for the commercial fleet. The double normal function allows for domed or logistic selectivity. It combines two normal distributions; the first describes the ascending limb, while the second describes the descending limb. Domed selectivity was not explored for St. Croix Stoplight Parrotfish. However, achieving the logistic shape with the double normal Stock Synthesis pattern facilitated model configurations for SEDAR 84. The two parameters used to achieve a logistic selectivity shape were the size associated with peak selectivity and the width of the ascending limb.
 
 ## Survey Data {#sec-data-survey}
 
@@ -59,7 +59,7 @@ Annual mean density and associated standard errors for SEDAR 84 were provided by
 
 ### Size Composition Data {#sec-data-survey-size}
 
-The three most recent years of the National Coral Reef Monitoring Program survey in St. Croix provided counts by individual lengths measured to the nearest centimeter. However, before 2017 the length observations were collected in 5-centimeter bins. **The length data inputs for both the dive fleet and the three years of the survey with 1-centimeter length measurements were binned to match the survey's 2012 and 2015 5-centimeter bins.**
+The three most recent years of the National Coral Reef Monitoring Program survey in St. Croix provided counts by individual lengths measured to the nearest centimeter. However, before 2017 the length observations were collected in 5-centimeter bins. **The length data inputs for both the commercial fleet and the three years of the survey with 1-centimeter length measurements were binned to match the survey's 2012 and 2015 5-centimeter bins.**
 
 A large proportion of small fish were observed in the National Coral Reef Monitoring Program survey. **The smallest two bins, \[1 - 6) and \[6 - 11), were collapsed into a single bin \[1 - 11).**
 
@@ -133,9 +133,9 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
 ## Summary of Data-Informed Modeling Configurations
 
--   Based on the available data, the assessment was configured with one area, one season, one fleet, and one fishery-independent survey.
+-   Based on the available data, the assessment was configured with one area, one season, one commercial fleet, and one fishery-independent survey.
 
-### Dive Fleet
+### Commercial Fleet
 
 -   The catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season, i.e., each fishing year.
 
@@ -151,13 +151,13 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
     -   The initial equilibrium catch was explored via likelihood profiling.
 
--   The relative model weighting of the dive fleet length compositions was based on the number of trips sampled.
+-   The relative model weighting of the commercial fleet length compositions was based on the number of trips sampled.
 
--   Due to low sample sizes, the fishery-dependent commercial dive fleet length composition data were combined across all years.
+-   Due to low sample sizes, the fishery-dependent commercial fleet length composition data were combined across all years.
 
--   The length compositions of the commercial dive fleet were assumed to be representative of the total catch.
+-   The length compositions of the commercial fleet were assumed to be representative of the total catch.
 
--   A double normal function was used to model the relative vulnerability of capture by length for the dive fleet.
+-   A double normal function was used to model the relative vulnerability of capture by length for the commercial fleet.
 
 ### National Coral Reef Monitoring Program Survey.
 
@@ -167,7 +167,7 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
 -   The relative model weighting of the survey length compositions across years was based on the number of paired dives.
 
--   The length data inputs for both the dive fleet and the three years of the survey with 1-centimeter length measurements were binned to match the survey's 2012 and 2015 5-centimeter bins.
+-   The length data inputs for both the commercial fleet and the three years of the survey with 1-centimeter length measurements were binned to match the survey's 2012 and 2015 5-centimeter bins.
 
 -   Although the size bins of all the length data inputs were large (≥ 5 centimeters), the model's simulated population bin size was 1-centimeter bins.
 

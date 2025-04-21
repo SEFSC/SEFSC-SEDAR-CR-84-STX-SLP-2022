@@ -17,9 +17,10 @@ fig_eez_cap <- "The U.S. EEZ is defined as the federal waters ranging from 3 to 
 ::: {#fig-par layout-ncol="2"}
 ![Unfished recruitment (r0)](/Scenarios/plots_m3/compare16_densities_SR_LN(R0).png){#fig-r0}
 
-![Spawning Biomass](/Scenarios/plots_m3_plain/compare2_spawnbio_uncertainty.png){#fig-ssb}
+![Virgin Spawning Stock Biomass](/Scenarios/plots_m3/compare16_densities_SSB_Virgin.png){#fig-ssb1}
 
 ![Spawning Biomass Ratio](/Scenarios/plots_m3_plain/compare4_Bratio_uncertainty.png){#fig-ssb-ratio}
+![Spawning Biomass](/Scenarios/plots_m3_plain/compare2_spawnbio_uncertainty.png){#fig-ssb2}
 
 ![Fishing Mortality](/Scenarios/plots_m3/compare8_Fvalue_uncertainty.png){#fig-f}
 
@@ -65,15 +66,15 @@ St. Croix stoplight parrotfish National Coral Reef Monitoring Program observed (
 
 ![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/comp_lenfit__aggregated_across_time.png){width="50%"}
 
-St. Croix stoplight parrotfish observed and predicted length distributions aggregated across years for the Commercial Dive and NCRMP length compositions by modeling scenario. Green lines represent predicted length compositions, while gray regions represent observed length compositions. The effective sample size used to weight the length composition data is provided by N adj (the input sample size), and N eff (the calculated effective sample size used in the McAllister-Ianelli tuning method), are shown in the upper right corners.
+St. Croix stoplight parrotfish observed and predicted length distributions aggregated across years for the Commercial and NCRMP length compositions by modeling scenario. Green lines represent predicted length compositions, while gray regions represent observed length compositions. The effective sample size used to weight the length composition data is provided by N adj (the input sample size), and N eff (the calculated effective sample size used in the McAllister-Ianelli tuning method), are shown in the upper right corners.
 :::
 
-::: {#fig-lenfit-ncrmp layout-ncol="2"}
-![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/plots/comp_lenfit_flt2mkt0.png){width="50%"}
+::: {#fig-lenfit-ncrmp layout-ncol="3"}
+![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/plots/comp_lenfit_flt2mkt0_crop.png)
 
-![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/plots/comp_lenfit_flt2mkt0.png){width="50%"}
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/plots/comp_lenfit_flt2mkt0_crop.png)
 
-![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/comp_lenfit_flt2mkt0.png){width="50%"}
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/comp_lenfit_flt2mkt0_crop.png)
 
 St. Croix stoplight parrotfish observed and predicted length distributions for the NCRMP length composition data by year and modeling scenario. Green lines represent predicted length compositions, while gray regions represent observed length compositions. The effective sample size used to weight the length composition data is provided by N adj (the input sample size), and N eff (the calculated effective sample size used in the McAllister-Ianelli tuning method), are shown in the upper right corners.
 :::
@@ -140,6 +141,48 @@ St. Croix stoplight parrotfish initial equilibrium catch profile (*ADD MORE HERE
 ![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
 
 ![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+
+St. Croix stoplight parrotfish steepness profile (*ADD MORE HERE ABOUT THE PLOTS*).
+:::
+
+::: {#fig-profile-r0-msyspr layout-ncol="2"}
+![a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+
+![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+
+![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+
+St. Croix stoplight parrotfish unfished recruitment profile.
+:::
+
+::: {#fig-profile-eqcatch-msyspr layout-ncol="2"}
+![a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+
+![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+
+![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+
+St. Croix stoplight parrotfish initial equilibrium catch profile (*ADD MORE HERE ABOUT THE PLOTS*).
+:::
+
+::: {#fig-profile-k-msyspr layout-ncol="2"}
+![a_m3](/Scenarios/84_stx_f3_5cm_010641_0041_a_m3/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+
+![b_m3](/Scenarios/84_stx_f3_5cm_010641_0041_b_m3/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+
+![v1_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v1_m3/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+
+![v3_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v3_m3/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+
+![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
 
 St. Croix stoplight parrotfish steepness profile (*ADD MORE HERE ABOUT THE PLOTS*).
 :::

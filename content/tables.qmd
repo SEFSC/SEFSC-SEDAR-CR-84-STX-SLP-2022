@@ -18,14 +18,14 @@ title: "Tables"
 | Total	| 112.37 | 247,733 | 	82%	 |	18%	 |
 
 :  Commercial landings of Stoplight Parrotfish reported in St. Croix from
-2012-2022 in metric tons and pounds by year, along with the percentage of landings that came from each gear group.  {#tbl-catch}
+2012-2022 in metric tons and pounds by year, along with the percentage of the total commercial landings that came from each gear group.  {#tbl-catch}
 
 {{< pagebreak >}}
 
 | Input Source | Input Type | Input | M | Method |
 |:-----------|:-----------|:--------:|:--:|:--------|
 | @choat2003 | Maximum age | 30 | 0.180 | Hamel_Amax |
-| SEDAR84-AP-01 | Maximum age | 20 | 0.270 | Hamel_Amax |
+| **SEDAR84-AP-01** | **Maximum age** | **20** | **0.270** | **Hamel_Amax** |
 | Meta-analysis | Scientific name | *Sparisoma viride* | 0.397 | FishLife |
 | @choat2003 | Maximum age | 12 | 0.450 | Hamel_Amax |
 | @choat2003 | Maximum age | 9 | 0.600 | Hamel_Amax |
@@ -46,47 +46,48 @@ title: "Tables"
 
 | Model Development Process | Code | Sequential modeling steps |
 |---------------------------|:----:|-----------------------------|
-| Data-limited configuration | null | super-year size data |
-| *Data-moderate consideration* | *a* | *index* |
-| *Data-moderate consideration* | *b* | *annual fishery-independent size data* |
-| Data-moderate consideration | c | annual fishery-dependent size data |
-| Data-moderate consideration | d | recruitment deviations |
-| Data-moderate consideration | e | dome-shaped selectivity |
-| Data-moderate consideration | f | time blocks |
-| *Version combining complexity steps* | *v1* | *a + b* |
-| Versions combining complexity steps | v2 | a + c |
-| *Versions combining complexity steps* | *v3* | *a + d* |
-| Versions combining complexity steps | v4 | a + e |
-| Versions combining complexity steps | v5 | a + f |
-| Versions combining complexity steps | v6 | a + b + c |
-| *Versions combining complexity steps* | *v7* | *a + b + d* |
-| Versions combining complexity steps | v8 | a + b + e |
-| Versions combining complexity steps | v9 | a + b + f |
-| Versions combining complexity steps | v10 | a + c + d |
-| Versions combining complexity steps | v11 | a + c + e |
-| Versions combining complexity steps | v12 | a + c + f |
-| Versions combining complexity steps | v13 | a + d + e |
-| Versions combining complexity steps | v14 | a + d + f |
-| Versions combining complexity steps | v15 | a + e + f |
-| Versions combining complexity steps | v16 | a + b + c + d |
-| Versions combining complexity steps | v17 | a + b + c + e |
-| Versions combining complexity steps | v18 | a + b + c + f |
-| Versions combining complexity steps | v19 | a + b + d + e |
-| Versions combining complexity steps | v20 | a + b + d + f |
-| Versions combining complexity steps | v21 | a + b + e + f |
-| Versions combining complexity steps | v22 | a + b + c + d + e |
-| Versions combining complexity steps | v23 | a + b + c + d + f |
-| Versions combining complexity steps | v24 | a + b + c + e + f |
-| Versions combining complexity steps | v25 | a + b + c + d + e + f |
+| Data-limited | null | super-year size data |
+| **Data-moderate** | **a** | **index** |
+| **Data-moderate** | **b** | **annual fishery-independent size data** |
+| Data-moderate | c | annual fishery-dependent size data |
+| Data-moderate | d | recruitment deviations |
+| Data-moderate | e | dome-shaped selectivity |
+| Data-moderate | f | time blocks |
+| **Variation 1** | **v1** | **a + b** |
+| Variation 2| v2 | a + c |
+| **Variation** 3| **v3** | **a + d** |
+| Variation 4 | v4 | a + e |
+| Variation 5 | v5 | a + f |
+| Variation 6 | v6 | a + b + c |
+| **Variation** 7| **v7** | **a + b + d** |
+| Variation 8 | v8 | a + b + e |
+| Variation 9 | v9 | a + b + f |
+| Variation 10 | v10 | a + c + d |
+| Variation 11 | v11 | a + c + e |
+| Variation 12 | v12 | a + c + f |
+| Variation 13 | v13 | a + d + e |
+| Variation 14 | v14 | a + d + f |
+| Variation 15 | v15 | a + e + f |
+| Variation 16 | v16 | a + b + c + d |
+| Variation 17 | v17 | a + b + c + e |
+| Variation 18 | v18 | a + b + c + f |
+| Variation 19 | v19 | a + b + d + e |
+| Variation 20 | v20 | a + b + d + f |
+| Variation 21 | v21 | a + b + e + f |
+| Variation 22 | v22 | a + b + c + d + e |
+| Variation 23 | v23 | a + b + c + d + f |
+| Variation 24 | v24 | a + b + c + e + f |
+| Variation 25 | v25 | a + b + c + d + e + f |
 
 :  Summary of process and naming conventions used for SEDAR 84 assessments describing  model development noting the simplest data-limited configuration, exploring individual data-moderate considerations, individually and combined.  {#tbl-overview}
 
 | Stage | Code | Sequential modeling steps |
-|--------|:-----:|---------------------------------------------------------------|
+|--------|:----:|----------------------------------------------------------------|
 | Initial	| ct	| model initialized with continuum tool (ct) |
 | Initial	| m1	| ct + hermaphroditism |
 | Initial	| m2	| m1 + continuous recruitment |
-| *Initial* | *m3*  | *m2 + catch uncertainty* |
+| **Initial** | **m3**  | **m2 + catch uncertainty** |
+| Scenario  | null | super-year size data |
 | Scenario	| a	| index |
 | Scenario	| b	| annual fishery-independent size data |
 | Scenario	| v1	| index + annual fishery-independent size data |
@@ -98,6 +99,8 @@ title: "Tables"
 | Sensitivity	| s4	| lower standard error on initial equilibrium catch |
 
 :  Summary of process and naming conventions used across different model development stages of the SEDAR 84 St. Croix Stoplight Parrotfish stock assessment.  {#tbl-ss3-stxslp}
+
+{{< pagebreak >}}
 
 ```{r}
 #| echo: false
@@ -113,11 +116,11 @@ short_covar <- read.csv(here::here("Scenarios", "scenarios_covar.csv")) |>
   dplyr::mutate(
     label.i = dplyr::case_when(
       label.i == "InitF_seas_1_flt_1Commercial" ~ "Initial F",
-      label.i == "Size_DblN_ascend_se_Commercial(1)" ~ "Dive Selectivity Asend."
+      label.i == "Size_DblN_ascend_se_Commercial(1)" ~ "Commercial Selectivity Asend."
     ),
     label.j = dplyr::case_when(
       label.j == "SR_LN(R0)" ~ "Unfished Recruitment (R0)",
-      label.j == "Size_DblN_peak_Commercial(1)" ~ "Dive Selectivity Peak"
+      label.j == "Size_DblN_peak_Commercial(1)" ~ "Commercial Selectivity Peak"
     )
   )
 
@@ -179,9 +182,9 @@ est_parm_short <- read.csv(here::here("Scenarios", "scenarios_parm.csv")) |>
   dplyr::mutate(
     Parameter = dplyr::case_when(
       Parameter == "InitF_seas_1_flt_1Commercial" ~ "Initial F",
-      Parameter == "Size_DblN_ascend_se_Commercial(1)" ~ "Dive Selectivity Asend.",
+      Parameter == "Size_DblN_ascend_se_Commercial(1)" ~ "Commercial Selectivity Asend.",
       Parameter == "SR_LN(R0)" ~ "Unfished Recruitment (R0)",
-      Parameter == "Size_DblN_peak_Commercial(1)" ~ "Dive Selectivity Peak"
+      Parameter == "Size_DblN_peak_Commercial(1)" ~ "Commercial Selectivity Peak"
     )
   ) |>
   dplyr::select(Parameter, Scenario, Estimate, SD, CV) |>
@@ -230,5 +233,53 @@ tbl_dq <- est_dq |>
   flextable::font(fontname = "Times New Roman", part = "all")
 
 tbl_dq
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-est-msy
+#| tbl-cap: "St. Croix stoplight parrotfish derived quantities for MSY SPR 40%. CV is calculated as the SD divided by the parameter estimate."
+
+est_msy <- read.csv(here::here("Scenarios", "est_msy.csv")) |>
+  dplyr::filter(!stringr::str_detect(Scenario, "ct|m1" ))
+
+
+tbl_est_msy <- est_msy |>
+  flextable::flextable() |>
+  flextable::autofit() |>
+  flextable::theme_box() |>
+  flextable::align(align = "center", part = "all") |>
+  flextable::fontsize(size = 11, part = "all") |>
+  flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_est_msy
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-msy
+#| tbl-cap: "St. Croix stoplight parrotfish estimated MSY SPR 40% in pounds."
+
+scenarios_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
+  dplyr::select(scenario, Dead_Catch_SPR_lbs) |>
+  dplyr::filter(!stringr::str_detect(scenario, "ct|m1" )) |>
+  tidyr::separate(scenario, c('run', 'Scenario'), sep = "_", extra = "merge") |>
+  tidyr::pivot_wider(
+    names_from = c(run),
+    values_from = c(Dead_Catch_SPR_lbs))
+
+tbl_msy <- scenarios_summary |>
+  flextable::flextable() |>
+  flextable::autofit() |>
+  flextable::theme_box() |>
+  flextable::align(align = "center", part = "all") |>
+  flextable::fontsize(size = 11, part = "all") |>
+  flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_msy
 
 ```

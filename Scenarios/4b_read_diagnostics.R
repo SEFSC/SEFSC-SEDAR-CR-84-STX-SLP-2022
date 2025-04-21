@@ -1,7 +1,7 @@
 library(foreach)
 
 # Specify pattern ####
-pattern <- "84_stx_f3_5cm_010641_0041.*v7_m3$"
+pattern <- "84_stx_f3_5cm_010641_0041.*b_m3$"
 retro_years <- c(0:-5)
 jitter_iterations <- 30
 
@@ -17,8 +17,8 @@ full_names
 # Choose what to run ####
 read_retro <- FALSE
 read_jitter <- FALSE
-read_profile_r0 <- FALSE
-read_profile_eqcatch <- FALSE
+read_profile_r0 <- TRUE
+read_profile_eqcatch <- TRUE
 read_profile_k <- TRUE
 read_aspm <- FALSE
 rsme <- FALSE
@@ -36,6 +36,16 @@ save_summaries <- function(run_summary, run_dir) {
             row.names = FALSE)
   write.csv(likes, here::here(run_dir, "summary_likelihoods.csv"),
             row.names = FALSE)
+  
+  catch <- quants |>
+    dplyr::filter(Label == "Dead_Catch_SPR")
+  profile_par <- pars |>
+    dplyr::filter(
+      Label %in% c("SR_LN(R0)", "SR_BH_steep")
+    )
+  
+  par_catch <- dplyr::bind_rows(catch, profile_par)
+  return(par_catch)
   
 }
 
@@ -319,7 +329,7 @@ foreach::foreach(i = seq_along(full_names)) %do% {
       pwidth = 4, pheight = 3
     )
     
-    save_summaries(profile_r0_summary, dir_profile_r0)
+    par_catch <- save_summaries(profile_r0_summary, dir_profile_r0)
     
     plot_sizeselex(profile_r0_runs, dir_profile_r0)
     
@@ -333,6 +343,36 @@ foreach::foreach(i = seq_along(full_names)) %do% {
       plotdir = dir_profile_r0,
       pwidth = 3.75, pheight = 3.75
     )
+    
+    par_plot <- par_catch |> 
+      dplyr::select(-Yr, -recdev) |>
+      tidyr::pivot_longer(
+        cols = tidyselect::starts_with("replist"),
+        names_prefix = "replist",
+        values_to = "test"
+      ) |>
+      tidyr::pivot_wider(
+        names_from = "Label",
+        values_from = "test"
+      )
+    
+    nwfscDiag::pngfun(
+      wd = here::here(dir_profile_r0_plots),
+      file = "profile_msyspr.png",
+      w = 3.75, h = 3.75
+    )
+    
+    plot(
+      par_plot$"SR_LN(R0)", 
+      par_plot$Dead_Catch_SPR,
+      xlab="Virgin Recruitment R0 in log space", 
+      ylab= "MSY SPR 40% in metric tons",
+      ylim = c(0,max(par_plot$Dead_Catch_SPR)),
+      lwd = 1, lty = 2, type = "o", cex = 1.2
+      )
+    abline(h=0,col='grey')
+    
+    dev.off()
 
   }
   
@@ -355,7 +395,7 @@ foreach::foreach(i = seq_along(full_names)) %do% {
       pwidth = 4, pheight = 3
     )
     
-    save_summaries(profile_eqcatch_summary, dir_profile_eqcatch)
+    par_catch <- save_summaries(profile_eqcatch_summary, dir_profile_eqcatch)
     
     plot_sizeselex(profile_eqcatch_runs, dir_profile_eqcatch)
     
@@ -395,7 +435,38 @@ foreach::foreach(i = seq_along(full_names)) %do% {
       plotdir = dir_profile_eqcatch,
       pwidth = 3.75, pheight = 3.75
     )
+    
+    par_catch <- dplyr::bind_rows(par_catch, eqcatch)
 
+    par_plot <- par_catch |> 
+      dplyr::select(-Yr, -recdev) |>
+      tidyr::pivot_longer(
+        cols = tidyselect::starts_with("replist"),
+        names_prefix = "replist",
+        values_to = "test"
+      ) |>
+      tidyr::pivot_wider(
+        names_from = "Label",
+        values_from = "test"
+      )
+    
+    nwfscDiag::pngfun(
+      wd = here::here(dir_profile_eqcatch_plots),
+      file = "profile_msyspr.png",
+      w = 3.75, h = 3.75
+    )
+    
+    plot(
+      par_plot$eqcatch, 
+      par_plot$Dead_Catch_SPR,
+      xlab="eqcatch", 
+      ylab= "MSY SPR 40% in metric tons",
+      ylim = c(0,max(par_plot$Dead_Catch_SPR)),
+      lwd = 1, lty = 2, type = "o", cex = 1.2
+    )
+    abline(h=0,col='grey')
+    
+    dev.off()
   }
   
   
@@ -417,7 +488,7 @@ foreach::foreach(i = seq_along(full_names)) %do% {
       pwidth = 4, pheight = 3
     )
     
-    save_summaries(profile_k_summary, dir_profile_k)
+    par_catch <- save_summaries(profile_k_summary, dir_profile_k)
     
     plot_sizeselex(profile_k_runs, dir_profile_k)
     
@@ -432,6 +503,35 @@ foreach::foreach(i = seq_along(full_names)) %do% {
       pwidth = 3.75, pheight = 3.75
     )
 
+    par_plot <- par_catch |> 
+      dplyr::select(-Yr, -recdev) |>
+      tidyr::pivot_longer(
+        cols = tidyselect::starts_with("replist"),
+        names_prefix = "replist",
+        values_to = "test"
+      ) |>
+      tidyr::pivot_wider(
+        names_from = "Label",
+        values_from = "test"
+      )
+    
+    nwfscDiag::pngfun(
+      wd = here::here(dir_profile_k_plots),
+      file = "profile_msyspr.png",
+      w = 3.75, h = 3.75
+    )
+    
+    plot(
+      par_plot$SR_BH_steep, 
+      par_plot$Dead_Catch_SPR,
+      xlab="Spawner-recruit steepness (h)", 
+      ylab= "MSY SPR 40% in metric tons",
+      ylim = c(0,max(par_plot$Dead_Catch_SPR)),
+      lwd = 1, lty = 2, type = "o", cex = 1.2
+    )
+    abline(h=0,col='grey')
+    
+    dev.off()
   }
   
   ## Read aspm ####

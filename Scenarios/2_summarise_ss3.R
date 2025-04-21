@@ -110,7 +110,7 @@ est_parm <- parms |>
   dplyr::select(scenario, Label, Status, Phase, Value, Parm_StDev) |>
   dplyr::filter(!is.na(Parm_StDev), 	
                 Status != "act") |>
-  dplyr::mutate(CV = round(Parm_StDev/Value*100, 2)) 
+  dplyr::mutate(CV = round(Parm_StDev/Value, 2)) 
 
 est_parm_short <- est_parm |>
   dplyr::select(-Status, -Phase) |>
@@ -133,7 +133,7 @@ est_parm_short <- est_parm |>
   
 est_dq <- dq |>
   dplyr::select(scenario, Label, Value, StdDev) |>
-  dplyr::mutate(CV = round(StdDev/Value*100, 2))  |>
+  dplyr::mutate(CV = round(StdDev/Value, 2))  |>
   dplyr::filter(Label %in% c(
     "SSB_unfished",
     "SSB_Initial",
@@ -142,6 +142,27 @@ est_dq <- dq |>
   ) |>
   dplyr::rename(
     Parameter = Label,
+    Scenario = scenario,
+    Estimate = Value,
+    SD = StdDev,
+  ) |>
+  tidyr::pivot_longer(
+    cols = c("Estimate", "SD", "CV"),
+    names_to = "Type",
+    values_to = "Value"
+  ) |>
+  dplyr::mutate(Value = round(Value, 2)) |>
+  tidyr::pivot_wider(
+    names_from = Type,
+    values_from = Value
+  ) 
+
+est_msy <- dq |>
+  dplyr::select(scenario, Label, Value, StdDev) |>
+  dplyr::mutate(CV = round(StdDev/Value, 2))  |>
+  dplyr::filter(Label == "Dead_Catch_SPR") |>
+  dplyr::select(-Label) |>
+  dplyr::rename(
     Scenario = scenario,
     Estimate = Value,
     SD = StdDev,
@@ -236,3 +257,8 @@ write.csv(eq_catch,
           here::here("Scenarios", "eq_catch.csv"),
           row.names = FALSE
 )
+
+write.csv(est_msy, 
+          here::here("Scenarios", "est_msy.csv"),
+          row.names = FALSE
+          )
