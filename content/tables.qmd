@@ -86,7 +86,7 @@ title: "Tables"
 | Initial	| ct	| model initialized with continuum tool (ct) |
 | Initial	| m1	| ct + hermaphroditism |
 | Initial	| m2	| m1 + continuous recruitment |
-| **Initial** | **m3**  | **m2 + catch uncertainty** |
+| Initial | m3  | m2 + catch uncertainty |
 | Scenario  | null | super-year size data |
 | Scenario	| a	| index |
 | Scenario	| b	| annual fishery-independent size data |
@@ -96,7 +96,9 @@ title: "Tables"
 | Sensitivity	| s1	| higher CV on growth young |
 | Sensitivity	| s2	| higher age and lower m |
 | Sensitivity	| s3	| one sex (age-based fecundity = maturity * weight * sex ratio)  |
-| Sensitivity	| s4	| lower standard error on initial equilibrium catch |
+| **Sensitivity**	| **s4**	| **higher catch uncertainty** |
+| Sensitivity	| s5	| s2 + s4 |
+| Sensitivity	| s6	| s2 + s3 + s4 |
 
 :  Summary of process and naming conventions used across different model development stages of the SEDAR 84 St. Croix Stoplight Parrotfish stock assessment.  {#tbl-ss3-stxslp}
 
