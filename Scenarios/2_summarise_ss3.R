@@ -16,7 +16,8 @@ keep_parm <- c(
 # Specify derived quantities of interest
 keep_dq <- c("SSB_Virgin", "SSB_Initial", "Recr_Virgin", "Recr_Initial",
              "Dead_Catch_SPR", "SPR_MSY", "Dead_Catch_MSY", "Ret_Catch_MSY",
-             "F_2012", "F_2022", "SSB_2022")
+             "annF_SPR", "F_2012", "F_2020", "F_2021", "F_2022", 
+             "SSB_SPR", "SSB_2022")
 
 # Specify selectivity strata of interest
 sizesel_factor <- c("Lsel")
@@ -228,7 +229,16 @@ run_summary <- notes |>
   dplyr::left_join(warnings, by = "scenario") |>
   dplyr::left_join(short_likelihood, by = "scenario")
 
-write.csv(run_summary,
+print_summary <- run_summary |>
+  dplyr::rowwise() |>
+  dplyr::mutate(
+    SSB2022_SSBSPR = SSB_2022 / SSB_SPR,
+    F2022_FSPR = F_2022/ annF_SPR,
+    Fcurrent = psych::geometric.mean(c(F_2020, F_2021, F_2022)),
+    Fcurrent_FSPR = Fcurrent / annF_SPR
+  )
+
+write.csv(print_summary,
   here::here("Scenarios", "scenarios_summary.csv"),
   row.names = FALSE
 )

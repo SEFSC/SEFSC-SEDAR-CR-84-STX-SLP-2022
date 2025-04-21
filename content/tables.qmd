@@ -285,3 +285,55 @@ tbl_msy <- scenarios_summary |>
 tbl_msy
 
 ```
+```{r}
+#| label: tbl-spr-f
+#| tbl-cap: "St. Croix stoplight parrotfish estimated MSY SPR 40% in pounds."
+
+spr_f_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
+  dplyr::select(scenario, Fcurrent_FSPR) |>
+  dplyr::mutate(Fcurrent_FSPR = round(Fcurrent_FSPR, 2)) |>
+  dplyr::filter(!stringr::str_detect(scenario, "ct|m1" )) |>
+  tidyr::separate(scenario, c('run', 'Scenario'), sep = "_", extra = "merge") |>
+  tidyr::pivot_wider(
+    names_from = c(run),
+    values_from = c(Fcurrent_FSPR)) |>
+  dplyr::mutate(Metric = "F Current / F SPR 40%")
+
+spr_ssb_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
+  dplyr::select(scenario, SSB2022_SSBSPR) |>
+  dplyr::mutate(SSB2022_SSBSPR = round(SSB2022_SSBSPR, 2)) |>
+  dplyr::filter(!stringr::str_detect(scenario, "ct|m1" )) |>
+  tidyr::separate(scenario, c('run', 'Scenario'), sep = "_", extra = "merge") |>
+  tidyr::pivot_wider(
+    names_from = c(run),
+    values_from = c(SSB2022_SSBSPR)) |>
+  dplyr::mutate(Metric = "SSB 2022 / SSB SPR 40%")
+
+msra_summary = rbind(spr_f_summary, spr_ssb_summary) |>
+  dplyr::relocate(Metric) 
+  
+
+tbl_msra <- msra_summary |>
+  flextable::flextable() |>
+  flextable::autofit() |>
+  flextable::theme_box() |>
+  flextable::merge_v(j = "Metric") |>
+  flextable::align(align = "center", part = "all") |>
+  flextable::fontsize(size = 11, part = "all") |>
+  flextable::color(color = "red", i = ~ a > 1 & Metric == "F Current / F SPR 40%", j = "a") |>
+  flextable::color(color = "red", i = ~ b > 1 & Metric == "F Current / F SPR 40%", j = "b") |>
+  flextable::color(color = "red", i = ~ v1 > 1 & Metric == "F Current / F SPR 40%", j = "v1") |>
+  flextable::color(color = "red", i = ~ v3 > 1 & Metric == "F Current / F SPR 40%", j = "v3") |>
+  flextable::color(color = "red", i = ~ v7 > 1 & Metric == "F Current / F SPR 40%", j = "v7") |>
+    flextable::align(align = "center", part = "all") |>
+  flextable::fontsize(size = 11, part = "all") |>
+  flextable::color(color = "red", i = ~ a < 1 & Metric == "SSB 2022 / SSB SPR 40%", j = "a") |>
+  flextable::color(color = "red", i = ~ b < 1 & Metric == "SSB 2022 / SSB SPR 40%", j = "b") |>
+  flextable::color(color = "red", i = ~ v1 < 1 & Metric == "SSB 2022 / SSB SPR 40%", j = "v1") |>
+  flextable::color(color = "red", i = ~ v3 < 1 & Metric == "SSB 2022 / SSB SPR 40%", j = "v3") |>
+  flextable::color(color = "red", i = ~ v7 < 1 & Metric == "SSB 2022 / SSB SPR 40%", j = "v7") |>
+  flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_msra
+
+```
