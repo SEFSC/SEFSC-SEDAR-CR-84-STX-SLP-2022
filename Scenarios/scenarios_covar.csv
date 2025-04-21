@@ -7,7 +7,7 @@
 "a_m3_s1","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.901
 "a_m3_s2","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.91
 "a_m3_s3","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.901
-"a_m3_s4","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.901
+"a_m3_s4","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.902
 "b_m1","InitF_seas_1_flt_1Commercial","SR_LN(R0)",-0.993
 "b_m1","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.906
 "b_m2","InitF_seas_1_flt_1Commercial","SR_LN(R0)",-0.995
@@ -26,7 +26,7 @@
 "v1_m3_s1","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.901
 "v1_m3_s2","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.902
 "v1_m3_s3","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.902
-"v1_m3_s4","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.913
+"v1_m3_s4","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.909
 "v3_m1","InitF_seas_1_flt_1Commercial","SR_LN(R0)",-0.904
 "v3_m1","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.903
 "v3_m2","InitF_seas_1_flt_1Commercial","SR_LN(R0)",-0.904
@@ -38,5 +38,4 @@
 "v7_m3_s1","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.914
 "v7_m3_s2","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.936
 "v7_m3_s3","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.919
-"v7_m3_s4","InitF_seas_1_flt_1Commercial","SR_LN(R0)",-0.932
-"v7_m3_s4","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.918
+"v7_m3_s4","Size_DblN_ascend_se_Commercial(1)","Size_DblN_peak_Commercial(1)",0.933

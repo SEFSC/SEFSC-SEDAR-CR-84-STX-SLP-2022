@@ -5,7 +5,7 @@
 # )
 
 # Specify pattern and plots (plot 12 fails when using seasonal recruitment)
-pattern <- "84_stx.*_s3"
+pattern <- "84_stx.*_s4"
 plots <- c(1:11, 13:26)
 minbthresh <- -1
 

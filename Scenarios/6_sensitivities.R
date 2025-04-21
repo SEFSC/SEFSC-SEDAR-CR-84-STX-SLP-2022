@@ -15,8 +15,8 @@ full_names
 # Choose what to run ####
 run_s1 <- FALSE
 run_s2 <- FALSE
-run_s3 <- TRUE
-run_s4 <- FALSE
+run_s3 <- FALSE
+run_s4 <- TRUE
 
 
 setup_path <- function(dir) {
@@ -209,7 +209,7 @@ foreach::foreach(i = seq_along(full_names)) %do% {
                             datlist = dat, verbose = FALSE)
     
     dat$catch[,5]
-    dat$catch[,5] = 0.1
+    dat$catch[,5] = 2
     dat$catch[,5]
     
     r4ss::SS_writedat(
