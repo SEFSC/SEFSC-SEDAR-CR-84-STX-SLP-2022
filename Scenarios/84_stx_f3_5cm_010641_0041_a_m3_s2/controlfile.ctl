@@ -1,5 +1,5 @@
 #C file created using an r4ss function
-#C file write time: 2025-04-14  13:28:38
+#C file write time: 2025-04-21  12:53:03
 #
 0 # 0 means do not read wtatage.ss; 1 means read and usewtatage.ss and also read and use growth parameters
 1 #_N_Growth_Patterns
@@ -92,7 +92,7 @@
 0 # 0/1 to use steepness in initial equ recruitment calculation
 0 # future feature: 0/1 to make realized sigmaR a function of SR curvature
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE	env-var	use_dev	dev_mnyr	dev_mxyr	dev_PH	Block	Blk_Fxn # parm_name
-  4	7	5.5117	   7	  99	0	  1	0	0	0	0	0	0	0	#_SR_LN(R0)  
+  3	7	5.5117	   7	  99	0	  1	0	0	0	0	0	0	0	#_SR_LN(R0)  
 0.2	1	  0.99	0.99	0.24	0	 -1	0	0	0	0	0	0	0	#_SR_BH_steep
   0	2	   0.7	 0.7	  99	0	 -6	0	0	0	0	0	0	0	#_SR_sigmaR  
  -5	5	     0	   0	  99	0	-99	0	0	0	0	0	0	0	#_SR_regime  

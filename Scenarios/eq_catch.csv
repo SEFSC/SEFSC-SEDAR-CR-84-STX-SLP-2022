@@ -14,6 +14,10 @@
 "Commercial
  Equilibrium Catch","a_m3_s4",5.73978
 "Commercial
+ Equilibrium Catch","a_m3_s5",4.7957
+"Commercial
+ Equilibrium Catch","a_m3_s6",4.79999
+"Commercial
  Equilibrium Catch","b_m1",29.9772
 "Commercial
  Equilibrium Catch","b_m2",29.9835
@@ -27,6 +31,10 @@
  Equilibrium Catch","b_m3_s3",15.6495
 "Commercial
  Equilibrium Catch","b_m3_s4",3.77967
+"Commercial
+ Equilibrium Catch","b_m3_s5",8.31931
+"Commercial
+ Equilibrium Catch","b_m3_s6",8.32125
 "Commercial
  Equilibrium Catch","v1_ct",29.909
 "Commercial
@@ -44,6 +52,10 @@
 "Commercial
  Equilibrium Catch","v1_m3_s4",2.23621
 "Commercial
+ Equilibrium Catch","v1_m3_s5",7.36781
+"Commercial
+ Equilibrium Catch","v1_m3_s6",7.37072
+"Commercial
  Equilibrium Catch","v3_m1",29.9967
 "Commercial
  Equilibrium Catch","v3_m2",29.9975
@@ -58,6 +70,10 @@
 "Commercial
  Equilibrium Catch","v3_m3_s4",24.2989
 "Commercial
+ Equilibrium Catch","v3_m3_s5",10.4017
+"Commercial
+ Equilibrium Catch","v3_m3_s6",10.4036
+"Commercial
  Equilibrium Catch","v7_m2",29.9821
 "Commercial
  Equilibrium Catch","v7_m3",7.99865
@@ -69,3 +85,7 @@
  Equilibrium Catch","v7_m3_s3",7.99836
 "Commercial
  Equilibrium Catch","v7_m3_s4",2.85651e-06
+"Commercial
+ Equilibrium Catch","v7_m3_s5",4.27927
+"Commercial
+ Equilibrium Catch","v7_m3_s6",4.27875

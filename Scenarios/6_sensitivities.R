@@ -16,8 +16,9 @@ full_names
 run_s1 <- FALSE
 run_s2 <- FALSE
 run_s3 <- FALSE
-run_s4 <- TRUE
-
+run_s4 <- FALSE
+run_s5 <- FALSE
+run_s6 <- TRUE
 
 setup_path <- function(dir) {
   if (dir.exists(dir)) {
@@ -220,4 +221,152 @@ foreach::foreach(i = seq_along(full_names)) %do% {
     )
   }
 
+  #_s5 higher catch uncertainty, higher age and lower m ####
+  if (run_s5 == TRUE) {
+    
+    dir_s5 <- paste0(scenario, "_s5")
+    setup_path(dir_s5)
+    setup_ss3(dir_s5)
+    
+    start <- r4ss:::SS_readstarter(here::here(dir_s5, "starter.ss"),
+                                   verbose = FALSE)
+    dat <- r4ss:::SS_readdat(file = here::here(dir_s5, start$datfile),
+                             version = 3.3, verbose = FALSE)
+    ctl <- r4ss::SS_readctl(file = here::here(dir_s5, start$ctlfile),
+                            datlist = dat, verbose = FALSE)
+    
+    dat$Nages
+    dat$Nages = 30
+    dat$Nages
+    
+    dat$N_agebins
+    dat$N_agebins = dat$Nages
+    dat$N_agebins
+    
+    dat$catch[,5]
+    dat$catch[,5] = 2
+    dat$catch[,5]
+    
+    dat$agebin_vector
+    dat$agebin_vector = c(0:(dat$Nages-1))
+    dat$agebin_vector
+    
+    dat$ageerror
+    dim(dat$ageerror)
+    dat$ageerror = cbind(
+      dat$ageerror, dat$ageerror[,1:(dat$Nages-dim(dat$ageerror)[2]+1)] 
+    )
+    dat$ageerror
+    dim(dat$ageerror)
+    
+    ctl$MG_parms[1,3] 
+    ctl$MG_parms[1,3] = 0.18
+    ctl$MG_parms[1,3] 
+    ctl$MG_parms[13,3] 
+    ctl$MG_parms[13,3] = 0.18
+    ctl$MG_parms[13,3]
+    
+    ctl$SR_parms[1,1]
+    ctl$SR_parms[1,1] = 3
+    ctl$SR_parms[1,1]
+    
+    r4ss::SS_writedat(
+      datlist = dat,
+      outfile = here::here(dir_s5, start$datfile),
+      overwrite = TRUE,
+      verbose = FALSE
+    )
+    
+    r4ss::SS_writectl(
+      ctllist = ctl,
+      outfile = here::here(dir_s5, start$ctlfile),
+      overwrite = TRUE
+    )  
+    
+  }
+  
+  #_s6 set up for Hermaphroditism incorporated into fecundity  ####
+  if (run_s6 == TRUE) {
+    
+    dir_s6 <- paste0(scenario, "_s6")
+    setup_path(dir_s6)
+    setup_ss3(dir_s6)
+    
+    start <- r4ss:::SS_readstarter(here::here(dir_s6, "starter.ss"),
+                                   verbose = FALSE)
+    dat <- r4ss:::SS_readdat(file = here::here(dir_s6, start$datfile),
+                             version = 3.3, verbose = FALSE)
+    ctl <- r4ss::SS_readctl(file = here::here(dir_s6, start$ctlfile),
+                            datlist = dat, verbose = FALSE)
+    
+    dat$Nsexes
+    dat$Nsexes = 1
+    dat$Nsexes
+    
+    dat$Nages
+    dat$Nages = 30
+    dat$Nages
+    
+    dat$agebin_vector
+    dat$agebin_vector = c(0:(dat$Nages-1))
+    dat$agebin_vector
+    
+    dat$N_agebins
+    dat$N_agebins = dat$Nages
+    dat$N_agebins
+    
+    dat$ageerror
+    dim(dat$ageerror)
+    dat$ageerror = cbind(
+      dat$ageerror, dat$ageerror[,1:(dat$Nages-dim(dat$ageerror)[2]+1)] 
+    )
+    dat$ageerror
+    dim(dat$ageerror)
+    
+    dat$catch[,5]
+    dat$catch[,5] = 2
+    dat$catch[,5]
+    
+    ctl$MG_parms[1,3] 
+    ctl$MG_parms[1,3] = 0.18
+    ctl$MG_parms[1,3] 
+    
+    ctl$SR_parms[1,1]
+    ctl$SR_parms[1,1] = 3
+    ctl$SR_parms[1,1]
+    
+    names(dat$lencomp)[15:22]
+    dat$lencomp
+    dat$lencomp = dat$lencomp[,-(15:22)]
+    dat$lencomp
+    
+    ctl$maturity_option
+    ctl$maturity_option = 4
+    
+    Age_Maturity <- read.csv("Age_Maturity_30.csv", row.names = 1)
+    ctl$Age_Maturity <- Age_Maturity
+    
+    ctl$hermaphroditism_option
+    ctl$hermaphroditism_option = 0
+    ctl$hermaphroditism_option
+    
+    rownames(ctl$MG_parms)[13:23]
+    ctl$MG_parms = ctl$MG_parms[-(13:23),]
+    ctl$MG_parms
+    
+    r4ss::SS_writedat(
+      datlist = dat,
+      outfile = here::here(dir_s6, start$datfile),
+      overwrite = TRUE,
+      verbose = FALSE
+    )
+    
+    r4ss::SS_writectl(
+      ctllist = ctl,
+      outfile = here::here(dir_s6, start$ctlfile),
+      overwrite = TRUE
+    )  
+    
+  }
+  
 }
