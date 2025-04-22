@@ -2,8 +2,8 @@
 title: "Tables"
 ---
 
-| Year	| Metric Tons	| Pounds	| Dive | Other |
-|:---:|---:|---:|---:|---:|
+| Year	| Metric Tons	| Pounds	| Dive Gears | Other Gears|
+|:---:|---:|---:|-------:|-------:|
 | 2012	| 18.99	 | 41,869	 | 	97%	 |	3%	 |
 | 2013	| 15.32	 | 33,773	 | 	98%	 |	2%	 |
 | 2014	| 9.88	 | 21,774	 | 	87%	 |	13%	 |
@@ -18,14 +18,14 @@ title: "Tables"
 | Total	| 112.37 | 247,733 | 	82%	 |	18%	 |
 
 :  Commercial landings of Stoplight Parrotfish reported in St. Croix from
-2012-2022 in metric tons and pounds by year, along with the percentage of the total commercial landings that came from each gear group.  {#tbl-catch}
+2012-2022 in metric tons and pounds by year, along with the percentage of the total commercial landings that came from each gear group. {#tbl-catch}
 
 {{< pagebreak >}}
 
 | Input Source | Input Type | Input | M | Method |
 |:-----------|:-----------|:--------:|:--:|:--------|
 | @choat2003 | Maximum age | 30 | 0.180 | Hamel_Amax |
-| **SEDAR84-AP-01** | **Maximum age** | **20** | **0.270** | **Hamel_Amax** |
+| SEDAR84-AP-01 | Maximum age | **20** | **0.270** | Hamel_Amax |
 | Meta-analysis | Scientific name | *Sparisoma viride* | 0.397 | FishLife |
 | @choat2003 | Maximum age | 12 | 0.450 | Hamel_Amax |
 | @choat2003 | Maximum age | 9 | 0.600 | Hamel_Amax |
@@ -40,7 +40,7 @@ title: "Tables"
 | SEDAR84-AP-01 | Age at 50% maturity | 1.6 | 1.030 | Jensen_Amat |
 | SEDAR84-AP-01 | Age at 50% maturity | 1.6 | 0.924 | Ri_Ef_Amat |
 
-: Empirical estimates of natural mortality (M) can be derived using life history information and the Natural Mortality Tool [@cope2022]. The SEDAR assessment working paper SEDAR84-AP-01 is equivalent to @riverahernández2024.  {#tbl-m}
+: Empirical estimates of natural mortality (M) can be derived using life history information and the Natural Mortality Tool [@cope2022]. The SEDAR assessment working paper SEDAR84-AP-01 is equivalent to @riverahernández2024. All models included in this report utilize the natural mortality estimate of 0.27 corresponding with the maximum age observed by @riverahernández2024, except three of the sensitivity scenarios (s2, s5, and s6) which utilize the 0.18 natural morality corresponding with the estimated maximum age from tagging studies by @choat2003. {#tbl-m}
 
 {{< pagebreak >}}
 
@@ -79,25 +79,25 @@ title: "Tables"
 | Variation 24 | v24 | a + b + c + e + f |
 | Variation 25 | v25 | a + b + c + d + e + f |
 
-:  Summary of process and naming conventions used for SEDAR 84 assessments describing  model development noting the simplest data-limited configuration, exploring individual data-moderate considerations, individually and combined.  {#tbl-overview}
+:  Summary of process and naming conventions used for SEDAR 84 assessments describing  model development noting the simplest data-limited configuration, exploring individual data-moderate considerations, individually and combined. The models focused on in the current report are associated with the codes in bold. {#tbl-overview}
 
 | Stage | Code | Sequential modeling steps |
 |--------|:----:|----------------------------------------------------------------|
 | Initial	| ct	| model initialized with continuum tool (ct) |
 | Initial	| m1	| ct + hermaphroditism |
 | Initial	| m2	| m1 + continuous recruitment |
-| Initial | m3  | m2 + catch uncertainty |
+| Initial | **m3**  | m2 + catch uncertainty |
 | Scenario  | null | super-year size data |
-| Scenario	| a	| index |
-| Scenario	| b	| annual fishery-independent size data |
-| Scenario	| v1	| index + annual fishery-independent size data |
-| Scenario	| v3	| index + recruitment deviations |
-| Scenario	| v7	| index + annual fishery-independent size data + recruitment deviations |
+| Scenario	| **a**	| index |
+| Scenario	| **b**	| annual fishery-independent size data |
+| Scenario	| **v1**	| index + annual fishery-independent size data |
+| Scenario	| **v3**	| index + recruitment deviations |
+| Scenario	| **v7**	| index + annual fishery-independent size data + recruitment deviations |
 | Sensitivity	| s1	| higher CV on growth young |
 | Sensitivity	| s2	| higher age and lower m |
 | Sensitivity	| s3	| one sex (age-based fecundity = maturity * weight * sex ratio)  |
-| **Sensitivity**	| **s4**	| **higher catch uncertainty** |
-| Sensitivity	| s5	| s2 + s4 |
+| Sensitivity	| **s4**	| higher catch uncertainty |
+| Sensitivity	| **s5**	| s2 + s4 |
 | Sensitivity	| s6	| s2 + s3 + s4 |
 
 :  Summary of process and naming conventions used across different model development stages of the SEDAR 84 St. Croix Stoplight Parrotfish stock assessment.  {#tbl-ss3-stxslp}
@@ -108,7 +108,7 @@ title: "Tables"
 #| echo: false
 #| warning: false
 #| label: tbl-corr
-#| tbl-cap: "St. Croix stoplight parrotfish correlations between estimated parameters by modeling scenario. The table shows correlations greater than 0.9 or less than -0.9. Correlations that are greater than 0.95 or less than -0.95 are shown in red."
+#| tbl-cap: "St. Croix stoplight parrotfish correlations between estimated parameters across the m2 and m3 model variations. The table shows correlations greater than 0.9 or less than -0.9. Correlations that are greater than 0.95 or less than -0.95 are shown in red."
 
 library(here)
 library(dplyr)
@@ -151,7 +151,7 @@ tbl_corr
 
 ```{r}
 #| label: tbl-eqcatch
-#| tbl-cap: "St. Croix stoplight parrotfish estimated initial equilibrium catch in metric tons by model scenario. The input value was 30 metric tons with a standard error of 0.3."
+#| tbl-cap: "St. Croix stoplight parrotfish estimated initial equilibrium catch in metric tons by model variation including across sensitivity runs. The input value was 30 metric tons with a standard error of 0.3."
 
 est_eqcatch_short <- read.csv(here::here("Scenarios", "eq_catch.csv")) |>
   dplyr::mutate(Estimate = round(Estimate, 2)) |>
@@ -178,7 +178,7 @@ tbl_eqcatch
 
 ```{r}
 #| label: tbl-parm
-#| tbl-cap: "St. Croix stoplight parrotfish parameters, standard deviations (SD), and coefficient of variation (CV) by modeling scenario. CV is calculated as the SD divided by the parameter estimate."
+#| tbl-cap: "St. Croix stoplight parrotfish parameters, standard deviations (SD), and coefficient of variation (CV) by model varation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3). CV is calculated as the SD divided by the parameter estimate."
 
 est_parm_short <- read.csv(here::here("Scenarios", "scenarios_parm.csv")) |>
   dplyr::mutate(
@@ -189,9 +189,10 @@ est_parm_short <- read.csv(here::here("Scenarios", "scenarios_parm.csv")) |>
       Parameter == "Size_DblN_peak_Commercial(1)" ~ "Commercial Selectivity Peak"
     )
   ) |>
-  dplyr::select(Parameter, Scenario, Estimate, SD, CV) |>
+  dplyr::select(Parameter, Scenario, Estimate, SD, CV, Gradient) |>
   dplyr::arrange(Parameter, Scenario) |>
-  dplyr::filter(stringr::str_detect(Scenario, "\\w*m3$"))
+  dplyr::filter(stringr::str_detect(Scenario, "\\w*m3$")) |>
+  dplyr::mutate(Gradient = format(Gradient, scientific = TRUE, digits = 2))
 
 
 tbl_parm <- est_parm_short |>
@@ -209,7 +210,7 @@ tbl_parm
 
 ```{r}
 #| label: tbl-dq
-#| tbl-cap: "St. Croix stoplight parrotfish derived quantities for unfished and initial spawning stock biomass in metric tons (mt) along with standard deviations (SD) and coefficient of variation (CV) by modeling scenario. CV is calculated as the SD divided by the parameter estimate."
+#| tbl-cap: "St. Croix stoplight parrotfish derived quantities for unfished and initial spawning stock biomass in metric tons (mt) along with standard deviations (SD) and coefficient of variation (CV) by model varation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3). CV is calculated as the SD divided by the parameter estimate."
 
 est_dq <- read.csv(here::here("Scenarios", "scenarios_dq.csv")) |>
   dplyr::mutate(
@@ -242,7 +243,7 @@ tbl_dq
 
 ```{r}
 #| label: tbl-est-msy
-#| tbl-cap: "St. Croix stoplight parrotfish derived quantities for MSY SPR 40%. CV is calculated as the SD divided by the parameter estimate."
+#| tbl-cap: "St. Croix stoplight parrotfish derived quantities of the MSY proxy (based on SPR 40%) in metric tons  by model varation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3) and corresponding each model variation's six sensititivy runs. CV is calculated as the SD divided by the parameter estimate. Estimates of the MSY proxy are also presented in pounds in @tbl-msy."
 
 est_msy <- read.csv(here::here("Scenarios", "est_msy.csv")) |>
   dplyr::filter(!stringr::str_detect(Scenario, "ct|m1" ))
@@ -264,7 +265,7 @@ tbl_est_msy
 
 ```{r}
 #| label: tbl-msy
-#| tbl-cap: "St. Croix stoplight parrotfish estimated MSY SPR 40% in pounds."
+#| tbl-cap: "St. Croix stoplight parrotfish derived quantities of the MSY proxy (based on SPR 40%) in pounds  by model varation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3) and corresponding each model variation's six sensititivy runs."
 
 scenarios_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
   dplyr::select(scenario, Dead_Catch_SPR_lbs) |>
@@ -285,9 +286,12 @@ tbl_msy <- scenarios_summary |>
 tbl_msy
 
 ```
+
+{{< pagebreak >}}
+
 ```{r}
 #| label: tbl-spr-f
-#| tbl-cap: "St. Croix stoplight parrotfish estimated MSY SPR 40% in pounds."
+#| tbl-cap: "St. Croix stoplight parrotfish fishing mortality rate and spawning stock biomass ratios relative to the rate and biomass of the stock associated with the MSY proxy (based on SPR 40%). The relative fishing mortality ratio is expressed as a three-year geometric mean of the annual fishing mortality rates for 2020-2022 divided by the fishing mortality rate associated with MSY SPR 40%. Relative fishing mortality rates that are above one are shown in red font. The relative stock biomass ratio is expressed as the 2022 spawning biomass divided by the spawning stock biomass at MSY SPR 40%. Relative fishing mortality ratios that are below one are shown in red font."
 
 spr_f_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
   dplyr::select(scenario, Fcurrent_FSPR) |>

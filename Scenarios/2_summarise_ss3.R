@@ -108,10 +108,12 @@ short_parm <- parms |>
   )
 
 est_parm <- parms |>
-  dplyr::select(scenario, Label, Status, Phase, Value, Parm_StDev) |>
+  dplyr::select(scenario, Label, Status, Phase, Value, Parm_StDev, Gradient) |>
   dplyr::filter(!is.na(Parm_StDev), 	
                 Status != "act") |>
-  dplyr::mutate(CV = round(Parm_StDev/Value, 2)) 
+  dplyr::mutate(Value = round(Value, 2),
+                Parm_StDev = round(Parm_StDev, 2),
+                CV = round(Parm_StDev/Value, 2)) 
 
 est_parm_short <- est_parm |>
   dplyr::select(-Status, -Phase) |>
@@ -122,15 +124,14 @@ est_parm_short <- est_parm |>
     SD = Parm_StDev,
   ) |>
   tidyr::pivot_longer(
-    cols = c("Estimate", "SD", "CV"),
+    cols = c("Estimate", "SD", "CV", "Gradient"),
     names_to = "Type",
     values_to = "Value"
   ) |>
-  dplyr::mutate(Value = round(Value, 2)) |>
   tidyr::pivot_wider(
     names_from = Type,
     values_from = Value
-  )
+  ) 
   
 est_dq <- dq |>
   dplyr::select(scenario, Label, Value, StdDev) |>

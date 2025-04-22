@@ -1,183 +1,183 @@
-"Scenario","Parameter","Estimate","SD","CV"
-"a_m1","SR_LN(R0)",5.5,0.14,0.03
-"a_m1","InitF_seas_1_flt_1Commercial",0.28,0.09,0.34
-"a_m1","Size_DblN_peak_Commercial(1)",26.05,1.78,0.07
-"a_m1","Size_DblN_ascend_se_Commercial(1)",2.33,0.97,0.41
-"a_m2","SR_LN(R0)",5.62,0.18,0.03
-"a_m2","InitF_seas_1_flt_1Commercial",0.21,0.08,0.36
-"a_m2","Size_DblN_peak_Commercial(1)",25.81,1.8,0.07
-"a_m2","Size_DblN_ascend_se_Commercial(1)",2.24,0.99,0.44
-"a_m3","SR_LN(R0)",5.51,0.27,0.05
-"a_m3","InitF_seas_1_flt_1Commercial",0.19,0.08,0.42
-"a_m3","Size_DblN_peak_Commercial(1)",25.85,1.79,0.07
-"a_m3","Size_DblN_ascend_se_Commercial(1)",2.25,0.98,0.44
-"a_m3_s1","SR_LN(R0)",5.42,0.26,0.05
-"a_m3_s1","InitF_seas_1_flt_1Commercial",0.21,0.08,0.41
-"a_m3_s1","Size_DblN_peak_Commercial(1)",25.72,1.82,0.07
-"a_m3_s1","Size_DblN_ascend_se_Commercial(1)",2.21,1,0.45
-"a_m3_s2","SR_LN(R0)",4.11,0.14,0.03
-"a_m3_s2","InitF_seas_1_flt_1Commercial",0.28,0.1,0.37
-"a_m3_s2","Size_DblN_peak_Commercial(1)",26.47,1.67,0.06
-"a_m3_s2","Size_DblN_ascend_se_Commercial(1)",2.41,0.89,0.37
-"a_m3_s3","SR_LN(R0)",5.51,0.27,0.05
-"a_m3_s3","InitF_seas_1_flt_1Commercial",0.19,0.08,0.42
-"a_m3_s3","Size_DblN_peak_Commercial(1)",25.85,1.79,0.07
-"a_m3_s3","Size_DblN_ascend_se_Commercial(1)",2.25,0.98,0.44
-"a_m3_s4","SR_LN(R0)",4.97,0.32,0.06
-"a_m3_s4","InitF_seas_1_flt_1Commercial",0.05,0.07,1.53
-"a_m3_s4","Size_DblN_peak_Commercial(1)",26.02,1.74,0.07
-"a_m3_s4","Size_DblN_ascend_se_Commercial(1)",2.29,0.95,0.42
-"a_m3_s5","SR_LN(R0)",3.74,0.15,0.04
-"a_m3_s5","InitF_seas_1_flt_1Commercial",0.08,0.06,0.7
-"a_m3_s5","Size_DblN_peak_Commercial(1)",26.59,1.5,0.06
-"a_m3_s5","Size_DblN_ascend_se_Commercial(1)",2.42,0.81,0.33
-"a_m3_s6","SR_LN(R0)",3.74,0.15,0.04
-"a_m3_s6","InitF_seas_1_flt_1Commercial",0.08,0.06,0.7
-"a_m3_s6","Size_DblN_peak_Commercial(1)",26.59,1.5,0.06
-"a_m3_s6","Size_DblN_ascend_se_Commercial(1)",2.42,0.81,0.33
-"b_m1","SR_LN(R0)",5.77,0.15,0.03
-"b_m1","InitF_seas_1_flt_1Commercial",0.16,0.04,0.27
-"b_m1","Size_DblN_peak_Commercial(1)",25.71,1.94,0.08
-"b_m1","Size_DblN_ascend_se_Commercial(1)",2.27,1.05,0.46
-"b_m2","SR_LN(R0)",5.9,0.19,0.03
-"b_m2","InitF_seas_1_flt_1Commercial",0.13,0.04,0.31
-"b_m2","Size_DblN_peak_Commercial(1)",25.51,2.02,0.08
-"b_m2","Size_DblN_ascend_se_Commercial(1)",2.18,1.09,0.5
-"b_m3","SR_LN(R0)",5.29,0.33,0.06
-"b_m3","InitF_seas_1_flt_1Commercial",0.12,0.03,0.28
-"b_m3","Size_DblN_peak_Commercial(1)",25.89,1.82,0.07
-"b_m3","Size_DblN_ascend_se_Commercial(1)",2.27,0.98,0.43
-"b_m3_s1","SR_LN(R0)",5.17,0.3,0.06
-"b_m3_s1","InitF_seas_1_flt_1Commercial",0.13,0.04,0.27
-"b_m3_s1","Size_DblN_peak_Commercial(1)",25.78,1.83,0.07
-"b_m3_s1","Size_DblN_ascend_se_Commercial(1)",2.23,1,0.45
-"b_m3_s2","SR_LN(R0)",3.97,0.09,0.02
-"b_m3_s2","InitF_seas_1_flt_1Commercial",0.22,0.04,0.19
-"b_m3_s2","Size_DblN_peak_Commercial(1)",26.62,1.53,0.06
-"b_m3_s2","Size_DblN_ascend_se_Commercial(1)",2.46,0.81,0.33
-"b_m3_s3","SR_LN(R0)",5.29,0.33,0.06
-"b_m3_s3","InitF_seas_1_flt_1Commercial",0.12,0.03,0.28
-"b_m3_s3","Size_DblN_peak_Commercial(1)",25.89,1.82,0.07
-"b_m3_s3","Size_DblN_ascend_se_Commercial(1)",2.27,0.98,0.43
-"b_m3_s4","SR_LN(R0)",4.69,0.18,0.04
-"b_m3_s4","InitF_seas_1_flt_1Commercial",0.04,0.03,0.83
-"b_m3_s4","Size_DblN_peak_Commercial(1)",26.31,1.71,0.07
-"b_m3_s4","Size_DblN_ascend_se_Commercial(1)",2.35,0.92,0.39
-"b_m3_s5","SR_LN(R0)",3.87,0.09,0.02
-"b_m3_s5","InitF_seas_1_flt_1Commercial",0.18,0.04,0.22
-"b_m3_s5","Size_DblN_peak_Commercial(1)",26.7,1.57,0.06
-"b_m3_s5","Size_DblN_ascend_se_Commercial(1)",2.45,0.82,0.34
-"b_m3_s6","SR_LN(R0)",3.87,0.09,0.02
-"b_m3_s6","InitF_seas_1_flt_1Commercial",0.18,0.04,0.22
-"b_m3_s6","Size_DblN_peak_Commercial(1)",26.7,1.57,0.06
-"b_m3_s6","Size_DblN_ascend_se_Commercial(1)",2.45,0.82,0.34
-"v1_ct","SR_LN(R0)",5.67,0.07,0.01
-"v1_ct","InitF_seas_1_flt_1Commercial",0.21,0.04,0.18
-"v1_ct","Size_DblN_peak_Commercial(1)",24.93,2.97,0.12
-"v1_ct","Size_DblN_ascend_se_Commercial(1)",2.2,1.57,0.72
-"v1_ct","Size_DblN_peak_NCRMP(2)",5.73,38.6,6.74
-"v1_ct","Size_DblN_ascend_se_NCRMP(2)",4.29,175.29,40.84
-"v1_m1","SR_LN(R0)",5.87,0.17,0.03
-"v1_m1","InitF_seas_1_flt_1Commercial",0.13,0.04,0.29
-"v1_m1","Size_DblN_peak_Commercial(1)",25.64,1.96,0.08
-"v1_m1","Size_DblN_ascend_se_Commercial(1)",2.25,1.06,0.47
-"v1_m2","SR_LN(R0)",6.02,0.22,0.04
-"v1_m2","InitF_seas_1_flt_1Commercial",0.11,0.04,0.34
-"v1_m2","Size_DblN_peak_Commercial(1)",25.43,2.06,0.08
-"v1_m2","Size_DblN_ascend_se_Commercial(1)",2.15,1.12,0.52
-"v1_m3","SR_LN(R0)",5.28,0.35,0.07
-"v1_m3","InitF_seas_1_flt_1Commercial",0.11,0.03,0.28
-"v1_m3","Size_DblN_peak_Commercial(1)",25.87,1.81,0.07
-"v1_m3","Size_DblN_ascend_se_Commercial(1)",2.26,0.98,0.43
-"v1_m3_s1","SR_LN(R0)",5.15,0.32,0.06
-"v1_m3_s1","InitF_seas_1_flt_1Commercial",0.11,0.03,0.28
-"v1_m3_s1","Size_DblN_peak_Commercial(1)",25.78,1.82,0.07
-"v1_m3_s1","Size_DblN_ascend_se_Commercial(1)",2.23,0.99,0.45
-"v1_m3_s2","SR_LN(R0)",3.91,0.08,0.02
-"v1_m3_s2","InitF_seas_1_flt_1Commercial",0.19,0.04,0.19
-"v1_m3_s2","Size_DblN_peak_Commercial(1)",26.66,1.56,0.06
-"v1_m3_s2","Size_DblN_ascend_se_Commercial(1)",2.45,0.82,0.33
-"v1_m3_s3","SR_LN(R0)",5.28,0.35,0.07
-"v1_m3_s3","InitF_seas_1_flt_1Commercial",0.11,0.03,0.28
-"v1_m3_s3","Size_DblN_peak_Commercial(1)",25.87,1.81,0.07
-"v1_m3_s3","Size_DblN_ascend_se_Commercial(1)",2.26,0.98,0.43
-"v1_m3_s4","SR_LN(R0)",4.65,0.17,0.04
-"v1_m3_s4","InitF_seas_1_flt_1Commercial",0.02,0.03,1.25
-"v1_m3_s4","Size_DblN_peak_Commercial(1)",26.31,1.71,0.06
-"v1_m3_s4","Size_DblN_ascend_se_Commercial(1)",2.35,0.92,0.39
-"v1_m3_s5","SR_LN(R0)",3.83,0.08,0.02
-"v1_m3_s5","InitF_seas_1_flt_1Commercial",0.15,0.03,0.23
-"v1_m3_s5","Size_DblN_peak_Commercial(1)",26.73,1.58,0.06
-"v1_m3_s5","Size_DblN_ascend_se_Commercial(1)",2.44,0.83,0.34
-"v1_m3_s6","SR_LN(R0)",3.83,0.08,0.02
-"v1_m3_s6","InitF_seas_1_flt_1Commercial",0.15,0.03,0.23
-"v1_m3_s6","Size_DblN_peak_Commercial(1)",26.73,1.58,0.06
-"v1_m3_s6","Size_DblN_ascend_se_Commercial(1)",2.44,0.83,0.34
-"v3_m1","SR_LN(R0)",5.13,0.07,0.01
-"v3_m1","InitF_seas_1_flt_1Commercial",1.47,1.18,0.8
-"v3_m1","Size_DblN_peak_Commercial(1)",26.82,1.69,0.06
-"v3_m1","Size_DblN_ascend_se_Commercial(1)",2.52,0.86,0.34
-"v3_m2","SR_LN(R0)",5.13,0.07,0.01
-"v3_m2","InitF_seas_1_flt_1Commercial",1.39,1.03,0.75
-"v3_m2","Size_DblN_peak_Commercial(1)",26.6,1.56,0.06
-"v3_m2","Size_DblN_ascend_se_Commercial(1)",2.47,0.82,0.33
-"v3_m3","SR_LN(R0)",5.09,0.23,0.04
-"v3_m3","InitF_seas_1_flt_1Commercial",1.2,1.2,1
-"v3_m3","Size_DblN_peak_Commercial(1)",26.62,1.57,0.06
-"v3_m3","Size_DblN_ascend_se_Commercial(1)",2.48,0.83,0.33
-"v3_m3_s1","SR_LN(R0)",4.99,0.23,0.05
-"v3_m3_s1","InitF_seas_1_flt_1Commercial",2.02,2.72,1.35
-"v3_m3_s1","Size_DblN_peak_Commercial(1)",26.43,1.81,0.07
-"v3_m3_s1","Size_DblN_ascend_se_Commercial(1)",2.43,0.94,0.39
-"v3_m3_s2","SR_LN(R0)",4.31,0.21,0.05
-"v3_m3_s2","InitF_seas_1_flt_1Commercial",1.1,0.88,0.8
-"v3_m3_s2","Size_DblN_peak_Commercial(1)",27.03,1.79,0.07
-"v3_m3_s2","Size_DblN_ascend_se_Commercial(1)",2.55,0.87,0.34
-"v3_m3_s3","SR_LN(R0)",5.09,0.23,0.04
-"v3_m3_s3","InitF_seas_1_flt_1Commercial",1.21,1.21,1
-"v3_m3_s3","Size_DblN_peak_Commercial(1)",26.62,1.57,0.06
-"v3_m3_s3","Size_DblN_ascend_se_Commercial(1)",2.48,0.83,0.33
-"v3_m3_s4","SR_LN(R0)",4.98,0.4,0.08
-"v3_m3_s4","InitF_seas_1_flt_1Commercial",0.83,1.2,1.45
-"v3_m3_s4","Size_DblN_peak_Commercial(1)",26.65,1.6,0.06
-"v3_m3_s4","Size_DblN_ascend_se_Commercial(1)",2.48,0.84,0.34
-"v3_m3_s5","SR_LN(R0)",3.91,0.29,0.07
-"v3_m3_s5","InitF_seas_1_flt_1Commercial",0.31,0.29,0.93
-"v3_m3_s5","Size_DblN_peak_Commercial(1)",27.27,1.92,0.07
-"v3_m3_s5","Size_DblN_ascend_se_Commercial(1)",2.61,0.89,0.34
-"v3_m3_s6","SR_LN(R0)",3.91,0.29,0.07
-"v3_m3_s6","InitF_seas_1_flt_1Commercial",0.31,0.29,0.93
-"v3_m3_s6","Size_DblN_peak_Commercial(1)",27.27,1.92,0.07
-"v3_m3_s6","Size_DblN_ascend_se_Commercial(1)",2.61,0.89,0.34
-"v7_m2","SR_LN(R0)",6.03,0.29,0.05
-"v7_m2","InitF_seas_1_flt_1Commercial",0.11,0.05,0.43
-"v7_m2","Size_DblN_peak_Commercial(1)",26.41,1.82,0.07
-"v7_m2","Size_DblN_ascend_se_Commercial(1)",2.43,0.96,0.39
-"v7_m3","SR_LN(R0)",4.61,0.2,0.04
-"v7_m3","InitF_seas_1_flt_1Commercial",0.12,0.03,0.28
-"v7_m3","Size_DblN_peak_Commercial(1)",26.98,1.74,0.06
-"v7_m3","Size_DblN_ascend_se_Commercial(1)",2.56,0.85,0.33
-"v7_m3_s1","SR_LN(R0)",4.44,0.17,0.04
-"v7_m3_s1","InitF_seas_1_flt_1Commercial",0.13,0.04,0.28
-"v7_m3_s1","Size_DblN_peak_Commercial(1)",26.87,1.69,0.06
-"v7_m3_s1","Size_DblN_ascend_se_Commercial(1)",2.53,0.84,0.33
-"v7_m3_s2","SR_LN(R0)",3.71,0.1,0.03
-"v7_m3_s2","InitF_seas_1_flt_1Commercial",0.17,0.04,0.23
-"v7_m3_s2","Size_DblN_peak_Commercial(1)",27.5,2.02,0.07
-"v7_m3_s2","Size_DblN_ascend_se_Commercial(1)",2.75,0.87,0.32
-"v7_m3_s3","SR_LN(R0)",4.61,0.2,0.04
-"v7_m3_s3","InitF_seas_1_flt_1Commercial",0.12,0.03,0.28
-"v7_m3_s3","Size_DblN_peak_Commercial(1)",26.98,1.74,0.06
-"v7_m3_s3","Size_DblN_ascend_se_Commercial(1)",2.56,0.85,0.33
-"v7_m3_s4","SR_LN(R0)",4.16,0.12,0.03
-"v7_m3_s4","InitF_seas_1_flt_1Commercial",0,0,2000.12
-"v7_m3_s4","Size_DblN_peak_Commercial(1)",27.28,1.89,0.07
-"v7_m3_s4","Size_DblN_ascend_se_Commercial(1)",2.63,0.87,0.33
-"v7_m3_s5","SR_LN(R0)",3.52,0.11,0.03
-"v7_m3_s5","InitF_seas_1_flt_1Commercial",0.1,0.04,0.38
-"v7_m3_s5","Size_DblN_peak_Commercial(1)",27.64,2.1,0.08
-"v7_m3_s5","Size_DblN_ascend_se_Commercial(1)",2.77,0.88,0.32
-"v7_m3_s6","SR_LN(R0)",3.52,0.11,0.03
-"v7_m3_s6","InitF_seas_1_flt_1Commercial",0.1,0.04,0.38
-"v7_m3_s6","Size_DblN_peak_Commercial(1)",27.64,2.1,0.08
-"v7_m3_s6","Size_DblN_ascend_se_Commercial(1)",2.77,0.88,0.32
+"Scenario","Parameter","Estimate","SD","CV","Gradient"
+"a_m1","SR_LN(R0)",5.5,0.14,0.03," 3.4e-05"
+"a_m1","InitF_seas_1_flt_1Commercial",0.28,0.09,0.32," 3.7e-05"
+"a_m1","Size_DblN_peak_Commercial(1)",26.05,1.78,0.07," 1.1e-06"
+"a_m1","Size_DblN_ascend_se_Commercial(1)",2.33,0.97,0.42,"-3.6e-07"
+"a_m2","SR_LN(R0)",5.62,0.18,0.03," 6.3e-06"
+"a_m2","InitF_seas_1_flt_1Commercial",0.21,0.08,0.38," 9.2e-06"
+"a_m2","Size_DblN_peak_Commercial(1)",25.81,1.8,0.07,"-4.8e-07"
+"a_m2","Size_DblN_ascend_se_Commercial(1)",2.24,0.99,0.44," 2.2e-07"
+"a_m3","SR_LN(R0)",5.51,0.27,0.05,"-5.9e-06"
+"a_m3","InitF_seas_1_flt_1Commercial",0.19,0.08,0.42," 2.5e-06"
+"a_m3","Size_DblN_peak_Commercial(1)",25.85,1.79,0.07," 4.1e-06"
+"a_m3","Size_DblN_ascend_se_Commercial(1)",2.25,0.98,0.44,"-4.0e-06"
+"a_m3_s1","SR_LN(R0)",5.42,0.26,0.05,"-1.1e-05"
+"a_m3_s1","InitF_seas_1_flt_1Commercial",0.21,0.08,0.38," 1.4e-05"
+"a_m3_s1","Size_DblN_peak_Commercial(1)",25.72,1.82,0.07,"-2.4e-05"
+"a_m3_s1","Size_DblN_ascend_se_Commercial(1)",2.21,1,0.45," 1.6e-05"
+"a_m3_s2","SR_LN(R0)",4.11,0.14,0.03,"-6.0e-06"
+"a_m3_s2","InitF_seas_1_flt_1Commercial",0.28,0.1,0.36," 4.4e-06"
+"a_m3_s2","Size_DblN_peak_Commercial(1)",26.47,1.67,0.06," 1.5e-05"
+"a_m3_s2","Size_DblN_ascend_se_Commercial(1)",2.41,0.89,0.37,"-1.1e-05"
+"a_m3_s3","SR_LN(R0)",5.51,0.27,0.05," 2.9e-09"
+"a_m3_s3","InitF_seas_1_flt_1Commercial",0.19,0.08,0.42," 7.6e-08"
+"a_m3_s3","Size_DblN_peak_Commercial(1)",25.85,1.79,0.07,"-2.9e-08"
+"a_m3_s3","Size_DblN_ascend_se_Commercial(1)",2.25,0.98,0.44," 1.5e-08"
+"a_m3_s4","SR_LN(R0)",4.97,0.32,0.06,"-3.0e-05"
+"a_m3_s4","InitF_seas_1_flt_1Commercial",0.05,0.07,1.4," 5.7e-06"
+"a_m3_s4","Size_DblN_peak_Commercial(1)",26.02,1.74,0.07,"-7.7e-06"
+"a_m3_s4","Size_DblN_ascend_se_Commercial(1)",2.29,0.95,0.41," 8.6e-05"
+"a_m3_s5","SR_LN(R0)",3.74,0.15,0.04,"-3.0e-05"
+"a_m3_s5","InitF_seas_1_flt_1Commercial",0.08,0.06,0.75," 2.3e-05"
+"a_m3_s5","Size_DblN_peak_Commercial(1)",26.59,1.5,0.06," 8.0e-06"
+"a_m3_s5","Size_DblN_ascend_se_Commercial(1)",2.42,0.81,0.33,"-3.6e-06"
+"a_m3_s6","SR_LN(R0)",3.74,0.15,0.04,"-1.7e-05"
+"a_m3_s6","InitF_seas_1_flt_1Commercial",0.08,0.06,0.75," 9.4e-06"
+"a_m3_s6","Size_DblN_peak_Commercial(1)",26.59,1.5,0.06," 6.0e-05"
+"a_m3_s6","Size_DblN_ascend_se_Commercial(1)",2.42,0.81,0.33,"-4.4e-05"
+"b_m1","SR_LN(R0)",5.77,0.15,0.03," 1.5e-05"
+"b_m1","InitF_seas_1_flt_1Commercial",0.16,0.04,0.25," 2.7e-05"
+"b_m1","Size_DblN_peak_Commercial(1)",25.71,1.94,0.08,"-3.8e-07"
+"b_m1","Size_DblN_ascend_se_Commercial(1)",2.27,1.05,0.46," 6.5e-07"
+"b_m2","SR_LN(R0)",5.9,0.19,0.03," 2.6e-08"
+"b_m2","InitF_seas_1_flt_1Commercial",0.13,0.04,0.31," 5.4e-08"
+"b_m2","Size_DblN_peak_Commercial(1)",25.51,2.02,0.08,"-1.5e-08"
+"b_m2","Size_DblN_ascend_se_Commercial(1)",2.18,1.09,0.5," 1.5e-08"
+"b_m3","SR_LN(R0)",5.29,0.33,0.06," 1.4e-06"
+"b_m3","InitF_seas_1_flt_1Commercial",0.12,0.03,0.25,"-9.4e-06"
+"b_m3","Size_DblN_peak_Commercial(1)",25.89,1.82,0.07,"-1.6e-05"
+"b_m3","Size_DblN_ascend_se_Commercial(1)",2.27,0.98,0.43," 1.1e-05"
+"b_m3_s1","SR_LN(R0)",5.17,0.3,0.06,"-1.7e-06"
+"b_m3_s1","InitF_seas_1_flt_1Commercial",0.13,0.04,0.31," 2.1e-07"
+"b_m3_s1","Size_DblN_peak_Commercial(1)",25.78,1.83,0.07,"-1.2e-06"
+"b_m3_s1","Size_DblN_ascend_se_Commercial(1)",2.23,1,0.45," 2.0e-06"
+"b_m3_s2","SR_LN(R0)",3.97,0.09,0.02," 1.7e-05"
+"b_m3_s2","InitF_seas_1_flt_1Commercial",0.22,0.04,0.18,"-1.7e-05"
+"b_m3_s2","Size_DblN_peak_Commercial(1)",26.62,1.53,0.06," 8.9e-06"
+"b_m3_s2","Size_DblN_ascend_se_Commercial(1)",2.46,0.81,0.33,"-6.8e-06"
+"b_m3_s3","SR_LN(R0)",5.29,0.33,0.06," 4.7e-05"
+"b_m3_s3","InitF_seas_1_flt_1Commercial",0.12,0.03,0.25," 6.5e-05"
+"b_m3_s3","Size_DblN_peak_Commercial(1)",25.89,1.82,0.07,"-4.5e-05"
+"b_m3_s3","Size_DblN_ascend_se_Commercial(1)",2.27,0.98,0.43," 4.1e-05"
+"b_m3_s4","SR_LN(R0)",4.69,0.18,0.04,"-1.0e-05"
+"b_m3_s4","InitF_seas_1_flt_1Commercial",0.04,0.03,0.75,"-2.1e-05"
+"b_m3_s4","Size_DblN_peak_Commercial(1)",26.31,1.71,0.06," 1.3e-07"
+"b_m3_s4","Size_DblN_ascend_se_Commercial(1)",2.35,0.92,0.39," 3.5e-07"
+"b_m3_s5","SR_LN(R0)",3.87,0.09,0.02," 2.5e-05"
+"b_m3_s5","InitF_seas_1_flt_1Commercial",0.18,0.04,0.22,"-1.4e-05"
+"b_m3_s5","Size_DblN_peak_Commercial(1)",26.7,1.57,0.06," 4.3e-06"
+"b_m3_s5","Size_DblN_ascend_se_Commercial(1)",2.45,0.82,0.33,"-3.3e-06"
+"b_m3_s6","SR_LN(R0)",3.87,0.09,0.02," 4.0e-05"
+"b_m3_s6","InitF_seas_1_flt_1Commercial",0.18,0.04,0.22,"-4.6e-05"
+"b_m3_s6","Size_DblN_peak_Commercial(1)",26.7,1.57,0.06," 2.9e-05"
+"b_m3_s6","Size_DblN_ascend_se_Commercial(1)",2.45,0.82,0.33,"-1.8e-05"
+"v1_ct","SR_LN(R0)",5.67,0.07,0.01," 6.4e-08"
+"v1_ct","InitF_seas_1_flt_1Commercial",0.21,0.04,0.19,"-1.2e-07"
+"v1_ct","Size_DblN_peak_Commercial(1)",24.93,2.97,0.12," 1.4e-08"
+"v1_ct","Size_DblN_ascend_se_Commercial(1)",2.2,1.57,0.71,"-1.1e-08"
+"v1_ct","Size_DblN_peak_NCRMP(2)",5.73,38.6,6.74," 1.6e-08"
+"v1_ct","Size_DblN_ascend_se_NCRMP(2)",4.29,175.29,40.86,"-3.8e-10"
+"v1_m1","SR_LN(R0)",5.87,0.17,0.03," 2.2e-06"
+"v1_m1","InitF_seas_1_flt_1Commercial",0.13,0.04,0.31," 5.9e-06"
+"v1_m1","Size_DblN_peak_Commercial(1)",25.64,1.96,0.08,"-1.9e-06"
+"v1_m1","Size_DblN_ascend_se_Commercial(1)",2.25,1.06,0.47," 1.2e-06"
+"v1_m2","SR_LN(R0)",6.02,0.22,0.04,"-7.9e-06"
+"v1_m2","InitF_seas_1_flt_1Commercial",0.11,0.04,0.36,"-2.1e-05"
+"v1_m2","Size_DblN_peak_Commercial(1)",25.43,2.06,0.08," 9.8e-07"
+"v1_m2","Size_DblN_ascend_se_Commercial(1)",2.15,1.12,0.52,"-5.2e-07"
+"v1_m3","SR_LN(R0)",5.28,0.35,0.07," 7.8e-06"
+"v1_m3","InitF_seas_1_flt_1Commercial",0.11,0.03,0.27,"-3.3e-05"
+"v1_m3","Size_DblN_peak_Commercial(1)",25.87,1.81,0.07,"-5.9e-05"
+"v1_m3","Size_DblN_ascend_se_Commercial(1)",2.26,0.98,0.43," 1.9e-05"
+"v1_m3_s1","SR_LN(R0)",5.15,0.32,0.06,"-9.9e-07"
+"v1_m3_s1","InitF_seas_1_flt_1Commercial",0.11,0.03,0.27," 1.4e-05"
+"v1_m3_s1","Size_DblN_peak_Commercial(1)",25.78,1.82,0.07,"-1.8e-05"
+"v1_m3_s1","Size_DblN_ascend_se_Commercial(1)",2.23,0.99,0.44," 7.9e-06"
+"v1_m3_s2","SR_LN(R0)",3.91,0.08,0.02," 5.7e-06"
+"v1_m3_s2","InitF_seas_1_flt_1Commercial",0.19,0.04,0.21,"-7.1e-06"
+"v1_m3_s2","Size_DblN_peak_Commercial(1)",26.66,1.56,0.06," 3.1e-06"
+"v1_m3_s2","Size_DblN_ascend_se_Commercial(1)",2.45,0.82,0.33,"-1.9e-06"
+"v1_m3_s3","SR_LN(R0)",5.28,0.35,0.07,"-7.6e-08"
+"v1_m3_s3","InitF_seas_1_flt_1Commercial",0.11,0.03,0.27," 1.4e-07"
+"v1_m3_s3","Size_DblN_peak_Commercial(1)",25.87,1.81,0.07,"-2.3e-08"
+"v1_m3_s3","Size_DblN_ascend_se_Commercial(1)",2.26,0.98,0.43," 4.6e-08"
+"v1_m3_s4","SR_LN(R0)",4.65,0.17,0.04," 3.0e-05"
+"v1_m3_s4","InitF_seas_1_flt_1Commercial",0.02,0.03,1.5,"-1.1e-05"
+"v1_m3_s4","Size_DblN_peak_Commercial(1)",26.31,1.71,0.06,"-3.3e-05"
+"v1_m3_s4","Size_DblN_ascend_se_Commercial(1)",2.35,0.92,0.39," 1.9e-05"
+"v1_m3_s5","SR_LN(R0)",3.83,0.08,0.02," 3.2e-05"
+"v1_m3_s5","InitF_seas_1_flt_1Commercial",0.15,0.03,0.2," 9.0e-07"
+"v1_m3_s5","Size_DblN_peak_Commercial(1)",26.73,1.58,0.06,"-2.2e-05"
+"v1_m3_s5","Size_DblN_ascend_se_Commercial(1)",2.44,0.83,0.34,"-4.6e-07"
+"v1_m3_s6","SR_LN(R0)",3.83,0.08,0.02,"-1.1e-05"
+"v1_m3_s6","InitF_seas_1_flt_1Commercial",0.15,0.03,0.2," 3.1e-06"
+"v1_m3_s6","Size_DblN_peak_Commercial(1)",26.73,1.58,0.06,"-8.3e-06"
+"v1_m3_s6","Size_DblN_ascend_se_Commercial(1)",2.44,0.83,0.34," 4.8e-06"
+"v3_m1","SR_LN(R0)",5.13,0.07,0.01," 2.6e-05"
+"v3_m1","InitF_seas_1_flt_1Commercial",1.47,1.18,0.8," 4.3e-06"
+"v3_m1","Size_DblN_peak_Commercial(1)",26.82,1.69,0.06," 1.1e-05"
+"v3_m1","Size_DblN_ascend_se_Commercial(1)",2.52,0.86,0.34,"-1.2e-05"
+"v3_m2","SR_LN(R0)",5.13,0.07,0.01,"-9.1e-06"
+"v3_m2","InitF_seas_1_flt_1Commercial",1.39,1.03,0.74,"-1.1e-06"
+"v3_m2","Size_DblN_peak_Commercial(1)",26.6,1.56,0.06,"-5.9e-06"
+"v3_m2","Size_DblN_ascend_se_Commercial(1)",2.47,0.82,0.33," 4.9e-06"
+"v3_m3","SR_LN(R0)",5.09,0.23,0.05,"-2.0e-05"
+"v3_m3","InitF_seas_1_flt_1Commercial",1.2,1.2,1," 1.4e-05"
+"v3_m3","Size_DblN_peak_Commercial(1)",26.62,1.57,0.06,"-1.4e-05"
+"v3_m3","Size_DblN_ascend_se_Commercial(1)",2.48,0.83,0.33," 1.6e-05"
+"v3_m3_s1","SR_LN(R0)",4.99,0.23,0.05,"-3.1e-05"
+"v3_m3_s1","InitF_seas_1_flt_1Commercial",2.02,2.72,1.35," 2.0e-06"
+"v3_m3_s1","Size_DblN_peak_Commercial(1)",26.43,1.81,0.07,"-6.5e-05"
+"v3_m3_s1","Size_DblN_ascend_se_Commercial(1)",2.43,0.94,0.39," 3.5e-05"
+"v3_m3_s2","SR_LN(R0)",4.31,0.21,0.05," 4.3e-06"
+"v3_m3_s2","InitF_seas_1_flt_1Commercial",1.1,0.88,0.8,"-2.5e-06"
+"v3_m3_s2","Size_DblN_peak_Commercial(1)",27.03,1.79,0.07," 7.0e-06"
+"v3_m3_s2","Size_DblN_ascend_se_Commercial(1)",2.55,0.87,0.34,"-6.2e-06"
+"v3_m3_s3","SR_LN(R0)",5.09,0.23,0.05,"-1.3e-05"
+"v3_m3_s3","InitF_seas_1_flt_1Commercial",1.21,1.21,1," 1.6e-06"
+"v3_m3_s3","Size_DblN_peak_Commercial(1)",26.62,1.57,0.06,"-1.9e-05"
+"v3_m3_s3","Size_DblN_ascend_se_Commercial(1)",2.48,0.83,0.33," 1.2e-05"
+"v3_m3_s4","SR_LN(R0)",4.98,0.4,0.08," 1.8e-05"
+"v3_m3_s4","InitF_seas_1_flt_1Commercial",0.83,1.2,1.45,"-2.0e-06"
+"v3_m3_s4","Size_DblN_peak_Commercial(1)",26.65,1.6,0.06," 3.1e-07"
+"v3_m3_s4","Size_DblN_ascend_se_Commercial(1)",2.48,0.84,0.34," 2.0e-07"
+"v3_m3_s5","SR_LN(R0)",3.91,0.29,0.07," 3.9e-06"
+"v3_m3_s5","InitF_seas_1_flt_1Commercial",0.31,0.29,0.94,"-1.6e-06"
+"v3_m3_s5","Size_DblN_peak_Commercial(1)",27.27,1.92,0.07,"-1.7e-05"
+"v3_m3_s5","Size_DblN_ascend_se_Commercial(1)",2.61,0.89,0.34," 2.3e-05"
+"v3_m3_s6","SR_LN(R0)",3.91,0.29,0.07,"-4.6e-05"
+"v3_m3_s6","InitF_seas_1_flt_1Commercial",0.31,0.29,0.94," 2.2e-05"
+"v3_m3_s6","Size_DblN_peak_Commercial(1)",27.27,1.92,0.07,"-3.5e-05"
+"v3_m3_s6","Size_DblN_ascend_se_Commercial(1)",2.61,0.89,0.34," 2.8e-05"
+"v7_m2","SR_LN(R0)",6.03,0.29,0.05,"-7.0e-06"
+"v7_m2","InitF_seas_1_flt_1Commercial",0.11,0.05,0.45,"-2.1e-07"
+"v7_m2","Size_DblN_peak_Commercial(1)",26.41,1.82,0.07," 7.7e-06"
+"v7_m2","Size_DblN_ascend_se_Commercial(1)",2.43,0.96,0.4,"-8.8e-06"
+"v7_m3","SR_LN(R0)",4.61,0.2,0.04," 7.2e-06"
+"v7_m3","InitF_seas_1_flt_1Commercial",0.12,0.03,0.25," 1.3e-05"
+"v7_m3","Size_DblN_peak_Commercial(1)",26.98,1.74,0.06," 1.3e-05"
+"v7_m3","Size_DblN_ascend_se_Commercial(1)",2.56,0.85,0.33,"-1.1e-05"
+"v7_m3_s1","SR_LN(R0)",4.44,0.17,0.04,"-3.7e-06"
+"v7_m3_s1","InitF_seas_1_flt_1Commercial",0.13,0.04,0.31," 5.9e-06"
+"v7_m3_s1","Size_DblN_peak_Commercial(1)",26.87,1.69,0.06,"-3.6e-07"
+"v7_m3_s1","Size_DblN_ascend_se_Commercial(1)",2.53,0.84,0.33,"-1.1e-06"
+"v7_m3_s2","SR_LN(R0)",3.71,0.1,0.03,"-3.7e-06"
+"v7_m3_s2","InitF_seas_1_flt_1Commercial",0.17,0.04,0.24," 3.2e-05"
+"v7_m3_s2","Size_DblN_peak_Commercial(1)",27.5,2.02,0.07," 8.0e-06"
+"v7_m3_s2","Size_DblN_ascend_se_Commercial(1)",2.75,0.87,0.32,"-9.4e-06"
+"v7_m3_s3","SR_LN(R0)",4.61,0.2,0.04," 7.2e-06"
+"v7_m3_s3","InitF_seas_1_flt_1Commercial",0.12,0.03,0.25,"-6.5e-06"
+"v7_m3_s3","Size_DblN_peak_Commercial(1)",26.98,1.74,0.06," 8.1e-06"
+"v7_m3_s3","Size_DblN_ascend_se_Commercial(1)",2.56,0.85,0.33,"-6.4e-06"
+"v7_m3_s4","SR_LN(R0)",4.16,0.12,0.03,"-3.3e-06"
+"v7_m3_s4","InitF_seas_1_flt_1Commercial",0,0,NA," 9.7e-07"
+"v7_m3_s4","Size_DblN_peak_Commercial(1)",27.28,1.89,0.07,"-9.1e-07"
+"v7_m3_s4","Size_DblN_ascend_se_Commercial(1)",2.63,0.87,0.33," 6.2e-07"
+"v7_m3_s5","SR_LN(R0)",3.52,0.11,0.03," 2.1e-05"
+"v7_m3_s5","InitF_seas_1_flt_1Commercial",0.1,0.04,0.4,"-1.1e-05"
+"v7_m3_s5","Size_DblN_peak_Commercial(1)",27.64,2.1,0.08," 2.8e-05"
+"v7_m3_s5","Size_DblN_ascend_se_Commercial(1)",2.77,0.88,0.32,"-2.7e-05"
+"v7_m3_s6","SR_LN(R0)",3.52,0.11,0.03,"-6.8e-05"
+"v7_m3_s6","InitF_seas_1_flt_1Commercial",0.1,0.04,0.4," 4.3e-05"
+"v7_m3_s6","Size_DblN_peak_Commercial(1)",27.64,2.1,0.08,"-2.5e-05"
+"v7_m3_s6","Size_DblN_ascend_se_Commercial(1)",2.77,0.88,0.32," 2.3e-05"
