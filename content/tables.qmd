@@ -24,8 +24,8 @@ title: "Tables"
 
 | Input Source | Input Type | Input | M | Method |
 |:-----------|:-----------|:--------:|:--:|:--------|
-| @choat2003 | Maximum age | 30 | 0.180 | Hamel_Amax |
-| SEDAR84-AP-01 | Maximum age | **20** | **0.270** | Hamel_Amax |
+| @choat2003 | Maximum age | 30 | **0.180** | Hamel_Amax |
+| SEDAR84-AP-01 | Maximum age | 20 | **0.270** | Hamel_Amax |
 | Meta-analysis | Scientific name | *Sparisoma viride* | 0.397 | FishLife |
 | @choat2003 | Maximum age | 12 | 0.450 | Hamel_Amax |
 | @choat2003 | Maximum age | 9 | 0.600 | Hamel_Amax |
@@ -40,7 +40,7 @@ title: "Tables"
 | SEDAR84-AP-01 | Age at 50% maturity | 1.6 | 1.030 | Jensen_Amat |
 | SEDAR84-AP-01 | Age at 50% maturity | 1.6 | 0.924 | Ri_Ef_Amat |
 
-: Empirical estimates of natural mortality (M) can be derived using life history information and the Natural Mortality Tool [@cope2022]. The SEDAR assessment working paper SEDAR84-AP-01 is equivalent to @riverahernández2024. All models included in this report utilize the natural mortality estimate of 0.27 corresponding with the maximum age observed by @riverahernández2024, except three of the sensitivity scenarios (s2, s5, and s6) which utilize the 0.18 natural morality corresponding with the estimated maximum age from tagging studies by @choat2003. {#tbl-m}
+: Empirical estimates of natural mortality (M) derived using life history information and the Natural Mortality Tool [@cope2022]. The SEDAR assessment working paper SEDAR84-AP-01 is equivalent to @riverahernández2024. All models included in this report utilize the natural mortality estimate of 0.27 corresponding with the maximum age observed by @riverahernández2024, except three of the sensitivity scenarios (s2, s5, and s6) which utilize the 0.18 natural morality corresponding with the estimated maximum age from tagging studies by @choat2003. {#tbl-m}
 
 {{< pagebreak >}}
 
@@ -290,7 +290,7 @@ tbl_msy
 {{< pagebreak >}}
 
 ```{r}
-#| label: tbl-spr-f
+#| label: tbl-msra
 #| tbl-cap: "St. Croix stoplight parrotfish fishing mortality rate and spawning stock biomass ratios relative to the rate and biomass of the stock associated with the MSY proxy (based on SPR 40%). The relative fishing mortality ratio is expressed as a three-year geometric mean of the annual fishing mortality rates for 2020-2022 divided by the fishing mortality rate associated with MSY SPR 40%. Relative fishing mortality rates that are above one are shown in red font. The relative stock biomass ratio is expressed as the 2022 spawning biomass divided by the spawning stock biomass at MSY SPR 40%. Relative fishing mortality ratios that are below one are shown in red font."
 
 spr_f_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
