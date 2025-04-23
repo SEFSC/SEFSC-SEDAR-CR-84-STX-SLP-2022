@@ -1,0 +1,31 @@
+---
+  title: "Research Recomendations"
+---
+
+To address some of the data uncertainties it is recommended to:
+
+-   Expand fishery-independent survey time series and resolution (e.g., retain and use 1-cm length bin data where available).
+
+-   Further evaluate natural mortality and growth assumptions. Collect and analyze additional life history data to reduce uncertainty around growth and natural mortality rates.
+
+-   Conduct focused research on historical catches and fishing history to inform and constrain early model conditions.
+
+-   Consider using simpler production models or age-structured models with fixed selectivity to isolate and evaluate different data inputs.
+
+-   Develop and evaluate model ensembles or uncertainty grids to guide catch advice under different plausible scenarios.
+
+-   Investigate stock connectivity to better understand local vs. regional recruitment dynamics.
+
+-   Re-examine whether the current single-stock unit for parrotfish is appropriate, given available data only comprehensively evaluate S. viride.
+
+-   Research methods to “right-size” model complexity to match data availability, avoiding overparameterization in data-limited contexts.
+
+-   Expand simulation studies to understand trade-offs in model complexity vs. data requirements.
+
+-   Support MSEs that are robust to key uncertainties to guide harvest advice.
+
+-   Maintain and expand commercial catch monitoring programs
+
+-   Ensure the continuation of fishery-independent survey programs (e.g., NCRMP) with consistent spatial and temporal coverage.
+
+-   Expand port sampling and other fishery-dependent data collection to fill gaps in length composition and effort data.

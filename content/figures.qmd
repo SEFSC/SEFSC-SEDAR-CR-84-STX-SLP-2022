@@ -14,6 +14,8 @@ fig_eez_cap <- "The U.S. EEZ is defined as the federal waters ranging from 3 to 
 
 ![`r fig_eez_cap`](https://www.fisheries.noaa.gov/s3//styles/original/s3/dam-migration/carib_map_stx.jpg?itok=yeYHZ8gy){#fig-eez width="6in"}
 
+![St. Croix stoplight parrotfish commercial fleet logistic selectivity across model variations (a_m3, b_m3, v1_m3, v3_m3, and v7_m3).](/Scenarios/plots_m3/sizeselex_fleet1.png){#fig-m3-selectivity}
+
 ::: {#fig-m3-density layout-ncol="2"}
 ![Unfished recruitment](/Scenarios/plots_m3/compare16_densities_SR_LN(R0).png){#fig-m3-r0}
 
@@ -21,8 +23,6 @@ fig_eez_cap <- "The U.S. EEZ is defined as the federal waters ranging from 3 to 
 
 St. Croix stoplight parrotfish parameter distribution for (a) the natural log of the unfished recruitment parameter of the Beverton – Holt stock-recruit function and (b) virgin spawning stock biomass in metric tons across model variations (a_m3, b_m3, v1_m3, v3_m3, and v7_m3).
 :::
-
-![St. Croix stoplight parrotfish commercial fleet logistic selectivity across model variations (a_m3, b_m3, v1_m3, v3_m3, and v7_m3).](/Scenarios/plots_m3_plain/sizeselex_fleet1.png){#fig-m3-selectivity}
 
 ::: {#fig-m3-dq layout-ncol="2"}
 ![Spawning Biomass Ratio](/Scenarios/plots_m3_plain/compare4_Bratio_uncertainty.png){#fig-m3-ratio}
@@ -90,7 +90,7 @@ St. Croix stoplight parrotfish observed and predicted length distributions in ce
 ::: {#fig-lenfit-v7 layout-ncol="2"}
 ![v7_m3 across all years](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/comp_lenfit__aggregated_across_time.png){#fig-lenfit-v7-1}
 
-![v7_m3 by year](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/comp_lenfit_flt2mkt0_crop.png){#fig-lenfit-v7-1}
+![v7_m3 by year](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/comp_lenfit_flt2mkt0_crop.png){#fig-lenfit-v7-2}
 
 St. Croix stoplight parrotfish observed and predicted length distributions in centimeters (a) aggregated across years and (b) by year for the Commercial and NCRMP length compositions for the v7_m3 model variation. Green lines represent predicted length compositions, while gray regions represent observed length compositions. The effective sample size used to weight the length composition data is provided by N adj (the input sample size), and N eff (the calculated effective sample size), are shown in the upper right corners.
 :::

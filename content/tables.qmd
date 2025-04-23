@@ -150,6 +150,39 @@ tbl_corr
 {{< pagebreak >}}
 
 ```{r}
+#| label: tbl-dq
+#| tbl-cap: "St. Croix stoplight parrotfish derived quantities for unfished and initial spawning stock biomass in metric tons (mt) along with standard deviations (SD) and coefficient of variation (CV) by model varation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3). CV is calculated as the SD divided by the parameter estimate."
+
+est_dq <- read.csv(here::here("Scenarios", "scenarios_dq.csv")) |>
+  dplyr::mutate(
+    Parameter = dplyr::case_when(
+      Parameter == "SSB_Initial" ~ "SSB Initial (mt)",
+      Parameter == "Bratio_2012" ~ "Ratio SSB Initial:Unfished",
+      Parameter == "SSB_unfished" ~ "SSB Unfished (mt)"
+    )
+  ) |>
+  dplyr::select(Parameter, Scenario, Estimate, SD, CV) |>
+  dplyr::arrange(desc(Parameter), Scenario) |>
+  dplyr::filter(stringr::str_detect(Scenario, "\\w*m3$"))
+
+
+tbl_dq <- est_dq |>
+  dplyr::rename("Derived Quantity" = Parameter) |>
+  flextable::flextable() |>
+  flextable::autofit() |>
+  flextable::theme_box() |>
+  flextable::align(align = "center", part = "all") |>
+  flextable::merge_v(j = "Derived Quantity") |>
+  flextable::fontsize(size = 11, part = "all") |>
+  flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_dq
+
+```
+
+{{< pagebreak >}}
+
+```{r}
 #| label: tbl-eqcatch
 #| tbl-cap: "St. Croix stoplight parrotfish estimated initial equilibrium catch in metric tons by model variation including across sensitivity runs. The input value was 30 metric tons with a standard error of 0.3."
 
@@ -205,37 +238,6 @@ tbl_parm <- est_parm_short |>
   flextable::font(fontname = "Times New Roman", part = "all")
 
 tbl_parm
-
-```
-
-```{r}
-#| label: tbl-dq
-#| tbl-cap: "St. Croix stoplight parrotfish derived quantities for unfished and initial spawning stock biomass in metric tons (mt) along with standard deviations (SD) and coefficient of variation (CV) by model varation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3). CV is calculated as the SD divided by the parameter estimate."
-
-est_dq <- read.csv(here::here("Scenarios", "scenarios_dq.csv")) |>
-  dplyr::mutate(
-    Parameter = dplyr::case_when(
-      Parameter == "SSB_Initial" ~ "SSB Initial (mt)",
-      Parameter == "Bratio_2012" ~ "Ratio SSB \nInitial:Unfished",
-      Parameter == "SSB_unfished" ~ "SSB Unfished (mt)"
-    )
-  ) |>
-  dplyr::select(Parameter, Scenario, Estimate, SD, CV) |>
-  dplyr::arrange(desc(Parameter), Scenario) |>
-  dplyr::filter(stringr::str_detect(Scenario, "\\w*m3$"))
-
-
-tbl_dq <- est_dq |>
-  dplyr::rename("Derived Quantity" = Parameter) |>
-  flextable::flextable() |>
-  flextable::autofit() |>
-  flextable::theme_box() |>
-  flextable::align(align = "center", part = "all") |>
-  flextable::merge_v(j = "Derived Quantity") |>
-  flextable::fontsize(size = 11, part = "all") |>
-  flextable::font(fontname = "Times New Roman", part = "all")
-
-tbl_dq
 
 ```
 
