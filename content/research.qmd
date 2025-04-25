@@ -1,5 +1,5 @@
 ---
-  title: "Research Recomendations"
+  title: "Research Recommendations"
 ---
 
 To address some of the data uncertainties it is recommended to:

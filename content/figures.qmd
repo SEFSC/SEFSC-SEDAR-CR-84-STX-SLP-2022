@@ -59,7 +59,7 @@ St. Croix stoplight parrotfish jitter analysis total likelihood across model var
 
 ![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/index2_cpuefit_NCRMP.png)
 
-St. Croix stoplight parrotfish National Coral Reef Monitoring Program observed (open circles) and predicted (blue line) indices of relative abundance and associated standard errors across model variations (a_m3, v1_m3, v3_m3, and v7_m3). Model variation b_m3 is not provided as it's configuration does not include an index. Lines indicate 95% uncertainty interval around observed index values based on the model assumption of lognormal error. Model variation a_m3 and v1_m3 do not estimate recruitment deviations, while model variations v3_m3 and v7_m3 do.
+St. Croix stoplight parrotfish National Coral Reef Monitoring Program observed (open circles) and predicted (blue line) indices of relative abundance and associated standard errors across model variations (a_m3, v1_m3, v3_m3, and v7_m3). Model variation b_m3 is not provided as its configuration does not include an index. Lines indicate a 95% uncertainty interval around observed index values based on the model assumption of lognormal error. Model variations a_m3 and v1_m3 do not estimate recruitment deviations, while model variations v3_m3 and v7_m3 do.
 :::
 
 
@@ -116,7 +116,7 @@ St. Croix stoplight parrotfish observed (open circles) and predicted (blue line)
 
 ![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/retro/plots/retro_SSB.png){width="65%"}
 
-St. Croix stoplight parrotfish retrospective analysis of spawning stock biomass (SSB) conducted by refitting models after removing five years of observation, one year at a time sequentially. Mohn's rho statistics and the corresponding "hindcast rho" measure the severity of retrospective patterns. One-year-ahead projections denoted by color-coded dashed lines with terminal points. Grey shaded areas are the 95% confidence intervals.
+St. Croix stoplight parrotfish retrospective analysis of spawning stock biomass (SSB) conducted by refitting models after removing five years of observation, one year at a time sequentially. Mohn's rho statistics and the corresponding "hindcast rho" measure the severity of retrospective patterns. One-year-ahead projections are denoted by color-coded dashed lines with terminal points. Grey shaded areas are the 95% confidence intervals.
 :::
 
 ::: {#fig-profile-r0 layout-ncol="2"}
@@ -158,7 +158,7 @@ Estimates of the MSY proxy (based on SPR 40%) across the range of unfished recru
 
 ![v7_m3](/Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
 
-The profile likelihood for the fixed initial equilibrium catch for for St. Croix stoplight parrotfish across model variations (a_m3, b_m3, v1_m3, v3_m3, and v7_m3). Each line represents the change in negative log-likelihood value for each of the data sources fit in the model across the range of fixed steepness values tested in the profile diagnostic run. 
+The profile likelihood for the fixed initial equilibrium catch for St. Croix stoplight parrotfish across model variations (a_m3, b_m3, v1_m3, v3_m3, and v7_m3). Each line represents the change in negative log-likelihood value for each of the data sources fit in the model across the range of fixed steepness values tested in the profile diagnostic run. 
 :::
 
 ::: {#fig-profile-eqcatch-msyspr layout-ncol="2"}
@@ -220,7 +220,7 @@ St. Croix stoplight parrotfish parameter distribution for (a) the natural log of
 
 ![Recruitment](/Scenarios/plots_s4_plain/compare10_recruits_uncertainty.png){#fig-s4-recruits}
 
-St. Croix stoplight parrotfish derived quantity time series across model variations (a_m3_s5, b_m3_s5, v1_m3_s5, v3_m3_s5, and v7_m3_s5). Derived quantities plotted over time for (a) the relative spawning stock biomass (total biomass / virgin spawning stock biomass),  (b) spawning stock biomass in metric tons, (c) fishing mortality (total biomass killed / total biomass), (d) and recruitment in thousands of fish. The shaded areas and vertical bars in the derived quantities time series represent 95% confidence intervals.
+St. Croix stoplight parrotfish derived quantity time series across model variations (a_m3_s4, b_m3_s4, v1_m3_s4, v3_m3_s4, and v7_m3_s4). Derived quantities plotted over time for (a) the relative spawning stock biomass (total biomass / virgin spawning stock biomass),  (b) spawning stock biomass in metric tons, (c) fishing mortality (total biomass killed / total biomass), (d) and recruitment in thousands of fish. The shaded areas and vertical bars in the derived quantities time series represent 95% confidence intervals.
 :::
 
 ::: {#fig-s5-density layout-ncol="2"}

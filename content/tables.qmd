@@ -17,7 +17,7 @@ title: "Tables"
 | 2022	| 7.44	 | 16,398	 | 	74%	 |	26%	 |
 | Total	| 112.37 | 247,733 | 	82%	 |	18%	 |
 
-:  Commercial landings of Stoplight Parrotfish reported in St. Croix from
+:  Commercial landings of stoplight parrotfish reported in St. Croix from
 2012-2022 in metric tons and pounds by year, along with the percentage of the total commercial landings that came from each gear group. {#tbl-catch}
 
 {{< pagebreak >}}
@@ -100,7 +100,7 @@ title: "Tables"
 | Sensitivity	| **s5**	| s2 + s4 |
 | Sensitivity	| s6	| s2 + s3 + s4 |
 
-:  Summary of process and naming conventions used across different model development stages of the SEDAR 84 St. Croix Stoplight Parrotfish stock assessment.  {#tbl-ss3-stxslp}
+:  Summary of process and naming conventions used across different model development stages of the SEDAR 84 St. Croix stoplight parrotfish stock assessment.  {#tbl-ss3-stxslp}
 
 {{< pagebreak >}}
 
@@ -151,7 +151,7 @@ tbl_corr
 
 ```{r}
 #| label: tbl-dq
-#| tbl-cap: "St. Croix stoplight parrotfish derived quantities for unfished and initial spawning stock biomass in metric tons (mt) along with standard deviations (SD) and coefficient of variation (CV) by model varation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3). CV is calculated as the SD divided by the parameter estimate."
+#| tbl-cap: "St. Croix stoplight parrotfish derived quantities for unfished and initial spawning stock biomass in metric tons (mt) along with standard deviations (SD) and coefficient of variation (CV) by model variation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3). CV is calculated as the SD divided by the parameter estimate."
 
 est_dq <- read.csv(here::here("Scenarios", "scenarios_dq.csv")) |>
   dplyr::mutate(
@@ -211,7 +211,7 @@ tbl_eqcatch
 
 ```{r}
 #| label: tbl-parm
-#| tbl-cap: "St. Croix stoplight parrotfish parameters, standard deviations (SD), and coefficient of variation (CV) by model varation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3). CV is calculated as the SD divided by the parameter estimate."
+#| tbl-cap: "St. Croix stoplight parrotfish parameters, standard deviations (SD), and coefficient of variation (CV) by model variation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3). CV is calculated as the SD divided by the parameter estimate."
 
 est_parm_short <- read.csv(here::here("Scenarios", "scenarios_parm.csv")) |>
   dplyr::mutate(
@@ -245,7 +245,7 @@ tbl_parm
 
 ```{r}
 #| label: tbl-est-msy
-#| tbl-cap: "St. Croix stoplight parrotfish derived quantities of the MSY proxy (based on SPR 40%) in metric tons  by model varation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3) and corresponding each model variation's six sensititivy runs. CV is calculated as the SD divided by the parameter estimate. Estimates of the MSY proxy are also presented in pounds in @tbl-msy."
+#| tbl-cap: "St. Croix stoplight parrotfish derived quantities of the MSY proxy (based on SPR 40%) in metric tons  by model variation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3) and corresponding each model variation's six sensitivity runs. CV is calculated as the SD divided by the parameter estimate. Estimates of the MSY proxy are also presented in pounds in @tbl-msy."
 
 est_msy <- read.csv(here::here("Scenarios", "est_msy.csv")) |>
   dplyr::filter(!stringr::str_detect(Scenario, "ct|m1" ))
@@ -267,7 +267,7 @@ tbl_est_msy
 
 ```{r}
 #| label: tbl-msy
-#| tbl-cap: "St. Croix stoplight parrotfish derived quantities of the MSY proxy (based on SPR 40%) in pounds  by model varation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3) and corresponding each model variation's six sensititivy runs."
+#| tbl-cap: "St. Croix stoplight parrotfish derived quantities of the MSY proxy (based on SPR 40%) in pounds  by model variation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3) and corresponding each model variation's six sensitivity runs."
 
 scenarios_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
   dplyr::select(scenario, Dead_Catch_SPR_lbs) |>
