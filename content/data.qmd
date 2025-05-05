@@ -2,7 +2,7 @@
 title: "Data-Informed Modeling Decisions"
 ---
 
-The data available for use in the current assessment are documented in the SEDAR 84 US Caribbean stoplight parrotfish St. Croix Data Workshop Report [@sedar2024]. Provided here is a summary of those data with a focus on the associated model configurations explored using Stock Synthesis.
+The data available for use in the current assessment are documented in the SEDAR 84 US Caribbean stoplight parrotfish St. Croix Data Workshop Report [@sedar2024]. Provided here is a summary of those data with a focus on the associated model configurations explored using Stock Synthesis. Throughout this report, bolded text is used to highlight and summarize the model settings and configurations relevant to the various phases of model development.
 
 Additional details for each data input are available in their respective references:
 
@@ -14,9 +14,9 @@ Additional details for each data input are available in their respective referen
 
 **Based on the available data, the assessment was configured with one area, one season, one commercial fleet, and one fishery-independent survey.**
 
-## Commercial Fleet {#sec-data-fleet}
+## Commercial Fleet Data {#sec-data-fleet}
 
-### Catch Data {#sec-data-fleet-catch}
+### Catch {#sec-data-fleet-catch}
 
 The catch data for the commercial fleet came from the Caribbean Commercial Logbook program [@martínezrivera2024]. Beginning in 1996, part of the commercial landings was reported by species groups (e.g., snappers, groupers, parrotfishes, surgeonfishes, etc.), and by gear (hook and line, gill net, SCUBA, trap, etc.). All commercial fishery data reports included species groups beginning in 1998. In July of 2011, commercial landings were reported by species and gear. Various diving gears were combined to establish a dive gear group since the catch of stoplight parrotfish in St. Croix from this group made up 80% of the reported landings, all gears (dive and other) were included into a single commercial fleet (@tbl-catch). Potential outliers discussed during the assessment webinars were investigated and retained as valid trips.
 
@@ -35,7 +35,7 @@ Alternative model configurations associated with the commercial fleet data are d
 -   The initial equilibrium catch was explored via likelihood profiling.
 -   A higher standard error of 2 was explored via sensitivity analysis.
 
-### Size Composition Data {#sec-data-fleet-size}
+### Size Composition {#sec-data-fleet-size}
 
 Gear-specific annual length frequencies for the commercial fleet came from the commercial shore-based port-sampling Trip Interview Program [@godwin2024]. The NOAA Fisheries, Southeast Fisheries Science Center Trip Interview Program collects length and weight data from fish landed by commercial fishing vessels, along with information about fishing areas and gears. Data collection began in 1983 with frequent updates in best practices; the latest being in 2017. The stoplight parrotfish length data from St. Croix included 29,582 length observations across 1,028 unique port sampling interviews.
 
@@ -51,11 +51,11 @@ From 2012 - 2022, the size data included 1,033 shore-based length measurements o
 
 ### Index of Abundance {#sec-data-survey-index}
 
-The National Coral Reef Monitoring Program supports reef fish sampling on hard-bottom habitats from 0 to 30 meters depth [@grove2021]. In St. Croix, sampling began in 2001 and was conducted every year from 2001 to 2012 and then every other year starting in 2015. The data used in SEDAR 84 were from 2012 - 2022 when the survey was conducted island-wide. Data collected prior to 2017 were calibrated to account for a transition from belt transect to a cylinder survey method.
+The National Coral Reef Monitoring Program (NCRMP) supports reef fish sampling on hard-bottom habitats from 0 to 30 meters depth [@grove2021]. In St. Croix, sampling began in 2001 and was conducted every year from 2001 to 2012 and then every other year starting in 2015. The data used in SEDAR 84 were from 2012 - 2022 when the survey was conducted island-wide. Data collected prior to 2017 were calibrated to account for a transition from belt transect to a cylinder survey method.
 
 Annual mean density and associated standard errors for SEDAR 84 were provided by @grove2024.  In Stock Synthesis, the time series of mean density across all observed sizes **were input as an index in numbers with a lognormal error distribution**. The associated length composition data, described in the following subsection, suggested that **the index reflected the abundance of juveniles and adults**.
 
-### Size Composition Data {#sec-data-survey-size}
+### Size Composition {#sec-data-survey-size}
 
 The three most recent years of the National Coral Reef Monitoring Program survey in St. Croix provided counts by individual lengths measured to the nearest centimeter. However, before 2017 the length observations were collected in 5-centimeter bins. **The length data inputs for both the commercial fleet and the three years of the survey with 1-centimeter length measurements were binned to match the survey's 2012 and 2015 5-centimeter bins.**
 
@@ -115,7 +115,7 @@ Protogynous hermaphroditism was parameterized into the SS3 assessment framework 
 -   The virgin recruitment (R0; estimated in log space) represents the asymptote or unfished recruitment levels.
 -   The variance term (sigma R) is the standard deviation of the log of recruitment and describes the amount of year-to-year variation in recruitment.
 
-Only the virgin recruitment (R0) was estimated. **Sigma R and steepness were fixed at 0.7 and 0.99, respectively.** The primary assumption for steepness was that this stock is not a closed population, so recruitment may not be strongly tied to the local spawning stock biomass. **In initial model configurations, annual deviations from the stock-recruit function were not estimated.** Steepness and R0 were explored via likelihood profiling.
+Only the virgin recruitment (R0) was estimated. **Sigma R and steepness were fixed at 0.7 and 0.99, respectively.** The 0.7 sigma R reflects slightly high variation in recruitment. A value of 0.6 is a moderate level of recruitment variability, with lower values indicating lower variability and more predictable year-to-year recruitment. The primary assumption for steepness was that this stock is not a closed population, so recruitment may not be strongly tied to the local spawning stock biomass. **In initial model configurations, annual deviations from the stock-recruit function were not estimated.** Steepness and R0 were explored via likelihood profiling.
 
 **Continuous recruitment was parameterized in SS3 using four settlement events.** Equal proportions of recruits were assigned to each settlement event, and they were spaced such that recruitment would happen in months 1, 4, 7, and 10. This allowed growth to be staggered, reflecting a closer approximation of the observed stock dynamic of year-round spawning activity.
 
@@ -157,7 +157,7 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
 -   A double normal function was used to model the relative vulnerability of capture by length for the commercial fleet.
 
-### National Coral Reef Monitoring Program Survey {#sec-data-summary-survey}
+### Survey {#sec-data-summary-survey}
 
 -   The index reflected the abundance of juveniles and adults.
 
@@ -173,11 +173,7 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
 -   Selectivity for the survey was fixed at 1 for all sizes. 
 
--   Models were initially configured in Stock Synthesis with length compositions aggregated across the available years for each source of length data and proceeded stepwise from the simplest configuration to those of moderate complexity.
-
-    -   The steps included the inclusion of annual fishery-independent length compositions.
-
-### Biology {#sec-data-summary-biology}
+### Life History {#sec-data-summary-biology}
 
 -   The stoplight parrotfish population was modeled from age 0 through age 20, and from 0 to 41-centimeters fork length, in 1-centimeter bins, with the largest values for each as plus groups.
 
@@ -208,7 +204,5 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 -   Sigma R and steepness were fixed at 0.7 and 0.99, respectively.
 
 -   In initial model configurations, annual deviations from the stock-recruit function were not estimated.
-
-    -   In configurations where recruitment deviations were estimated, sigma R was explored via likelihood profiling.
     
 -   Continuous recruitment was parameterized in SS3 using four settlement events.

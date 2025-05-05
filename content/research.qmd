@@ -2,7 +2,7 @@
   title: "Research Recommendations"
 ---
 
-To address some of the data uncertainties it is recommended to:
+To mitigate some of the data uncertainties it is recommended to:
 
 -   Expand fishery-independent survey time series and resolution (e.g., retain and use 1-cm length bin data where available).
 
@@ -16,16 +16,12 @@ To address some of the data uncertainties it is recommended to:
 
 -   Investigate stock connectivity to better understand local vs. regional recruitment dynamics.
 
--   Re-examine whether the current single-stock unit for parrotfish is appropriate, given available data only comprehensively evaluate S. viride.
+-   Re-examine multiple indicator approach for the Parrotfish Two management unit given that SEDAR 84 only comprehensively evaluated data for *Sparisoma viride*.
 
--   Research methods to “right-size” model complexity to match data availability, avoiding overparameterization in data-limited contexts.
+-   Research methods, including simulations, to “right-size” model complexity to match data availability, avoiding overparameterization in data-limited contexts.
 
--   Expand simulation studies to understand trade-offs in model complexity vs. data requirements.
+-   Support Management Strategy Evaluations that are robust to key uncertainties to guide harvest advice.
 
--   Support MSEs that are robust to key uncertainties to guide harvest advice.
+-   Ensure the continuation of fishery-independent survey programs (e.g., National Coral Reef Monitoring Program) with consistent spatial and temporal coverage.
 
--   Maintain and expand commercial catch monitoring programs
-
--   Ensure the continuation of fishery-independent survey programs (e.g., NCRMP) with consistent spatial and temporal coverage.
-
--   Expand port sampling and other fishery-dependent data collection to fill gaps in length composition and effort data.
+-   Maintain and expand commercial catch monitoring programs. Expand port sampling and other fishery-dependent data collection to fill gaps in length composition and effort data.

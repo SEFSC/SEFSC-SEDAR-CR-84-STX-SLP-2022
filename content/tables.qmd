@@ -44,60 +44,23 @@ title: "Tables"
 
 {{< pagebreak >}}
 
-| Model Development Process | Code | Sequential modeling steps |
-|---------------------------|:----:|-----------------------------|
-| Data-limited | null | super-year size data |
-| **Data-moderate** | **a** | **index** |
-| **Data-moderate** | **b** | **annual fishery-independent size data** |
-| Data-moderate | c | annual fishery-dependent size data |
-| Data-moderate | d | recruitment deviations |
-| Data-moderate | e | dome-shaped selectivity |
-| Data-moderate | f | time blocks |
-| **Variation 1** | **v1** | **a + b** |
-| Variation 2| v2 | a + c |
-| **Variation** 3| **v3** | **a + d** |
-| Variation 4 | v4 | a + e |
-| Variation 5 | v5 | a + f |
-| Variation 6 | v6 | a + b + c |
-| **Variation** 7| **v7** | **a + b + d** |
-| Variation 8 | v8 | a + b + e |
-| Variation 9 | v9 | a + b + f |
-| Variation 10 | v10 | a + c + d |
-| Variation 11 | v11 | a + c + e |
-| Variation 12 | v12 | a + c + f |
-| Variation 13 | v13 | a + d + e |
-| Variation 14 | v14 | a + d + f |
-| Variation 15 | v15 | a + e + f |
-| Variation 16 | v16 | a + b + c + d |
-| Variation 17 | v17 | a + b + c + e |
-| Variation 18 | v18 | a + b + c + f |
-| Variation 19 | v19 | a + b + d + e |
-| Variation 20 | v20 | a + b + d + f |
-| Variation 21 | v21 | a + b + e + f |
-| Variation 22 | v22 | a + b + c + d + e |
-| Variation 23 | v23 | a + b + c + d + f |
-| Variation 24 | v24 | a + b + c + e + f |
-| Variation 25 | v25 | a + b + c + d + e + f |
-
-:  Summary of process and naming conventions used for SEDAR 84 assessments describing  model development noting the simplest data-limited configuration, exploring individual data-moderate considerations, individually and combined. The models focused on in the current report are associated with the codes in bold. {#tbl-overview}
-
 | Stage | Code | Sequential modeling steps |
 |--------|:----:|----------------------------------------------------------------|
 | Initial	| ct	| model initialized with continuum tool (ct) |
 | Initial	| m1	| ct + hermaphroditism |
 | Initial	| m2	| m1 + continuous recruitment |
-| Initial | **m3**  | m2 + catch uncertainty |
-| Scenario  | null | super-year size data |
-| Scenario	| **a**	| index |
-| Scenario	| **b**	| annual fishery-independent size data |
-| Scenario	| **v1**	| index + annual fishery-independent size data |
-| Scenario	| **v3**	| index + recruitment deviations |
-| Scenario	| **v7**	| index + annual fishery-independent size data + recruitment deviations |
+| Initial | m3  | m2 + catch uncertainty |
+| Scenario  | null | catch and super-year size data |
+| Scenario	| a	| index |
+| Scenario	| b	| annual fishery-independent size data |
+| Scenario	| v1	| index + annual fishery-independent size data |
+| Scenario	| v3	| index + recruitment deviations |
+| Scenario	| v7	| index + annual fishery-independent size data + recruitment deviations |
 | Sensitivity	| s1	| higher CV on growth young |
 | Sensitivity	| s2	| higher age and lower m |
 | Sensitivity	| s3	| one sex (age-based fecundity = maturity * weight * sex ratio)  |
-| Sensitivity	| **s4**	| higher catch uncertainty |
-| Sensitivity	| **s5**	| s2 + s4 |
+| Sensitivity	| s4	| higher catch uncertainty |
+| Sensitivity	| s5	| s2 + s4 |
 | Sensitivity	| s6	| s2 + s3 + s4 |
 
 :  Summary of process and naming conventions used across different model development stages of the SEDAR 84 St. Croix stoplight parrotfish stock assessment.  {#tbl-ss3-stxslp}
@@ -108,7 +71,7 @@ title: "Tables"
 #| echo: false
 #| warning: false
 #| label: tbl-corr
-#| tbl-cap: "St. Croix stoplight parrotfish correlations between estimated parameters across the m2 and m3 model variations. The table shows correlations greater than 0.9 or less than -0.9. Correlations that are greater than 0.95 or less than -0.95 are shown in red."
+#| tbl-cap: "St. Croix stoplight parrotfish correlations between estimated parameters across the m2 and m3 model scenarios. The table shows correlations greater than 0.9 or less than -0.9. Correlations that are greater than 0.95 or less than -0.95 are shown in red."
 
 library(here)
 library(dplyr)
@@ -130,7 +93,7 @@ var_corr <- c(
   "Scenario",
   "Estimated Parameters", 
   "Estimated Parameters", 
-  "Correlation")
+  "Correlation\nCoefficient")
 
 tbl_corr <- short_covar |>
   dplyr::filter(stringr::str_detect(scenario, "m2$|m3$" )) |>
@@ -151,7 +114,7 @@ tbl_corr
 
 ```{r}
 #| label: tbl-dq
-#| tbl-cap: "St. Croix stoplight parrotfish derived quantities for unfished and initial spawning stock biomass in metric tons (mt) along with standard deviations (SD) and coefficient of variation (CV) by model variation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3). CV is calculated as the SD divided by the parameter estimate."
+#| tbl-cap: "St. Croix stoplight parrotfish derived quantities for unfished and initial spawning stock biomass in metric tons (mt) along with standard deviations (SD) and coefficient of variation (CV) by model scenario (a_m3, b_m3, v1_m3, v3_m3, and v7_m3). CV is calculated as the SD divided by the parameter estimate."
 
 est_dq <- read.csv(here::here("Scenarios", "scenarios_dq.csv")) |>
   dplyr::mutate(
@@ -184,7 +147,7 @@ tbl_dq
 
 ```{r}
 #| label: tbl-eqcatch
-#| tbl-cap: "St. Croix stoplight parrotfish estimated initial equilibrium catch in metric tons by model variation including across sensitivity runs. The input value was 30 metric tons with a standard error of 0.3."
+#| tbl-cap: "St. Croix stoplight parrotfish estimated initial equilibrium catch in metric tons by model scenario including across sensitivity runs. The input value was 30 metric tons with a standard error of 0.3."
 
 est_eqcatch_short <- read.csv(here::here("Scenarios", "eq_catch.csv")) |>
   dplyr::mutate(Estimate = round(Estimate, 2)) |>
@@ -211,7 +174,7 @@ tbl_eqcatch
 
 ```{r}
 #| label: tbl-parm
-#| tbl-cap: "St. Croix stoplight parrotfish parameters, standard deviations (SD), and coefficient of variation (CV) by model variation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3). CV is calculated as the SD divided by the parameter estimate."
+#| tbl-cap: "St. Croix stoplight parrotfish parameters, standard deviations (SD), and coefficient of variation (CV) by model scenario (a_m3, b_m3, v1_m3, v3_m3, and v7_m3). CV is calculated as the SD divided by the parameter estimate."
 
 est_parm_short <- read.csv(here::here("Scenarios", "scenarios_parm.csv")) |>
   dplyr::mutate(
@@ -245,10 +208,11 @@ tbl_parm
 
 ```{r}
 #| label: tbl-est-msy
-#| tbl-cap: "St. Croix stoplight parrotfish derived quantities of the MSY proxy (based on SPR 40%) in metric tons  by model variation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3) and corresponding each model variation's six sensitivity runs. CV is calculated as the SD divided by the parameter estimate. Estimates of the MSY proxy are also presented in pounds in @tbl-msy."
+#| tbl-cap: "St. Croix stoplight parrotfish derived quantities of the MSY proxy (based on SPR 40%) in metric tons  by model scenario (a_m3, b_m3, v1_m3, v3_m3, and v7_m3) and corresponding each model scenario's six sensitivity runs. CV is calculated as the SD divided by the parameter estimate. Estimates of the MSY proxy are also presented in pounds in @tbl-msy."
 
 est_msy <- read.csv(here::here("Scenarios", "est_msy.csv")) |>
-  dplyr::filter(!stringr::str_detect(Scenario, "ct|m1" ))
+  dplyr::filter(!stringr::str_detect(Scenario, "ct|m1" )) |>
+  dplyr::rename("MSY Proxy" = Estimate)
 
 
 tbl_est_msy <- est_msy |>
@@ -267,7 +231,7 @@ tbl_est_msy
 
 ```{r}
 #| label: tbl-msy
-#| tbl-cap: "St. Croix stoplight parrotfish derived quantities of the MSY proxy (based on SPR 40%) in pounds  by model variation (a_m3, b_m3, v1_m3, v3_m3, and v7_m3) and corresponding each model variation's six sensitivity runs."
+#| tbl-cap: "St. Croix stoplight parrotfish derived quantities of the MSY proxy (based on SPR 40%) in pounds by model scenario (a_m3, b_m3, v1_m3, v3_m3, and v7_m3) and corresponding each model scenario's six sensitivity runs."
 
 scenarios_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
   dplyr::select(scenario, Dead_Catch_SPR_lbs) |>

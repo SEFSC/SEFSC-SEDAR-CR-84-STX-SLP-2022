@@ -10,7 +10,7 @@ St. Croix stoplight parrotfish is managed under the St. Croix Fishery Management
 
 The Parrotfish Two stock complex includes two indicator stocks and five other species. The indicator species are stoplight parrotfish and redtail parrotfish (*Sparisoma chrysopterum*). The allowable biological catch for the complex was established using Tier 4a of the 4-tiered control rule. The allowable biological catch and the annual catch limit are 85,135 and 72,365 pounds whole weight, respectively.
 
-A SEDAR 84 Data Workshop working paper summarizes federal management actions for stoplight parrotfish in St. Croix [@malone2024]. On August 29, 2013, a 9-inch federal size limit was instituted by Final Regulatory Amendment 4. The size limit only applies to the U.S. EEZ surrounding St. Croix, which is defined as the federal waters ranging from 3 to 200 nautical miles (nm) (5.6 – 370 kilometers \[km\]) from the nearest coastline point of the U.S. Virgin Islands (@fig-eez).
+A SEDAR 84 Data Workshop working paper summarizes federal management actions for stoplight parrotfish in St. Croix [@malone2024]. On August 29, 2013, a 9-inch federal size limit was instituted by Final Regulatory Amendment 4. The size limit only applies to the U.S. Exclusive Economic Zone surrounding St. Croix, which is defined as the federal waters ranging from 3 to 200 nautical miles (nm) (5.6 – 370 kilometers \[km\]) from the nearest coastline point of the U.S. Virgin Islands (@fig-eez).
 
 ## Assessment History {#sec-background-history}
 
