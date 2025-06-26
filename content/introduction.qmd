@@ -1,0 +1,94 @@
+---
+title: "Introduction"
+---
+
+##	Workshop Time and Place
+
+The SEDAR 84 Assessment Process was held via webinars from April to November 2024.
+
+##	Terms of Reference
+
+1. Develop and apply assessment tools that are compatible with available data and consistent with standard practices. Document input data, model assumptions and configuration, and equations for each approach considered.
+2. To the extent possible given data limitations, provide management benchmarks and status determination criteria, including: 
+    a. Maximum Fishing Mortality Threshold (MFMT) = F~MSY~ or proxy 
+    b. MSY proxy = yield at MFMT 
+    c. Minimum Stock Size Threshold (MSST) = SSB~MSY~ or proxy 
+    d. If alternative status determination criteria are recommended, provide a description of their use and a justification. 
+3. To the extent possible, develop projections to support estimates of maximum sustainable yield (MSY, the overfishing limit (OFL) and acceptable biological catch (ABC) as described below. If projections are not possible, and alternative management procedures are recommended, provide a description of their use and a justification. 
+    a. Unless otherwise recommended, use the geometric mean of the three previous years’ fishing mortality to determine F~Current~
+    b. Project F~MSY~ or proxy 
+    c. If the stock is overfished: 
+        i. Project ~F0~ 
+        ii. Project F~Rebuild~ 
+4. Provide recommendations for future research and data collection. 
+5. Provide an Assessment Workshop Report to address these Terms of reference and fully document the input data and results.
+
+##	List of Participants
+
+| ***Assessment Panel*** |  |
+| :- | -: |
+| Adyan Rios (Lead Analyst) | NMFS/SEFSC |
+| Richard Appeldoorn |  SSC |
+| J.J. Cruz-Motta | CFMC SSC, UPRM |
+| Matt Damiano | NMFS/SEFSC |
+| Sennai Habtes | USVI DPNR |
+| Walter Keithly | SSC/LSU |
+| Kevin McCarthy | NMFS/SEFSC |
+| M. Refik Orhun | NMFS/SEFSC |
+| Kyle Shertzer | NMFS/SEFSC |
+| Virginia Shervette | Univ SC |
+| Derek Soto | MER |
+: {tbl-colwidths="[50,50]"}
+
+| ***Appointed Observers*** |  |
+| :- | -: |
+| Carlos Farchette | Stakeholder - STX |
+| Julian Magras | DAP STT/STJ |
+: {tbl-colwidths="[50,50]"}
+
+| ***Observers*** |  |
+| :- | -: |
+| Jerald S. Ault | Univ of Miami |
+| Rachel Banton | NMFS/SEFSC |
+| Sarah Beggerly | NMFS/SEFSC |
+| David Behringer | NMFS/SEFSC |
+| Jeremiah Blondeau | NMFS/SEFSC |
+| Chip Collier | SAFMC Staff |
+| Carly Daiek | NMFS/SEFSC |
+| Katherine Godwin | UM-CIMAS |
+| Jennifer Granneman | NOAA |
+| Jay Grove | NMFS/SEFSC |
+| Walter Ingram | NMFS/SEFSC |
+| Stephanie Martinez-Rivera | NMFS/SEFSC |
+| Maria McGirl | FWC |
+| Jennifer Pytka | |
+| Maggie Rios | USVI DPNR |
+| Jesus M. Rivera-Herdández | Univ SC |
+| Grisel Rodriguez-Ferrer | PR DNER |
+| Wilson Santiago Soler | PR Fisheries Liaison |
+| Sarah Stephenson | NMFS/SEFSC |
+| Joyah Watkins | Rice University |
+: {tbl-colwidths="[50,50]"}
+
+| ***Staff*** |  |
+| :- | -: |
+| Julie A. Neer | SEDAR |
+| Liajay Rivera Garciá | CFMC Staff |
+| Graciela Garcia-Moliner | CFMC Staff |
+: {tbl-colwidths="[50,50]"}
+
+##	List of Assessment Process Working Papers and Reference Documents
+
+### Documents Prepared for the Assessment Process
+
+Document # | Title	| Authors |	Date Submitted|
+ --------- | :-------------- | :--------- | -------: 
+SEDAR84-AP-01	| Report on the status of U.S. Caribbean Stoplight Parrotfish Sparisoma viride age, growth, and reproductive biology for the SEDAR84 Stock Assessment	| Jesús M. Rivera Hernández and Virginia Shervette	| 6 July 2024
+
+### Reference Documents
+
+Document # | Title	| Authors
+ ------ | :------------- | ----------
+SEDAR84-RD11 | The Commercial Yellowtail Snapper Fishery off Puerto Rico, 1983-2003 |	Nancie J. Cummings
+SEDAR84-RD12 |	S8-DW-08: The commercial reef fish fishery in Puerto Rico with emphasis on yellowtail snapper, Ocyurus chrysurus: landings and catch per unit of effort from 1983 through 2003 |	Nancie J. Cummings and Daniel Matos-Caraballo
+SEDAR84-RD13	| The Net Buyback and Ban in St. Croix, U.S. Virgin Islands |	Juan J. Agar, Flavia Tonioli, Chloe Fleming
