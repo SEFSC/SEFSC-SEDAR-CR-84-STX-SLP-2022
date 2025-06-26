@@ -4,7 +4,7 @@ project:
 
 book: 
   page-navigation: true
-  title: "SEDAR 84" 
+  title: "S84_AWReport_SLP_STX" 
   site-url: "https://solid-adventure-7j5gko7.pages.github.io/" 
   repo-url: "https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STX-SLP-2022"
   repo-actions: [edit, source, issue]
@@ -17,7 +17,7 @@ book:
         - name: NOAA Fisheries
   chapters:
     - index.qmd
-    - content/background.qmd
+    - content/introduction.qmd
     - content/data.qmd
     - content/methods.qmd
     - content/diagnostics.qmd
@@ -62,24 +62,21 @@ format:
       - text: |
           \raggedright
           \usepackage{caption}
+          \usepackage{fancyhdr}
+          \pagestyle{fancy}
           \captionsetup[table]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
           \captionsetup[figure]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
-  docx:
-    toc: true
-    toc-depth: 3
-    reference-doc: template.docx
-    always_allow_html: true
-  html:
-    theme: [cosmo, assets/theme.scss] 
-    toc: true
-    toc-depth: 3
-    default-image-extension: png
-    include-in-header: 
-      - text: |
-          <style>table {padding: 2em 0 2em 0}</style>
-          <style>figure {padding: 2em 0 2em 0}</style>
-          
-
+          \fancypagestyle{plain}{
+            \fancyhf{}% Clear header/footer
+            \renewcommand{\headrulewidth}{0pt}
+            \fancyhead[LE, LO]{June 2025}
+            \fancyhead[RE, RO]{US Caribbean Stoplight Parrotfish – St. Croix}
+            \fancyfoot[LE, LO]{SEDAR 84 SAR Section III}
+            \fancyfoot[RE, RO]{Assessment Process Report}
+            \fancyfoot[CE, CO]{\thepage}
+          }
+          \pagestyle{plain}% Set page style to plain.
+  
 filters:
   - assets/include-files.lua
   - quarto
