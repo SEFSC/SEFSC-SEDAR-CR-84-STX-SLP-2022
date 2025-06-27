@@ -1,5 +1,6 @@
 # Specify pattern of runs (ex: "84_stx", "m2$")
-pattern <- "_s4"
+pattern <- "m3$"
+pattern <- "m3"
 
 # Specify cutout string to match short names in scenarios.csv
 cutout <- "84_stx_f3_5cm_010641_0041_"
@@ -44,7 +45,7 @@ full_data <- r4ss::SSgetoutput(dirvec = full_names) |>
 if (dir.exists(output_dir)) unlink(output_dir, recursive = TRUE)
 dir.create(output_dir)
 
-if (dir.exists(output_dir_plain)) unlink(output_dir, recursive = TRUE)
+if (dir.exists(output_dir_plain)) unlink(output_dir_plain, recursive = TRUE)
 dir.create(output_dir_plain)
 
 # Plot comparisons
@@ -95,7 +96,9 @@ plot_sizeselex <- function(
     ) |>
     dplyr::mutate(
       size = as.numeric(size),
-      selex = as.numeric(selex)
+      selex = as.numeric(selex),
+      Fleet = dplyr::recode(Fleet, "1" = "Commercial",
+                            "2" = "NCRMP")
     ) |>
     ggplot2::ggplot(ggplot2::aes(
       x = size,
@@ -105,7 +108,11 @@ plot_sizeselex <- function(
     )) +
     ggplot2::geom_line() +
     ggplot2::facet_wrap(~ Fleet) +
-    ggplot2::theme_minimal() 
+    ggplot2::theme_minimal()  +
+    ggplot2::guides(lty="none") +
+    ggplot2::labs(x = "Length (cm)",
+                  y = "Selectivity",
+                  color = "Model Scenario")
 
   ggplot2::ggsave(
     here::here(output_dir, paste0("sizeselex", sizesel_file, ".png")),

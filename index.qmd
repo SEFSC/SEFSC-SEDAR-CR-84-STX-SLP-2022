@@ -1,6 +1,6 @@
-# Executive Summary {.unnumbered}
+# Assessment Process Report Summary {.unnumbered}
 
-The SEDAR 84 St. Croix stoplight parrotfish (*Sparisoma viride*) stock assessment process consisted of four webinars between April 2024 and October 2024. The data available for the assessment included:
+The SEDAR 84 St. Croix Stoplight Parrotfish (*Sparisoma viride*) stock assessment process consisted of four webinars between April 2024 and October 2024. The data available for the assessment included:
 
 -   An annual species-specific catch time series from commercial logbooks
 -   Fishery-dependent length compositions from commercial port sampling

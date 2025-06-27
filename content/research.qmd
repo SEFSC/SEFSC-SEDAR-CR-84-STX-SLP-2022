@@ -1,5 +1,5 @@
 ---
-  title: "Research Recommendations"
+  title: "Assessment Process Research Recommendations"
 ---
 
 To mitigate some of the data uncertainties it is recommended to:
@@ -14,7 +14,7 @@ To mitigate some of the data uncertainties it is recommended to:
 
 -   Develop and evaluate model ensembles or uncertainty grids to guide catch advice under different plausible scenarios.
 
--   Investigate stock connectivity to better understand local vs. regional recruitment dynamics.
+-   Investigate stock connectivity to better understand local versus regional recruitment dynamics and their implications for informing steepness.
 
 -   Re-examine multiple indicator approach for the Parrotfish Two management unit given that SEDAR 84 only comprehensively evaluated data for *Sparisoma viride*.
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Model Development – SEDAR 84</title>
+<title>3&nbsp; Model Development – S84_AWReport_SLP_STX</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,7 +90,7 @@ div.csl-indent {
   }
 }</script>
 <style>table {padding: 2em 0 2em 0}</style>
-<style>figure {padding: 2em 0 2em 0}</style>
+<style>figure {padding: 2em 0 2em 0}</style>  
 
 
 </head>
@@ -122,7 +122,7 @@ div.csl-indent {
       <img src="https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">SEDAR 84</a> 
+      <a href="../">S84_AWReport_SLP_STX</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://nmfs-opensci.github.io" title="NMFS Open Science" class="quarto-navigation-tool px-1" aria-label="NMFS Open Science"><i class="bi bi-globe"></i></a>
     <a href="https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STX-SLP-2022" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
@@ -130,13 +130,13 @@ div.csl-indent {
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../SEDAR-84.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../S84_AWReport_SLP_STX.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../SEDAR-84.docx">
+            <a class="dropdown-item sidebar-tools-main-item" href="../S84_AWReport_SLP_STX.docx">
               <i class="bi bi-file-word pe-1"></i>
             Download Docx
             </a>
@@ -156,13 +156,13 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Executive Summary</span></a>
+ <span class="menu-text">Assessment Process Report Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/background.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Background</span></span></a>
+  <a href="../content/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -192,7 +192,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/research.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Research Recommendations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Assessment Process Research Recommendations</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -223,7 +223,8 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-methods-model-overview" id="toc-sec-methods-model-overview" class="nav-link active" data-scroll-target="#sec-methods-model-overview"><span class="header-section-number">3.1</span> Overview</a></li>
+  <li><a href="#sec-methods-framework" id="toc-sec-methods-framework" class="nav-link active" data-scroll-target="#sec-methods-framework"><span class="header-section-number">3.1</span> Framework</a></li>
+  <li><a href="#sec-methods-model-overview" id="toc-sec-methods-model-overview" class="nav-link" data-scroll-target="#sec-methods-model-overview"><span class="header-section-number">3.2</span> Overview</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STX-SLP-2022/edit/main/content/methods.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STX-SLP-2022/blob/main/content/methods.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STX-SLP-2022/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -249,19 +250,47 @@ div.csl-indent {
 </header>
 
 
-<p>Stock Synthesis models were initially configured using an annual commercial catch time series and size compositions data that were aggregated across the available years for each source of length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity.</p>
-<section id="sec-methods-model-overview" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="sec-methods-model-overview"><span class="header-section-number">3.1</span> Overview</h2>
-<p>The SEDAR 84 model development process started with simple data-limited configurations, followed by exploring data-moderate configurations, individually and combined. The simplest configurations aggregated length compositions across years by implementing the super-period approach in Stock Synthesis. When using super-periods, the estimation model generates annual values, but the likelihood function will compare the expected composite to the data composite across the super-period. When using this approach on the size composition data, Stock Synthesis models will still aim to identify parameter values for selectivity that achieve a fit between the predicted and observed data.</p>
-<p>The initial setup steps and description of the modeling scenarios documented in this report are listed in <a href="tables.html#tbl-ss3-stxslp" class="quarto-xref">Table&nbsp;<span>7.3</span></a>. For the SEDAR 84 Stoplight Parrotfish assessment, the data-moderate considerations explored included: (a) indices of abundance, (b) annual fishery-independent size compositions, and (c) recruitment deviations. Additional model configurations were not pursued. For example, annual fishery-dependent size composition data were not considered due to low sample sizes. Similarly, alternative dome-shaped selectivity patterns and selectivity-related time blocks were not explored, based on the reviewed fishery dynamics in St.&nbsp;Croix.</p>
-<p>The Stock Assessment Continuum Tool was used to develop the initial model setup by importing CSV input files and utilizing its Shiny application interface (<span class="citation" data-cites="cope2024">Cope (<a href="references.html#ref-cope2024" role="doc-biblioref">2024</a>)</span>). Starting from the Continuum Tool (ct) model, a series of sequential modifications were applied to represent three key biological and data-related complexities: hermaphroditism (m1), continuous recruitment (m2), and increased catch uncertainty (m3).</p>
-<p>This report focuses on the results and sensitivities associated with the m3 models, evaluated under the various data configurations described in the previous section. While a full discussion of sensitivity runs is provided later in the report, they are also summarized in <a href="tables.html#tbl-ss3-stxslp" class="quarto-xref">Table&nbsp;<span>7.3</span></a> to help familiarize the reader with the terminology used throughout. For instance, model <strong>v1_m3_s4</strong> refers to the first scenario (<strong>v1</strong>, which includes an index and annual fishery-independent size data), the third level modification (<strong>m3</strong>, reflecting hermaphroditism, continuous recruitment, and higher catch uncertainty), and the fourth sensitivity scenario (<strong>s4</strong>, assuming one sex).</p>
-<p>Due to the lack of an estimable spawner-recruit relationship across the explored models, a commonly used 40% spawning potential ratio (SPR) was used as a proxy for Maximum Sustainable Yield (MSY) and as the basis for management reference points. The SPR proxy reflects the ratio of expected lifetime reproductive potential under fished conditions compared to virgin conditions.</p>
+<section id="sec-methods-framework" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-methods-framework"><span class="header-section-number">3.1</span> Framework</h2>
+<p><strong>Stock Synthesis V3.30.22 was the modeling approach applied in the current SEDAR 84 assessment because of compatibility with the available data and consistency with standard practices.</strong></p>
+<p>Stock Synthesis is a statistical catch-at-age model that uses a population model, an observation model, and an estimation model and applies a likelihood function in the estimation process <span class="citation" data-cites="methot2020">(<a href="references.html#ref-methot2020" role="doc-biblioref">Methot et al., 2020</a>)</span>. Stock Synthesis, commonly referred to as SS3, has been applied extensively worldwide for stock assessment evaluations <span class="citation" data-cites="methot2013">(<a href="references.html#ref-methot2013" role="doc-biblioref">Methot &amp; Wetzel, 2013</a>)</span>. It has also been used for previous data-limited and data-moderate SEDAR assessments, including the SEDAR 57 assessments and subsequent updates for Caribbean Spiny Lobster (<em>Panulirus argus</em>), and the SEDAR 80 assessments for Queen Triggerfish (<em>Balistes vetula</em>) <span class="citation" data-cites="sedar2019 sedar2022">(<a href="references.html#ref-sedar2019" role="doc-biblioref">SEDAR, 2019</a>, <a href="references.html#ref-sedar2022" role="doc-biblioref">2022</a>)</span>.</p>
+<p>The Stock Synthesis modeling framework is a compatible tool for SEDAR stock assessments in the U.S. Caribbean because it can accommodate a wide range of model complexities, from data-limited to highly detailed assessments <span class="citation" data-cites="cope2024">(<a href="references.html#ref-cope2024" role="doc-biblioref">Cope, 2024</a>)</span>. Stock Synthesis allows for the characterization of stock, fishing fleet, and survey dynamics through various parameters, which can be either fixed based on external data or estimated when sufficient assessment data are available. Additionally, it can incorporate complex biological dynamics, such as hermaphroditism and continuous recruitment, which are critical for accurately assessing St.&nbsp;Croix stoplight parrotfish.</p>
+<p>Finally, R packages such as r4ss and ss3diags facilitate critical evaluations of model reliability and model comparisons <span class="citation" data-cites="taylor2021 carvalho2021">(<a href="references.html#ref-carvalho2021" role="doc-biblioref">Carvalho et al., 2021</a>; <a href="references.html#ref-taylor2021" role="doc-biblioref">Taylor et al., 2021</a>)</span>. For example, R4SS provides visualization and diagnostic tools to summarize and interpret fit, convergence, and key output metrics. SS3diags focuses on retrospective analyses, hind-casting, and residual pattern evaluations. The integration of these tools allows rigorous uncertainty analysis, streamlined sensitivity analyses, and enhanced transparency in decision-making.</p>
+<p>Stock Synthesis models were initially configured using an annual commercial catch time series and length composition data that were aggregated across the available years for each source of length data. Model development proceeded stepwise from the simplest configuration to those of moderate complexity.</p>
+</section>
+<section id="sec-methods-model-overview" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-methods-model-overview"><span class="header-section-number">3.2</span> Overview</h2>
+<p>The SEDAR 84 model development process started with simple data-limited configurations, followed by exploring data-moderate configurations, individually and combined. The simplest configurations aggregated length composition data across years by implementing the super-period approach in Stock Synthesis. When using super-periods, the estimation model generates annual values, but the likelihood function will compare the expected composite to the data composite across the super-period. When using this approach on the length composition data, Stock Synthesis models will still aim to identify parameter values for selectivity that achieve a fit between the predicted and observed data.</p>
+<p>The initial setup steps and description of the modeling scenarios documented in this report are listed in <a href="tables.html#tbl-ss3-stxslp" class="quarto-xref">Table&nbsp;<span>7.3</span></a>. For the SEDAR 84 Stoplight Parrotfish assessment, the data-moderate considerations explored included: (a) indices of abundance, (b) annual fishery-independent length compositions, and (c) recruitment deviations. Additional model configurations were not pursued. For example, annual fishery-dependent length composition data were not considered due to low sample sizes. Similarly, alternative dome-shaped selectivity patterns and selectivity-related time blocks were not explored, based on the reviewed fishery dynamics in St.&nbsp;Croix.</p>
+<p>The Stock Assessment Continuum Tool was used to develop the initial model setup by importing CSV input files and utilizing its Shiny application interface <span class="citation" data-cites="cope2024">(<a href="references.html#ref-cope2024" role="doc-biblioref">Cope, 2024</a>)</span>. Starting from the Continuum Tool (ct) model, a series of sequential modifications were applied to represent three key biological and data-related complexities: hermaphroditism (m1), continuous recruitment (m2), and increased catch uncertainty (m3).</p>
+<p>This report focuses on the results and sensitivities associated with the m3 models, evaluated under the various data configurations described in the previous section. While a full discussion of sensitivity runs is provided later in the report, they are also summarized in <a href="tables.html#tbl-ss3-stxslp" class="quarto-xref">Table&nbsp;<span>7.3</span></a> to help familiarize the reader with the terminology used throughout. For instance, model <strong>v1_m3_s4</strong> refers to the first scenario (<strong>v1</strong>, which includes an index and annual fishery-independent length data), the third level modification (<strong>m3</strong>, reflecting hermaphroditism, continuous recruitment, and higher catch uncertainty), and the fourth sensitivity scenario (<strong>s4</strong>, assuming one sex). The numbering of model runs in <a href="tables.html#tbl-ss3-stxslp" class="quarto-xref">Table&nbsp;<span>7.3</span></a> reflects a structured approach used to track configurations consistently across all three assessments. Not every model was used for every island because the data available varies, but the numbering stays the same so that the same model structure means the same thing across all islands and helps show how the models became more complex over time.</p>
+<p>Due to the lack of an estimable spawner-recruit relationship across the explored models, a commonly used 40% spawning potential ratio (SPR) was used as a proxy for Maximum Sustainable Yield (MSY) and as the basis for management reference points <span class="citation" data-cites="shertzer">(<a href="references.html#ref-shertzer" role="doc-biblioref">Shertzer et al., 2024</a>)</span>. The SPR proxy reflects the ratio of expected lifetime reproductive potential under fished conditions compared to virgin conditions.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-carvalho2021" class="csl-entry" role="listitem">
+Carvalho, F., Winker, H., Courtney, D., Kapur, M., Kell, L., Cardinale, M., Schirripa, M., Kitakado, T., Yemane, D., Piner, K. R., Maunder, M. N., Taylor, I., Wetzel, C. R., Doering, K., Johnson, K. F., &amp; Methot, R. D. (2021). A cookbook for using model diagnostics in integrated stock assessments. <em>Fisheries Research</em>, <em>240</em>, 105959. <a href="https://doi.org/10.1016/j.fishres.2021.105959">https://doi.org/10.1016/j.fishres.2021.105959</a>
+</div>
 <div id="ref-cope2024" class="csl-entry" role="listitem">
 Cope, J. (2024). <em>Stock assessment continuum tool</em>. <a href="https://github.com/shcaba/SS-DL-tool">https://github.com/shcaba/SS-DL-tool</a>
+</div>
+<div id="ref-methot2013" class="csl-entry" role="listitem">
+Methot, R. D., &amp; Wetzel, C. R. (2013). Stock synthesis: A biological and statistical framework for fish stock assessment and fishery management. <em>Fisheries Research</em>, <em>142</em>, 86–99. <a href="https://doi.org/10.1016/j.fishres.2012.10.012">https://doi.org/10.1016/j.fishres.2012.10.012</a>
+</div>
+<div id="ref-methot2020" class="csl-entry" role="listitem">
+Methot, R. D., Wetzel, C. R., Taylor, I. G., &amp; Doering, K. (2020). Stock synthesis user manual: Version 3.30.15. <em>Northwest Fisheries Science Center (U.S.)</em>. <a href="https://doi.org/10.25923/5WPN-QT71">https://doi.org/10.25923/5WPN-QT71</a>
+</div>
+<div id="ref-sedar2019" class="csl-entry" role="listitem">
+SEDAR. (2019). <em>SEDAR 57 Stock Assessment Report <span>U.S. Caribbean</span> Spiny Lobster</em>. 232. <a href="http://sedarweb.org/sedar-57">http://sedarweb.org/sedar-57</a>
+</div>
+<div id="ref-sedar2022" class="csl-entry" role="listitem">
+SEDAR. (2022). <em>SEDAR 80 <span>U.S. Caribbean</span> queen triggerfish <span>Puerto Rico</span> final stock assessment report</em>. <a href="https://sedarweb.org/documents/sedar-80-us-caribbean-queen-triggerfish-puerto-rico-final-stock-assessment-report/">https://sedarweb.org/documents/sedar-80-us-caribbean-queen-triggerfish-puerto-rico-final-stock-assessment-report/</a>
+</div>
+<div id="ref-shertzer" class="csl-entry" role="listitem">
+Shertzer, K. W., Damiano, M. D., &amp; Williams, E. H. (2024). Spawning Potential Ratio Can Provide Reference Points for Fishery Management That Are Robust to Environmental Variability. <em>Fishes</em>. https://doi.org/<a href="https://doi.org/10.3390/fishes9120497">https://doi.org/10.3390/fishes9120497</a>
+</div>
+<div id="ref-taylor2021" class="csl-entry" role="listitem">
+Taylor, I. G., Doering, K. L., Johnson, K. F., Wetzel, C. R., &amp; Stewart, I. J. (2021). Beyond visualizing catch-at-age models: Lessons learned from the r4ss package about software to support stock assessments. <em>Fisheries Research</em>, <em>239</em>, 105924. <a href="https://doi.org/10.1016/j.fishres.2021.105924">https://doi.org/10.1016/j.fishres.2021.105924</a>
 </div>
 </div>
 </section>
