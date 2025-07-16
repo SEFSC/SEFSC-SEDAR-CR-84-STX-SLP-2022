@@ -1,0 +1,682 @@
+---
+title: "U.S. Caribbean Stoplight Parrotfish St. Croix, USVI"
+format: 
+  pptx:
+    reference-doc: NOAA.pptx
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## Outline
+
+:::: columns
+::: column
+I.    Introduction & Background
+II.   Data & Methods
+III.    Assessment Results
+IV.   Discussion & Uncertainties
+V.    Conclusions & Recommendations
+:::
+
+::: column
+[![Stoplight Parrotfish, Sparisoma viride, terminal and initial phases](https://flowergarden.noaa.gov/image_library/fish/2phasesstoplightparrotrje.jpg)](https://flowergarden.noaa.gov/about/fishlist2.html)
+:::
+::::
+
+---
+
+## I. Introduction & Background
+
+:::: columns
+::: column
+-   Maps
+-   Current Management
+-   Management History
+-   Stock Complexes
+-   Assessment History
+:::
+
+::: column
+[![Stoplight Parrotfish, Sparisoma viride, terminal phase](https://flowergarden.noaa.gov/image_library/fish/stoplightparrottermgpsmd.jpg)](https://flowergarden.noaa.gov/about/fishlist2.html)
+:::
+::::
+
+---
+
+:::: columns
+::: column
+![U.S. Caribbean](presentation/images/island_group_management_areas.jpg)
+:::
+
+::: column
+![St. Croix Management Area](presentation/images/mutton_snapper_rh_spawn_agg.jpg)
+:::
+::::
+
+::: {.notes}
+The Stoplight Parrotfish stock was defined by the CFMC Island-based Fishery Management Plan. The St. Croix stock is defined as the population within the U.S. Virgin Island’s territorial  waters; i.e., the island platform of St. Croix and the adjacent EEZ.
+:::
+
+---
+
+## Current Management
+
+-   Island-based fishery management plans effective as of October 2022
+    -   [St. Croix Fishery Management
+    Plan](https://repository.library.noaa.gov/view/noaa/45275)
+    -   [Annual Catch Limits for Stocks and Stock
+    Complexes](https://www.fisheries.noaa.gov/southeast/commercial-fishing/annual-catch-limit-monitoring-under-st-croix-fishery-management-plan)
+-   2022 ACL for St. Croix Parrotfish 2— 72,365 lbs
+    -   *2000-2010 reference; 2012-2016 ratio*
+    -   Based on commercial landings but applies to all harvest
+    -   Landings of indicator stocks are combined to monitor compliance
+    -   Accountability measures apply to all stocks in the complex if ACL is exceeded
+
+---
+
+## Management History
+
+-   Federal Waters
+    -   2005 [FMP comprehensive
+    amendment](https://www.govinfo.gov/app/details/FR-2005-10-28/05-21559) and ban of gillnets and trammel nets
+    -   2012 Prohibited Blue, Midnight, and Rainbow parrotfish
+    -   2012 ACL for St. Croix Parrotfish 240,000 lb *(1999-2005 reference)*
+    -   2013 9-inch size limit for parrotfishes, except redband
+-   Territorial Waters
+    -   2008 [Buy-back/ban](https://sedarweb.org/documents/sedar-84-rd-13-the-net-buyback-and-ban-in-st-croix-u-s-virgin-islands/)
+    of gillnets and trammel nets
+
+---
+
+## Stock Complexes
+
+:::: columns
+::: column
+-   Parrotfish 1— Blue, Midnight, and Rainbow parrotfish **Prohibited
+    2012**
+-   Parrotfish 2— Princess, Queen, Redband, **Redfin**, Redtail,
+    **Stoplight**, Striped parrotfish
+:::
+
+::: column
+[![Prohibited
+species.](presentation/images/issuu_2022.jpg)](https://issuu.com/caribbeanfmc/docs/cfmc_updates_july_2022)
+:::
+::::
+
+---
+
+## Assessment History
+
+:::: columns
+::: column
+-   A 2016 assessment ([SEDAR
+    46](https://sedarweb.org/assessments/sedar-46/)) used data-limited
+    methods but was not used for management advice
+::: 
+
+::: column
+[![SEDAR 46](presentation/images/sedar46_stxslp.jpg)](https://sedarweb.org/assessments/sedar-46/)
+::: 
+:::: 
+
+---
+
+## II. Data & Methods
+
+:::: columns
+::: column
+-   Data Sources Overview
+-   Data Workshop Outcomes
+-   Post-Data Workshop Outcomes
+-   Modeling Approach
+-   Assessment Methodology
+-   Assessment Overview
+-   Data Sources
+::: 
+
+::: column
+[![Stoplight Parrotfish, Sparisoma viride, initial phase](https://nmsflowergarden.blob.core.windows.net/flowergarden-prod/media/archive/image_library/fish/stoplightparrotinitelh.jpg)](https://flowergarden.noaa.gov/about/fishlist2.html)
+::: 
+::::
+
+---
+
+## Data Sources Overview
+
+1.  **Landings** from self-reported commercial fisher logbooks
+2.  **Length compositions** from shore-based port sampling
+3.  **Length compositions** from a fishery-independent survey of reef fish
+4.  **Index of abundance** from a fishery-independent survey of reef fish
+5.  **Life history information** from otolith analysis and gonad histology
+
+---
+
+##   Data Workshop Outcomes
+
+-   Use life history data made available in SEDAR working papers.
+-   Only use commercial landings data starting in 2012.
+-   Identify and flag outliers.
+-   Utilize the various diving gears to establish a SCUBA gear group.
+-   Assume commercial discards are negligible.
+-   Utilize TIP lengths from 2012 to 2022 to inform selectivity.
+-   Use the NCRMP Stoplight Parrotfish data for STX from 2012 to 2022.
+-   Do not consider the fishery-dependent information for an abundance indices.
+
+--- 
+
+## Post-Data Workshop Outcomes
+
+:::: columns
+::: column
+- Life history working paper finalized ([SEDAR84-AP-01](https://sedarweb.org/documents/sedar-84-ap-01-report-on-the-status-of-u-s-caribbean-stoplight-parrotfish-sparisoma-viride-age-growth-and-reproductive-biology-for-the-sedar84-stock-assessment/))
+- Assessment panel accepted landings outliers retained as valid trips
+::: 
+
+::: column
+[![Stoplight Parrotfish, Sparisoma viride, initial phase](https://nmsflowergarden.blob.core.windows.net/flowergarden-prod/media/archive/image_library/fish/stoplightparrotgps.jpg)](https://flowergarden.noaa.gov/about/fishlist2.html)
+::: 
+::::
+
+---
+
+## Modeling Approach
+
+-   [Stock Synthesis](https://nmfs-ost.github.io/ss3-website/) V3.30.22 was the modeling approach applied in the current SEDAR 84 assessment because of compatibility with the available data and consistency with standard practices.
+-   40% SPR used as a proxy for MSY.
+-   Tools for working with Stock Synthesis
+    - [r4ss](https://r4ss.github.io/r4ss/): Create plots and tables of Stock Synthesis output and functions to work with Stock Synthesis in R.
+    - [ss3diags](https://pifscstockassessments.github.io/ss3diags/): Run advanced diagnostics for Stock Synthesis models.
+    - [Stock Assessment Continuum Tool](https://github.com/shcaba/SS-DL-tool) (previously the SS-DL-tool) a shiny app that includes Extended Simple Stock Synthesis and Simple Stock Synthesis in its functionality.
+
+---
+
+## Assessment Method
+
+- Began with data-limited models using super-period length compositions
+    -   Steepness fixed at 0.99
+    -   Sigma R fixed at 0.7
+-   Model progression tracked biological/data complexities:
+    -   m1: Hermaphroditism
+    -   m2: Continuous recruitment
+    -   m3: Increased catch uncertainty
+-   Progressed to data-moderate models incorporating:
+    -   Abundance indices
+    -   Annual fishery-independent length compositions
+    -   Recruitment deviations
+    
+---
+
+## Model Development
+
+:::: columns
+::: column
+-   Labels (e.g., v1_m3_s4) reflect version, complexity, and sensitivity runs
+-   **Model v7_m3** proposed to inform catch advice (*index + annual fishery-independent length data + rec deviations*)
+:::
+
+::: column
+![](presentation/images/development.jpg)
+:::
+::::
+
+---
+
+## Assessment Overview
+
+-   Stock Assessment Continuum Tool used to build initial models
+-   Models configured with 1 area, 1 fleet, and 1 survey; 2012—2022
+-   Sensitivities tested using:
+    -   Longevity-based natural mortality
+    -   Growth variability (CV on growth)
+    -   Hermaphroditism parameterization
+    -   Uncertainty in initial equilibrium catch
+-   Diagnostics included:
+    -   Gradients, residuals, likelihood profiles
+    -   Retrospectives and jitter analyses
+
+---
+
+# 1.  Landings from self-reported commercial logbooks
+
+---
+
+## Caribbean Commercial Logbook Program
+
+![](presentation/images/landings.jpg)
+
+---
+
+![](presentation/images/species.jpg)
+
+---
+
+![](presentation/images/trips.jpg)
+
+---
+
+![](presentation/images/gears.jpg)
+
+---
+
+# 2.  Length compositions from shore-based port sampling
+
+---
+
+## Trip Interview Program
+
+-   98% of TIP length data (2012–2022) came from diving gear.
+    - 1,033 length measurements from 66 trips.
+-   Used to inform length-based selectivity for the commercial fleet.
+-   Multiple lengths per trip; non-independent observations.
+-   Model weighting based on number of sampled trips.
+
+---
+
+![](presentation/images/tip_gears.jpg)
+
+---
+
+![](presentation/images/tip_time.jpg)
+
+---
+
+![](presentation/images/tip_hist.jpg)
+
+---
+
+# 3.  Length compositions from a fishery-independent survey of reef fish
+
+---
+
+## National Coral Reef Monitoring Program
+
+:::: columns
+::: column
+-   Regionally restricted transect data from 2001 to 2011.
+-   Belt transect (2001–2015); Stationary point count (2017–2021).
+-   Multiple lengths per dive; non-independent observations.
+-   The relative model weighting based on the number of paired dives.
+:::
+
+::: column
+![](presentation/images/ncrmp_sites.jpg)
+::: 
+::::
+
+---
+
+![](presentation/images/ncrmp_sites.jpg)
+
+---
+
+# 4.  Index of abundance from a fishery-independent survey of reef fish
+
+---
+
+![](presentation/images/ncrmp_density.jpg)
+
+---
+
+## 5.  Life history information
+
+-   Lengths
+    -   1,801 samples from 2013-2023 and across the U.S. Caribbean
+    -   Males (304 mm FL) were significantly larger than females (259 mm FL) and transitioning (258 mm FL)
+    -   Very few females greater than 351 mm FL 
+    -   Maximum length 433 mm FL
+-   Ages
+    -   1,649 aged fish
+    -   Oldest fish (20 y) female
+
+---
+
+## 5.  Life history information
+
+-   Sexual maturity and reproductive phase
+    -   1,765 stoplight parrotfish gonads
+    -   Females and males spawning capable year-round
+    -   Not all females appear to transition to males 
+    -   Females are more dominant through age-3
+    -   Similar proportions of females and males ages 4-15
+
+---
+
+## Growth
+
+![](presentation/images/growth.jpg)
+
+---
+
+## Growth
+
+![](presentation/images/tbl_vbgf.jpg)
+
+---
+
+## Growth
+
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/sel21_agelen_contour_flt1sex2.png)
+
+---
+
+## Maturity and Hermaprhoditism
+
+![](presentation/images/tbl_sex.jpg)
+
+---
+
+## Maturity and Hermaprhoditism
+![](presentation/images/sex.jpg)
+
+---
+
+## Natural Mortality
+
+![](presentation/images/tbl_m.jpg)
+
+---
+
+## III. Assessment Results
+
+Model Scenario m3_v7
+
+1.    Convergence - OKAY
+2.    Correlation Analysis - OKAY
+3.    Variance - OKAY
+4.    Jitter Analysis - OKAY
+5.    Residual Analysis
+6.    Retrospective Analysis
+7.    Likelihood Profiles (3)
+8.    Sensitivities (6)
+
+---
+
+## 5. Residual Analysis
+
+-   Catch
+-   Indices
+-   Length Compositions
+
+---
+
+## Catch
+
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/catch3_observed_and_expected_landings_(if_different).png)
+
+---
+
+## Index
+
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/index2_cpuefit_NCRMP.png)
+
+---
+
+## Length Compositions
+
+:::: columns
+::: column
+
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/comp_lenfit__aggregated_across_time.png)
+:::
+
+::: column
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/sel01_multiple_fleets_length1.png)
+::: 
+::::
+
+---
+
+## Length Compositions
+
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/comp_lenfit__multi-fleet_comparison.png)
+
+---
+
+## Length Compositions
+
+:::: columns
+::: column
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/comp_lenfit_flt2mkt0_crop.png)
+::: 
+
+::: column
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/comp_lenfit_data_weighting_TA1-8_NCRMP.png)
+::: 
+::::
+
+---
+
+## Recruitment Deviations
+
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/recdevs2_withbars.png)
+
+---
+
+## 6. Retrospective Analysis
+
+:::: columns
+::: column
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/retro/plots/retro_F.png)
+::: 
+
+::: column
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/retro/plots/hcxval_2.png)
+::: 
+::::
+
+---
+
+## 7. Likelihood Profiles
+
+-   Unfished Recruitment
+-   Initial Equilibrium Catch
+-   Steepness
+
+---
+
+## Unfished Recruitment
+
+:::: columns
+::: column
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_r0/profile_plot_likelihood.png)
+::: 
+
+::: column
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_r0/plots/profile_msyspr.png)
+::: 
+::::
+
+---
+
+## Initial Equilibrium Catch
+
+:::: columns
+::: column
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png)
+::: 
+
+::: column
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png)
+::: 
+::::
+
+---
+
+## Steepness
+
+:::: columns
+::: column
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_k/profile_plot_likelihood.png)
+::: 
+
+::: column
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/profile_k/plots/profile_msyspr.png)
+::: 
+::::
+
+---
+
+## 8. Sensitivities
+
+-   s1 Growth CV increased from 0.15 to 0.25.
+-   s2 Natural Mortality
+-   s3 Single Sex Model
+-   s4 Standard Error on Catch
+-   s5 Standard Error on Catch and Natural Mortality
+-   s6 Single Sex Model, Standard Error on Catch, and Natural Mortality
+
+---
+
+## 8. Sensitivities
+
+:::: columns
+::: column
+![](Scenarios/plots_v7_m3_plain/compare4_Bratio_uncertainty.png)
+::: 
+
+::: column
+![](Scenarios/plots_v7_m3/compare8_Fvalue_uncertainty.png)
+::: 
+::::
+
+---
+
+## 8. Sensitivities
+
+:::: columns
+::: column
+![](Scenarios/plots_v7_m3_plain/compare16_densities_SR_LN(R0).png)
+::: 
+
+::: column
+![](Scenarios/plots_v7_m3/compare16_densities_SSB_Virgin.png)
+::: 
+::::
+
+---
+
+## IV. Discussion & Uncertainties
+
+-   Assessment uses a stepwise, scenario-based framework to explore uncertainty
+-   Natural mortality and initial catch are highly influential in model outcomes 
+-   Short time series (2012-2022) and coarse length bins (2012 & 2015)
+-   Recruitment deviations are uncertain but improved by fishery-independent data
+
+---
+
+# V. Conclusions & Recommendations
+
+---
+
+## Key Findings
+
+-   Model indicates no overfishing and not overfished
+-   Only one sensitivity (m3_s6) showed potential overfishing status
+-   Initial catch conditions are a major source of uncertainty
+-   Results are robust across models but limited by low-contrast data
+
+---
+
+## Assessment Research Recommendations
+
+-   Reevaluate use of combined indicator species for setting ACLs
+-   Consider larger-scale stock definitions due to high larval connectivity
+-   Expand modeling to reflect regional metapopulation dynamics
+-   Continue long-term monitoring with 1-cm length resolution
+-   Decouple initial condition from long-term sustainable yields
+-   Support development of ensembles to capture uncertainty
+-   Promote scenario testing for other Caribbean species
+
+---
+
+## Data Workshop Research Recommendations
+
+Life History
+
+- Optimize sample sizes
+- Ensure adequate coverage of small and large fish
+
+Length Composition
+
+- Increase TIP sample size and improve trip coverage (e.g., night fishing)
+- Link TIP and CCL via integrated data system
+- Investigate weight-at-length trends and trip-level representativeness
+- Develop a more holistic sampling strategy
+
+---
+
+## Data Workshop Recommendations (cont.)
+
+-   Commercial Landings
+  -   Investigate trends in effort, gear, and environmental drivers
+  -   Explore hindcasting and develop gear grouping and outlier flagging tools
+-   Discards & Mortality
+  -   Quantify **shark depredation** and discard mortality
+  -   Promote discard reporting through outreach and education
+
+---
+
+## Data Workshop Recommendations (cont.)
+
+-   Fishery-Independent (NCRMP)
+    -   Investigate changes across consistent sites (e.g., Buck Island);
+    -   Investigate habitat change and expand to seagrass/mangrove areas
+    -   Explore unsurveyed turbid regions
+
+-   Fishery-Dependent Indices
+    -   Apply ecosystem lens to fisher targeting behavior
+    -   Filter out lobster/conch-only trips
+    -   Examine effort vs. catch disconnect in dive data
+
+---
+
+## The End
+
+[![Stoplight Parrotfish, Sparisoma viride, terminal and initial phases](https://flowergarden.noaa.gov/image_library/fish/2phasesstoplightparrotrje.jpg)](https://flowergarden.noaa.gov/about/fishlist2.html)
+
+---
+
+## 1. Convergence
+
+-   Positive definite Hessian, indicating local optimal fit
+-   No parameters were bounded, suggesting unconstrained optimization
+-   Parameter gradients were small (all < 0.001), supporting convergence
+
+---
+
+## 2. Correlation Analysis
+
+- No correlations greater than 0.95 or less than -0.95
+- Moderately high correlations (> 0.90) commercial fleet logistic selectivity
+  -   length at peak selectivity
+  -   width of the ascending limb
+
+---
+
+## 3. Variance
+
+:::: columns
+::: column
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/ts9_Relative_spawning_output_intervals.png)
+::: 
+
+::: column
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/plots/SPR3_ratiointerval.png)
+::: 
+::::
+
+---
+
+## 4. Jitter Analysis
+
+:::: columns
+::: column
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/jitter/Total_Likelihood.png)
+::: 
+
+::: column
+![](Scenarios/84_stx_f3_5cm_010641_0041_v7_m3/diagnostics/jitter/sizeselex.png)
+::: 
+::::
