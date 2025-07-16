@@ -17,15 +17,16 @@ book:
         - name: NOAA Fisheries
   chapters:
     - index.qmd
-    - content/introduction.qmd
-    - content/data.qmd
-    - content/methods.qmd
-    - content/diagnostics.qmd
-    - content/discussion.qmd
-    - content/research.qmd
-    - content/tables.qmd
-    - content/figures.qmd
-    - content/references.qmd
+    # - content/introduction.qmd
+    # - content/data.qmd
+    # - content/methods.qmd
+    # - content/diagnostics.qmd
+    # - content/discussion.qmd
+    # - content/research.qmd
+    # - content/tables.qmd
+    # - content/figures.qmd
+    # - content/references.qmd
+    - content/compare.qmd
 
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
