@@ -1,5 +1,5 @@
 #C file created using an r4ss function
-#C file write time: 2025-04-16  07:55:28
+#C file write time: 2025-07-16  13:58:25
 #
 0 # 0 means do not read wtatage.ss; 1 means read and usewtatage.ss and also read and use growth parameters
 1 #_N_Growth_Patterns
@@ -55,8 +55,8 @@
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE	env_var&link	dev_link	dev_minyr	dev_maxyr	dev_PH	Block	Block_Fxn
 0.001	   2	     0.27	    -2.92	0.22	0	 -1	0	0	0	0	0	0	0	#_NatM_p_1_Fem_GP_1            
   -50	 100	    0.001	        0	  10	0	 -3	0	0	0	0	0	0	0	#_L_at_Amin_Fem_GP_1           
-    1	 500	     33.2	     33.2	  10	0	 2	0	0	0	0	0	0	0	#_L_at_Amax_Fem_GP_1           
-0.001	   2	     0.39	     0.39	0.05	0	 3	0	0	0	0	0	0	0	#_VonBert_K_Fem_GP_1           
+    1	 500	     33.2	     33.2	  10	0	  2	0	0	0	0	0	0	0	#_L_at_Amax_Fem_GP_1           
+0.001	   2	     0.39	     0.39	0.05	0	  3	0	0	0	0	0	0	0	#_VonBert_K_Fem_GP_1           
 0.001	   5	     0.15	     0.15	 0.5	0	 -4	0	0	0	0	0	0	0	#_CV_young_Fem_GP_1            
 0.001	   5	     0.15	     0.15	 0.5	0	 -4	0	0	0	0	0	0	0	#_CV_old_Fem_GP_1              
     0	   3	 3.18e-05	 3.18e-05	  99	0	-99	0	0	0	0	0	0	0	#_Wtlen_1_Fem_GP_1             
@@ -78,15 +78,15 @@
 #_ LO HI INIT PRIOR PR_SD PR_type PHASE
 #_Cond -2 2 0 0 -1 99 -2 #_placeholder when no seasonal MG parameters
 #
-3 #_Spawner-Recruitment; 2=Ricker; 3=std_B-H; 4=SCAA;5=Hockey; 6=B-H_flattop; 7=survival_3Parm;8=Shepard_3Parm
+3 #_Spawner-Recruitment; 2=Ricker (2 parms); 3=std_B-H(2); 4=SCAA(2);5=Hockey(3); 6=B-H_flattop(2); 7=Survival(3);8=Shepard(3);9=Ricker_Power(3);10=B-H_a,b(4)
 0 # 0/1 to use steepness in initial equ recruitment calculation
 0 # future feature: 0/1 to make realized sigmaR a function of SR curvature
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE	env-var	use_dev	dev_mnyr	dev_mxyr	dev_PH	Block	Blk_Fxn # parm_name
   2	10	4.61247	   7	  99	0	  1	0	0	0	0	0	0	0	#_SR_LN(R0)  
-0.2	1	   0.99	0.99	0.24	0	 -1	0	0	0	0	0	0	0	#_SR_BH_steep
-  0	2	    0.7	 0.7	  99	0	 -6	0	0	0	0	0	0	0	#_SR_sigmaR  
- -5	5	      0	   0	  99	0	-99	0	0	0	0	0	0	0	#_SR_regime  
-  0	2	      0	   1	  99	0	-99	0	0	0	0	0	0	0	#_SR_autocorr
+0.2	 1	   0.99	0.99	0.24	0	 -1	0	0	0	0	0	0	0	#_SR_BH_steep
+  0	 2	    0.7	 0.7	  99	0	 -6	0	0	0	0	0	0	0	#_SR_sigmaR  
+ -5	 5	      0	   0	  99	0	-99	0	0	0	0	0	0	0	#_SR_regime  
+  0	 2	      0	   1	  99	0	-99	0	0	0	0	0	0	0	#_SR_autocorr
 #_no timevary SR parameters
 3 #do_recdev:  0=none; 1=devvector (R=F(SSB)+dev); 2=deviations (R=F(SSB)+dev); 3=deviations (R=R0*dev; dev2=R-f(SSB)); 4=like 3 with sum(dev2) adding penalty
 2012 # first year of main recr_devs; early devs can preceed this era
@@ -115,11 +115,10 @@
 #Fishing Mortality info
 0.03 # F ballpark
 -1999 # F ballpark year (neg value to disable)
-2 # F_Method:  1=Pope midseason rate; 2=F as parameter; 3=F as hybrid; 4=fleet-specific parm/hybrid (#4 is superset of #2 and #3 and is recommended)
-4 # max F (methods 2-4) or harvest fraction (method 1)
-0.05 # overall start F value (all fleets; used if start phase = 1 and not reading parfile)
-1 # start phase for parms (does hybrid in early phases)
-0 # N detailed inputs to read
+2 # F_Method:  1=Pope; 2=instan. F; 3=hybrid (hybrid is recommended)
+4 # max F or harvest rate, depends on F_Method
+#_overall start F value; overall phase; N detailed inputs to read
+0.05 1 0 #_F_setup
 #
 #_initial_F_parms
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE

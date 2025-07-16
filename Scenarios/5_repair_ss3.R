@@ -1,7 +1,7 @@
 library(foreach)
 
 # Specify pattern
-pattern <- "84_stx_f3_5cm_010641_0041_"
+pattern <- "_0041"
 
 # Get folder names ####
 full_names <- list.files(
@@ -19,22 +19,36 @@ foreach::foreach(i = seq_along(full_names)) %do% {
   ctl <- r4ss::SS_readctl(file = here::here(full_names[i], start$ctlfile),
                           datlist = dat, verbose = FALSE)
   
+  ctl$F_Method
+  ctl$F_Method = 2
+  
+  ctl$maxF
+  ctl$maxF = 4
+  ctl$maxF
+  
+  ctl$F_setup
+  ctl$F_setup[1] = 0.05
+  ctl$F_setup[2] = 1.00
+  ctl$F_setup[3] = 0.00
+  ctl$F_setup
+  
+  
   # Update age
-  dat$Nages
-  dat$Nages = 20
-  dat$Nages
-  
-  dat$N_agebins
-  dat$N_agebins = dat$Nages
-  dat$N_agebins
-  
-  dat$agebin_vector
-  dat$agebin_vector = c(0:(dat$Nages-1))
-  dat$agebin_vector
-  
-  dat$ageerror
-  dat$ageerror = cbind(dat$ageerror, dat$ageerror[dat$Nages])
-  dat$ageerror
+  # dat$Nages
+  # dat$Nages = 20
+  # dat$Nages
+  # 
+  # dat$N_agebins
+  # dat$N_agebins = dat$Nages
+  # dat$N_agebins
+  # 
+  # dat$agebin_vector
+  # dat$agebin_vector = c(0:(dat$Nages-1))
+  # dat$agebin_vector
+  # 
+  # dat$ageerror
+  # dat$ageerror = cbind(dat$ageerror, dat$ageerror[dat$Nages])
+  # dat$ageerror
   
   
   # Update M
@@ -71,20 +85,20 @@ foreach::foreach(i = seq_along(full_names)) %do% {
   # ctl$init_F[1, 2] = 4
   # ctl$init_F[1, 3]
   # ctl$init_F[1, 3] = 1.2
-  
-  r4ss::SS_writedat(
-    datlist = dat,
-    outfile = here::here(full_names[i], start$datfile),
-    overwrite = TRUE,
-    verbose = FALSE
-  )
+  # 
+  # r4ss::SS_writedat(
+  #   datlist = dat,
+  #   outfile = here::here(full_names[i], start$datfile),
+  #   overwrite = TRUE,
+  #   verbose = FALSE
+  # )
 
   
-  # r4ss::SS_writectl(
-  #   ctllist = ctl,
-  #   outfile = here::here(full_names[i], start$ctlfile),
-  #   overwrite = TRUE
-  # )
+  r4ss::SS_writectl(
+    ctllist = ctl,
+    outfile = here::here(full_names[i], start$ctlfile),
+    overwrite = TRUE
+  )
   
   return(NULL)
 }
